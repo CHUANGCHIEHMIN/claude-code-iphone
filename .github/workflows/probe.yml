@@ -1,0 +1,19 @@
+name: probe-endpoints
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "YYYYMMDD"
+        required: false
+  push:
+    branches: ["claude/**"]
+    paths: ["tools/probe.py", ".github/workflows/probe.yml"]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/probe.py ${{ github.event.inputs.date || '20261023' }}
