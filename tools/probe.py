@@ -8,7 +8,8 @@ import sys
 import time
 import urllib.request
 
-D = sys.argv[1] if len(sys.argv) > 1 else "20261023"
+D = sys.argv[1] if len(sys.argv) > 1 else "20261022"
+ONLY = set(sys.argv[2].split(",")) if len(sys.argv) > 2 else None
 Y, M, DD = D[:4], D[4:6], D[6:]
 ROC = f"{int(Y) - 1911}/{M}/{DD}"
 SLASH = f"{Y}/{M}/{DD}"
@@ -48,6 +49,8 @@ def short(v, n=400):
 
 
 for name, url in URLS:
+    if ONLY and name not in ONLY:
+        continue
     print(f"\n===== {name}\n{url}")
     try:
         req = urllib.request.Request(url, headers=UA)
@@ -100,7 +103,8 @@ for name, url in URLS:
             print("  fields", short(t.get("fields"), 1500))
             if t.get("groups"):
                 print("  groups", short(t.get("groups"), 800))
-            print("  first", short((t.get("data") or [])[:1], 1200))
+            print("  first", short((t.get("data") or [])[:3], 2400))
+            print("  other", {k: short(v, 300) for k, v in t.items() if k not in ("data", "fields", "title")})
         for k, v in js.items():
             if k.startswith(("data", "fields", "groups")) and k not in ("data", "fields"):
                 print(k, short(v, 600))
