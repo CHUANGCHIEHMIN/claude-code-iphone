@@ -11,9 +11,6 @@ on:
         description: "不呼叫 Claude API（只跑官方數據）"
         type: boolean
         default: false
-  push:  # TEMP: live test on the feature branch
-    branches: ["claude/tw-chip-screener"]
-    paths: ["screener/**", ".github/workflows/daily.yml"]
 permissions:
   contents: write
 concurrency:
@@ -44,7 +41,6 @@ jobs:
           [ -n "$DATE_INPUT" ] && args+=(--date "$DATE_INPUT")
           [ "$NO_LLM" = "true" ] && args+=(--no-llm)
           [ "$EVENT" = "schedule" ] && args+=(--skip-existing)
-          [ "$EVENT" = "push" ] && args+=(--no-llm)  # TEMP
           [ -z "$SCREENER_MODEL" ] && unset SCREENER_MODEL
           [ -z "$SCREENER_MAX_RESEARCH" ] && unset SCREENER_MAX_RESEARCH
           python -m screener "${args[@]}"
