@@ -32,9 +32,14 @@ def ratings_text(c: dict) -> str:
     parts = []
     for r in c["ratings"]:
         tp = f"TP {r['target_price']:,.0f}" if isinstance(r.get("target_price"), (int, float)) else "TP —"
-        link = f"[{r.get('source') or '來源'}]({r['url']})" if r.get("url") else ""
+        link = f"[{r.get('source') or '來源'}]({url(r.get('url'))})" if url(r.get("url")) else ""
         parts.append(f"{r['broker']}／{r.get('rating') or DASH}／{tp}／{r.get('date') or DASH} {link}")
     return "<br>".join(parts)
+
+
+def url(u) -> str:
+    u = str(u or "")
+    return u.replace(" ", "%20").replace(")", "%29") if u.startswith(("http://", "https://")) else ""
 
 
 def esc(s) -> str:
@@ -92,13 +97,13 @@ def render(rep: dict) -> str:
             any_news = True
             L.append(f"- **{s['code']} {s['name']}**")
             for n in s["news"]:
-                L.append(f"  - {esc(n.get('summary') or n.get('title'))}（{esc(n.get('source'))}，{esc(n.get('date'))}）[連結]({n['url']})")
+                L.append(f"  - {esc(n.get('summary') or n.get('title'))}（{esc(n.get('source'))}，{esc(n.get('date'))}）[連結]({url(n['url'])})")
     if not any_news:
         L.append("- —（未取得）")
     L.append("\n### (b) 當日國內外重要科技新聞")
     if rep["tech_news"]:
         for i, n in enumerate(rep["tech_news"], 1):
-            L.append(f"{i}. **{esc(n.get('title'))}** — {esc(n.get('summary'))}（{esc(n.get('source'))}）[連結]({n['url']})")
+            L.append(f"{i}. **{esc(n.get('title'))}** — {esc(n.get('summary'))}（{esc(n.get('source'))}）[連結]({url(n['url'])})")
     else:
         L.append("- —（未取得）")
     L.append("")
@@ -116,12 +121,13 @@ def render(rep: dict) -> str:
     seen = set()
     for s in rep["pool"]:
         for e in (s["A"].get("evidence") or []) + (s["C"].get("ratings") or []) + (s.get("news") or []):
-            u = e.get("url")
+            u = url(e.get("url"))
             if u and u not in seen:
                 seen.add(u)
                 L.append(f"- [{esc(e.get('title') or e.get('source') or s['name'])}]({u})")
     for n in rep["tech_news"]:
-        if n.get("url") and n["url"] not in seen:
-            seen.add(n["url"])
-            L.append(f"- [{esc(n.get('title'))}]({n['url']})")
+        u = url(n.get("url"))
+        if u and u not in seen:
+            seen.add(u)
+            L.append(f"- [{esc(n.get('title'))}]({u})")
     return "\n".join(L) + "\n"

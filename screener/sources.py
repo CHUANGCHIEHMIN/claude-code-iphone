@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 import re
 from datetime import date
+from functools import lru_cache
 
 from .net import fetch_json, fetch_text
 from .tables import col, extract_tables, find_table, norm, num
@@ -72,6 +73,7 @@ def tpex_quotes(d: date) -> dict[str, dict]:
 
 
 # ------------------------------------------------------ institutional investors
+@lru_cache(maxsize=32)
 def twse_insti(d: date) -> dict[str, dict]:
     js = fetch_json(f"{TWSE}/fund/T86?date={ymd(d)}&selectType=ALLBUT0999&response=json")
     t = find_table(extract_tables(js), "證券代號", "三大法人")
@@ -103,6 +105,7 @@ def twse_insti(d: date) -> dict[str, dict]:
 TPEX_INSTI_IDX = {"foreign": 4, "foreign_dealer": 7, "foreign_all": 10, "trust": 13, "dealer": 22, "total": 23}
 
 
+@lru_cache(maxsize=32)
 def tpex_insti(d: date) -> dict[str, dict]:
     js = fetch_json(f"{TPEX}/insti/dailyTrade?type=Daily&sect=EW&date={slash(d)}&response=json")
     if not _tpex_date_ok(js, d):

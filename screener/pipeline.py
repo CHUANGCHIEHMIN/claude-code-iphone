@@ -162,6 +162,8 @@ def enrich(pool: list[dict], days, notes: list) -> None:
 def revenue_months(asof: date, notes: list, need: int = 3) -> list[tuple[str, dict]]:
     out = []
     y, m = asof.year, asof.month
+    if asof.day <= 10:  # 上月營收須於每月10日前公布，10日前上月資料尚不完整
+        y, m = (y - 1, 12) if m == 1 else (y, m - 1)
     for _ in range(need + 2):
         m -= 1
         if m == 0:
@@ -248,6 +250,9 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
     days = trading_days(asof)
     if len(days) < 6:
         raise RuntimeError(f"只取得 {len(days)} 個交易日資料，無法計算（需至少6日）")
+    if not _safe(sources.twse_insti, days[0][0], label="T86 發布檢查"):
+        notes.append(f"{days[0][0]} 三大法人資料尚未公布，改以前一交易日為基準")
+        days = trading_days(days[1][0], need=21)
     existing = out_dir / "reports" / f"{days[0][0].isoformat()}.json"
     if skip_existing and existing.exists():
         prev = json.loads(existing.read_text("utf-8"))
