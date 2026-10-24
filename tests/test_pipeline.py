@@ -85,3 +85,28 @@ def test_research_json_parsing():
     assert research._parse_json('前言\n```json\n{"a": 1}\n```') == {"a": 1}
     assert research._parse_json('{"a": {"b": 2}}') == {"a": {"b": 2}}
     assert research._parse_json("no json") is None
+
+
+def test_research_handles_pause_turn_and_collects_urls(monkeypatch):
+    from types import SimpleNamespace as NS
+
+    calls = []
+    responses = [
+        NS(stop_reason="pause_turn", content=[
+            NS(type="web_search_tool_result", content=[NS(title="t1", url="https://a.example/1")])]),
+        NS(stop_reason="end_turn", content=[
+            NS(type="text", text='```json\n{"sustainability": {"pass": true}, "ratings": [], "news": []}\n```')]),
+    ]
+
+    class FakeMessages:
+        def create(self, **kw):
+            calls.append(kw)
+            return responses[len(calls) - 1]
+
+    monkeypatch.setattr(research, "_client", lambda: NS(beta=NS(messages=FakeMessages())))
+    out = research.research_stock("2330", "台積電", "上市", "半導體業", date(2026, 10, 22))
+    assert out["sustainability"]["pass"] is True
+    assert out["searched"] == [{"title": "t1", "url": "https://a.example/1"}]
+    assert len(calls) == 2 and calls[1]["messages"][1]["role"] == "assistant"
+    assert calls[0]["tools"][0]["type"] == "web_search_20260209"
+    assert calls[0]["fallbacks"] == "default"
