@@ -5,9 +5,6 @@ on:
       date:
         description: "YYYYMMDD"
         required: false
-  push:
-    branches: ["claude/**"]
-    paths: ["tools/probe.py", ".github/workflows/probe.yml"]
 jobs:
   probe:
     runs-on: ubuntu-latest

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>法人籌碼選股</title>
+<meta name="description" content="台股三大法人近五日買超 × 永續 × 未來性 × 投行評等 × 量增 每日選股報告">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="法人選股">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <div>
+      <h1>法人籌碼選股</h1>
+      <p class="sub" id="sub">載入中…</p>
+    </div>
+    <label class="date-pick">
+      <span class="sr">報告日期</span>
+      <select id="date"></select>
+    </label>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="summary" aria-selected="true">摘要</button>
+    <button role="tab" data-tab="picks">精選</button>
+    <button role="tab" data-tab="pool">候選池</button>
+    <button role="tab" data-tab="news">新聞</button>
+    <button role="tab" data-tab="notes">說明</button>
+  </nav>
+</header>
+<main id="main">
+  <section id="summary" class="panel"></section>
+  <section id="picks" class="panel" hidden></section>
+  <section id="pool" class="panel" hidden></section>
+  <section id="news" class="panel" hidden></section>
+  <section id="notes" class="panel" hidden></section>
+</main>
+<footer class="foot">資料來源：證交所、櫃買中心、公開資訊觀測站及公開新聞報導。本頁為資料整理，不構成投資建議。</footer>
+<script src="app.js"></script>
+</body>
+</html>
