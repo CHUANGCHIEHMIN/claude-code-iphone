@@ -1,0 +1,51 @@
+name: daily-report
+on:
+  schedule:
+    - cron: "17 14 * * 1-5"   # 每個交易日 22:17（台北時間）— 融資融券、外資持股等資料已公布
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "基準日 YYYY-MM-DD（留空＝今天，遇休市自動往前找）"
+        required: false
+      no_llm:
+        description: "不呼叫 Claude API（只跑官方數據）"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q tests
+      - name: Generate report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SCREENER_MODEL: ${{ vars.SCREENER_MODEL }}
+          SCREENER_MAX_RESEARCH: ${{ vars.SCREENER_MAX_RESEARCH }}
+          DATE_INPUT: ${{ inputs.date }}
+          NO_LLM: ${{ inputs.no_llm }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          args=()
+          [ -n "$DATE_INPUT" ] && args+=(--date "$DATE_INPUT")
+          [ "$NO_LLM" = "true" ] && args+=(--no-llm)
+          [ "$EVENT" = "schedule" ] && args+=(--skip-existing)
+          [ -z "$SCREENER_MODEL" ] && unset SCREENER_MODEL
+          [ -z "$SCREENER_MAX_RESEARCH" ] && unset SCREENER_MAX_RESEARCH
+          python -m screener "${args[@]}"
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          tools/commit_report.sh "$GITHUB_REF_NAME"

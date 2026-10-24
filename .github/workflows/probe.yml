@@ -1,0 +1,16 @@
+name: probe-endpoints
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "YYYYMMDD"
+        required: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/probe.py ${{ github.event.inputs.date || '20261022' }} twse_t86,twse_mi_index,twse_qfiis,twse_margin,twse_bwibbu,tpex_3insti_new,tpex_quotes_new,tpex_pe_new,tpex_margin_new,tpex_qfii_new

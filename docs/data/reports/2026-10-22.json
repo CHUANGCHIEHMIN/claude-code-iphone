@@ -1,0 +1,4638 @@
+{
+ "generated_at": "2026-10-24T14:34:17+08:00",
+ "asof": "2026-10-22",
+ "window": [
+  "2026-10-16",
+  "2026-10-19",
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22"
+ ],
+ "research_enabled": false,
+ "model": null,
+ "market": {
+  "上市": {
+   "net": -174107736471.1702,
+   "foreign": -239627637761.2999,
+   "trust": 71928075640.74002
+  },
+  "上櫃": {
+   "net": -16831785795.409998,
+   "foreign": -16531437270.050009,
+   "trust": 3107624261.55
+  }
+ },
+ "picks": [],
+ "pool": [
+  {
+   "code": "3231",
+   "name": "緯創",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 1,
+   "close": 190.0,
+   "chg5": 0.07954545454545459,
+   "net_amt": 13582565100.0,
+   "foreign_amt": 12344468498.5,
+   "trust_amt": 7240709.0,
+   "dealer_amt": 1230855892.5,
+   "foreign_sh": 64886427.0,
+   "trust_sh": -247641.0,
+   "net_sh": 71160884.0,
+   "value5": 48343960661.0,
+   "net_ratio": 0.280956812687408,
+   "dominant": true,
+   "avg_vol5": 50938793.2,
+   "avg_vol20": 42503948.8,
+   "vol_ratio": 1.1984484886260733,
+   "volume_up": null,
+   "pe": 15.09,
+   "qfii_ratio": 35.95,
+   "qfii_chg5": 1.8200000000000003,
+   "margin_balance": 43199.0,
+   "margin_chg5": -4450.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 87.18
+     },
+     {
+      "month": "2026-08",
+      "yoy": 166.48
+     },
+     {
+      "month": "2026-07",
+      "yoy": 60.76
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +87.2%、08月 +166.5%、07月 +60.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2317",
+   "name": "鴻海",
+   "market": "上市",
+   "industry": "其他電子業",
+   "rank": 2,
+   "close": 245.0,
+   "chg5": 0.022964509394572064,
+   "net_amt": 11091139714.5,
+   "foreign_amt": 10866780034.0,
+   "trust_amt": 408218282.5,
+   "dealer_amt": -183858602.0,
+   "foreign_sh": 43551893.0,
+   "trust_sh": 1689288.0,
+   "net_sh": 44568264.0,
+   "value5": 46601613810.0,
+   "net_ratio": 0.23799904783812464,
+   "dominant": true,
+   "avg_vol5": 38067471.0,
+   "avg_vol20": 41318130.1,
+   "vol_ratio": 0.9213260839216922,
+   "volume_up": null,
+   "pe": 16.15,
+   "qfii_ratio": 39.85,
+   "qfii_chg5": 0.28000000000000114,
+   "margin_balance": 57768.0,
+   "margin_chg5": -2824.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 38.41
+     },
+     {
+      "month": "2026-08",
+      "yoy": 51.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 54.18
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +38.4%、08月 +52.0%、07月 +54.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2382",
+   "name": "廣達",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 3,
+   "close": 322.0,
+   "chg5": 0.017377567140600236,
+   "net_amt": 3878143679.5,
+   "foreign_amt": 1855159661.0,
+   "trust_amt": 1259884774.5,
+   "dealer_amt": 763099244.0,
+   "foreign_sh": 5596562.0,
+   "trust_sh": 3902893.0,
+   "net_sh": 11886157.0,
+   "value5": 15244663439.0,
+   "net_ratio": 0.25439352564377726,
+   "dominant": true,
+   "avg_vol5": 9492372.6,
+   "avg_vol20": 11295102.8,
+   "vol_ratio": 0.8403971852296908,
+   "volume_up": null,
+   "pe": 14.03,
+   "qfii_ratio": 23.0,
+   "qfii_chg5": 0.120000000000001,
+   "margin_balance": 15199.0,
+   "margin_chg5": -801.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 76.68
+     },
+     {
+      "month": "2026-08",
+      "yoy": 177.45
+     },
+     {
+      "month": "2026-07",
+      "yoy": 131.31
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +76.7%、08月 +177.4%、07月 +131.3%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 4,
+   "close": 7585.0,
+   "chg5": -0.011082138200782299,
+   "net_amt": 3312581450.0,
+   "foreign_amt": 242446035.0,
+   "trust_amt": 4339300190.0,
+   "dealer_amt": -1269164775.0,
+   "foreign_sh": 36848.0,
+   "trust_sh": 555115.0,
+   "net_sh": 425950.0,
+   "value5": 68051641370.0,
+   "net_ratio": 0.04867746586727185,
+   "dominant": false,
+   "avg_vol5": 1737988.8,
+   "avg_vol20": 1398954.95,
+   "vol_ratio": 1.24234793979606,
+   "volume_up": null,
+   "pe": 194.44,
+   "qfii_ratio": 27.37,
+   "qfii_chg5": -0.05000000000000071,
+   "margin_balance": 4494.0,
+   "margin_chg5": -138.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 97.77
+     },
+     {
+      "month": "2026-08",
+      "yoy": 111.02
+     },
+     {
+      "month": "2026-07",
+      "yoy": 158.38
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +97.8%、08月 +111.0%、07月 +158.4%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2603",
+   "name": "長榮",
+   "market": "上市",
+   "industry": "航運業",
+   "rank": 5,
+   "close": 260.0,
+   "chg5": 0.011673151750972721,
+   "net_amt": 2837374940.5,
+   "foreign_amt": 1150745130.5,
+   "trust_amt": 1093925013.5,
+   "dealer_amt": 592704796.5,
+   "foreign_sh": 4404612.0,
+   "trust_sh": 4126973.0,
+   "net_sh": 10804604.0,
+   "value5": 14755001110.0,
+   "net_ratio": 0.1922992021042281,
+   "dominant": true,
+   "avg_vol5": 11262105.4,
+   "avg_vol20": 13062237.7,
+   "vol_ratio": 0.8621880613916558,
+   "volume_up": null,
+   "pe": 10.31,
+   "qfii_ratio": 27.12,
+   "qfii_chg5": 0.05000000000000071,
+   "margin_balance": 8295.0,
+   "margin_chg5": -553.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 63.74
+     },
+     {
+      "month": "2026-08",
+      "yoy": 48.63
+     },
+     {
+      "month": "2026-07",
+      "yoy": 43.07
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +63.7%、08月 +48.6%、07月 +43.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2379",
+   "name": "瑞昱",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 6,
+   "close": 772.0,
+   "chg5": 0.010471204188481575,
+   "net_amt": 2830389230.0,
+   "foreign_amt": 2038437332.0,
+   "trust_amt": 324685589.0,
+   "dealer_amt": 467266309.0,
+   "foreign_sh": 2598997.0,
+   "trust_sh": 420198.0,
+   "net_sh": 3617626.0,
+   "value5": 10764799815.0,
+   "net_ratio": 0.26293003851832425,
+   "dominant": true,
+   "avg_vol5": 2756101.0,
+   "avg_vol20": 2572346.4,
+   "vol_ratio": 1.0714346248234685,
+   "volume_up": null,
+   "pe": 27.99,
+   "qfii_ratio": 46.77,
+   "qfii_chg5": 0.39000000000000057,
+   "margin_balance": 2440.0,
+   "margin_chg5": -147.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 23.35
+     },
+     {
+      "month": "2026-08",
+      "yoy": 28.08
+     },
+     {
+      "month": "2026-07",
+      "yoy": 32.53
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +23.4%、08月 +28.1%、07月 +32.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6505",
+   "name": "台塑化",
+   "market": "上市",
+   "industry": "油電燃氣業",
+   "rank": 7,
+   "close": 106.5,
+   "chg5": -0.04484304932735428,
+   "net_amt": 2664911258.0,
+   "foreign_amt": 4102609241.5,
+   "trust_amt": -1546868032.0,
+   "dealer_amt": 109170048.5,
+   "foreign_sh": 37478215.0,
+   "trust_sh": -15176136.0,
+   "net_sh": 23224477.0,
+   "value5": 28992619359.0,
+   "net_ratio": 0.09191688494929824,
+   "dominant": false,
+   "avg_vol5": 50436530.4,
+   "avg_vol20": 43067496.85,
+   "vol_ratio": 1.1711042918436991,
+   "volume_up": null,
+   "pe": 18.49,
+   "qfii_ratio": 6.5,
+   "qfii_chg5": 0.3600000000000003,
+   "margin_balance": 9358.0,
+   "margin_chg5": -306.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 65.59
+     },
+     {
+      "month": "2026-08",
+      "yoy": 50.28
+     },
+     {
+      "month": "2026-07",
+      "yoy": 32.34
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +65.6%、08月 +50.3%、07月 +32.3%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "4938",
+   "name": "和碩",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 8,
+   "close": 103.5,
+   "chg5": 0.05504587155963314,
+   "net_amt": 2550808564.5,
+   "foreign_amt": 2743915840.5,
+   "trust_amt": -474435075.0,
+   "dealer_amt": 281327799.0,
+   "foreign_sh": 26514989.0,
+   "trust_sh": -4620333.0,
+   "net_sh": 24612929.0,
+   "value5": 10018558109.0,
+   "net_ratio": 0.2546083514960626,
+   "dominant": true,
+   "avg_vol5": 19159644.6,
+   "avg_vol20": 17623298.25,
+   "vol_ratio": 1.087177004452047,
+   "volume_up": null,
+   "pe": 17.45,
+   "qfii_ratio": 32.7,
+   "qfii_chg5": 0.7700000000000031,
+   "margin_balance": 4900.0,
+   "margin_chg5": -1139.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 86.87
+     },
+     {
+      "month": "2026-08",
+      "yoy": 34.11
+     },
+     {
+      "month": "2026-07",
+      "yoy": 11.55
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +86.9%、08月 +34.1%、07月 +11.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3034",
+   "name": "聯詠",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 9,
+   "close": 583.0,
+   "chg5": 0.031858407079645934,
+   "net_amt": 2535519795.0,
+   "foreign_amt": 2015343647.0,
+   "trust_amt": 182390694.0,
+   "dealer_amt": 337785454.0,
+   "foreign_sh": 3434652.0,
+   "trust_sh": 317457.0,
+   "net_sh": 4331931.0,
+   "value5": 11587816164.0,
+   "net_ratio": 0.21880911460065514,
+   "dominant": true,
+   "avg_vol5": 3991073.6,
+   "avg_vol20": 3376500.8,
+   "vol_ratio": 1.1820147058753845,
+   "volume_up": null,
+   "pe": 20.34,
+   "qfii_ratio": 45.97,
+   "qfii_chg5": 0.240000000000002,
+   "margin_balance": 2231.0,
+   "margin_chg5": 78.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 24.99
+     },
+     {
+      "month": "2026-08",
+      "yoy": 26.33
+     },
+     {
+      "month": "2026-07",
+      "yoy": 26.79
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +25.0%、08月 +26.3%、07月 +26.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2912",
+   "name": "統一超",
+   "market": "上市",
+   "industry": "貿易百貨",
+   "rank": 10,
+   "close": 226.0,
+   "chg5": 0.008928571428571397,
+   "net_amt": 2532053812.0,
+   "foreign_amt": 2491671326.5,
+   "trust_amt": 36231519.0,
+   "dealer_amt": 4150966.5,
+   "foreign_sh": 11017562.0,
+   "trust_sh": 156597.0,
+   "net_sh": 11192895.0,
+   "value5": 3642357916.0,
+   "net_ratio": 0.6951688632457832,
+   "dominant": true,
+   "avg_vol5": 3234916.4,
+   "avg_vol20": 2524924.4,
+   "vol_ratio": 1.2811933695915807,
+   "volume_up": null,
+   "pe": 20.36,
+   "qfii_ratio": 16.48,
+   "qfii_chg5": 1.1400000000000006,
+   "margin_balance": 862.0,
+   "margin_chg5": -58.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 7.81
+     },
+     {
+      "month": "2026-08",
+      "yoy": 4.81
+     },
+     {
+      "month": "2026-07",
+      "yoy": 8.47
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +7.8%、08月 +4.8%、07月 +8.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "8996",
+   "name": "高力",
+   "market": "上市",
+   "industry": "電機機械",
+   "rank": 11,
+   "close": 1560.0,
+   "chg5": 0.026315789473684292,
+   "net_amt": 2476571175.0,
+   "foreign_amt": 661511940.0,
+   "trust_amt": 2026877190.0,
+   "dealer_amt": -211817955.0,
+   "foreign_sh": 417934.0,
+   "trust_sh": 1283982.0,
+   "net_sh": 1564426.0,
+   "value5": 41695077425.0,
+   "net_ratio": 0.05939720772685434,
+   "dominant": false,
+   "avg_vol5": 5178541.0,
+   "avg_vol20": 4111038.4,
+   "vol_ratio": 1.2596673871983293,
+   "volume_up": null,
+   "pe": 105.05,
+   "qfii_ratio": 23.73,
+   "qfii_chg5": 0.7600000000000016,
+   "margin_balance": 7800.0,
+   "margin_chg5": -919.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片",
+     "散熱"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 153.77
+     },
+     {
+      "month": "2026-08",
+      "yoy": 112.83
+     },
+     {
+      "month": "2026-07",
+      "yoy": 57.63
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片、散熱；近3月營收年增皆正（09月 +153.8%、08月 +112.8%、07月 +57.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2412",
+   "name": "中華電",
+   "market": "上市",
+   "industry": "通信網路業",
+   "rank": 12,
+   "close": 158.0,
+   "chg5": 0.0360655737704918,
+   "net_amt": 2393632408.0,
+   "foreign_amt": 1177618917.5,
+   "trust_amt": 1226094686.5,
+   "dealer_amt": -10081196.0,
+   "foreign_sh": 7499331.0,
+   "trust_sh": 7943496.0,
+   "net_sh": 15374063.0,
+   "value5": 10191663765.0,
+   "net_ratio": 0.23486179128280926,
+   "dominant": true,
+   "avg_vol5": 13207913.2,
+   "avg_vol20": 10654642.75,
+   "vol_ratio": 1.239639236144262,
+   "volume_up": null,
+   "pe": 31.04,
+   "qfii_ratio": 18.86,
+   "qfii_chg5": 0.0799999999999983,
+   "margin_balance": 578.0,
+   "margin_chg5": 205.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 20.85
+     },
+     {
+      "month": "2026-08",
+      "yoy": 25.61
+     },
+     {
+      "month": "2026-07",
+      "yoy": 3.68
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +20.9%、08月 +25.6%、07月 +3.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6278",
+   "name": "台表科",
+   "market": "上市",
+   "industry": "光電業",
+   "rank": 13,
+   "close": 290.5,
+   "chg5": -0.041254125412541254,
+   "net_amt": 2283155914.0,
+   "foreign_amt": 1052312287.5,
+   "trust_amt": 1347229272.0,
+   "dealer_amt": -116385645.5,
+   "foreign_sh": 3702249.0,
+   "trust_sh": 4647994.0,
+   "net_sh": 7937750.0,
+   "value5": 36397217035.0,
+   "net_ratio": 0.06272885951155249,
+   "dominant": false,
+   "avg_vol5": 24310960.8,
+   "avg_vol20": 19874498.4,
+   "vol_ratio": 1.2232238676272706,
+   "volume_up": null,
+   "pe": 29.43,
+   "qfii_ratio": 29.74,
+   "qfii_chg5": 1.1799999999999997,
+   "margin_balance": 7283.0,
+   "margin_chg5": -3098.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 15.93
+     },
+     {
+      "month": "2026-08",
+      "yoy": 10.86
+     },
+     {
+      "month": "2026-07",
+      "yoy": 12.18
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +15.9%、08月 +10.9%、07月 +12.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2377",
+   "name": "微星",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 14,
+   "close": 163.0,
+   "chg5": 0.03164556962025311,
+   "net_amt": 2174987550.5,
+   "foreign_amt": 2016951909.0,
+   "trust_amt": -24895096.0,
+   "dealer_amt": 182930737.5,
+   "foreign_sh": 12385148.0,
+   "trust_sh": -164608.0,
+   "net_sh": 13337940.0,
+   "value5": 7508772992.0,
+   "net_ratio": 0.2896595159844726,
+   "dominant": true,
+   "avg_vol5": 9196916.6,
+   "avg_vol20": 5966660.6,
+   "vol_ratio": 1.5413842376085545,
+   "volume_up": null,
+   "pe": 14.14,
+   "qfii_ratio": 22.1,
+   "qfii_chg5": 1.2800000000000011,
+   "margin_balance": 10389.0,
+   "margin_chg5": -647.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 1.83
+     },
+     {
+      "month": "2026-08",
+      "yoy": -6.05
+     },
+     {
+      "month": "2026-07",
+      "yoy": -0.01
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "主題對照表：AI伺服器／AI晶片"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2002",
+   "name": "中鋼",
+   "market": "上市",
+   "industry": "鋼鐵工業",
+   "rank": 15,
+   "close": 19.55,
+   "chg5": 0.01558441558441559,
+   "net_amt": 2174560716.6000004,
+   "foreign_amt": 1926455092.0,
+   "trust_amt": 288590926.8,
+   "dealer_amt": -40485302.2,
+   "foreign_sh": 98514129.0,
+   "trust_sh": 14726208.0,
+   "net_sh": 111172361.0,
+   "value5": 4702540009.0,
+   "net_ratio": 0.4624225870355589,
+   "dominant": true,
+   "avg_vol5": 48190296.0,
+   "avg_vol20": 41588836.4,
+   "vol_ratio": 1.158731529213931,
+   "volume_up": null,
+   "pe": null,
+   "qfii_ratio": 16.31,
+   "qfii_chg5": 0.4999999999999982,
+   "margin_balance": 38126.0,
+   "margin_chg5": -1702.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 27.13
+     },
+     {
+      "month": "2026-08",
+      "yoy": 12.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 21.84
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +27.1%、08月 +13.0%、07月 +21.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2344",
+   "name": "華邦電",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 16,
+   "close": 154.5,
+   "chg5": -0.003225806451612856,
+   "net_amt": 2167559712.5,
+   "foreign_amt": 1932219967.0,
+   "trust_amt": -798599527.5,
+   "dealer_amt": 1033939273.0,
+   "foreign_sh": 11649726.0,
+   "trust_sh": -5111975.0,
+   "net_sh": 13114855.0,
+   "value5": 37847540635.0,
+   "net_ratio": 0.05727082066979859,
+   "dominant": false,
+   "avg_vol5": 48195126.0,
+   "avg_vol20": 66024417.45,
+   "vol_ratio": 0.7299591251448444,
+   "volume_up": null,
+   "pe": 17.03,
+   "qfii_ratio": 19.64,
+   "qfii_chg5": 0.19000000000000128,
+   "margin_balance": 109781.0,
+   "margin_chg5": -2831.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 256.66
+     },
+     {
+      "month": "2026-08",
+      "yoy": 289.42
+     },
+     {
+      "month": "2026-07",
+      "yoy": 291.54
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +256.7%、08月 +289.4%、07月 +291.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3374",
+   "name": "精材",
+   "market": "上櫃",
+   "industry": "半導體業",
+   "rank": 17,
+   "close": 463.5,
+   "chg5": 0.024309392265193353,
+   "net_amt": 2117506590.5,
+   "foreign_amt": 3026065219.5,
+   "trust_amt": -684190932.0,
+   "dealer_amt": -224367697.0,
+   "foreign_sh": 6518205.0,
+   "trust_sh": -1569364.0,
+   "net_sh": 4443343.0,
+   "value5": 24390983060.0,
+   "net_ratio": 0.08681513923777044,
+   "dominant": false,
+   "avg_vol5": 13314554.25,
+   "avg_vol20": 10114333.555555556,
+   "vol_ratio": 1.3164045042479977,
+   "volume_up": null,
+   "pe": 72.76,
+   "qfii_ratio": 21.76,
+   "qfii_chg5": 2.400000000000002,
+   "margin_balance": 25353.0,
+   "margin_chg5": -475.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "先進製程與先進封裝"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 21.33
+     },
+     {
+      "month": "2026-08",
+      "yoy": 36.74
+     },
+     {
+      "month": "2026-07",
+      "yoy": 30.96
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：先進製程與先進封裝；近3月營收年增皆正（09月 +21.3%、08月 +36.7%、07月 +31.0%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2886",
+   "name": "兆豐金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 18,
+   "close": 55.2,
+   "chg5": 0.05142857142857138,
+   "net_amt": 1907067184.0,
+   "foreign_amt": 1439235735.7,
+   "trust_amt": -306435642.5,
+   "dealer_amt": 774267090.8,
+   "foreign_sh": 26600003.0,
+   "trust_sh": -5687643.0,
+   "net_sh": 35236154.0,
+   "value5": 5642973564.0,
+   "net_ratio": 0.33795430057768744,
+   "dominant": true,
+   "avg_vol5": 20988116.0,
+   "avg_vol20": 21783669.9,
+   "vol_ratio": 0.9634793446810357,
+   "volume_up": null,
+   "pe": 21.48,
+   "qfii_ratio": 21.71,
+   "qfii_chg5": 0.15000000000000213,
+   "margin_balance": 1864.0,
+   "margin_chg5": -483.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 16.45
+     },
+     {
+      "month": "2026-08",
+      "yoy": 15.55
+     },
+     {
+      "month": "2026-07",
+      "yoy": 4.11
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +16.4%、08月 +15.6%、07月 +4.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2891",
+   "name": "中信金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 19,
+   "close": 74.9,
+   "chg5": 0.027434842249657088,
+   "net_amt": 1809902536.1000001,
+   "foreign_amt": 1663627284.1999998,
+   "trust_amt": -800486139.2,
+   "dealer_amt": 946761391.1,
+   "foreign_sh": 22017420.0,
+   "trust_sh": -10900113.0,
+   "net_sh": 23972824.0,
+   "value5": 14302033168.0,
+   "net_ratio": 0.12654861828663325,
+   "dominant": true,
+   "avg_vol5": 38738422.8,
+   "avg_vol20": 32750381.85,
+   "vol_ratio": 1.1828388132213485,
+   "volume_up": null,
+   "pe": 17.92,
+   "qfii_ratio": 35.18,
+   "qfii_chg5": 0.10999999999999943,
+   "margin_balance": 2121.0,
+   "margin_chg5": -183.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 12.81
+     },
+     {
+      "month": "2026-08",
+      "yoy": -32.01
+     },
+     {
+      "month": "2026-07",
+      "yoy": -18.42
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3045",
+   "name": "台灣大",
+   "market": "上市",
+   "industry": "通信網路業",
+   "rank": 20,
+   "close": 133.0,
+   "chg5": 0.01526717557251911,
+   "net_amt": 1741521839.0,
+   "foreign_amt": 1895752970.0,
+   "trust_amt": -86926408.0,
+   "dealer_amt": -67304723.0,
+   "foreign_sh": 14439175.0,
+   "trust_sh": -641256.0,
+   "net_sh": 13280748.0,
+   "value5": 6518825195.0,
+   "net_ratio": 0.2671527133962364,
+   "dominant": true,
+   "avg_vol5": 9960578.4,
+   "avg_vol20": 8126711.6,
+   "vol_ratio": 1.2256591460683803,
+   "volume_up": null,
+   "pe": 25.14,
+   "qfii_ratio": 19.82,
+   "qfii_chg5": 0.35999999999999943,
+   "margin_balance": 57.0,
+   "margin_chg5": -59.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 10.34
+     },
+     {
+      "month": "2026-08",
+      "yoy": 8.49
+     },
+     {
+      "month": "2026-07",
+      "yoy": 7.14
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +10.3%、08月 +8.5%、07月 +7.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6147",
+   "name": "頎邦",
+   "market": "上櫃",
+   "industry": "半導體業",
+   "rank": 21,
+   "close": 203.0,
+   "chg5": -0.053613053613053574,
+   "net_amt": 1664799863.0,
+   "foreign_amt": 906980834.5,
+   "trust_amt": 840115824.0,
+   "dealer_amt": -82296795.5,
+   "foreign_sh": 4226167.0,
+   "trust_sh": 4058778.0,
+   "net_sh": 7874207.0,
+   "value5": 16886353170.0,
+   "net_ratio": 0.09858847829605118,
+   "dominant": false,
+   "avg_vol5": 20344505.75,
+   "avg_vol20": 33007189.055555556,
+   "vol_ratio": 0.6163658988275993,
+   "volume_up": null,
+   "pe": 49.03,
+   "qfii_ratio": 34.69,
+   "qfii_chg5": 0.769999999999996,
+   "margin_balance": 36022.0,
+   "margin_chg5": -4408.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 27.94
+     },
+     {
+      "month": "2026-08",
+      "yoy": 43.61
+     },
+     {
+      "month": "2026-07",
+      "yoy": 39.17
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +27.9%、08月 +43.6%、07月 +39.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2885",
+   "name": "元大金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 22,
+   "close": 72.4,
+   "chg5": -0.004126547455295726,
+   "net_amt": 1621721761.1999998,
+   "foreign_amt": 1633064019.4,
+   "trust_amt": -634338826.0,
+   "dealer_amt": 622996567.8,
+   "foreign_sh": 22570071.0,
+   "trust_sh": -8859200.0,
+   "net_sh": 22398377.0,
+   "value5": 8331255074.0,
+   "net_ratio": 0.1946551566115211,
+   "dominant": true,
+   "avg_vol5": 23232769.0,
+   "avg_vol20": 23272376.6,
+   "vol_ratio": 0.9982980852931023,
+   "volume_up": null,
+   "pe": 16.96,
+   "qfii_ratio": 27.42,
+   "qfii_chg5": 0.14000000000000057,
+   "margin_balance": 1080.0,
+   "margin_chg5": -52.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 67.25
+     },
+     {
+      "month": "2026-08",
+      "yoy": 57.94
+     },
+     {
+      "month": "2026-07",
+      "yoy": 78.98
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +67.2%、08月 +57.9%、07月 +79.0%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2884",
+   "name": "玉山金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 23,
+   "close": 49.75,
+   "chg5": 0.01946721311475419,
+   "net_amt": 1613126218.5,
+   "foreign_amt": 582692686.65,
+   "trust_amt": 378438229.75,
+   "dealer_amt": 651995302.1,
+   "foreign_sh": 11671070.0,
+   "trust_sh": 7705741.0,
+   "net_sh": 32622731.0,
+   "value5": 7950999064.0,
+   "net_ratio": 0.2028834622561842,
+   "dominant": true,
+   "avg_vol5": 32307093.0,
+   "avg_vol20": 27168493.95,
+   "vol_ratio": 1.1891381634718843,
+   "volume_up": null,
+   "pe": 20.64,
+   "qfii_ratio": 30.47,
+   "qfii_chg5": 0.08999999999999986,
+   "margin_balance": 5383.0,
+   "margin_chg5": -303.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 7.18
+     },
+     {
+      "month": "2026-08",
+      "yoy": 19.28
+     },
+     {
+      "month": "2026-07",
+      "yoy": 4.74
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +7.2%、08月 +19.3%、07月 +4.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2324",
+   "name": "仁寶",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 24,
+   "close": 37.3,
+   "chg5": 0.03611111111111098,
+   "net_amt": 1605157224.1,
+   "foreign_amt": 1574486907.1500003,
+   "trust_amt": -148557588.79999998,
+   "dealer_amt": 179227905.75,
+   "foreign_sh": 42341553.0,
+   "trust_sh": -4014505.0,
+   "net_sh": 43188963.0,
+   "value5": 7422255098.0,
+   "net_ratio": 0.21626273994982,
+   "dominant": true,
+   "avg_vol5": 39865569.8,
+   "avg_vol20": 34655908.2,
+   "vol_ratio": 1.1503253520275656,
+   "volume_up": null,
+   "pe": 18.74,
+   "qfii_ratio": 33.59,
+   "qfii_chg5": 0.6900000000000048,
+   "margin_balance": 58880.0,
+   "margin_chg5": -1773.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 35.44
+     },
+     {
+      "month": "2026-08",
+      "yoy": 14.5
+     },
+     {
+      "month": "2026-07",
+      "yoy": 38.25
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +35.4%、08月 +14.5%、07月 +38.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "1216",
+   "name": "統一",
+   "market": "上市",
+   "industry": "食品工業",
+   "rank": 25,
+   "close": 79.6,
+   "chg5": 0.0012578616352201255,
+   "net_amt": 1601681546.2999997,
+   "foreign_amt": 1698295093.9,
+   "trust_amt": -562347510.4000001,
+   "dealer_amt": 465733962.8000001,
+   "foreign_sh": 21456576.0,
+   "trust_sh": -7144751.0,
+   "net_sh": 20185528.0,
+   "value5": 5056684890.0,
+   "net_ratio": 0.3167453739242193,
+   "dominant": true,
+   "avg_vol5": 12814141.0,
+   "avg_vol20": 12592338.7,
+   "vol_ratio": 1.0176140671946825,
+   "volume_up": null,
+   "pe": 19.23,
+   "qfii_ratio": 35.2,
+   "qfii_chg5": 0.29000000000000625,
+   "margin_balance": 360.0,
+   "margin_chg5": -28.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 5.8
+     },
+     {
+      "month": "2026-08",
+      "yoy": 3.79
+     },
+     {
+      "month": "2026-07",
+      "yoy": 8.84
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +5.8%、08月 +3.8%、07月 +8.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "7769",
+   "name": "鴻勁",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 26,
+   "close": 5275.0,
+   "chg5": 0.009569377990430672,
+   "net_amt": 1460097475.0,
+   "foreign_amt": -290239605.0,
+   "trust_amt": 1482551845.0,
+   "dealer_amt": 267785235.0,
+   "foreign_sh": -54779.0,
+   "trust_sh": 275450.0,
+   "net_sh": 271354.0,
+   "value5": 17964692605.0,
+   "net_ratio": 0.08127595095023336,
+   "dominant": false,
+   "avg_vol5": 678516.0,
+   "avg_vol20": 851671.7,
+   "vol_ratio": 0.7966872681104703,
+   "volume_up": null,
+   "pe": 54.46,
+   "qfii_ratio": 19.69,
+   "qfii_chg5": -0.129999999999999,
+   "margin_balance": 653.0,
+   "margin_chg5": -63.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 100.21
+     },
+     {
+      "month": "2026-08",
+      "yoy": 91.58
+     },
+     {
+      "month": "2026-07",
+      "yoy": 100.82
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +100.2%、08月 +91.6%、07月 +100.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "1101",
+   "name": "台泥",
+   "market": "上市",
+   "industry": "水泥工業",
+   "rank": 27,
+   "close": 27.95,
+   "chg5": 0.042910447761193904,
+   "net_amt": 1444071193.15,
+   "foreign_amt": 1072855751.75,
+   "trust_amt": 280998055.6,
+   "dealer_amt": 90217385.8,
+   "foreign_sh": 38712194.0,
+   "trust_sh": 10327767.0,
+   "net_sh": 52264785.0,
+   "value5": 6953738053.0,
+   "net_ratio": 0.20766833351264866,
+   "dominant": true,
+   "avg_vol5": 50733344.6,
+   "avg_vol20": 54852143.35,
+   "vol_ratio": 0.9249108877347088,
+   "volume_up": null,
+   "pe": null,
+   "qfii_ratio": 13.62,
+   "qfii_chg5": 0.33999999999999986,
+   "margin_balance": 35698.0,
+   "margin_chg5": -3468.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 7.62
+     },
+     {
+      "month": "2026-08",
+      "yoy": 10.64
+     },
+     {
+      "month": "2026-07",
+      "yoy": 1.53
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +7.6%、08月 +10.6%、07月 +1.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2882",
+   "name": "國泰金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 28,
+   "close": 113.5,
+   "chg5": 0.0,
+   "net_amt": 1355712151.5,
+   "foreign_amt": 1087334002.0,
+   "trust_amt": 108064190.5,
+   "dealer_amt": 160313959.0,
+   "foreign_sh": 9159005.0,
+   "trust_sh": 948478.0,
+   "net_sh": 11515105.0,
+   "value5": 14282052848.0,
+   "net_ratio": 0.09492417973301705,
+   "dominant": false,
+   "avg_vol5": 25125147.0,
+   "avg_vol20": 19990376.9,
+   "vol_ratio": 1.2568620954815515,
+   "volume_up": null,
+   "pe": 13.38,
+   "qfii_ratio": 23.25,
+   "qfii_chg5": 0.05000000000000071,
+   "margin_balance": 4817.0,
+   "margin_chg5": 469.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": -47.38
+     },
+     {
+      "month": "2026-08",
+      "yoy": -69.46
+     },
+     {
+      "month": "2026-07",
+      "yoy": -69.7
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "8299",
+   "name": "群聯",
+   "market": "上櫃",
+   "industry": "半導體業",
+   "rank": 29,
+   "close": 1880.0,
+   "chg5": 0.02732240437158473,
+   "net_amt": 1346504605.0,
+   "foreign_amt": 1378294735.0,
+   "trust_amt": -30892250.0,
+   "dealer_amt": -897880.0,
+   "foreign_sh": 710337.0,
+   "trust_sh": -14566.0,
+   "net_sh": 690684.0,
+   "value5": 14963004525.0,
+   "net_ratio": 0.08998891918733815,
+   "dominant": false,
+   "avg_vol5": 1996703.25,
+   "avg_vol20": 2777336.277777778,
+   "vol_ratio": 0.7189274363267297,
+   "volume_up": null,
+   "pe": 8.62,
+   "qfii_ratio": 44.44,
+   "qfii_chg5": 0.8499999999999943,
+   "margin_balance": 10262.0,
+   "margin_chg5": -287.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 370.26
+     },
+     {
+      "month": "2026-08",
+      "yoy": 376.51
+     },
+     {
+      "month": "2026-07",
+      "yoy": 377.55
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +370.3%、08月 +376.5%、07月 +377.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2376",
+   "name": "技嘉",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 30,
+   "close": 349.0,
+   "chg5": 0.0057636887608070175,
+   "net_amt": 1336774130.5,
+   "foreign_amt": 828918835.5,
+   "trust_amt": 207619286.0,
+   "dealer_amt": 300236009.0,
+   "foreign_sh": 2319401.0,
+   "trust_sh": 577996.0,
+   "net_sh": 3743623.0,
+   "value5": 6682051605.0,
+   "net_ratio": 0.20005444577825884,
+   "dominant": true,
+   "avg_vol5": 3760344.4,
+   "avg_vol20": 5776445.45,
+   "vol_ratio": 0.6509789510779505,
+   "volume_up": null,
+   "pe": 13.06,
+   "qfii_ratio": 22.9,
+   "qfii_chg5": 0.04999999999999716,
+   "margin_balance": 6472.0,
+   "margin_chg5": -550.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 125.44
+     },
+     {
+      "month": "2026-08",
+      "yoy": 98.42
+     },
+     {
+      "month": "2026-07",
+      "yoy": 59.67
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +125.4%、08月 +98.4%、07月 +59.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6173",
+   "name": "信昌電",
+   "market": "上櫃",
+   "industry": "電子零組件業",
+   "rank": 31,
+   "close": 293.5,
+   "chg5": null,
+   "net_amt": 1265521594.5,
+   "foreign_amt": 983889703.0,
+   "trust_amt": 205456000.0,
+   "dealer_amt": 76175891.5,
+   "foreign_sh": 3406069.0,
+   "trust_sh": 706000.0,
+   "net_sh": 4346460.0,
+   "value5": 15665063485.0,
+   "net_ratio": 0.08078624103322617,
+   "dominant": false,
+   "avg_vol5": 13628504.5,
+   "avg_vol20": null,
+   "vol_ratio": null,
+   "volume_up": null,
+   "pe": 52.04,
+   "qfii_ratio": 12.85,
+   "qfii_chg5": -1.540000000000001,
+   "margin_balance": 5063.0,
+   "margin_chg5": -2035.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 54.76
+     },
+     {
+      "month": "2026-08",
+      "yoy": 54.26
+     },
+     {
+      "month": "2026-07",
+      "yoy": 47.86
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +54.8%、08月 +54.3%、07月 +47.9%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3167",
+   "name": "大量",
+   "market": "上市",
+   "industry": "電機機械",
+   "rank": 32,
+   "close": 924.0,
+   "chg5": -0.03749999999999998,
+   "net_amt": 1244658578.0,
+   "foreign_amt": 249565569.0,
+   "trust_amt": 903398000.0,
+   "dealer_amt": 91695009.0,
+   "foreign_sh": 178244.0,
+   "trust_sh": 868000.0,
+   "net_sh": 1141730.0,
+   "value5": 18741900851.0,
+   "net_ratio": 0.06641047713864037,
+   "dominant": false,
+   "avg_vol5": 3727040.6,
+   "avg_vol20": 4479284.0,
+   "vol_ratio": 0.8320616866445619,
+   "volume_up": null,
+   "pe": 64.8,
+   "qfii_ratio": 11.48,
+   "qfii_chg5": -0.16999999999999993,
+   "margin_balance": 7319.0,
+   "margin_chg5": -1047.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 172.33
+     },
+     {
+      "month": "2026-08",
+      "yoy": 152.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 152.87
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +172.3%、08月 +153.0%、07月 +152.9%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2356",
+   "name": "英業達",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 33,
+   "close": 60.5,
+   "chg5": 0.0503472222222221,
+   "net_amt": 1200899250.7,
+   "foreign_amt": 1193576996.0,
+   "trust_amt": -244227549.7,
+   "dealer_amt": 251549804.39999998,
+   "foreign_sh": 19824512.0,
+   "trust_sh": -4051347.0,
+   "net_sh": 19978131.0,
+   "value5": 5597848864.0,
+   "net_ratio": 0.21452870198462007,
+   "dominant": true,
+   "avg_vol5": 18685465.6,
+   "avg_vol20": 13412131.05,
+   "vol_ratio": 1.3931764855518616,
+   "volume_up": null,
+   "pe": 19.52,
+   "qfii_ratio": 18.91,
+   "qfii_chg5": 0.8200000000000003,
+   "margin_balance": 28232.0,
+   "margin_chg5": -1143.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 62.87
+     },
+     {
+      "month": "2026-08",
+      "yoy": 35.82
+     },
+     {
+      "month": "2026-07",
+      "yoy": 65.72
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +62.9%、08月 +35.8%、07月 +65.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2801",
+   "name": "彰銀",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 34,
+   "close": 29.9,
+   "chg5": 0.02572898799313883,
+   "net_amt": 1186121201.3999999,
+   "foreign_amt": 1070482673.6999999,
+   "trust_amt": 134942589.8,
+   "dealer_amt": -19304062.1,
+   "foreign_sh": 36130197.0,
+   "trust_sh": 4607882.0,
+   "net_sh": 40079598.0,
+   "value5": 2954772887.0,
+   "net_ratio": 0.40142550604093175,
+   "dominant": true,
+   "avg_vol5": 20077943.4,
+   "avg_vol20": 19052727.85,
+   "vol_ratio": 1.05380938404576,
+   "volume_up": null,
+   "pe": 17.59,
+   "qfii_ratio": 17.0,
+   "qfii_chg5": 0.28999999999999915,
+   "margin_balance": 6774.0,
+   "margin_chg5": -1226.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 12.75
+     },
+     {
+      "month": "2026-08",
+      "yoy": 21.13
+     },
+     {
+      "month": "2026-07",
+      "yoy": 7.11
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +12.8%、08月 +21.1%、07月 +7.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "5880",
+   "name": "合庫金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 35,
+   "close": 28.2,
+   "chg5": 0.025454545454545396,
+   "net_amt": 1181123637.0500002,
+   "foreign_amt": 886976032.55,
+   "trust_amt": 252540277.35000002,
+   "dealer_amt": 41607327.15,
+   "foreign_sh": 31439103.0,
+   "trust_sh": 9006619.0,
+   "net_sh": 41925475.0,
+   "value5": 2736432413.0,
+   "net_ratio": 0.4316290186590478,
+   "dominant": true,
+   "avg_vol5": 19582899.6,
+   "avg_vol20": 17766642.95,
+   "vol_ratio": 1.1022284657327457,
+   "volume_up": null,
+   "pe": 18.43,
+   "qfii_ratio": 17.85,
+   "qfii_chg5": 0.17999999999999972,
+   "margin_balance": 1296.0,
+   "margin_chg5": -55.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": -3.74
+     },
+     {
+      "month": "2026-08",
+      "yoy": 23.6
+     },
+     {
+      "month": "2026-07",
+      "yoy": 20.43
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3529",
+   "name": "力旺",
+   "market": "上櫃",
+   "industry": "半導體業",
+   "rank": 36,
+   "close": 2485.0,
+   "chg5": -0.064030131826742,
+   "net_amt": 1159036335.0,
+   "foreign_amt": 1460197140.0,
+   "trust_amt": -187596285.0,
+   "dealer_amt": -113564520.0,
+   "foreign_sh": 563326.0,
+   "trust_sh": -79763.0,
+   "net_sh": 439162.0,
+   "value5": 9099266050.0,
+   "net_ratio": 0.12737690365697132,
+   "dominant": true,
+   "avg_vol5": 859570.25,
+   "avg_vol20": 1194871.3333333333,
+   "vol_ratio": 0.7193831051265214,
+   "volume_up": null,
+   "pe": 83.36,
+   "qfii_ratio": 58.94,
+   "qfii_chg5": 0.519999999999996,
+   "margin_balance": 1845.0,
+   "margin_chg5": -53.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "先進製程與先進封裝"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 13.47
+     },
+     {
+      "month": "2026-08",
+      "yoy": 42.77
+     },
+     {
+      "month": "2026-07",
+      "yoy": 23.76
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：先進製程與先進封裝；近3月營收年增皆正（09月 +13.5%、08月 +42.8%、07月 +23.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2027",
+   "name": "大成鋼",
+   "market": "上市",
+   "industry": "鋼鐵工業",
+   "rank": 37,
+   "close": 50.6,
+   "chg5": 0.026369168356997985,
+   "net_amt": 1150241840.0,
+   "foreign_amt": 908787310.3999999,
+   "trust_amt": 165891637.7,
+   "dealer_amt": 75562891.9,
+   "foreign_sh": 17951401.0,
+   "trust_sh": 3231246.0,
+   "net_sh": 22663326.0,
+   "value5": 2796421715.0,
+   "net_ratio": 0.4113263152800256,
+   "dominant": true,
+   "avg_vol5": 11084224.0,
+   "avg_vol20": 10353730.05,
+   "vol_ratio": 1.0705536986643764,
+   "volume_up": null,
+   "pe": 9.98,
+   "qfii_ratio": 26.52,
+   "qfii_chg5": 0.6799999999999997,
+   "margin_balance": 20947.0,
+   "margin_chg5": -738.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 41.07
+     },
+     {
+      "month": "2026-08",
+      "yoy": 46.09
+     },
+     {
+      "month": "2026-07",
+      "yoy": 46.11
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +41.1%、08月 +46.1%、07月 +46.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3293",
+   "name": "鈊象",
+   "market": "上櫃",
+   "industry": "文化創意業",
+   "rank": 38,
+   "close": 787.0,
+   "chg5": -0.0295930949445129,
+   "net_amt": 1048831723.0,
+   "foreign_amt": 1026768750.0,
+   "trust_amt": 41316000.0,
+   "dealer_amt": -19253027.0,
+   "foreign_sh": 1307812.0,
+   "trust_sh": 54000.0,
+   "net_sh": 1336959.0,
+   "value5": 4590989149.0,
+   "net_ratio": 0.22845441123041085,
+   "dominant": true,
+   "avg_vol5": 1468352.25,
+   "avg_vol20": 2303031.0,
+   "vol_ratio": 0.6375738103395048,
+   "volume_up": null,
+   "pe": 18.18,
+   "qfii_ratio": 35.03,
+   "qfii_chg5": 1.1400000000000006,
+   "margin_balance": 1973.0,
+   "margin_chg5": -184.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 25.29
+     },
+     {
+      "month": "2026-08",
+      "yoy": 24.8
+     },
+     {
+      "month": "2026-07",
+      "yoy": 25.85
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +25.3%、08月 +24.8%、07月 +25.9%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2881",
+   "name": "富邦金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 39,
+   "close": 158.5,
+   "chg5": -0.006269592476489061,
+   "net_amt": 1008430209.5,
+   "foreign_amt": 1442890879.5,
+   "trust_amt": -671149592.5,
+   "dealer_amt": 236688922.5,
+   "foreign_sh": 8828391.0,
+   "trust_sh": -4194727.0,
+   "net_sh": 6112889.0,
+   "value5": 13419220694.0,
+   "net_ratio": 0.07514819470484521,
+   "dominant": false,
+   "avg_vol5": 16922463.0,
+   "avg_vol20": 16172200.15,
+   "vol_ratio": 1.0463921323654901,
+   "volume_up": null,
+   "pe": 14.81,
+   "qfii_ratio": 18.87,
+   "qfii_chg5": 0.05000000000000071,
+   "margin_balance": 5071.0,
+   "margin_chg5": 61.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": -63.8
+     },
+     {
+      "month": "2026-08",
+      "yoy": -48.01
+     },
+     {
+      "month": "2026-07",
+      "yoy": -79.15
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2887",
+   "name": "台新新光金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 40,
+   "close": 42.1,
+   "chg5": 0.012019230769230838,
+   "net_amt": 946323916.5500002,
+   "foreign_amt": 449017659.2500001,
+   "trust_amt": -98196880.94999999,
+   "dealer_amt": 595503138.25,
+   "foreign_sh": 10025606.0,
+   "trust_sh": -2356010.0,
+   "net_sh": 21873295.0,
+   "value5": 8985614599.0,
+   "net_ratio": 0.10531543570267476,
+   "dominant": true,
+   "avg_vol5": 42830186.8,
+   "avg_vol20": 46399958.45,
+   "vol_ratio": 0.9230651972706668,
+   "volume_up": null,
+   "pe": 15.59,
+   "qfii_ratio": 22.88,
+   "qfii_chg5": 0.03999999999999915,
+   "margin_balance": 42022.0,
+   "margin_chg5": -880.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": -18.58
+     },
+     {
+      "month": "2026-08",
+      "yoy": -44.54
+     },
+     {
+      "month": "2026-07",
+      "yoy": -15.63
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6456",
+   "name": "GIS-KY",
+   "market": "上市",
+   "industry": "光電業",
+   "rank": 41,
+   "close": 102.0,
+   "chg5": 0.1499436302142052,
+   "net_amt": 936336653.2,
+   "foreign_amt": 872918252.0000001,
+   "trust_amt": 0.0,
+   "dealer_amt": 63418401.20000001,
+   "foreign_sh": 8869089.0,
+   "trust_sh": 0.0,
+   "net_sh": 9488280.0,
+   "value5": 15030138872.0,
+   "net_ratio": 0.06229727224572247,
+   "dominant": false,
+   "avg_vol5": 30836134.8,
+   "avg_vol20": 28352822.3,
+   "vol_ratio": 1.0875860778064412,
+   "volume_up": null,
+   "pe": null,
+   "qfii_ratio": 51.36,
+   "qfii_chg5": 2.9299999999999997,
+   "margin_balance": 32000.0,
+   "margin_chg5": 1159.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 30.83
+     },
+     {
+      "month": "2026-08",
+      "yoy": -29.98
+     },
+     {
+      "month": "2026-07",
+      "yoy": -24.67
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2609",
+   "name": "陽明",
+   "market": "上市",
+   "industry": "航運業",
+   "rank": 42,
+   "close": 61.9,
+   "chg5": -0.02211690363349128,
+   "net_amt": 922154986.5,
+   "foreign_amt": 899644494.0,
+   "trust_amt": 91004451.0,
+   "dealer_amt": -68493958.5,
+   "foreign_sh": 14030791.0,
+   "trust_sh": 1341205.0,
+   "net_sh": 14273846.0,
+   "value5": 6517036760.0,
+   "net_ratio": 0.14149912306156764,
+   "dominant": true,
+   "avg_vol5": 20528523.0,
+   "avg_vol20": 27248726.9,
+   "vol_ratio": 0.7533754907279724,
+   "volume_up": null,
+   "pe": 13.94,
+   "qfii_ratio": 28.37,
+   "qfii_chg5": 0.39000000000000057,
+   "margin_balance": 25236.0,
+   "margin_chg5": -3639.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 69.93
+     },
+     {
+      "month": "2026-08",
+      "yoy": 56.17
+     },
+     {
+      "month": "2026-07",
+      "yoy": 34.56
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +69.9%、08月 +56.2%、07月 +34.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "1802",
+   "name": "台玻",
+   "market": "上市",
+   "industry": "玻璃陶瓷",
+   "rank": 43,
+   "close": 67.1,
+   "chg5": 0.070175438596491,
+   "net_amt": 911840887.3999999,
+   "foreign_amt": 700675509.6000001,
+   "trust_amt": 232613966.19999996,
+   "dealer_amt": -21448588.399999976,
+   "foreign_sh": 9946488.0,
+   "trust_sh": 3468363.0,
+   "net_sh": 13058166.0,
+   "value5": 66398059227.0,
+   "net_ratio": 0.01373294487844323,
+   "dominant": false,
+   "avg_vol5": 194891813.8,
+   "avg_vol20": 90622431.75,
+   "vol_ratio": 2.1505913054468437,
+   "volume_up": null,
+   "pe": 78.02,
+   "qfii_ratio": 7.16,
+   "qfii_chg5": 0.4500000000000002,
+   "margin_balance": 44832.0,
+   "margin_chg5": 1720.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 34.1
+     },
+     {
+      "month": "2026-08",
+      "yoy": 32.59
+     },
+     {
+      "month": "2026-07",
+      "yoy": 28.44
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +34.1%、08月 +32.6%、07月 +28.4%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2353",
+   "name": "宏碁",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 44,
+   "close": 32.45,
+   "chg5": 0.023659305993690927,
+   "net_amt": 902341120.6,
+   "foreign_amt": 892897254.85,
+   "trust_amt": -119962185.54999998,
+   "dealer_amt": 129406051.30000001,
+   "foreign_sh": 27576023.0,
+   "trust_sh": -3713514.0,
+   "net_sh": 27865457.0,
+   "value5": 2923928988.0,
+   "net_ratio": 0.3086056892295498,
+   "dominant": true,
+   "avg_vol5": 18046432.8,
+   "avg_vol20": 13654988.8,
+   "vol_ratio": 1.3215999708472848,
+   "volume_up": null,
+   "pe": 19.32,
+   "qfii_ratio": 14.39,
+   "qfii_chg5": 0.5099999999999998,
+   "margin_balance": 33303.0,
+   "margin_chg5": 572.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "機器人／自動化"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 17.63
+     },
+     {
+      "month": "2026-08",
+      "yoy": 38.41
+     },
+     {
+      "month": "2026-07",
+      "yoy": 21.93
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：機器人／自動化；近3月營收年增皆正（09月 +17.6%、08月 +38.4%、07月 +21.9%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6805",
+   "name": "富世達",
+   "market": "上市",
+   "industry": "電子零組件業",
+   "rank": 45,
+   "close": 2335.0,
+   "chg5": 0.10401891252955076,
+   "net_amt": 855885565.0,
+   "foreign_amt": -3670851535.0,
+   "trust_amt": 4581900950.0,
+   "dealer_amt": -55163850.0,
+   "foreign_sh": -1591866.0,
+   "trust_sh": 1978030.0,
+   "net_sh": 363526.0,
+   "value5": 20537083295.0,
+   "net_ratio": 0.04167512750987262,
+   "dominant": false,
+   "avg_vol5": 1761053.0,
+   "avg_vol20": 1688636.2,
+   "vol_ratio": 1.042884784774838,
+   "volume_up": null,
+   "pe": 49.95,
+   "qfii_ratio": 17.39,
+   "qfii_chg5": -2.3200000000000003,
+   "margin_balance": 2355.0,
+   "margin_chg5": -121.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 32.17
+     },
+     {
+      "month": "2026-08",
+      "yoy": 29.13
+     },
+     {
+      "month": "2026-07",
+      "yoy": 17.06
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +32.2%、08月 +29.1%、07月 +17.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "5876",
+   "name": "上海商銀",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 46,
+   "close": 54.6,
+   "chg5": 0.022471910112359605,
+   "net_amt": 852028790.1999999,
+   "foreign_amt": 612453738.4,
+   "trust_amt": 20232231.800000012,
+   "dealer_amt": 219342820.0,
+   "foreign_sh": 11254850.0,
+   "trust_sh": 401414.0,
+   "net_sh": 15708964.0,
+   "value5": 2482352693.0,
+   "net_ratio": 0.34323438107833776,
+   "dominant": true,
+   "avg_vol5": 9195543.2,
+   "avg_vol20": 6984792.0,
+   "vol_ratio": 1.3165092389293767,
+   "volume_up": null,
+   "pe": 15.42,
+   "qfii_ratio": 56.44,
+   "qfii_chg5": 0.21999999999999886,
+   "margin_balance": 355.0,
+   "margin_chg5": -143.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 10.69
+     },
+     {
+      "month": "2026-08",
+      "yoy": 7.06
+     },
+     {
+      "month": "2026-07",
+      "yoy": 19.61
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +10.7%、08月 +7.1%、07月 +19.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3324",
+   "name": "雙鴻",
+   "market": "上櫃",
+   "industry": "其他電子業",
+   "rank": 47,
+   "close": 1360.0,
+   "chg5": -0.03546099290780147,
+   "net_amt": 804290025.0,
+   "foreign_amt": 1493116420.0,
+   "trust_amt": 38568340.0,
+   "dealer_amt": -727394735.0,
+   "foreign_sh": 1087604.0,
+   "trust_sh": 28343.0,
+   "net_sh": 587969.0,
+   "value5": 23972029535.0,
+   "net_ratio": 0.03355118613656422,
+   "dominant": false,
+   "avg_vol5": 4265973.25,
+   "avg_vol20": 3835839.722222222,
+   "vol_ratio": 1.112135427683769,
+   "volume_up": null,
+   "pe": 31.37,
+   "qfii_ratio": 40.26,
+   "qfii_chg5": 1.4199999999999946,
+   "margin_balance": 6167.0,
+   "margin_chg5": -1197.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片",
+     "散熱"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 23.22
+     },
+     {
+      "month": "2026-08",
+      "yoy": 67.17
+     },
+     {
+      "month": "2026-07",
+      "yoy": 116.69
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片、散熱；近3月營收年增皆正（09月 +23.2%、08月 +67.2%、07月 +116.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2892",
+   "name": "第一金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 48,
+   "close": 42.35,
+   "chg5": 0.018028846153846256,
+   "net_amt": 793652557.65,
+   "foreign_amt": 534145858.5,
+   "trust_amt": 186209648.70000002,
+   "dealer_amt": 73297050.44999999,
+   "foreign_sh": 12697201.0,
+   "trust_sh": 4542102.0,
+   "net_sh": 19004434.0,
+   "value5": 4092764002.0,
+   "net_ratio": 0.1939160326034357,
+   "dominant": true,
+   "avg_vol5": 19741940.4,
+   "avg_vol20": 19604788.5,
+   "vol_ratio": 1.006995836756923,
+   "volume_up": null,
+   "pe": 19.79,
+   "qfii_ratio": 26.93,
+   "qfii_chg5": 0.05000000000000071,
+   "margin_balance": 15317.0,
+   "margin_chg5": -154.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": -1.28
+     },
+     {
+      "month": "2026-08",
+      "yoy": 13.89
+     },
+     {
+      "month": "2026-07",
+      "yoy": 2.36
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2368",
+   "name": "金像電",
+   "market": "上市",
+   "industry": "電子零組件業",
+   "rank": 49,
+   "close": 1115.0,
+   "chg5": -0.06302521008403361,
+   "net_amt": 785181185.0,
+   "foreign_amt": -6617809800.0,
+   "trust_amt": 7099302705.0,
+   "dealer_amt": 303688280.0,
+   "foreign_sh": -5388211.0,
+   "trust_sh": 5800888.0,
+   "net_sh": 644917.0,
+   "value5": 69520664695.0,
+   "net_ratio": 0.01129421285663385,
+   "dominant": false,
+   "avg_vol5": 11360802.8,
+   "avg_vol20": 12174468.15,
+   "vol_ratio": 0.9331662508805364,
+   "volume_up": null,
+   "pe": 40.02,
+   "qfii_ratio": 19.93,
+   "qfii_chg5": -1.0300000000000011,
+   "margin_balance": 10646.0,
+   "margin_chg5": -1080.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 55.46
+     },
+     {
+      "month": "2026-08",
+      "yoy": 76.38
+     },
+     {
+      "month": "2026-07",
+      "yoy": 77.38
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +55.5%、08月 +76.4%、07月 +77.4%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2542",
+   "name": "興富發",
+   "market": "上市",
+   "industry": "建材營造",
+   "rank": 50,
+   "close": 40.0,
+   "chg5": 0.016518424396442244,
+   "net_amt": 782474235.6999999,
+   "foreign_amt": 841614924.4000001,
+   "trust_amt": -95817365.25,
+   "dealer_amt": 36676676.550000004,
+   "foreign_sh": 21056495.0,
+   "trust_sh": -2401735.0,
+   "net_sh": 19569743.0,
+   "value5": 1636321806.0,
+   "net_ratio": 0.4781909235890241,
+   "dominant": true,
+   "avg_vol5": 8159109.4,
+   "avg_vol20": 11926349.4,
+   "vol_ratio": 0.6841246324713579,
+   "volume_up": null,
+   "pe": 9.26,
+   "qfii_ratio": 9.22,
+   "qfii_chg5": 0.7000000000000011,
+   "margin_balance": 4615.0,
+   "margin_chg5": 462.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 103.72
+     },
+     {
+      "month": "2026-08",
+      "yoy": -20.87
+     },
+     {
+      "month": "2026-07",
+      "yoy": 196.58
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  }
+ ],
+ "compare": [
+  {
+   "code": "3231",
+   "name": "緯創",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 1,
+   "close": 190.0,
+   "chg5": 0.07954545454545459,
+   "net_amt": 13582565100.0,
+   "foreign_amt": 12344468498.5,
+   "trust_amt": 7240709.0,
+   "dealer_amt": 1230855892.5,
+   "foreign_sh": 64886427.0,
+   "trust_sh": -247641.0,
+   "net_sh": 71160884.0,
+   "value5": 48343960661.0,
+   "net_ratio": 0.280956812687408,
+   "dominant": true,
+   "avg_vol5": 50938793.2,
+   "avg_vol20": 42503948.8,
+   "vol_ratio": 1.1984484886260733,
+   "volume_up": null,
+   "pe": 15.09,
+   "qfii_ratio": 35.95,
+   "qfii_chg5": 1.8200000000000003,
+   "margin_balance": 43199.0,
+   "margin_chg5": -4450.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 87.18
+     },
+     {
+      "month": "2026-08",
+      "yoy": 166.48
+     },
+     {
+      "month": "2026-07",
+      "yoy": 60.76
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +87.2%、08月 +166.5%、07月 +60.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2317",
+   "name": "鴻海",
+   "market": "上市",
+   "industry": "其他電子業",
+   "rank": 2,
+   "close": 245.0,
+   "chg5": 0.022964509394572064,
+   "net_amt": 11091139714.5,
+   "foreign_amt": 10866780034.0,
+   "trust_amt": 408218282.5,
+   "dealer_amt": -183858602.0,
+   "foreign_sh": 43551893.0,
+   "trust_sh": 1689288.0,
+   "net_sh": 44568264.0,
+   "value5": 46601613810.0,
+   "net_ratio": 0.23799904783812464,
+   "dominant": true,
+   "avg_vol5": 38067471.0,
+   "avg_vol20": 41318130.1,
+   "vol_ratio": 0.9213260839216922,
+   "volume_up": null,
+   "pe": 16.15,
+   "qfii_ratio": 39.85,
+   "qfii_chg5": 0.28000000000000114,
+   "margin_balance": 57768.0,
+   "margin_chg5": -2824.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 38.41
+     },
+     {
+      "month": "2026-08",
+      "yoy": 51.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 54.18
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +38.4%、08月 +52.0%、07月 +54.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2382",
+   "name": "廣達",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 3,
+   "close": 322.0,
+   "chg5": 0.017377567140600236,
+   "net_amt": 3878143679.5,
+   "foreign_amt": 1855159661.0,
+   "trust_amt": 1259884774.5,
+   "dealer_amt": 763099244.0,
+   "foreign_sh": 5596562.0,
+   "trust_sh": 3902893.0,
+   "net_sh": 11886157.0,
+   "value5": 15244663439.0,
+   "net_ratio": 0.25439352564377726,
+   "dominant": true,
+   "avg_vol5": 9492372.6,
+   "avg_vol20": 11295102.8,
+   "vol_ratio": 0.8403971852296908,
+   "volume_up": null,
+   "pe": 14.03,
+   "qfii_ratio": 23.0,
+   "qfii_chg5": 0.120000000000001,
+   "margin_balance": 15199.0,
+   "margin_chg5": -801.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 76.68
+     },
+     {
+      "month": "2026-08",
+      "yoy": 177.45
+     },
+     {
+      "month": "2026-07",
+      "yoy": 131.31
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +76.7%、08月 +177.4%、07月 +131.3%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 4,
+   "close": 7585.0,
+   "chg5": -0.011082138200782299,
+   "net_amt": 3312581450.0,
+   "foreign_amt": 242446035.0,
+   "trust_amt": 4339300190.0,
+   "dealer_amt": -1269164775.0,
+   "foreign_sh": 36848.0,
+   "trust_sh": 555115.0,
+   "net_sh": 425950.0,
+   "value5": 68051641370.0,
+   "net_ratio": 0.04867746586727185,
+   "dominant": false,
+   "avg_vol5": 1737988.8,
+   "avg_vol20": 1398954.95,
+   "vol_ratio": 1.24234793979606,
+   "volume_up": null,
+   "pe": 194.44,
+   "qfii_ratio": 27.37,
+   "qfii_chg5": -0.05000000000000071,
+   "margin_balance": 4494.0,
+   "margin_chg5": -138.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 97.77
+     },
+     {
+      "month": "2026-08",
+      "yoy": 111.02
+     },
+     {
+      "month": "2026-07",
+      "yoy": 158.38
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +97.8%、08月 +111.0%、07月 +158.4%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2603",
+   "name": "長榮",
+   "market": "上市",
+   "industry": "航運業",
+   "rank": 5,
+   "close": 260.0,
+   "chg5": 0.011673151750972721,
+   "net_amt": 2837374940.5,
+   "foreign_amt": 1150745130.5,
+   "trust_amt": 1093925013.5,
+   "dealer_amt": 592704796.5,
+   "foreign_sh": 4404612.0,
+   "trust_sh": 4126973.0,
+   "net_sh": 10804604.0,
+   "value5": 14755001110.0,
+   "net_ratio": 0.1922992021042281,
+   "dominant": true,
+   "avg_vol5": 11262105.4,
+   "avg_vol20": 13062237.7,
+   "vol_ratio": 0.8621880613916558,
+   "volume_up": null,
+   "pe": 10.31,
+   "qfii_ratio": 27.12,
+   "qfii_chg5": 0.05000000000000071,
+   "margin_balance": 8295.0,
+   "margin_chg5": -553.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 63.74
+     },
+     {
+      "month": "2026-08",
+      "yoy": 48.63
+     },
+     {
+      "month": "2026-07",
+      "yoy": 43.07
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +63.7%、08月 +48.6%、07月 +43.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2379",
+   "name": "瑞昱",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 6,
+   "close": 772.0,
+   "chg5": 0.010471204188481575,
+   "net_amt": 2830389230.0,
+   "foreign_amt": 2038437332.0,
+   "trust_amt": 324685589.0,
+   "dealer_amt": 467266309.0,
+   "foreign_sh": 2598997.0,
+   "trust_sh": 420198.0,
+   "net_sh": 3617626.0,
+   "value5": 10764799815.0,
+   "net_ratio": 0.26293003851832425,
+   "dominant": true,
+   "avg_vol5": 2756101.0,
+   "avg_vol20": 2572346.4,
+   "vol_ratio": 1.0714346248234685,
+   "volume_up": null,
+   "pe": 27.99,
+   "qfii_ratio": 46.77,
+   "qfii_chg5": 0.39000000000000057,
+   "margin_balance": 2440.0,
+   "margin_chg5": -147.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 23.35
+     },
+     {
+      "month": "2026-08",
+      "yoy": 28.08
+     },
+     {
+      "month": "2026-07",
+      "yoy": 32.53
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +23.4%、08月 +28.1%、07月 +32.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6505",
+   "name": "台塑化",
+   "market": "上市",
+   "industry": "油電燃氣業",
+   "rank": 7,
+   "close": 106.5,
+   "chg5": -0.04484304932735428,
+   "net_amt": 2664911258.0,
+   "foreign_amt": 4102609241.5,
+   "trust_amt": -1546868032.0,
+   "dealer_amt": 109170048.5,
+   "foreign_sh": 37478215.0,
+   "trust_sh": -15176136.0,
+   "net_sh": 23224477.0,
+   "value5": 28992619359.0,
+   "net_ratio": 0.09191688494929824,
+   "dominant": false,
+   "avg_vol5": 50436530.4,
+   "avg_vol20": 43067496.85,
+   "vol_ratio": 1.1711042918436991,
+   "volume_up": null,
+   "pe": 18.49,
+   "qfii_ratio": 6.5,
+   "qfii_chg5": 0.3600000000000003,
+   "margin_balance": 9358.0,
+   "margin_chg5": -306.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 65.59
+     },
+     {
+      "month": "2026-08",
+      "yoy": 50.28
+     },
+     {
+      "month": "2026-07",
+      "yoy": 32.34
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +65.6%、08月 +50.3%、07月 +32.3%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "4938",
+   "name": "和碩",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 8,
+   "close": 103.5,
+   "chg5": 0.05504587155963314,
+   "net_amt": 2550808564.5,
+   "foreign_amt": 2743915840.5,
+   "trust_amt": -474435075.0,
+   "dealer_amt": 281327799.0,
+   "foreign_sh": 26514989.0,
+   "trust_sh": -4620333.0,
+   "net_sh": 24612929.0,
+   "value5": 10018558109.0,
+   "net_ratio": 0.2546083514960626,
+   "dominant": true,
+   "avg_vol5": 19159644.6,
+   "avg_vol20": 17623298.25,
+   "vol_ratio": 1.087177004452047,
+   "volume_up": null,
+   "pe": 17.45,
+   "qfii_ratio": 32.7,
+   "qfii_chg5": 0.7700000000000031,
+   "margin_balance": 4900.0,
+   "margin_chg5": -1139.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 86.87
+     },
+     {
+      "month": "2026-08",
+      "yoy": 34.11
+     },
+     {
+      "month": "2026-07",
+      "yoy": 11.55
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +86.9%、08月 +34.1%、07月 +11.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3034",
+   "name": "聯詠",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 9,
+   "close": 583.0,
+   "chg5": 0.031858407079645934,
+   "net_amt": 2535519795.0,
+   "foreign_amt": 2015343647.0,
+   "trust_amt": 182390694.0,
+   "dealer_amt": 337785454.0,
+   "foreign_sh": 3434652.0,
+   "trust_sh": 317457.0,
+   "net_sh": 4331931.0,
+   "value5": 11587816164.0,
+   "net_ratio": 0.21880911460065514,
+   "dominant": true,
+   "avg_vol5": 3991073.6,
+   "avg_vol20": 3376500.8,
+   "vol_ratio": 1.1820147058753845,
+   "volume_up": null,
+   "pe": 20.34,
+   "qfii_ratio": 45.97,
+   "qfii_chg5": 0.240000000000002,
+   "margin_balance": 2231.0,
+   "margin_chg5": 78.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 24.99
+     },
+     {
+      "month": "2026-08",
+      "yoy": 26.33
+     },
+     {
+      "month": "2026-07",
+      "yoy": 26.79
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +25.0%、08月 +26.3%、07月 +26.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2912",
+   "name": "統一超",
+   "market": "上市",
+   "industry": "貿易百貨",
+   "rank": 10,
+   "close": 226.0,
+   "chg5": 0.008928571428571397,
+   "net_amt": 2532053812.0,
+   "foreign_amt": 2491671326.5,
+   "trust_amt": 36231519.0,
+   "dealer_amt": 4150966.5,
+   "foreign_sh": 11017562.0,
+   "trust_sh": 156597.0,
+   "net_sh": 11192895.0,
+   "value5": 3642357916.0,
+   "net_ratio": 0.6951688632457832,
+   "dominant": true,
+   "avg_vol5": 3234916.4,
+   "avg_vol20": 2524924.4,
+   "vol_ratio": 1.2811933695915807,
+   "volume_up": null,
+   "pe": 20.36,
+   "qfii_ratio": 16.48,
+   "qfii_chg5": 1.1400000000000006,
+   "margin_balance": 862.0,
+   "margin_chg5": -58.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 7.81
+     },
+     {
+      "month": "2026-08",
+      "yoy": 4.81
+     },
+     {
+      "month": "2026-07",
+      "yoy": 8.47
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +7.8%、08月 +4.8%、07月 +8.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "8996",
+   "name": "高力",
+   "market": "上市",
+   "industry": "電機機械",
+   "rank": 11,
+   "close": 1560.0,
+   "chg5": 0.026315789473684292,
+   "net_amt": 2476571175.0,
+   "foreign_amt": 661511940.0,
+   "trust_amt": 2026877190.0,
+   "dealer_amt": -211817955.0,
+   "foreign_sh": 417934.0,
+   "trust_sh": 1283982.0,
+   "net_sh": 1564426.0,
+   "value5": 41695077425.0,
+   "net_ratio": 0.05939720772685434,
+   "dominant": false,
+   "avg_vol5": 5178541.0,
+   "avg_vol20": 4111038.4,
+   "vol_ratio": 1.2596673871983293,
+   "volume_up": null,
+   "pe": 105.05,
+   "qfii_ratio": 23.73,
+   "qfii_chg5": 0.7600000000000016,
+   "margin_balance": 7800.0,
+   "margin_chg5": -919.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片",
+     "散熱"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 153.77
+     },
+     {
+      "month": "2026-08",
+      "yoy": 112.83
+     },
+     {
+      "month": "2026-07",
+      "yoy": 57.63
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片、散熱；近3月營收年增皆正（09月 +153.8%、08月 +112.8%、07月 +57.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2412",
+   "name": "中華電",
+   "market": "上市",
+   "industry": "通信網路業",
+   "rank": 12,
+   "close": 158.0,
+   "chg5": 0.0360655737704918,
+   "net_amt": 2393632408.0,
+   "foreign_amt": 1177618917.5,
+   "trust_amt": 1226094686.5,
+   "dealer_amt": -10081196.0,
+   "foreign_sh": 7499331.0,
+   "trust_sh": 7943496.0,
+   "net_sh": 15374063.0,
+   "value5": 10191663765.0,
+   "net_ratio": 0.23486179128280926,
+   "dominant": true,
+   "avg_vol5": 13207913.2,
+   "avg_vol20": 10654642.75,
+   "vol_ratio": 1.239639236144262,
+   "volume_up": null,
+   "pe": 31.04,
+   "qfii_ratio": 18.86,
+   "qfii_chg5": 0.0799999999999983,
+   "margin_balance": 578.0,
+   "margin_chg5": 205.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 20.85
+     },
+     {
+      "month": "2026-08",
+      "yoy": 25.61
+     },
+     {
+      "month": "2026-07",
+      "yoy": 3.68
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +20.9%、08月 +25.6%、07月 +3.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6278",
+   "name": "台表科",
+   "market": "上市",
+   "industry": "光電業",
+   "rank": 13,
+   "close": 290.5,
+   "chg5": -0.041254125412541254,
+   "net_amt": 2283155914.0,
+   "foreign_amt": 1052312287.5,
+   "trust_amt": 1347229272.0,
+   "dealer_amt": -116385645.5,
+   "foreign_sh": 3702249.0,
+   "trust_sh": 4647994.0,
+   "net_sh": 7937750.0,
+   "value5": 36397217035.0,
+   "net_ratio": 0.06272885951155249,
+   "dominant": false,
+   "avg_vol5": 24310960.8,
+   "avg_vol20": 19874498.4,
+   "vol_ratio": 1.2232238676272706,
+   "volume_up": null,
+   "pe": 29.43,
+   "qfii_ratio": 29.74,
+   "qfii_chg5": 1.1799999999999997,
+   "margin_balance": 7283.0,
+   "margin_chg5": -3098.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 15.93
+     },
+     {
+      "month": "2026-08",
+      "yoy": 10.86
+     },
+     {
+      "month": "2026-07",
+      "yoy": 12.18
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +15.9%、08月 +10.9%、07月 +12.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2377",
+   "name": "微星",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 14,
+   "close": 163.0,
+   "chg5": 0.03164556962025311,
+   "net_amt": 2174987550.5,
+   "foreign_amt": 2016951909.0,
+   "trust_amt": -24895096.0,
+   "dealer_amt": 182930737.5,
+   "foreign_sh": 12385148.0,
+   "trust_sh": -164608.0,
+   "net_sh": 13337940.0,
+   "value5": 7508772992.0,
+   "net_ratio": 0.2896595159844726,
+   "dominant": true,
+   "avg_vol5": 9196916.6,
+   "avg_vol20": 5966660.6,
+   "vol_ratio": 1.5413842376085545,
+   "volume_up": null,
+   "pe": 14.14,
+   "qfii_ratio": 22.1,
+   "qfii_chg5": 1.2800000000000011,
+   "margin_balance": 10389.0,
+   "margin_chg5": -647.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 1.83
+     },
+     {
+      "month": "2026-08",
+      "yoy": -6.05
+     },
+     {
+      "month": "2026-07",
+      "yoy": -0.01
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "主題對照表：AI伺服器／AI晶片"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2002",
+   "name": "中鋼",
+   "market": "上市",
+   "industry": "鋼鐵工業",
+   "rank": 15,
+   "close": 19.55,
+   "chg5": 0.01558441558441559,
+   "net_amt": 2174560716.6000004,
+   "foreign_amt": 1926455092.0,
+   "trust_amt": 288590926.8,
+   "dealer_amt": -40485302.2,
+   "foreign_sh": 98514129.0,
+   "trust_sh": 14726208.0,
+   "net_sh": 111172361.0,
+   "value5": 4702540009.0,
+   "net_ratio": 0.4624225870355589,
+   "dominant": true,
+   "avg_vol5": 48190296.0,
+   "avg_vol20": 41588836.4,
+   "vol_ratio": 1.158731529213931,
+   "volume_up": null,
+   "pe": null,
+   "qfii_ratio": 16.31,
+   "qfii_chg5": 0.4999999999999982,
+   "margin_balance": 38126.0,
+   "margin_chg5": -1702.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 27.13
+     },
+     {
+      "month": "2026-08",
+      "yoy": 12.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 21.84
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +27.1%、08月 +13.0%、07月 +21.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2344",
+   "name": "華邦電",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 16,
+   "close": 154.5,
+   "chg5": -0.003225806451612856,
+   "net_amt": 2167559712.5,
+   "foreign_amt": 1932219967.0,
+   "trust_amt": -798599527.5,
+   "dealer_amt": 1033939273.0,
+   "foreign_sh": 11649726.0,
+   "trust_sh": -5111975.0,
+   "net_sh": 13114855.0,
+   "value5": 37847540635.0,
+   "net_ratio": 0.05727082066979859,
+   "dominant": false,
+   "avg_vol5": 48195126.0,
+   "avg_vol20": 66024417.45,
+   "vol_ratio": 0.7299591251448444,
+   "volume_up": null,
+   "pe": 17.03,
+   "qfii_ratio": 19.64,
+   "qfii_chg5": 0.19000000000000128,
+   "margin_balance": 109781.0,
+   "margin_chg5": -2831.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 256.66
+     },
+     {
+      "month": "2026-08",
+      "yoy": 289.42
+     },
+     {
+      "month": "2026-07",
+      "yoy": 291.54
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +256.7%、08月 +289.4%、07月 +291.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3374",
+   "name": "精材",
+   "market": "上櫃",
+   "industry": "半導體業",
+   "rank": 17,
+   "close": 463.5,
+   "chg5": 0.024309392265193353,
+   "net_amt": 2117506590.5,
+   "foreign_amt": 3026065219.5,
+   "trust_amt": -684190932.0,
+   "dealer_amt": -224367697.0,
+   "foreign_sh": 6518205.0,
+   "trust_sh": -1569364.0,
+   "net_sh": 4443343.0,
+   "value5": 24390983060.0,
+   "net_ratio": 0.08681513923777044,
+   "dominant": false,
+   "avg_vol5": 13314554.25,
+   "avg_vol20": 10114333.555555556,
+   "vol_ratio": 1.3164045042479977,
+   "volume_up": null,
+   "pe": 72.76,
+   "qfii_ratio": 21.76,
+   "qfii_chg5": 2.400000000000002,
+   "margin_balance": 25353.0,
+   "margin_chg5": -475.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "先進製程與先進封裝"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 21.33
+     },
+     {
+      "month": "2026-08",
+      "yoy": 36.74
+     },
+     {
+      "month": "2026-07",
+      "yoy": 30.96
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：先進製程與先進封裝；近3月營收年增皆正（09月 +21.3%、08月 +36.7%、07月 +31.0%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2886",
+   "name": "兆豐金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 18,
+   "close": 55.2,
+   "chg5": 0.05142857142857138,
+   "net_amt": 1907067184.0,
+   "foreign_amt": 1439235735.7,
+   "trust_amt": -306435642.5,
+   "dealer_amt": 774267090.8,
+   "foreign_sh": 26600003.0,
+   "trust_sh": -5687643.0,
+   "net_sh": 35236154.0,
+   "value5": 5642973564.0,
+   "net_ratio": 0.33795430057768744,
+   "dominant": true,
+   "avg_vol5": 20988116.0,
+   "avg_vol20": 21783669.9,
+   "vol_ratio": 0.9634793446810357,
+   "volume_up": null,
+   "pe": 21.48,
+   "qfii_ratio": 21.71,
+   "qfii_chg5": 0.15000000000000213,
+   "margin_balance": 1864.0,
+   "margin_chg5": -483.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 16.45
+     },
+     {
+      "month": "2026-08",
+      "yoy": 15.55
+     },
+     {
+      "month": "2026-07",
+      "yoy": 4.11
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +16.4%、08月 +15.6%、07月 +4.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2891",
+   "name": "中信金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 19,
+   "close": 74.9,
+   "chg5": 0.027434842249657088,
+   "net_amt": 1809902536.1000001,
+   "foreign_amt": 1663627284.1999998,
+   "trust_amt": -800486139.2,
+   "dealer_amt": 946761391.1,
+   "foreign_sh": 22017420.0,
+   "trust_sh": -10900113.0,
+   "net_sh": 23972824.0,
+   "value5": 14302033168.0,
+   "net_ratio": 0.12654861828663325,
+   "dominant": true,
+   "avg_vol5": 38738422.8,
+   "avg_vol20": 32750381.85,
+   "vol_ratio": 1.1828388132213485,
+   "volume_up": null,
+   "pe": 17.92,
+   "qfii_ratio": 35.18,
+   "qfii_chg5": 0.10999999999999943,
+   "margin_balance": 2121.0,
+   "margin_chg5": -183.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": false,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 12.81
+     },
+     {
+      "month": "2026-08",
+      "yoy": -32.01
+     },
+     {
+      "month": "2026-07",
+      "yoy": -18.42
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "非成長主題且近3月營收年增未全為正"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證",
+    "B未來性未符合"
+   ],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3045",
+   "name": "台灣大",
+   "market": "上市",
+   "industry": "通信網路業",
+   "rank": 20,
+   "close": 133.0,
+   "chg5": 0.01526717557251911,
+   "net_amt": 1741521839.0,
+   "foreign_amt": 1895752970.0,
+   "trust_amt": -86926408.0,
+   "dealer_amt": -67304723.0,
+   "foreign_sh": 14439175.0,
+   "trust_sh": -641256.0,
+   "net_sh": 13280748.0,
+   "value5": 6518825195.0,
+   "net_ratio": 0.2671527133962364,
+   "dominant": true,
+   "avg_vol5": 9960578.4,
+   "avg_vol20": 8126711.6,
+   "vol_ratio": 1.2256591460683803,
+   "volume_up": null,
+   "pe": 25.14,
+   "qfii_ratio": 19.82,
+   "qfii_chg5": 0.35999999999999943,
+   "margin_balance": 57.0,
+   "margin_chg5": -59.0,
+   "A": {
+    "pass": null,
+    "basis": "未查證（無手動清單、未啟用網路研究）",
+    "evidence": []
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 10.34
+     },
+     {
+      "month": "2026-08",
+      "yoy": 8.49
+     },
+     {
+      "month": "2026-07",
+      "yoy": 7.14
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +10.3%、08月 +8.5%、07月 +7.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": false,
+   "reasons": [
+    "A永續未能查證"
+   ],
+   "researched": false,
+   "research_sources": []
+  }
+ ],
+ "tech_news": [],
+ "revenue_months": [
+  "2026-09",
+  "2026-08",
+  "2026-07"
+ ],
+ "notes": [
+  "未設定 ANTHROPIC_API_KEY：永續性（除手動清單外）、投行評等與新聞未查證"
+ ],
+ "sources": [
+  {
+   "name": "臺灣證券交易所 三大法人買賣超日報 (T86)",
+   "url": "https://www.twse.com.tw/zh/trading/foreign/t86.html"
+  },
+  {
+   "name": "臺灣證券交易所 每日收盤行情 (MI_INDEX)",
+   "url": "https://www.twse.com.tw/zh/trading/historical/mi-index.html"
+  },
+  {
+   "name": "臺灣證券交易所 外資及陸資投資持股統計 (MI_QFIIS)",
+   "url": "https://www.twse.com.tw/zh/trading/foreign/mi-qfiis.html"
+  },
+  {
+   "name": "臺灣證券交易所 融資融券彙總 (MI_MARGN)",
+   "url": "https://www.twse.com.tw/zh/trading/margin/mi-margn.html"
+  },
+  {
+   "name": "臺灣證券交易所 個股本益比、殖利率及股價淨值比 (BWIBBU_d)",
+   "url": "https://www.twse.com.tw/zh/trading/historical/bwibbu-day.html"
+  },
+  {
+   "name": "櫃買中心 三大法人買賣明細資訊",
+   "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/major-institutional/detail/day.html"
+  },
+  {
+   "name": "櫃買中心 上櫃股票行情",
+   "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/info/mi-pricing.html"
+  },
+  {
+   "name": "櫃買中心 僑外資及陸資持股比例",
+   "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/major-institutional/qfii/rank.html"
+  },
+  {
+   "name": "櫃買中心 融資融券餘額",
+   "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/margin-trading/transactions.html"
+  },
+  {
+   "name": "櫃買中心 個股本益比、殖利率、股價淨值比",
+   "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/info/pe-ratio.html"
+  },
+  {
+   "name": "公開資訊觀測站 每月營業收入彙總表",
+   "url": "https://mopsov.twse.com.tw/mops/web/t21sc04_ifrs"
+  },
+  {
+   "name": "證交所 OpenAPI 上市公司每月營業收入彙總表（產業別）",
+   "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"
+  },
+  {
+   "name": "櫃買中心 OpenAPI 上櫃公司每月營業收入彙總表（產業別）",
+   "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap05_O"
+  }
+ ],
+ "summary": {
+  "count": 0,
+  "top3": [],
+  "market_line": "近5日（2026-10-16～2026-10-22）三大法人合計賣超約 1,909 億元（外資 -2,561.6 億、投信 +750.4 億；上市 -1,741.1 億、上櫃 -168.3 億，依個股買賣超×收盤價估算）。"
+ }
+}
