@@ -1,13 +1,9 @@
 name: probe-lists
 on:
   workflow_dispatch:
-    inputs:
-      urls:
-        description: "extra URLs (space separated)"
-        required: false
   push:
     branches: ["claude/**"]
-    paths: ["tools/probe_lists.py", ".github/workflows/probe-lists.yml"]
+    paths: ["tools/fetch_esg_lists.py", ".github/workflows/probe-lists.yml"]
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -16,4 +12,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python tools/probe_lists.py ${{ github.event.inputs.urls }}
+      - run: pip install -q pypdf
+      - run: python tools/fetch_esg_lists.py 2>&1
