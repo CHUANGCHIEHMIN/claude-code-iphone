@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T15:34:00+08:00",
+ "generated_at": "2026-10-25T16:10:36+08:00",
  "asof": "2026-10-22",
  "window": [
   "2026-10-16",
@@ -6680,14 +6680,560 @@
    "research_sources": []
   }
  ],
- "tech_news": [],
+ "tech_news": [
+  {
+   "region": "國內",
+   "title": "PHP爆重大資安漏洞全球網站緊急搶修- 綜合",
+   "title_orig": null,
+   "translated": false,
+   "summary": "6 家媒體報導：華視新聞網、數位時代、自由財經、udn、經濟日報、商業周刊",
+   "source": "華視新聞網",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBmTXhRTG9LSGI3aV9tdDhLbjBaN3FwbEFaQXZZdFRTSkZVVTRnekJhYk95RzVES2ZtbjNCdjc1V0xYQ0xNY3Z1T2xrQlJ6aWgwa2g4cGJ1SGNyai1xU2loYlBhRXl3akx2bUozM09aZ2E?oc=5",
+   "date": "2026-10-23",
+   "source_count": 6,
+   "sources": [
+    {
+     "source": "華視新聞網",
+     "title": "PHP爆重大資安漏洞全球網站緊急搶修- 綜合",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBmTXhRTG9LSGI3aV9tdDhLbjBaN3FwbEFaQXZZdFRTSkZVVTRnekJhYk95RzVES2ZtbjNCdjc1V0xYQ0xNY3Z1T2xrQlJ6aWgwa2g4cGJ1SGNyai1xU2loYlBhRXl3akx2bUozM09aZ2E?oc=5"
+    },
+    {
+     "source": "數位時代",
+     "title": "PHP是什麼？全球網站爆重大資安漏洞：為何連政府、醫院都緊急關站？一般人會受影響嗎？",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9mRGxCbmp3T0lEdUJ2UW9QUVFoUjBOUzd4cUNRdVNZZmFveXVUU05BRWpBU2c0TTBtNGQ0S3pMSlBpOGpCTlNCUmthYTJrRHdSV01XUl9RSDN3aHdrTGxwN2tLb2tyTXVBazBDRWlDVkVESzV6aHZxdFZn?oc=5"
+    },
+    {
+     "source": "自由財經",
+     "title": "歐洲部分政府網站緊急下線！PHP爆重大資安漏洞 資安署緊急示警",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9UbFZpbzRaVWVORmNCNXo2ci1NVFo1M05QX0FtSVlJX285TkduUWN1ZC10ZElKTHpiSjNtLVZ3R1JxQUoyd00wUDhoa2lVUUQ1UmhpTXJBOVFCUzdaQlp30gFkQVVfeXFMUE43M2JHV3ZHNndHVGpoeFdObXB3YTJkV2xoQy1NTzdGRE9wcmpfaGp6M2NKSGUxYkFTU1BHX2FPYUhuQkZWXzZMZTgxSnRrZ245TDRqbV8tTWxkQ09KLUUtMFU0cw?oc=5"
+    },
+    {
+     "source": "udn",
+     "title": "全球網站爆重大資安漏洞！金管會急掃金融業揪出高風險系統| 金融要聞| 產經",
+     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBoQ0ZlWkI5cmNDWHRoZ3FQNjMxd1dab3VaaEpUY2kxU1paZFdyWllUc3RYQnEwYk1zMlJuRHFoSkVpU1lwQTdWd2U5dW9TRXd2?oc=5"
+    },
+    {
+     "source": "經濟日報",
+     "title": "PHP 爆重大資安漏洞 影響範圍、風險一次看 | 政經焦點 | 要聞",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4zTEJZVnlaVmMtVzJkblhKNGl3Vl9MYzF3Y0FRQzNPNWJ1elF4Nk8tS3VfdXRBYmhxQkRNcDNBXzJHWEpUenRXQ2lBRTNTVEFIelJHXzg2S0FIUQ?oc=5"
+    },
+    {
+     "source": "商業周刊",
+     "title": "PHP爆重大資安漏洞！台灣2.8萬網站使用，PHP是什麼？影響一次看",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBTYXRybWdMODAtRjZUaU9OMHB1LU01ZVZiOXlNVUwwck1tZjl6NS0xSVhOSm5kNmF0eS1pdkZ2N0lNeEp5b1hiQmdQNTlsWjlYeEM2U0RJYnlIMy1MTG5qMjB3?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "OpenAI模型再擴展雲端平臺合作，在Google Cloud上架",
+   "title_orig": null,
+   "translated": false,
+   "summary": "3 家媒體報導：iThome、OpenAI、TechNews 科技新報",
+   "source": "iThome",
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE0zV255S3d5N2NrTUUwZGlSekpjcmpJR0k2a2ZrQVNOZDJHVGVNRWtvM1hLYWlsVGJNbHJua0o2VXB1QjhMemV5blNaN0NEdw?oc=5",
+   "date": "2026-10-23",
+   "source_count": 3,
+   "sources": [
+    {
+     "source": "iThome",
+     "title": "OpenAI模型再擴展雲端平臺合作，在Google Cloud上架",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE0zV255S3d5N2NrTUUwZGlSekpjcmpJR0k2a2ZrQVNOZDJHVGVNRWtvM1hLYWlsVGJNbHJua0o2VXB1QjhMemV5blNaN0NEdw?oc=5"
+    },
+    {
+     "source": "OpenAI",
+     "title": "OpenAI 模型即將登陸 Google Cloud",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE91emV2d01sc192bmF1NGZldTVfZ1FPQW5rM1JmSXJwbFVhcmJXVGVzVEQyV2w3VFUxcG5LM1A0dDN3UmtuZzBGdmktV1NseVc5bm5rNUFKZHI4Z3pCNGtjTHlNUGdaUkpiR0RpcA?oc=5"
+    },
+    {
+     "source": "TechNews 科技新報",
+     "title": "OpenAI 宣布進駐 Google Cloud：最新 GPT-5.1 模型與 Codex 啟動私人預覽",
+     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8xUl91TkEwRDlreXRGR25zYVcydDVXWlFwcmVpRU9DV1JKTktuMzk0dWRTbDJsZ01OdS04b3ppejZjeHpqQng0WkVfazc0VjRRbWlDb25EOGtHd2RtMVBSc0g3aVNJMmpIM0xzMHo3NGg1UG8?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "PHP資安漏洞波及台灣金融業 金管會啟動3大因應措施| 財經焦點",
+   "title_orig": null,
+   "translated": false,
+   "summary": "3 家媒體報導：太報 TaiSounds、經濟日報、中央社 CNA",
+   "source": "太報 TaiSounds",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9Od1d2U0s1Z3RNYkhTa2Vhck5OWUVpVC10R0RhMEZwQm14TU8tQ01ON1pGSEFlSWJqS2V0WWtpQ0tRLUtjOUhqSzNzeDRXMjl1eGM1a3U1V2pQalgt?oc=5",
+   "date": "2026-10-22",
+   "source_count": 3,
+   "sources": [
+    {
+     "source": "太報 TaiSounds",
+     "title": "PHP資安漏洞波及台灣金融業 金管會啟動3大因應措施| 財經焦點",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9Od1d2U0s1Z3RNYkhTa2Vhck5OWUVpVC10R0RhMEZwQm14TU8tQ01ON1pGSEFlSWJqS2V0WWtpQ0tRLUtjOUhqSzNzeDRXMjl1eGM1a3U1V2pQalgt?oc=5"
+    },
+    {
+     "source": "經濟日報",
+     "title": "PHP爆資安漏洞　金管會掃描金融機構啟動3因應措施",
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUmxpdTlfNW5fbVMxY1N6NVFsSXFZSlBjRlZ6bDJCSXlvQXZNbGY4RkgxeG1aMmR3YjdfLWdOeXBxMUJZbkE5Y1RSdGVMcndDbXc1b2NqNFZuTEgteVRsUnVScW1KX2lraWF2WTNxTDFhTHhrREJUODlxN0o4QmRvb9IBX0FVX3lxTE00QnRJaldBUFdxN0drQl92R09KWmRvcENCcnUxeTZiRUZXYlZ2aG1Wb1RUZUhyaWhzY0l6cXdYNkVZYklDQVpXN2h5d1B3NHpUVG9QV1FWU2hhcHBXZUlB?oc=5"
+    },
+    {
+     "source": "中央社 CNA",
+     "title": "PHP爆資安漏洞金管會掃描金融機構啟動3因應措施| 產經",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBZS3dzWlMtNjdFSHdjSzRuZW9UanI5bVVRbi1DTldCQzdPYkZDRG5nQV9icTUtb0p4enVYa2RVQjROdVRSVmRXVDc0c29yaGJtTVNHVVpuTlBGWGxaVUE?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "受薔琵颱風影響 台積電原訂周六運動會取消",
+   "title_orig": null,
+   "translated": false,
+   "summary": "3 家媒體報導：UDN、Yahoo股市、自由財經",
+   "source": "UDN",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4bFd6dXAwSFluejBueFRKWGRCYWNKRTJGZXNlbGUxOTV0YTRpU3FtYnNSNlRhaG5tZ0QyU0VLQTJQWk1KNkc5OUs0WGlMZEs30gFWQVVfeXFMTWhYemZtYXI4MlVTSXlYTUkwWkRIN0p6Uy1BTHBFTGNENmc4ZHRxdUk3dzJiaUxsT0U0NDZaS29WRGlidzEzbnhNMXVqa2VxdGhmSF9lWWc?oc=5",
+   "date": "2026-10-22",
+   "source_count": 3,
+   "sources": [
+    {
+     "source": "UDN",
+     "title": "受薔琵颱風影響 台積電原訂周六運動會取消",
+     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4bFd6dXAwSFluejBueFRKWGRCYWNKRTJGZXNlbGUxOTV0YTRpU3FtYnNSNlRhaG5tZ0QyU0VLQTJQWk1KNkc5OUs0WGlMZEs30gFWQVVfeXFMTWhYemZtYXI4MlVTSXlYTUkwWkRIN0p6Uy1BTHBFTGNENmc4ZHRxdUk3dzJiaUxsT0U0NDZaS29WRGlidzEzbnhNMXVqa2VxdGhmSF9lWWc?oc=5"
+    },
+    {
+     "source": "Yahoo股市",
+     "title": "颱風薔琵衝擊台積電！ 10/24運動會取消",
+     "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOMXlia3pLRHY4RGtadDNBX3RyeVpCVktLTzh1czNaSy11eV9GSlJmcTYyN0lvc0ZWejhTb0lmZzBPU3ZBU0psNFp2ZmE5QVoxUzhfaUhrQVQ4MHJLUWlsV0c5em1xZ2Z6MmhpeTZGSWQ1c01SR0VOdkp4M0hXYkxuYjd4d3JOX0U2Q05UR1VWSEdMaWhMWHVMNWhYY0FCaE4wdHpEZEo4Vkl6eW9YbDhCbXdlWlViNmhTRk1QYjhwcnd3S094aThrUndPb2xHVHRWSzFKWUtFajd3UzU4cmRIby1YUWtuSmZXOXNIa1lZbGFSbndKamJjMERZSnBnTHJSQ2dWNVktMmFvR3NuSUZvVEhRaE5vZw?oc=5"
+    },
+    {
+     "source": "自由財經",
+     "title": "考量人員安全 台積電10/24運動會取消",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5HWExNRjNCajVHM2hMbHdGc01NeVNIUE04T0VzbC1oUldramR3Tzk5Vk9YWWh5WjA4N3RtTU1hdFVCRHVQRUdwSG1BN0V3UjhiSk5NX3FjQlZCay1OaHg00gFkQVVfeXFMTVFrdFlEd3p6NkoyY3lvaXJWLU5zT3hEY2F2bzRFZXV1a05UekpFWnByQlBnQkNKcVlXNVlCWkFva3hrS3V2a1R1d0ROeTEwWTdzZmZ1UXBRNjZMbW5XaHg0U3E2Ug?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "Meta財報引爆「AI恐慌」！台指期夜盤一度崩500點",
+   "title_orig": null,
+   "translated": false,
+   "summary": "2 家媒體報導：Yahoo股市、自由財經",
+   "source": "Yahoo股市",
+   "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPX2VkcEpZbWhsTFJQbnVHWmJySmhXWjhkUGlCX19EY3AwaWZCWllEdVR5TFdKM2ZBYXFrN0ZBcGJqa1dDS2ZaSTFmdG9xMWRpQjNScXNrWE0xdnptRHV3MWdIYkZUaHdSLThzX3BUbXMtTU1vMDlVYW90eFU1RmQ5OS1Qc0lMMjFLTzJaMzlwZm9RVmdweVBxdVhNeWUtbmh1M01QS1g3elIxMWs3TC1SZVVGdFRlc3BOdjlSWnJTYWhuMGNmSHh1ZDFSZHphMXJmSkp0b1lWYWJ4YW1leFk5V2MzQ3Z0VHZ0cXZHNUdVSTdNcENIandJeEhqNHlxNENPUUQ1bU5OSU1ta3pfaFE3aWgwaw?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "Yahoo股市",
+     "title": "Meta財報引爆「AI恐慌」！台指期夜盤一度崩500點",
+     "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPX2VkcEpZbWhsTFJQbnVHWmJySmhXWjhkUGlCX19EY3AwaWZCWllEdVR5TFdKM2ZBYXFrN0ZBcGJqa1dDS2ZaSTFmdG9xMWRpQjNScXNrWE0xdnptRHV3MWdIYkZUaHdSLThzX3BUbXMtTU1vMDlVYW90eFU1RmQ5OS1Qc0lMMjFLTzJaMzlwZm9RVmdweVBxdVhNeWUtbmh1M01QS1g3elIxMWs3TC1SZVVGdFRlc3BOdjlSWnJTYWhuMGNmSHh1ZDFSZHphMXJmSkp0b1lWYWJ4YW1leFk5V2MzQ3Z0VHZ0cXZHNUdVSTdNcENIandJeEhqNHlxNENPUUQ1bU5OSU1ta3pfaFE3aWgwaw?oc=5"
+    },
+    {
+     "source": "自由財經",
+     "title": "4天後剉咧等？台積電ADR大暴跌 台指期夜盤一度狂殺500點",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5weUlEYUx1SXg4Rjg2TkdYY1BkN1JwUkUxeWVRNFFPbGhsbUFHVzcyb2d5cUdiWHdtajhibk1SSXZ6eGJKNHFNZVdIR1RHeE9HSEZfM0p0b0tYbXRCaEY40gFkQVVfeXFMTkRPaThHbGt6MVdMR08wNnROUEFEVDFvQ3dFSW0tamxhcTQ5ME92OG1WUDFVOUZjRXZtQkVmRlFHUkJqTW42QU1heEc3WTFyZldmR21RbnF0ZG5QM1N3eW53ZmViXw?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "AI股震盪的避風港！蘋果今年大漲27%成標普最大後盾 高估值恐成隱憂",
+   "title_orig": null,
+   "translated": false,
+   "summary": "2 家媒體報導：鉅亨網、Yahoo股市",
+   "source": "鉅亨網",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5pUnZzcG9QNlNvbnFKLVZtWU4xbUp3MGlaTHJQMFRMQmlwYWpUTjJrT2FFVUxVREZ4MXNmSWhPM3AtMU5PMHBSMEIwc0NpOFk?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "鉅亨網",
+     "title": "AI股震盪的避風港！蘋果今年大漲27%成標普最大後盾 高估值恐成隱憂",
+     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5pUnZzcG9QNlNvbnFKLVZtWU4xbUp3MGlaTHJQMFRMQmlwYWpUTjJrT2FFVUxVREZ4MXNmSWhPM3AtMU5PMHBSMEIwc0NpOFk?oc=5"
+    },
+    {
+     "source": "Yahoo股市",
+     "title": "AI股震盪的避風港！蘋果今年大漲27%成標普最大後盾 高估值恐成隱憂",
+     "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxNRU0zT0gwbnFZUEVQejJwUlFNSUtDV2Q2dXd3Nnc1UDdZN1ZvSFdFM1c5RDhFaEx3YkFxQmFMeFpBV0lhdS1vaXlONzc2eklpTmNjSXd4ejRLR1hpcTVFY2thczhTNkt2RXhKUDB4WlpOY0o0VlBkR1MwaGJtdWVNYnhFMzRCWVZnWmNlb3VfbGVIM3JIVFJqOGxCeUFiZkx4ekRzNUxZV3lqVmhPTTdpU0lCWUlWSWhUU0Q2NjByX0JlQ0xTOEZiMkFCcmVJT3A3dUtyOTZraWh0V2lsV1F5dFFMSmlhTXhCTTQtcGs0VWFFV0t0VGJibkF6aFlZTjBQYXI2SHdlWHFWQ2VRLWw1M3RPZXZTcFFzR20zeXFZTXlreWdUd040MVhJdWpOc1oyNUZKQXB6cHNacmhmbGRRR1Eya0ZiSThLOWFlRUI0Tks3VnZYRlZ1bkwzZjUya256cVV2bWRscmlmSVJIZnN5UTB0MGVxQVVqM0dGcVotdEVCSklXV1VJMXJTZlJHeFl0ZmV3elZGSEk2X2ticnp3S0RiVkhoVFUz?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "PHP資安漏洞潛藏逾10年 歐洲多國政府網站預防性下線",
+   "title_orig": null,
+   "translated": false,
+   "summary": "2 家媒體報導：你的公共電視、Yahoo新聞",
+   "source": "你的公共電視",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8yX3p4d2hGdlVvTnNfNS1Da1Y5MVB3YXk5R1VBNDNPYXhWWl9vYlN0Uk1CM0lKWHVhcHotRDBzZGNITXdnTHRmWGFseXF6enc?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "你的公共電視",
+     "title": "PHP資安漏洞潛藏逾10年 歐洲多國政府網站預防性下線",
+     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8yX3p4d2hGdlVvTnNfNS1Da1Y5MVB3YXk5R1VBNDNPYXhWWl9vYlN0Uk1CM0lKWHVhcHotRDBzZGNITXdnTHRmWGFseXF6enc?oc=5"
+    },
+    {
+     "source": "Yahoo新聞",
+     "title": "PHP資安漏洞潛藏逾10年 歐洲多國政府網站預防性下線",
+     "url": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxQcTJPeVd1M3cxZS04cUo4bGFMaGF1cjE5OHBTc0lyQmZkT3dCd21TdHBuMVJPQjZTSEdoS2xLZTBoaXBVMllWUXFxZjlQNUNqbEU0NnZxNi1JTlVjT1A1SVpSbEZ4RnRTYjVUNC1qMG5rcEo5WmFfRGVVaFA4YlRmamdMYTNic2hBWmN2WHBuWDlKOG9LMWtyM3RXQy1aN05NQ202U09hLV9nRkpHclRXMlVJSU5rQUl0cDRtdHo3ZTlaa2YtMFlud0pVUDhLSnlkOWI0SmMtTGRxTks3cEpsXzRrZ3F1aF9vX2wzUHFFdU9jVktkdGMydDBqMUlVai1NU1B4Y0l4T3R4ZkxGdUd5ZGRsQ3lDZTE5MDdHRlRuWTdEOThZMWRQeEVPYmROYmw5SVVjQktpbmIzZHhwVll3a25FeElIdE1VN012ZWJHeWlQVURWZ2dJ?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "PHP 資安漏洞 引爆全球關站潮 數發部三招應變",
+   "title_orig": null,
+   "translated": false,
+   "summary": "2 家媒體報導：經濟日報、UDN",
+   "source": "經濟日報",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAtOUVSX1Q5Vk9jd1lxQ09pNUZuQkhlSkptMXNmam9MSk9QRE1XSFhHUFFQZWVhdlNEcjJvekhkVlVTb1B3NGNTck03LTdVdjVBQU1CbXF3Zk1zUE0zdDFv0gFfQVVfeXFMUC05RVJfVDlWT2N3WXFDT2k1Rm5CSGVKSm0xc2Zqb0xKT1BETVdIWEdQUVBlZWF2U0RyMm96SGRWVVNvUHc0Y1NyTTctN1V2NUFBTUJtcXdmTXNQTTN0MW8?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "經濟日報",
+     "title": "PHP 資安漏洞 引爆全球關站潮 數發部三招應變",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAtOUVSX1Q5Vk9jd1lxQ09pNUZuQkhlSkptMXNmam9MSk9QRE1XSFhHUFFQZWVhdlNEcjJvekhkVlVTb1B3NGNTck03LTdVdjVBQU1CbXF3Zk1zUE0zdDFv0gFfQVVfeXFMUC05RVJfVDlWT2N3WXFDT2k1Rm5CSGVKSm0xc2Zqb0xKT1BETVdIWEdQUVBlZWF2U0RyMm96SGRWVVNvUHc0Y1NyTTctN1V2NUFBTUJtcXdmTXNQTTN0MW8?oc=5"
+    },
+    {
+     "source": "UDN",
+     "title": "PHP資安漏洞引爆全球關站潮| 科技產業| 產經",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5md2djeWpLdi1mUnJYOTNtUTlqVmk2UEg1VFh1RjRCeWotaGVWXy1nX0VrMnpzNTRFcnp3aVRJcDlZaS1TcUU1WFQ5N0RFLWktOTBaVHMzd1NLeDQtOWc4OUtDOVRnYW5ydVdabklNamdPWFl6?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "漢翔 9MW / 54MWh 電力島啟用，全台最大工業級表後儲能微電網運轉",
+   "title_orig": null,
+   "translated": false,
+   "summary": "2 家媒體報導：TechNews 科技新報、MoneyDJ理財網",
+   "source": "TechNews 科技新報",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ19ZanJmQmRvb200dWRVUmgtZTNKNEladGtOaFpCLTNXUEh2LS05Ukd0bTR6OWo4WUc0R1dCRHl0X1JJRW9kWWpobFJtaDRLMkM4VEtzUktjRzhhNTVQUGt6T29vaWhGbHJWSFpnM0FTamw0d1B1bU0tTEduamg4bDIyMG9GcUFWS1E?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "TechNews 科技新報",
+     "title": "漢翔 9MW / 54MWh 電力島啟用，全台最大工業級表後儲能微電網運轉",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ19ZanJmQmRvb200dWRVUmgtZTNKNEladGtOaFpCLTNXUEh2LS05Ukd0bTR6OWo4WUc0R1dCRHl0X1JJRW9kWWpobFJtaDRLMkM4VEtzUktjRzhhNTVQUGt6T29vaWhGbHJWSFpnM0FTamw0d1B1bU0tTEduamg4bDIyMG9GcUFWS1E?oc=5"
+    },
+    {
+     "source": "MoneyDJ理財網",
+     "title": "漢翔9MW電力島啟用，表後儲能微電網邁向市場化應用 - 台股 - 新聞",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRk1Fd2ZSRjlSOWxLS0lHd0lwVE9iVjNKdTM0YVZGcS1WbC1iX3QtbEUxNHFWU1dsUU80UjdtaFNfN3N3TDhpV2VXdlQwMHg1X0NzdExfazhBU1hiM1B0M3paV2d3STlhMzdwbFRZQ3RhdWUxcVduUlJSQUNpdnpVTXpMUFoyTXU0NnBxekRKRHZWcHdjZnpzdVNsNA?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國內",
+   "title": "台積電高雄廠工安4死 遺孀悲痛發文：你怎麼可以丟下我",
+   "title_orig": null,
+   "translated": false,
+   "summary": "2 家媒體報導：udn、Yahoo新聞",
+   "source": "udn",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UbVdWZ2RobEx3eE9jY2R0cnhGVTRDRWJOYjJqZEtENjVwNURWeU81TEtLZE5zYXBxNldHa1JEOWEwbS1aelFyQm5iYWFSbWUy0gFWQVVfeXFMUHNJUmJjM0pyTlNJOUU1SXBFT2ZKbC1SRTVxUW43d2VLZ3VDNXo1c1ZBWG1oUy1lUjhjQlNyc0Y2T19QbmZCSFdoM2UxTG5PUEV4MUd2OVE?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "udn",
+     "title": "台積電高雄廠工安4死 遺孀悲痛發文：你怎麼可以丟下我",
+     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UbVdWZ2RobEx3eE9jY2R0cnhGVTRDRWJOYjJqZEtENjVwNURWeU81TEtLZE5zYXBxNldHa1JEOWEwbS1aelFyQm5iYWFSbWUy0gFWQVVfeXFMUHNJUmJjM0pyTlNJOUU1SXBFT2ZKbC1SRTVxUW43d2VLZ3VDNXo1c1ZBWG1oUy1lUjhjQlNyc0Y2T19QbmZCSFdoM2UxTG5PUEV4MUd2OVE?oc=5"
+    },
+    {
+     "source": "Yahoo新聞",
+     "title": "台積電高雄廠工安事故4死！38歲工人結婚14年留5子女 妻悲喊：怎麼可以丟下我一個人",
+     "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxNemRFT2dlSFAzQVNzYVVjaHNFRzhfWGVpTWcxWnlobFR3UHBwbU5HSmVFN3A3UGEtVWxTN1phOFBDVWpBMk55ckpqMGI0Q1Zoa2REaURIQVVKcXEwYVJLRXRzY3BxOUVKQzlRbUxVdlpZeGFTaEwteVdpQ0NDdVRra1hBcHBNbFhDeFlacW4zT2VHcGR5RjQwT0RsaE1MNlpvcmtjT0NlN2NqZnlCajVObldLUGZLS0FOOVgxUURsSlF2MzNoS3Nzc3BqcmRPa0QxUWtBZURMTDdoUDRscmxzY0x1Nm0xNXdXaEY5aWNaVGsxbkd6VTJGdDNoMFFBUXVqeVMtbllleS1MN01uMUJmR2ptWkZWcENIMWo4MHY1cU5XNjR5MXh6WDNXN1NmYkpkUFo1cnZ0SWlRYXAzM3FDTUQxT2JOOW5aX1ZFZFAteTlTWjE0ZFZSVjkwWjh2VW9HcWdNZE9DUnR0SmZEb0pVanlLMGdOd0EwalFkU2VJcWcwNmpzM3NVblJ1cHViQU5PNmItZXlockhVMzROUzZYbWZYdVU4OFpWdHk2Z1RvQjJUTUNoeTRROGIyUG9zcTY0cmRWWUROR2E3SllOUU5kdmRZWGZFeFpuWlk3dk5EYjc?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "人工智慧代理引發銀行擔憂",
+   "title_orig": "AI agents raise concerns for banks",
+   "translated": true,
+   "summary": "5 家媒體報導：CNBC、Mother Jones、Reuters、Yahoo Finance、ABC News - Breaking News, Latest News and Videos",
+   "source": "CNBC",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb0JGN0Y1UjBfVW9HVUtYeTlxNlUtN2dpRDBnZkNyWjhnSGd4N3VQZG0xaUE2V3VDaTFCaW14LUJtS0c4ZmJGNkNJYkhpUUFEeWtFcWxnOTJiOVJRMjFORWFjNlRfOHlOZU1TMGlsdjBHazljckJ0Z0haYTlNWFF3d3hyQQ?oc=5",
+   "date": "2026-10-23",
+   "source_count": 5,
+   "sources": [
+    {
+     "source": "CNBC",
+     "title": "AI agents raise concerns for banks",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb0JGN0Y1UjBfVW9HVUtYeTlxNlUtN2dpRDBnZkNyWjhnSGd4N3VQZG0xaUE2V3VDaTFCaW14LUJtS0c4ZmJGNkNJYkhpUUFEeWtFcWxnOTJiOVJRMjFORWFjNlRfOHlOZU1TMGlsdjBHazljckJ0Z0haYTlNWFF3d3hyQQ?oc=5"
+    },
+    {
+     "source": "Mother Jones",
+     "title": "Banks Are Struggling to Protect Customers From Their Own AI Agents",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSUZSYnI4ekVMTXFwOGlnU19uWTI3VVJkSGZKZWJqMlU3em1BclFuZnZiSGtNR21jT2UwTTNDQ0xnSlU1dXFHVnd0V0JwSnFpcnVFY3lfRG9ScjRRUThBQVE5YXdTWWhtV0Vvb0tHY3NMckw5QXRKa2pmNGFmM2M3SFM3YmFCc2l5VkQtU3pRalRTVXhnYjNBZThMY0M4eFJWeWtGTQ?oc=5"
+    },
+    {
+     "source": "Reuters",
+     "title": "US banks are blocking third-party AI agents access to customer accounts, sources say",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPcEFxNjAweHdoQ0ZaOWpUTGdVNWRkTXJ2Z08zeG1wOG03ZklKSW9WbTFBbGJWUVZVb211eFN4UFpjTG83aHBtMTViQ21fQmxBd2U0b2JTLXNHcjBReXRpMDl3am82SUVqVU1ndmRxejczTVZaWFlCMVZQSGNwWEQ0NXcyLWt0dlduZ2VUbjNyTUdyRUVndWEzV041cVQ1Mk1uV21vNGZBTUpaQ0tkVk1sOElNZW5NQThVZm9SemdUbXY?oc=5"
+    },
+    {
+     "source": "Yahoo Finance",
+     "title": "US Banks Fear Rogue AI Agents Inside Customer Accounts",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcnc3Rm54bjd6bWItUlNkUlZ1UzhDRHlKLXI0WXMzdFktZ0pqQkhXdzIyQ3JkbF9DenY4QWFCQTZCdWhHc214Z1VSYV9EdHd3c1pGeTlybnBhb0lhOGp1TFR0Z2ZKVVBpTHVDWGNwTURHcnZ0aVVOSVRoYjdlRTFRVnpSeUk3RmhrNXlRdlVGdXA?oc=5"
+    },
+    {
+     "source": "ABC News - Breaking News, Latest News and Videos",
+     "title": "OpenAI says its AI agents disabled their own monitoring",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOM2Z1WmV6RXdLMWhzZ2U4ZnozN20tS25KVE1CT29UcGVJZFhXSWt2eUhGV3JuTXJuU2JnSHhiS0hkbEVqTFRpYUlHRm81WW9MOW1DZGt5WGZOek1Pak8zQnhOUllYd2dOWmgwMm9xckNpWVN0bmItOEl1bVNTVjFUbUpsOWZYem5nNzhsV9IBkgFBVV95cUxNZEw4eklJLUZfOC1VeGNmbVItT2JGWks5VnVRcGd2c2tBZUdsNzcyMDJZTy1MOWlCRTFJWmdiR2FnMkdoeXRQbWphb1NsVnZEUDhBUm9yUXdZTTRidHdNS0xHQ050c3p1SmJwbklrX3I1aHEwWVB0ZnlSdnEwZTlFeDQ5X3daZkpHVVdLQmFNZFFidw?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "川普希望在Google地圖上出現「川普海洋」。他說首席執行官桑達爾·皮查伊（Sundar Pichai）關閉了它",
+   "title_orig": "Trump wanted a ‘Trump Ocean’ on Google Maps. He says CEO Sundar Pichai shut it down",
+   "translated": true,
+   "summary": "4 家媒體報導：Fortune、The Washington Post、The Guardian、Variety",
+   "source": "Fortune",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQm1mV2VGOFNidHp6V01fd3dJM09acFRiYWtBY0RsSVRmVU9vNnJaWGZPUm1vd3M0UHJ0anRtSWlMN08yWlBPNU1DLXVVTER0ODNaSzhGazExVkZHQTR2eTBWcTd1UnFIU0s2MFRyZFAzNkdNTWhHWFBrMk96Z1ktYnhLWmREb0lYU2k5T0Jub0FzU2ZlMXQ4?oc=5",
+   "date": "2026-10-23",
+   "source_count": 4,
+   "sources": [
+    {
+     "source": "Fortune",
+     "title": "Trump wanted a ‘Trump Ocean’ on Google Maps. He says CEO Sundar Pichai shut it down",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQm1mV2VGOFNidHp6V01fd3dJM09acFRiYWtBY0RsSVRmVU9vNnJaWGZPUm1vd3M0UHJ0anRtSWlMN08yWlBPNU1DLXVVTER0ODNaSzhGazExVkZHQTR2eTBWcTd1UnFIU0s2MFRyZFAzNkdNTWhHWFBrMk96Z1ktYnhLWmREb0lYU2k5T0Jub0FzU2ZlMXQ4?oc=5"
+    },
+    {
+     "source": "The Washington Post",
+     "title": "Trump says he called Google’s CEO to discuss renaming Atlantic Ocean",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZ0tvTkVYeE5WX0Qxb3ZsSjN4SFd3ZjRKQkcxdldjYTRIX1VrOE9vSEdwYmZCTHd3UTFZcUZJakpnMlkxczBBcWJEblBXZ0JnMF92NE1fNVBPTlhrelF4WTlyc1A3ZUQ4RzVBcDB5bEZsSERSbnZyUjZRVUM4aDA0cVpFMEtlZlBBbVFmc0ZCMmUweE1NRkpQaHdHWk14LWVZUXV2eGNXRFRoWmYzMFg5RFlQR0phMkRjV2hVX3BtS2ozUml4Sjc4NQ?oc=5"
+    },
+    {
+     "source": "The Guardian",
+     "title": "Trump says he asked Google CEO to rename Atlantic Ocean on Maps",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTXhuV09SQnVKM2ozUFBFVTFXUjlsbU13b0VZVWJmR1pMOWZxS25MR3NYVGluZTBxVFFxN05ScDFVbzREZ0NNSWRhbjh3MmpkU2R2WXhUcTh5dlk0b09RY19IZ0JkaktXdS1jVlY0VEJEUGJiQjRWdHJRVUcwX3gwaW1QWENBSTVCYlE?oc=5"
+    },
+    {
+     "source": "Variety",
+     "title": "Trump Says Google CEO Rejected His Request to Rename Atlantic Ocean on Google Maps",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZkxVNWZvQVVYOWxzbmtCNFBlNzc1RDBXbmxOTnNXLUJLWTBaS0dVQ1pLTHF0NjdwaWZPa1lacVRGMFVvSEg4LWYwcDBNWHk5QXJ1Zy1WZ2dqQWtyNVdaaERfZzhhc0t3OWk3SzllMUNPWjFOb1dSWlpYSWZUdnlWLUZVS0hHYTBUU2MweVlVdk5LZmxyUHFfeFVSWmU1RUJjYkJlb0NsZ2g?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "Google Cloud 擴大了模型選擇和靈活性，為客戶帶來 OpenAI 模型",
+   "title_orig": "Google Cloud expands model choice and flexibility, bringing OpenAI models to customers",
+   "translated": true,
+   "summary": "4 家媒體報導：Google Cloud、OpenAI、Reuters、CNBC",
+   "source": "Google Cloud",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSV9US2kzdWs5bHhuMThHOEpkbFZ4VTh6UEdodGJRVWJ0OXJBYlVsZk5lbnRKT3FQVUxXRFNJbDNCS3hlTVFDcTJSSm9nUzJ6R2FGWVAwRHhORm16NjdySHNleTBKMTRzWnNvejZRZGtfSXo0WWtKdFlYbURhX2haZXFRTlhvdUtrV3U1UFBiY0RMQlFsQTVpRDl5RWk1RDBnazYtbUM4Z0I?oc=5",
+   "date": "2026-10-21",
+   "source_count": 4,
+   "sources": [
+    {
+     "source": "Google Cloud",
+     "title": "Google Cloud expands model choice and flexibility, bringing OpenAI models to customers",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOSV9US2kzdWs5bHhuMThHOEpkbFZ4VTh6UEdodGJRVWJ0OXJBYlVsZk5lbnRKT3FQVUxXRFNJbDNCS3hlTVFDcTJSSm9nUzJ6R2FGWVAwRHhORm16NjdySHNleTBKMTRzWnNvejZRZGtfSXo0WWtKdFlYbURhX2haZXFRTlhvdUtrV3U1UFBiY0RMQlFsQTVpRDl5RWk1RDBnazYtbUM4Z0I?oc=5"
+    },
+    {
+     "source": "OpenAI",
+     "title": "OpenAI models are coming to Google Cloud",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5VQ0dJX2hsMnZhUnJFNnM1YkwyUHZwWmNGR3BHbGpCSEZ3YkJaaHYydV94RlF2dGJQbVZ4SnV6TFN4YWhvbkc5dGNfOTc5bXlkcDlUWmxiRnFRQ1RmSjZ1ZzlB?oc=5"
+    },
+    {
+     "source": "Reuters",
+     "title": "OpenAI to sell its top models on Google Cloud in latest enterprise push",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcF9EWG9QTDRBLU5tUVpFUXNUVW8wU2s3WVNTY2RnQUd0SEZfaXRyVmhpTFg4dGhuZ1RlN3JpOGVSNmY4VDNOUzFSNG9OVnZGTm1oXzk1VTFjakdIOVcyMm9qN2tPMEVJYjl1TzdtdkpCZjNSRlRZdFVGR3JFSC1mX3prVEJOYWI3aUdBbWx1WW40bUhSZmxJMV9kS01RMHBVc3huVWszcE5MTTA3M2RKTGZyMmpNczhpU3ZRcm5fMFA?oc=5"
+    },
+    {
+     "source": "CNBC",
+     "title": "OpenAI to bring AI models to Google's cloud, in further expansion beyond Microsoft",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNXhvUlpRaDlhdjFIa3BDYy12MFBILU1vZFNfa0ZKUlV6cERUd1lVUWtEbEFVcTAxRlVuaGJFTENlYUtyOFloTlhRZ1QwTW5zOUd2UXFwT1pjS0FhX2NfT0R4MUJpNVZ6Z3ItZ05WRklZN2tSX2NUdkhsckYyM1FHbjM4Mi1WeTNvdUI5MkR0LXphNWs5UHFUZGxENXE4NWliZkdQeXR5eW7SAa4BQVVfeXFMTUhXVUF3ZHRsOGJpRnlGR2dKT2FWdk5oaW5zTzVJN1E5aEt5eGM4Wmtyei00T2F4dFBMSm5CWGR1WjYzU3BpVWpKUjdNZkltS3VzdkYyMDNMZWtCbnQwZHUtMVV5dTdmZF9tcVpnVW52aGlqNGJzNlJvaDJyZXRMR19QN293Tzk2NnV0NXVwUmxBUUx6TTA2aDMzaUlTc20zWFg2UkhfdnhCUnpnMm9R?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "人工智慧發現嚴重缺陷後，營運商解決 PHP 問題，一些網站在全球關閉",
+   "title_orig": "Some websites shut down globally as operators address PHP issue after AI finds critical flaw",
+   "translated": true,
+   "summary": "3 家媒體報導：ABC7 New York、CNN、The Conversation",
+   "source": "ABC7 New York",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQR3ZTZ1ExM0h1VXRSM0FTNjBnR01mRmZBbjF4blpQVHRHdi1qdWVPcHlwcW14QVNHd3BLZ2xId0I0QUVicGZBV3UzbHFFQ3dPXzZoR1lKY3FVNnBFV3FEV0NmelVqWnhJT2xtQUJKMUxlWXBUYjhYMmRlVkNpczVscnJIaFBiOHZqd0ZNMzNUXy1Xd0JwbjBoSWtlVnRCNW1nZVJnSXI1T1pRYnJGWFZIbzJTV204NVBwRWRabW5UbUhRZUxTMlBaaFpsUGgwTGVrOWdPVlRSaTRGbHZvTGc?oc=5",
+   "date": "2026-10-22",
+   "source_count": 3,
+   "sources": [
+    {
+     "source": "ABC7 New York",
+     "title": "Some websites shut down globally as operators address PHP issue after AI finds critical flaw",
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQR3ZTZ1ExM0h1VXRSM0FTNjBnR01mRmZBbjF4blpQVHRHdi1qdWVPcHlwcW14QVNHd3BLZ2xId0I0QUVicGZBV3UzbHFFQ3dPXzZoR1lKY3FVNnBFV3FEV0NmelVqWnhJT2xtQUJKMUxlWXBUYjhYMmRlVkNpczVscnJIaFBiOHZqd0ZNMzNUXy1Xd0JwbjBoSWtlVnRCNW1nZVJnSXI1T1pRYnJGWFZIbzJTV204NVBwRWRabW5UbUhRZUxTMlBaaFpsUGgwTGVrOWdPVlRSaTRGbHZvTGc?oc=5"
+    },
+    {
+     "source": "CNN",
+     "title": "Websites shut down globally after AI finds cybersecurity flaw affecting 70% of the internet",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9VMi1odVpCeldBLWZwZjdGVkE5am16cTZfeHlkbno4SzdGSmg4TVVTcVkxRnF5aUZvbV9DOEVpbGdSa05IX2VocHE5ZEdIa1M4cVoxVVZwX290REZNZFhRNGFRMkQ4ZzRJTC0xWHI0MlI5dDg4WVE?oc=5"
+    },
+    {
+     "source": "The Conversation",
+     "title": "A critical flaw affecting 70% of all websites has the cybersecurity world panicked",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONnQ3ZjBSMm9BY0c1S2F3TDROVkdnRy1qVjUyTFdDYW92cnRWZUpxNklXYmUtZFFQdm5QR1hZWHBkS3lfVF9jWEtwbHV6bXY1ek00SUJaMlVPLUhISUQwNmRWczhqeldiY2dUNUs4bVljZEVhVjF4UGdZeV84UjJXdm0wSEpqNHp2VVoxTVZuVjdPWFVNaFdkWmhYTVphZEU5UEZtazJtWEpNekd0S0ZVR21zc3J0cjg?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "列治文公立學校仍在調查網路安全事件",
+   "title_orig": "Richmond Public Schools still investigating cybersecurity incident",
+   "translated": true,
+   "summary": "3 家媒體報導：VPM、WRIC ABC 8News、WWBT",
+   "source": "VPM",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdG9nQnpyN015THNIOXVnQ2piN1dObEVSbUJtLU9qNUFhYTdPOFJ1Z2k5MWctRmMzeEx3QVZlYy1TN1plSm1EYTgyaDBuNnhtUG82M0FIZjZyQU5US19VSkQ3SDU1Q2trX1lZVnVmYzZ3ZVdoUF9FMm9rYzRYWG5PVmN4UFlEdw?oc=5",
+   "date": "2026-10-22",
+   "source_count": 3,
+   "sources": [
+    {
+     "source": "VPM",
+     "title": "Richmond Public Schools still investigating cybersecurity incident",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdG9nQnpyN015THNIOXVnQ2piN1dObEVSbUJtLU9qNUFhYTdPOFJ1Z2k5MWctRmMzeEx3QVZlYy1TN1plSm1EYTgyaDBuNnhtUG82M0FIZjZyQU5US19VSkQ3SDU1Q2trX1lZVnVmYzZ3ZVdoUF9FMm9rYzRYWG5PVmN4UFlEdw?oc=5"
+    },
+    {
+     "source": "WRIC ABC 8News",
+     "title": "Cybersecurity incident disrupts online systems at Richmond Public Schools",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYjh5TTFNbHk0aXBBeDhyX2d6cVBDNWFyRkJnaDJrLVpNaEtzekUwUFFCOUEzbC0tbVFPOUltUnNNd3lZVGNrekt2SzM5NEFlRldiNEpnNXlJZXoyZTAybW14eFpXQmxoZDdERWo0X0xSNFlZOV9KZU8tV2I5amJtcFlnZ0hnTjN0bkhVWjZPYmJLRVZxZWlHZ9IBngFBVV95cUxNYmlPRnd6MGhNZ29TVVdUUDdiMksyaE9JMmdCVTE4MUowaHgtWDFWYUJVQ0hrUDF1cGJMUXN5LWR4a2QyR3M3OVhzYldXLXVERHdVd1kxUHNrNlpNckdDMEstU1luOUdxTHFuV3J0eFNvOHFFd1U1YlZKUUFXckRXUVdieS1yZVBpMUhGLVBOdUljWWdmNkUySG11ZkNmQQ?oc=5"
+    },
+    {
+     "source": "WWBT",
+     "title": "Richmond schools remain offline as cybersecurity incident investigation continues",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQcndBZ1l6YVlLdExGYnpPYVlEcGh0YnBacnM1a1NjVHNZam1HMld6S3pZeEp6UlZtOFpiTUkxYmxnVlY4RkZWcHZxZThBNDVyaW5JX1FDZmNWRW45cEFPSm84S1NDMzdVN2tNQjhfbEQzMUtWNDNKOUtxNVNDUDdVVUNaZFA4NEhhY0k4UFgxU1Bha1lhdmxzRjVvMHl2LTdCY0lHel93QkFOaG0waHNkQkYyLThKQkEySjRr0gHPAUFVX3lxTE4tZnUyZk9Lb3JIUHh6TFcyVVU4VS1Qd2NCMzFJUmJnci1jb2J5NFIzLWZVNHZlZGo0TDd4M3JtejI2NnFMZ3RUd0MySmlBdE51d0F3QUI0aEZUaV9zck94cTNiRnQ3RnNlZXFzZE5UcnRWb3Jsa0JMNEJDdGZ5dThBNURFb1VZcnRHZ294X2QwWnd5MHpWMS0tbkFBMWlDV3dKT1lRTGozMDFhOXhGZENTQk05Uk5ZVndUTDB2aG1xdUROQ1kxdk9Xb3YtSFc2dw?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "ChatGPT 廣告擴展到 26 個新國家/地區，已有超過 10 萬名廣告商使用該平台",
+   "title_orig": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+   "translated": true,
+   "summary": "3 家媒體報導：OpenAI、Reuters、CNBC",
+   "source": "OpenAI",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE83VjdWNHJPeklSZjF5NURic2NYOUVlVDlDeFVLb3ZuODJqQV9lWk5EVjJNSi1sWDlIUGRNNlYtQTRTcHJ5S1ZpLUJETVB3ZENseXhFY2hvY2ZsWFhsb2RYMXFYREFULUVHNndOQmRubw?oc=5",
+   "date": "2026-10-21",
+   "source_count": 3,
+   "sources": [
+    {
+     "source": "OpenAI",
+     "title": "ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE83VjdWNHJPeklSZjF5NURic2NYOUVlVDlDeFVLb3ZuODJqQV9lWk5EVjJNSi1sWDlIUGRNNlYtQTRTcHJ5S1ZpLUJETVB3ZENseXhFY2hvY2ZsWFhsb2RYMXFYREFULUVHNndOQmRubw?oc=5"
+    },
+    {
+     "source": "Reuters",
+     "title": "OpenAI expands ChatGPT ads to 26 more countries in bid to boost revenue",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNHFERURfRDhCWENqMGowemlERzBvaU00S3pBbmRwNDFpcGNpWjZ6cFJIak1WTnVMN3NOemFlUE1nNVkweGk3V3NnNFlHa29UYUFjRVYzRGhGUjlWSEh4b09UWnEyN1V4bzJ6UmVBUkVRWkhHQVh1S1Z2MWdzTHlpUHJGWTlnNVd0dHNJekZfQk9PUWxCa1IwUFI0LTdnQUVhZGJ0eFpkUnlDclN3b3hFUWpzajF3MHFjZnREdVln?oc=5"
+    },
+    {
+     "source": "CNBC",
+     "title": "OpenAI expands ChatGPT Ads to 26 new countries as diversification push accelerates",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8zT2hqbHpJQWlRY2M5SElrcVpHc3BHM3dWdks0R0hhbWM4NFlmQkItUFhPUW9zSXhyaG1NWjNjV3U1eERDOGE2WVI0eF8zX0JjeURXR0NBTGlLbm1YZERsVkhsLWUtRm4xSl8tcHQ4NkFGWDZxN1hV0gF8QVVfeXFMTndoM0pabVhEX0Z2Xzc0aWI2QVZINmpJdEs3RjdqemVxUlNfVFJLczRhN0d1RTJZd19zTUN3dEc0R25OZXZvZmVnWDB5dkxtRHZhUVpyNEpfUVpNUUp5S0NCcGQ0MU9FQW1fTzJWYkdFZ3Z5VENGMXZtOVJfbQ?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "外部評估人員在試點審查中發現OpenAI人工智慧監控系統有缺陷",
+   "title_orig": "External evaluators find flaws in OpenAI's AI monitoring system in pilot review",
+   "translated": true,
+   "summary": "2 家媒體報導：Reuters、CNBC",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPa2JvMy1McnRUdXBvVGlqSDhtMERqUGQyczh4TzJpTGFLX21ncWdQMXZOLW9YNW01b3hvWm1iWnVEQmtfQWowX1JRdzgzZFBlZVk4d0pxbFFnX3p0andwR09xWU9Fb2gtQ2hBZXI0QmlKZU1OWGlLQW1RdEtJTlM1WUVIdk15U0xQYU00eVl5UThUX2M3N0ZZOFJKM3R1RVF5RUpoTTRFZ05EQmw5WG8tS2ZB?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "Reuters",
+     "title": "External evaluators find flaws in OpenAI's AI monitoring system in pilot review",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPa2JvMy1McnRUdXBvVGlqSDhtMERqUGQyczh4TzJpTGFLX21ncWdQMXZOLW9YNW01b3hvWm1iWnVEQmtfQWowX1JRdzgzZFBlZVk4d0pxbFFnX3p0andwR09xWU9Fb2gtQ2hBZXI0QmlKZU1OWGlLQW1RdEtJTlM1WUVIdk15U0xQYU00eVl5UThUX2M3N0ZZOFJKM3R1RVF5RUpoTTRFZ05EQmw5WG8tS2ZB?oc=5"
+    },
+    {
+     "source": "CNBC",
+     "title": "Third-party evaluators found vulnerabilities in OpenAI monitoring system during test pilot",
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1xeTgxRlUydl9jNmMwMzZTOUl5MVJpRGpFSGw1eGVSQ0hNR2FhM0tReGlOb2cydUZGNHpWUEVqTktjWWh2c0RYTk5IUGVUWG1ab2VYT3RBRnB4RVgzT3p6RXoxRzhrckFmeFc0RjF6TlVyWkJsZ0pXMVpTa9IBgAFBVV95cUxPbVFRUDR4dTZpcFBRZ0RNYV94blNUVmhZalBCdlpMc0t6S01CbWRkQXE5eEozTXFwOHZrZWNBcmpLMVd5OTVUNWUyNGlnZlp0T1dURGQzZDRrMVppODQ4Z1lMQkhSUk4wY2FHNVJLNElDUWpUX1RVZWRPc0xleG5Sag?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "財政部將生物技術納入擬議的《硬幣法案》限制，但不考慮大型製藥公司的中國許可交易",
+   "title_orig": "Treasury sweeps biotech into proposed COINS Act restrictions, but spares Big Pharma’s China licensing deals",
+   "translated": true,
+   "summary": "2 家媒體報導：Fierce Biotech、Endpoints News",
+   "source": "Fierce Biotech",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZk9hMXREUkpYNkViVWs5R2JKZEQ0Q1hucE1HdHBiUDlqUTFPd01nQy1JUl8yaXRoOUVON3Q5QVlhNHpYZWZRbVNUMUQ1OURCQUZqWGRmVloyS09kSDJPd2IwX0hneUxPaFhNWUk1Q3cwY1NfcWdmbFBwUEhnZDlTbm92MmkzanlHQVJuNXdBYUVEa2hWdzFHNFZPTG5kNUJrZGphaUxhNlV4TWF5YUpnYy1OVnZhSkx4LVdxd0RtejNnaWZxMXc?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "Fierce Biotech",
+     "title": "Treasury sweeps biotech into proposed COINS Act restrictions, but spares Big Pharma’s China licensing deals",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZk9hMXREUkpYNkViVWs5R2JKZEQ0Q1hucE1HdHBiUDlqUTFPd01nQy1JUl8yaXRoOUVON3Q5QVlhNHpYZWZRbVNUMUQ1OURCQUZqWGRmVloyS09kSDJPd2IwX0hneUxPaFhNWUk1Q3cwY1NfcWdmbFBwUEhnZDlTbm92MmkzanlHQVJuNXdBYUVEa2hWdzFHNFZPTG5kNUJrZGphaUxhNlV4TWF5YUpnYy1OVnZhSkx4LVdxd0RtejNnaWZxMXc?oc=5"
+    },
+    {
+     "source": "Endpoints News",
+     "title": "Treasury expected to be harder on China biotech deals in new rules",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRVZPQzFMaTJuRmlUM1VfNjZMSzRVMzBsNWg3VEs4R2hpYzVyWGM2NTRfcmw0ZXpnN3k3Tk1pWEJoTTZ0cDA4d3BuelNuVVBGUmdnSE5mc3ZUNnVsZ0Rab1RUVTB0TFdta0RFWmoyekNtMS1HbEtmRVhVV1B5U3ZVTWhLNU9jdVlyNGtqUUNNbVFNbWp2?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "Starshield中斷後烏克蘭希望與ICEYE和諾基亞建立自己的衛星通訊網路",
+   "title_orig": "After Starshield interruption, Ukraine wants to build its own satellite communication network with ICEYE and Nokia",
+   "translated": true,
+   "summary": "2 家媒體報導：Space、SpaceNews",
+   "source": "Space",
+   "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNb19kUXo4dUlfVndUUTdQM0VNY19uRUI0RUdESklsaDZ5c0p2UFNRUVZQQ2dzUVpwaUlMX2JXS043WmxSa3FST255UHJMc1F3dFI0S0JHNHVTX0V2QklJT2VsUEJvRlNvcWxpVTlfZjlaYnVzN0VlemdBLVBGSGFxcUJ0anZhUndrdDZBdy1lMV9haUFSM1dpdVMyRzJ2eVlTTVkxTlV6RkZFVng1ODkzTFRkR29QbUNZc0lHd2FOQ2FQWmJUMlJDb1Bfa0U4cXhWWlo3RUlJeVU1MlJfWnozckNjdllrbVFyZGdlNVZuT1pQNW1SLTJr?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "Space",
+     "title": "After Starshield interruption, Ukraine wants to build its own satellite communication network with ICEYE and Nokia",
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNb19kUXo4dUlfVndUUTdQM0VNY19uRUI0RUdESklsaDZ5c0p2UFNRUVZQQ2dzUVpwaUlMX2JXS043WmxSa3FST255UHJMc1F3dFI0S0JHNHVTX0V2QklJT2VsUEJvRlNvcWxpVTlfZjlaYnVzN0VlemdBLVBGSGFxcUJ0anZhUndrdDZBdy1lMV9haUFSM1dpdVMyRzJ2eVlTTVkxTlV6RkZFVng1ODkzTFRkR29QbUNZc0lHd2FOQ2FQWmJUMlJDb1Bfa0U4cXhWWlo3RUlJeVU1MlJfWnozckNjdllrbVFyZGdlNVZuT1pQNW1SLTJr?oc=5"
+    },
+    {
+     "source": "SpaceNews",
+     "title": "Ukraine explores its own satellite network after SpaceX disruptions",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcXc2a2t2ZGtCMGtxTFhJbnRrVW1vX3pyS09lZ2c3bHdLMDNkRGZRZ1Npc0VEQnE5ajRUZ2ZxS2ZodkVlcV9yNnVnemY4LUtUa3hDalVfT096YmVjU3FVU21TNGFEUzhPNGl5Tk5rNWs2ZjVnVU9teG1wSzB2RnQwU0tPS0Z2c1pFb2FlQjZCRzNRdTYt?oc=5"
+    }
+   ]
+  },
+  {
+   "region": "國外",
+   "title": "OpenAI 即將完成 300 億美元融資，估值 1.25 兆美元，由阿聯酋投資者領投",
+   "title_orig": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
+   "translated": true,
+   "summary": "2 家媒體報導：CNBC、Bloomberg.com",
+   "source": "CNBC",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yWm1VRnpOb00tR0ZfUDVmaVh2S1dyNVhia0J4OWJ5anpxRUUtbjhHX19IbHZDUEdlVEc4OEE3aHQxNGw0ajhwR0ZDTFdPcC01YzZ6My1HVW84bzFzRHpnNGdkNnRCSnVrYTZMcnBGMjZVd0tIVUI5cWkxQdIBgAFBVV95cUxPeVdKRHhVdHUwa3ZfVkMxQm1od1YycVNSZURFaU1yeS1jUGhUNVF6MTh1aDdObmNuUks4d2k3empTZFNGUnFmZjYzNWR2VTJNbnlhNzI0dmpZZ0ctR3NwT05yTGdqRU5yaGFzX0FWVFpNY1BnbmVMaldMU3NZXzh1OA?oc=5",
+   "date": "2026-10-23",
+   "source_count": 2,
+   "sources": [
+    {
+     "source": "CNBC",
+     "title": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation led by UAE investors",
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yWm1VRnpOb00tR0ZfUDVmaVh2S1dyNVhia0J4OWJ5anpxRUUtbjhHX19IbHZDUEdlVEc4OEE3aHQxNGw0ajhwR0ZDTFdPcC01YzZ6My1HVW84bzFzRHpnNGdkNnRCSnVrYTZMcnBGMjZVd0tIVUI5cWkxQdIBgAFBVV95cUxPeVdKRHhVdHUwa3ZfVkMxQm1od1YycVNSZURFaU1yeS1jUGhUNVF6MTh1aDdObmNuUks4d2k3empTZFNGUnFmZjYzNWR2VTJNbnlhNzI0dmpZZ0ctR3NwT05yTGdqRU5yaGFzX0FWVFpNY1BnbmVMaldMU3NZXzh1OA?oc=5"
+    },
+    {
+     "source": "Bloomberg.com",
+     "title": "OpenAI Shifts Value to $1.25 Trillion as Funding Talks Finalize",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNlJ6SFpHeHRub3NJR1l1dFg0YzFULWdWX1MtU1A4b1luZTFMMkktcHU0YWdNMi1RMy1Sc3FkVF9WTnhvc0txaV9HX1k1d1cxQVgyOWdWcUU2UVVRXzlNMDdydVc2cmxEQ1FqX0dPeEFqZ3pzZnVGRnZYUzEwR0xfanQycnZPUEp6SkM1ZEo4OV9KOHZrWk9sbElfRmcxVDVmYUhfSmNqODhra1JvYko4MWRLNA?oc=5"
+    }
+   ]
+  }
+ ],
  "revenue_months": [
   "2026-09",
   "2026-08",
   "2026-07"
  ],
  "notes": [
-  "未設定 ANTHROPIC_API_KEY：永續性僅依名單判定、個股新聞與科技新聞未取得；投行評等改由新聞標題擷取",
+  "未設定 ANTHROPIC_API_KEY：永續性僅依名單判定、個股新聞未取得；投行評等改由新聞標題擷取",
   "符合條件超過 20 檔，依買超金額排名保留前 20 檔後再依量增比排序"
  ],
  "sources": [
@@ -6738,6 +7284,14 @@
   {
    "name": "Google 新聞搜尋（投行評等新聞標題）",
    "url": "https://news.google.com/?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+  },
+  {
+   "name": "Google 新聞 RSS（國內外科技新聞，同一事件需 2 家以上媒體報導）",
+   "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+  },
+  {
+   "name": "Google 翻譯（外文新聞標題機器翻譯）",
+   "url": "https://translate.google.com/"
   },
   {
    "name": "證交所公司治理中心 第十二屆公司治理評鑑結果",
