@@ -170,7 +170,7 @@ function renderNotes(rep, mdPath) {
     <div class="card small"><ul class="notes" style="margin:0;padding-left:20px">
       ${(rep.notes || []).map((n) => `<li>${esc(n)}</li>`).join("")}
       <li>買超金額為「股數 × 收盤價」估算，非實際成交均價。「外資」含外資自營商。</li>
-      <li>投行評等僅取自公開新聞報導，可能遺漏或有日期落差。</li>
+      <li>投行評等取自公開新聞報導：自動擷取 Google 新聞標題中寫明券商、評等或目標價者，可能遺漏或誤判，請點連結核對。</li>
       <li>月營收採用：${esc((rep.revenue_months || []).join("、") || DASH)}。</li>
       ${rep.research_enabled ? `<li>網路研究模型：${esc(rep.model)}</li>` : ""}
     </ul></div>

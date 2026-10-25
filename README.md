@@ -4,7 +4,7 @@
 
 - **網站**：`docs/`（GitHub Pages 靜態網站，讀取 `docs/data/` 的 JSON）
 - **資料管線**：`screener/`（Python 3.12，標準庫＋Anthropic SDK）
-- **排程**：`.github/workflows/daily-report`，每個交易日 22:17（台北）執行並把報告 commit 回 repo
+- **排程**：`.github/workflows/daily-report`，每天 21:00（台北）執行並把報告 commit 回 repo；休市日已有報告會自動略過
 
 ## 選股流程
 
@@ -13,7 +13,7 @@
 | 1 候選池 | 上市＋上櫃普通股（排除 ETF／ETN／權證／特別股／存託憑證），近 5 個交易日三大法人買賣超股數 × 當日收盤價逐日加總，取買超金額前 50 名。另列外資、投信 5 日買賣超，以及「買超金額 ÷ 5 日成交值」（≥10% 標「法人主導」） | 證交所 T86、MI_INDEX；櫃買中心三大法人買賣明細、上櫃行情 |
 | 2A 永續 | 公司治理評鑑前 20%、臺灣永續指數／富時台灣 ESG 成分股、MSCI ESG A 以上（符合任一） | `config/sustainability.json` 手動清單，或 Claude 網路搜尋（須附來源網址） |
 | 2B 未來性 | 成長產業主題（AI 伺服器、先進製程封裝、矽光子、散熱、重電儲能、機器人、低軌衛星、資安、生技新藥），或近 3 個月月營收年增率皆為正 | `config/themes.json`、公開資訊觀測站月營收、Claude 網路搜尋 |
-| 2C 投行 | J.P. Morgan、BofA、Morgan Stanley、Goldman Sachs 近 3 個月評等（列出券商／評等／目標價／日期／連結；負面也列） | Claude 網路搜尋公開新聞報導 |
+| 2C 投行 | J.P. Morgan、BofA、Morgan Stanley、Goldman Sachs 近 3 個月評等（列出券商／評等／目標價／日期／連結；負面也列） | 自動搜尋 Google 新聞標題擷取（免費）；有 API 金鑰時再加上 Claude 網路搜尋 |
 | 入選 | A、B 皆符合，且 C 不是「只有負面評等」；最多 20 檔 | |
 | 3 量增 | 量增比＝5 日均量 ÷ 20 日均量，入選股依此排序，≥1.2 標「量增」 | 同步驟 1 |
 | 4 報告 | 摘要、精選表、候選池前 20 名對照表、個股新聞＋當日 5 則科技新聞、資料限制、Sources | 以上全部 |

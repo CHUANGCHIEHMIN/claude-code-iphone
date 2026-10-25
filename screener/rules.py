@@ -15,7 +15,7 @@ BROKERS = {
     "Morgan Stanley": ("morgan stanley", "摩根士丹利", "大摩"),
     "Goldman Sachs": ("goldman", "高盛"),
 }
-POSITIVE = ("buy", "overweight", "outperform", "買進", "加碼", "優於大盤", "增持", "買入", "conviction")
+POSITIVE = ("buy", "overweight", "outperform", "買進", "加碼", "優於大盤", "增持", "買入", "喊進", "喊買", "conviction")
 NEGATIVE = ("sell", "underweight", "underperform", "賣出", "減碼", "劣於大盤", "減持")
 
 COMMON_CODE = re.compile(r"^[1-9]\d{3}$")
