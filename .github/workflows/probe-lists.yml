@@ -1,0 +1,19 @@
+name: probe-lists
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "extra URLs (space separated)"
+        required: false
+  push:
+    branches: ["claude/**"]
+    paths: ["tools/probe_lists.py", ".github/workflows/probe-lists.yml"]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/probe_lists.py ${{ github.event.inputs.urls }}
