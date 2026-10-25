@@ -31,7 +31,9 @@ _RATING_RE = re.compile("|".join(re.escape(t) for t in sorted(POS + NEU + NEG, k
 _FINAL_RE = re.compile(r"(?:調升|上調|調高|調降|下調|調低|升|降|改|調整)(?:評等|投資評等)?(?:至|為|到)\s*(" + _RATING_RE.pattern + ")", re.I)
 _NUM = r"(\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?)"
 _TP_FINAL = re.compile(r"(?:至|到|上看|喊|為|調升|調高|上調|升|調降|下修|降)\s*" + _NUM + r"\s*元")
-_TP_ANY = re.compile(_NUM + r"\s*元")
+_TP_AFTER = re.compile(r"^目標價[^0-9！？!?，,。；;]{0,6}?" + _NUM + r"\s*元")
+_TP_BEFORE = re.compile(_NUM + r"\s*元(?:的)?目標價")
+_CLAUSE_END = re.compile(r"[！？!?，。；;｜|]")
 
 
 def short_name(name: str) -> str:
@@ -81,6 +83,11 @@ def extract(title: str, name: str, all_names: tuple[str, ...] = ()) -> dict | No
     pos = _find_name(title, sn, longer)
     if pos < 0:
         return None
+    # a headline that also names other listed stocks (lists, comparisons) can't be pinned on this one
+    own = {sn, *longer}
+    for other in map(short_name, all_names):
+        if len(other) >= 2 and other not in own and not sn.startswith(other) and other in title:
+            return None
     brokers = [(m.start(), canonical_broker(m.group(0))) for m in _BROKER_RE.finditer(title)]
     brokers = [(p, b) for p, b in brokers if b]
     if not brokers:
@@ -94,8 +101,10 @@ def extract(title: str, name: str, all_names: tuple[str, ...] = ()) -> dict | No
     tp = None
     i = title.find("目標價")
     if i >= 0:
-        seg = title[i: i + 40]
-        m = _TP_FINAL.search(seg) or _TP_ANY.search(seg)
+        seg = title[i: i + 24]
+        cut = _CLAUSE_END.search(seg)
+        seg = seg[: cut.start()] if cut else seg
+        m = _TP_FINAL.search(seg) or _TP_AFTER.search(seg) or _TP_BEFORE.search(title)
         if m:
             tp = float(m.group(1).replace(",", ""))
     if rating is None and tp is None:

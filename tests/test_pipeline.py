@@ -158,7 +158,7 @@ def test_missing_tpex_day_is_noted(monkeypatch, tmp_path):
 
 
 def test_headline_extraction():
-    names = ("長榮", "長榮航", "鴻海", "廣達", "台積電")
+    names = ("長榮", "長榮航", "鴻海", "廣達", "台積電", "緯創", "英業達", "緯穎")
     assert news_ratings.extract("小摩將鴻海評等從中立調升至加碼，目標價上看300元", "鴻海", names) == \
         {"broker": "J.P. Morgan", "rating": "加碼", "target_price": 300.0}
     assert news_ratings.extract("美銀降評廣達至劣於大盤 目標價從350元下修至280元", "廣達", names)["rating"] == "劣於大盤"
@@ -166,3 +166,12 @@ def test_headline_extraction():
     assert news_ratings.extract("高盛喊進長榮 目標價260元", "長榮", names)["target_price"] == 260.0
     assert news_ratings.extract("大摩看好台積電、聯發科", "台積電", names) is None     # no rating / target price
     assert news_ratings.extract("外資喊進鴻海", "鴻海", names) is None                 # not one of the 4 brokers
+    # list headlines naming several stocks are not attributed to any of them
+    assert news_ratings.extract("目標價1次看》鴻海、廣達、英業達、緯創 高盛完整評：這家強力買、1檔喊賣出", "廣達", names) is None
+    assert news_ratings.extract("18家台廠高盛喊「買進」 鴻海、緯穎、緯創入列", "鴻海", names) is None
+    # target price written before 目標價; the share price after it is ignored
+    assert news_ratings.extract("高盛列「首選」喊400元目標價！鴻海254元還能漲近6成？", "鴻海", names)["target_price"] == 400.0
+    assert news_ratings.extract("美銀喊「台積電估值太便宜」 目標價升至3,260元", "台積電", names)["target_price"] == 3260.0
+    assert news_ratings.extract("高盛調升台積電目標價至 3300 元 凸顯全球半導體龍頭價值", "台積電", names)["target_price"] == 3300.0
+    assert news_ratings.extract("緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元", "緯創", names)["target_price"] == 265.0
+    assert news_ratings.extract("最新宣布！台積電(2330)受惠AI基建爆發，小摩給予優於大盤評級", "台積電", names)["rating"] == "優於大盤"
