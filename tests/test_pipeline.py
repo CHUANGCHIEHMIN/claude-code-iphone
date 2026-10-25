@@ -204,3 +204,23 @@ def test_tech_headline_similarity():
     assert tech_news.similar(a, tech_news.tokens("台積電2奈米量產進度超前，蘋果搶下首批產能"))
     assert not tech_news.similar(a, tech_news.tokens("台積電法說會釋出第四季財測"))
     assert not tech_news.is_tech("鴻海股價漲停 外資連三買")
+    assert not tech_news.is_tech("受颱風影響 台積電原訂周六運動會取消")
+    assert not tech_news.is_tech("台積電高雄廠工安4死")
+    assert not tech_news.is_tech("Meta財報引爆「AI恐慌」！台指期夜盤一度崩500點")
+    # 媒體欄目名不算標題
+    assert tech_news._clean_title("PHP爆重大資安漏洞全球網站緊急搶修- 綜合", "") == "PHP爆重大資安漏洞全球網站緊急搶修"
+    assert tech_news._clean_title("全球網站爆重大資安漏洞！金管會急掃金融業| 金融要聞| 產經", "") == "全球網站爆重大資安漏洞！金管會急掃金融業"
+    assert tech_news._clean_title("漢翔電力島啟用 - 台股 - 新聞", "") == "漢翔電力島啟用"
+
+
+def test_tech_news_merges_same_event_through_any_headline():
+    d = date(2026, 10, 22)
+    art = lambda t, s: {"title": t, "url": f"https://n.example/{s}/{abs(hash(t))}", "source": s, "date": d}
+    groups = [
+        [art("PHP爆重大資安漏洞全球網站緊急搶修", "華視"),
+         art("歐洲部分政府網站緊急下線！PHP爆重大資安漏洞", "自由財經")],
+        [art("PHP資安漏洞潛藏逾10年 歐洲多國政府網站預防性下線", "公視"), art("PHP資安漏洞潛藏逾10年", "Yahoo新聞")],
+        [art("受颱風影響 台積電原訂周六運動會取消", "UDN"), art("颱風衝擊台積電！運動會取消", "Yahoo股市")],
+    ]
+    out = tech_news.stories(groups, d)
+    assert len(out) == 1 and out[0]["count"] == 4
