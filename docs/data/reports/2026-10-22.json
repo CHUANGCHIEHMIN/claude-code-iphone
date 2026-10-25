@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T16:22:28+08:00",
+ "generated_at": "2026-10-25T15:23:22+08:00",
  "asof": "2026-10-22",
  "window": [
   "2026-10-16",
@@ -22,8 +22,371 @@
    "trust": 4478772067.050001
   }
  },
- "picks": [],
- "pool": [
+ "picks": [
+  {
+   "code": "2377",
+   "name": "微星",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 16,
+   "close": 163.0,
+   "chg5": 0.03164556962025311,
+   "net_amt": 2174987550.5,
+   "foreign_amt": 2016951909.0,
+   "trust_amt": -24895096.0,
+   "dealer_amt": 182930737.5,
+   "foreign_sh": 12385148.0,
+   "trust_sh": -164608.0,
+   "net_sh": 13337940.0,
+   "value5": 7508772992.0,
+   "net_ratio": 0.2896595159844726,
+   "dominant": true,
+   "avg_vol5": 9196916.6,
+   "avg_vol20": 5966660.6,
+   "vol_ratio": 1.5413842376085545,
+   "volume_up": true,
+   "pe": 14.14,
+   "qfii_ratio": 22.1,
+   "qfii_chg5": 1.2800000000000011,
+   "margin_balance": 10389.0,
+   "margin_chg5": -647.0,
+   "A": {
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 1.83
+     },
+     {
+      "month": "2026-08",
+      "yoy": -6.05
+     },
+     {
+      "month": "2026-07",
+      "yoy": -0.01
+     }
+    ],
+    "revenue_all_positive": false,
+    "basis": "主題對照表：AI伺服器／AI晶片"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2912",
+   "name": "統一超",
+   "market": "上市",
+   "industry": "貿易百貨",
+   "rank": 12,
+   "close": 226.0,
+   "chg5": 0.008928571428571397,
+   "net_amt": 2532053812.0,
+   "foreign_amt": 2491671326.5,
+   "trust_amt": 36231519.0,
+   "dealer_amt": 4150966.5,
+   "foreign_sh": 11017562.0,
+   "trust_sh": 156597.0,
+   "net_sh": 11192895.0,
+   "value5": 3642357916.0,
+   "net_ratio": 0.6951688632457832,
+   "dominant": true,
+   "avg_vol5": 3234916.4,
+   "avg_vol20": 2524924.4,
+   "vol_ratio": 1.2811933695915807,
+   "volume_up": true,
+   "pe": 20.36,
+   "qfii_ratio": 16.48,
+   "qfii_chg5": 1.1400000000000006,
+   "margin_balance": 862.0,
+   "margin_chg5": -58.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 7.81
+     },
+     {
+      "month": "2026-08",
+      "yoy": 4.81
+     },
+     {
+      "month": "2026-07",
+      "yoy": 8.47
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +7.8%、08月 +4.8%、07月 +8.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3443",
+   "name": "創意",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 5,
+   "close": 7585.0,
+   "chg5": -0.011082138200782299,
+   "net_amt": 3312581450.0,
+   "foreign_amt": 242446035.0,
+   "trust_amt": 4339300190.0,
+   "dealer_amt": -1269164775.0,
+   "foreign_sh": 36848.0,
+   "trust_sh": 555115.0,
+   "net_sh": 425950.0,
+   "value5": 68051641370.0,
+   "net_ratio": 0.04867746586727185,
+   "dominant": false,
+   "avg_vol5": 1737988.8,
+   "avg_vol20": 1398954.95,
+   "vol_ratio": 1.24234793979606,
+   "volume_up": true,
+   "pe": 194.44,
+   "qfii_ratio": 27.37,
+   "qfii_chg5": -0.05000000000000071,
+   "margin_balance": 4494.0,
+   "margin_chg5": -138.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 97.77
+     },
+     {
+      "month": "2026-08",
+      "yoy": 111.02
+     },
+     {
+      "month": "2026-07",
+      "yoy": 158.38
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +97.8%、08月 +111.0%、07月 +158.4%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2412",
+   "name": "中華電",
+   "market": "上市",
+   "industry": "通信網路業",
+   "rank": 14,
+   "close": 158.0,
+   "chg5": 0.0360655737704918,
+   "net_amt": 2393632408.0,
+   "foreign_amt": 1177618917.5,
+   "trust_amt": 1226094686.5,
+   "dealer_amt": -10081196.0,
+   "foreign_sh": 7499331.0,
+   "trust_sh": 7943496.0,
+   "net_sh": 15374063.0,
+   "value5": 10191663765.0,
+   "net_ratio": 0.23486179128280926,
+   "dominant": true,
+   "avg_vol5": 13207913.2,
+   "avg_vol20": 10654642.75,
+   "vol_ratio": 1.239639236144262,
+   "volume_up": true,
+   "pe": 31.04,
+   "qfii_ratio": 18.86,
+   "qfii_chg5": 0.0799999999999983,
+   "margin_balance": 578.0,
+   "margin_chg5": 205.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 20.85
+     },
+     {
+      "month": "2026-08",
+      "yoy": 25.61
+     },
+     {
+      "month": "2026-07",
+      "yoy": 3.68
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +20.9%、08月 +25.6%、07月 +3.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3045",
+   "name": "台灣大",
+   "market": "上市",
+   "industry": "通信網路業",
+   "rank": 21,
+   "close": 133.0,
+   "chg5": 0.01526717557251911,
+   "net_amt": 1741521839.0,
+   "foreign_amt": 1895752970.0,
+   "trust_amt": -86926408.0,
+   "dealer_amt": -67304723.0,
+   "foreign_sh": 14439175.0,
+   "trust_sh": -641256.0,
+   "net_sh": 13280748.0,
+   "value5": 6518825195.0,
+   "net_ratio": 0.2671527133962364,
+   "dominant": true,
+   "avg_vol5": 9960578.4,
+   "avg_vol20": 8126711.6,
+   "vol_ratio": 1.2256591460683803,
+   "volume_up": true,
+   "pe": 25.14,
+   "qfii_ratio": 19.82,
+   "qfii_chg5": 0.35999999999999943,
+   "margin_balance": 57.0,
+   "margin_chg5": -59.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 10.34
+     },
+     {
+      "month": "2026-08",
+      "yoy": 8.49
+     },
+     {
+      "month": "2026-07",
+      "yoy": 7.14
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +10.3%、08月 +8.5%、07月 +7.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
   {
    "code": "3231",
    "name": "緯創",
@@ -45,16 +408,27 @@
    "avg_vol5": 50938793.2,
    "avg_vol20": 42503948.8,
    "vol_ratio": 1.1984484886260733,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 15.09,
    "qfii_ratio": 35.95,
    "qfii_chg5": 1.8200000000000003,
    "margin_balance": 43199.0,
    "margin_chg5": -4450.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -83,10 +457,657 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2884",
+   "name": "玉山金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 23,
+   "close": 49.75,
+   "chg5": 0.01946721311475419,
+   "net_amt": 1613126218.5,
+   "foreign_amt": 582692686.65,
+   "trust_amt": 378438229.75,
+   "dealer_amt": 651995302.1,
+   "foreign_sh": 11671070.0,
+   "trust_sh": 7705741.0,
+   "net_sh": 32622731.0,
+   "value5": 7950999064.0,
+   "net_ratio": 0.2028834622561842,
+   "dominant": true,
+   "avg_vol5": 32307093.0,
+   "avg_vol20": 27168493.95,
+   "vol_ratio": 1.1891381634718843,
+   "volume_up": false,
+   "pe": 20.64,
+   "qfii_ratio": 30.47,
+   "qfii_chg5": 0.08999999999999986,
+   "margin_balance": 5383.0,
+   "margin_chg5": -303.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 7.18
+     },
+     {
+      "month": "2026-08",
+      "yoy": 19.28
+     },
+     {
+      "month": "2026-07",
+      "yoy": 4.74
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +7.2%、08月 +19.3%、07月 +4.7%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "3034",
+   "name": "聯詠",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 11,
+   "close": 583.0,
+   "chg5": 0.031858407079645934,
+   "net_amt": 2535519795.0,
+   "foreign_amt": 2015343647.0,
+   "trust_amt": 182390694.0,
+   "dealer_amt": 337785454.0,
+   "foreign_sh": 3434652.0,
+   "trust_sh": 317457.0,
+   "net_sh": 4331931.0,
+   "value5": 11587816164.0,
+   "net_ratio": 0.21880911460065514,
+   "dominant": true,
+   "avg_vol5": 3991073.6,
+   "avg_vol20": 3376500.8,
+   "vol_ratio": 1.1820147058753845,
+   "volume_up": false,
+   "pe": 20.34,
+   "qfii_ratio": 45.97,
+   "qfii_chg5": 0.240000000000002,
+   "margin_balance": 2231.0,
+   "margin_chg5": 78.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 24.99
+     },
+     {
+      "month": "2026-08",
+      "yoy": 26.33
+     },
+     {
+      "month": "2026-07",
+      "yoy": 26.79
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +25.0%、08月 +26.3%、07月 +26.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "6505",
+   "name": "台塑化",
+   "market": "上市",
+   "industry": "油電燃氣業",
+   "rank": 9,
+   "close": 106.5,
+   "chg5": -0.04484304932735428,
+   "net_amt": 2664911258.0,
+   "foreign_amt": 4102609241.5,
+   "trust_amt": -1546868032.0,
+   "dealer_amt": 109170048.5,
+   "foreign_sh": 37478215.0,
+   "trust_sh": -15176136.0,
+   "net_sh": 23224477.0,
+   "value5": 28992619359.0,
+   "net_ratio": 0.09191688494929824,
+   "dominant": false,
+   "avg_vol5": 50436530.4,
+   "avg_vol20": 43067496.85,
+   "vol_ratio": 1.1711042918436991,
+   "volume_up": false,
+   "pe": 18.49,
+   "qfii_ratio": 6.5,
+   "qfii_chg5": 0.3600000000000003,
+   "margin_balance": 9358.0,
+   "margin_chg5": -306.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 65.59
+     },
+     {
+      "month": "2026-08",
+      "yoy": 50.28
+     },
+     {
+      "month": "2026-07",
+      "yoy": 32.34
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +65.6%、08月 +50.3%、07月 +32.3%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2002",
+   "name": "中鋼",
+   "market": "上市",
+   "industry": "鋼鐵工業",
+   "rank": 17,
+   "close": 19.55,
+   "chg5": 0.01558441558441559,
+   "net_amt": 2174560716.6000004,
+   "foreign_amt": 1926455092.0,
+   "trust_amt": 288590926.8,
+   "dealer_amt": -40485302.2,
+   "foreign_sh": 98514129.0,
+   "trust_sh": 14726208.0,
+   "net_sh": 111172361.0,
+   "value5": 4702540009.0,
+   "net_ratio": 0.4624225870355589,
+   "dominant": true,
+   "avg_vol5": 48190296.0,
+   "avg_vol20": 41588836.4,
+   "vol_ratio": 1.158731529213931,
+   "volume_up": false,
+   "pe": null,
+   "qfii_ratio": 16.31,
+   "qfii_chg5": 0.4999999999999982,
+   "margin_balance": 38126.0,
+   "margin_chg5": -1702.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 27.13
+     },
+     {
+      "month": "2026-08",
+      "yoy": 12.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 21.84
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +27.1%、08月 +13.0%、07月 +21.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2324",
+   "name": "仁寶",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 24,
+   "close": 37.3,
+   "chg5": 0.03611111111111098,
+   "net_amt": 1605157224.1,
+   "foreign_amt": 1574486907.1500003,
+   "trust_amt": -148557588.79999998,
+   "dealer_amt": 179227905.75,
+   "foreign_sh": 42341553.0,
+   "trust_sh": -4014505.0,
+   "net_sh": 43188963.0,
+   "value5": 7422255098.0,
+   "net_ratio": 0.21626273994982,
+   "dominant": true,
+   "avg_vol5": 39865569.8,
+   "avg_vol20": 34655908.2,
+   "vol_ratio": 1.1503253520275656,
+   "volume_up": false,
+   "pe": 18.74,
+   "qfii_ratio": 33.59,
+   "qfii_chg5": 0.6900000000000048,
+   "margin_balance": 58880.0,
+   "margin_chg5": -1773.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 35.44
+     },
+     {
+      "month": "2026-08",
+      "yoy": 14.5
+     },
+     {
+      "month": "2026-07",
+      "yoy": 38.25
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +35.4%、08月 +14.5%、07月 +38.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "4938",
+   "name": "和碩",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 10,
+   "close": 103.5,
+   "chg5": 0.05504587155963314,
+   "net_amt": 2550808564.5,
+   "foreign_amt": 2743915840.5,
+   "trust_amt": -474435075.0,
+   "dealer_amt": 281327799.0,
+   "foreign_sh": 26514989.0,
+   "trust_sh": -4620333.0,
+   "net_sh": 24612929.0,
+   "value5": 10018558109.0,
+   "net_ratio": 0.2546083514960626,
+   "dominant": true,
+   "avg_vol5": 19159644.6,
+   "avg_vol20": 17623298.25,
+   "vol_ratio": 1.087177004452047,
+   "volume_up": false,
+   "pe": 17.45,
+   "qfii_ratio": 32.7,
+   "qfii_chg5": 0.7700000000000031,
+   "margin_balance": 4900.0,
+   "margin_chg5": -1139.0,
+   "A": {
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 86.87
+     },
+     {
+      "month": "2026-08",
+      "yoy": 34.11
+     },
+     {
+      "month": "2026-07",
+      "yoy": 11.55
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +86.9%、08月 +34.1%、07月 +11.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2379",
+   "name": "瑞昱",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 7,
+   "close": 772.0,
+   "chg5": 0.010471204188481575,
+   "net_amt": 2830389230.0,
+   "foreign_amt": 2038437332.0,
+   "trust_amt": 324685589.0,
+   "dealer_amt": 467266309.0,
+   "foreign_sh": 2598997.0,
+   "trust_sh": 420198.0,
+   "net_sh": 3617626.0,
+   "value5": 10764799815.0,
+   "net_ratio": 0.26293003851832425,
+   "dominant": true,
+   "avg_vol5": 2756101.0,
+   "avg_vol20": 2572346.4,
+   "vol_ratio": 1.0714346248234685,
+   "volume_up": false,
+   "pe": 27.99,
+   "qfii_ratio": 46.77,
+   "qfii_chg5": 0.39000000000000057,
+   "margin_balance": 2440.0,
+   "margin_chg5": -147.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 23.35
+     },
+     {
+      "month": "2026-08",
+      "yoy": 28.08
+     },
+     {
+      "month": "2026-07",
+      "yoy": 32.53
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +23.4%、08月 +28.1%、07月 +32.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2885",
+   "name": "元大金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 22,
+   "close": 72.4,
+   "chg5": -0.004126547455295726,
+   "net_amt": 1621721761.1999998,
+   "foreign_amt": 1633064019.4,
+   "trust_amt": -634338826.0,
+   "dealer_amt": 622996567.8,
+   "foreign_sh": 22570071.0,
+   "trust_sh": -8859200.0,
+   "net_sh": 22398377.0,
+   "value5": 8331255074.0,
+   "net_ratio": 0.1946551566115211,
+   "dominant": true,
+   "avg_vol5": 23232769.0,
+   "avg_vol20": 23272376.6,
+   "vol_ratio": 0.9982980852931023,
+   "volume_up": false,
+   "pe": 16.96,
+   "qfii_ratio": 27.42,
+   "qfii_chg5": 0.14000000000000057,
+   "margin_balance": 1080.0,
+   "margin_chg5": -52.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 67.25
+     },
+     {
+      "month": "2026-08",
+      "yoy": 57.94
+     },
+     {
+      "month": "2026-07",
+      "yoy": 78.98
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +67.2%、08月 +57.9%、07月 +79.0%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2886",
+   "name": "兆豐金",
+   "market": "上市",
+   "industry": "金融保險業",
+   "rank": 19,
+   "close": 55.2,
+   "chg5": 0.05142857142857138,
+   "net_amt": 1907067184.0,
+   "foreign_amt": 1439235735.7,
+   "trust_amt": -306435642.5,
+   "dealer_amt": 774267090.8,
+   "foreign_sh": 26600003.0,
+   "trust_sh": -5687643.0,
+   "net_sh": 35236154.0,
+   "value5": 5642973564.0,
+   "net_ratio": 0.33795430057768744,
+   "dominant": true,
+   "avg_vol5": 20988116.0,
+   "avg_vol20": 21783669.9,
+   "vol_ratio": 0.9634793446810357,
+   "volume_up": false,
+   "pe": 21.48,
+   "qfii_ratio": 21.71,
+   "qfii_chg5": 0.15000000000000213,
+   "margin_balance": 1864.0,
+   "margin_chg5": -483.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 16.45
+     },
+     {
+      "month": "2026-08",
+      "yoy": 15.55
+     },
+     {
+      "month": "2026-07",
+      "yoy": 4.11
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +16.4%、08月 +15.6%、07月 +4.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -111,16 +1132,27 @@
    "avg_vol5": 38067471.0,
    "avg_vol20": 41318130.1,
    "vol_ratio": 0.9213260839216922,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 16.15,
    "qfii_ratio": 39.85,
    "qfii_chg5": 0.28000000000000114,
    "margin_balance": 57768.0,
    "margin_chg5": -2824.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -149,10 +1181,81 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2603",
+   "name": "長榮",
+   "market": "上市",
+   "industry": "航運業",
+   "rank": 6,
+   "close": 260.0,
+   "chg5": 0.011673151750972721,
+   "net_amt": 2837374940.5,
+   "foreign_amt": 1150745130.5,
+   "trust_amt": 1093925013.5,
+   "dealer_amt": 592704796.5,
+   "foreign_sh": 4404612.0,
+   "trust_sh": 4126973.0,
+   "net_sh": 10804604.0,
+   "value5": 14755001110.0,
+   "net_ratio": 0.1922992021042281,
+   "dominant": true,
+   "avg_vol5": 11262105.4,
+   "avg_vol20": 13062237.7,
+   "vol_ratio": 0.8621880613916558,
+   "volume_up": false,
+   "pe": 10.31,
+   "qfii_ratio": 27.12,
+   "qfii_chg5": 0.05000000000000071,
+   "margin_balance": 8295.0,
+   "margin_chg5": -553.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 63.74
+     },
+     {
+      "month": "2026-08",
+      "yoy": 48.63
+     },
+     {
+      "month": "2026-07",
+      "yoy": 43.07
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +63.7%、08月 +48.6%、07月 +43.1%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -177,16 +1280,22 @@
    "avg_vol5": 9492372.6,
    "avg_vol20": 11295102.8,
    "vol_ratio": 0.8403971852296908,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 14.03,
    "qfii_ratio": 23.0,
    "qfii_chg5": 0.120000000000001,
    "margin_balance": 15199.0,
    "margin_chg5": -801.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -215,10 +1324,373 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "8299",
+   "name": "群聯",
+   "market": "上櫃",
+   "industry": "半導體業",
+   "rank": 8,
+   "close": 1880.0,
+   "chg5": 0.02732240437158473,
+   "net_amt": 2769032005.0,
+   "foreign_amt": 2471126755.0,
+   "trust_amt": 98576530.0,
+   "dealer_amt": 199328720.0,
+   "foreign_sh": 1288555.0,
+   "trust_sh": 53936.0,
+   "net_sh": 1443344.0,
+   "value5": 21654549540.0,
+   "net_ratio": 0.12787299037946184,
+   "dominant": true,
+   "avg_vol5": 2298031.8,
+   "avg_vol20": 3046375.3,
+   "vol_ratio": 0.7543495379574539,
+   "volume_up": false,
+   "pe": 8.62,
+   "qfii_ratio": 44.44,
+   "qfii_chg5": 0.8499999999999943,
+   "margin_balance": 10262.0,
+   "margin_chg5": -287.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 370.26
+     },
+     {
+      "month": "2026-08",
+      "yoy": 376.51
+     },
+     {
+      "month": "2026-07",
+      "yoy": 377.55
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +370.3%、08月 +376.5%、07月 +377.6%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2344",
+   "name": "華邦電",
+   "market": "上市",
+   "industry": "半導體業",
+   "rank": 18,
+   "close": 154.5,
+   "chg5": -0.003225806451612856,
+   "net_amt": 2167559712.5,
+   "foreign_amt": 1932219967.0,
+   "trust_amt": -798599527.5,
+   "dealer_amt": 1033939273.0,
+   "foreign_sh": 11649726.0,
+   "trust_sh": -5111975.0,
+   "net_sh": 13114855.0,
+   "value5": 37847540635.0,
+   "net_ratio": 0.05727082066979859,
+   "dominant": false,
+   "avg_vol5": 48195126.0,
+   "avg_vol20": 66024417.45,
+   "vol_ratio": 0.7299591251448444,
+   "volume_up": false,
+   "pe": 17.03,
+   "qfii_ratio": 19.64,
+   "qfii_chg5": 0.19000000000000128,
+   "margin_balance": 109781.0,
+   "margin_chg5": -2831.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 256.66
+     },
+     {
+      "month": "2026-08",
+      "yoy": 289.42
+     },
+     {
+      "month": "2026-07",
+      "yoy": 291.54
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "近3月營收年增皆正（09月 +256.7%、08月 +289.4%、07月 +291.5%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  }
+ ],
+ "pool": [
+  {
+   "code": "3231",
+   "name": "緯創",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 1,
+   "close": 190.0,
+   "chg5": 0.07954545454545459,
+   "net_amt": 13582565100.0,
+   "foreign_amt": 12344468498.5,
+   "trust_amt": 7240709.0,
+   "dealer_amt": 1230855892.5,
+   "foreign_sh": 64886427.0,
+   "trust_sh": -247641.0,
+   "net_sh": 71160884.0,
+   "value5": 48343960661.0,
+   "net_ratio": 0.280956812687408,
+   "dominant": true,
+   "avg_vol5": 50938793.2,
+   "avg_vol20": 42503948.8,
+   "vol_ratio": 1.1984484886260733,
+   "volume_up": false,
+   "pe": 15.09,
+   "qfii_ratio": 35.95,
+   "qfii_chg5": 1.8200000000000003,
+   "margin_balance": 43199.0,
+   "margin_chg5": -4450.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 87.18
+     },
+     {
+      "month": "2026-08",
+      "yoy": 166.48
+     },
+     {
+      "month": "2026-07",
+      "yoy": 60.76
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +87.2%、08月 +166.5%、07月 +60.8%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2317",
+   "name": "鴻海",
+   "market": "上市",
+   "industry": "其他電子業",
+   "rank": 2,
+   "close": 245.0,
+   "chg5": 0.022964509394572064,
+   "net_amt": 11091139714.5,
+   "foreign_amt": 10866780034.0,
+   "trust_amt": 408218282.5,
+   "dealer_amt": -183858602.0,
+   "foreign_sh": 43551893.0,
+   "trust_sh": 1689288.0,
+   "net_sh": 44568264.0,
+   "value5": 46601613810.0,
+   "net_ratio": 0.23799904783812464,
+   "dominant": true,
+   "avg_vol5": 38067471.0,
+   "avg_vol20": 41318130.1,
+   "vol_ratio": 0.9213260839216922,
+   "volume_up": false,
+   "pe": 16.15,
+   "qfii_ratio": 39.85,
+   "qfii_chg5": 0.28000000000000114,
+   "margin_balance": 57768.0,
+   "margin_chg5": -2824.0,
+   "A": {
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 38.41
+     },
+     {
+      "month": "2026-08",
+      "yoy": 51.97
+     },
+     {
+      "month": "2026-07",
+      "yoy": 54.18
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +38.4%、08月 +52.0%、07月 +54.2%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
+   "researched": false,
+   "research_sources": []
+  },
+  {
+   "code": "2382",
+   "name": "廣達",
+   "market": "上市",
+   "industry": "電腦及週邊設備業",
+   "rank": 3,
+   "close": 322.0,
+   "chg5": 0.017377567140600236,
+   "net_amt": 3878143679.5,
+   "foreign_amt": 1855159661.0,
+   "trust_amt": 1259884774.5,
+   "dealer_amt": 763099244.0,
+   "foreign_sh": 5596562.0,
+   "trust_sh": 3902893.0,
+   "net_sh": 11886157.0,
+   "value5": 15244663439.0,
+   "net_ratio": 0.25439352564377726,
+   "dominant": true,
+   "avg_vol5": 9492372.6,
+   "avg_vol20": 11295102.8,
+   "vol_ratio": 0.8403971852296908,
+   "volume_up": false,
+   "pe": 14.03,
+   "qfii_ratio": 23.0,
+   "qfii_chg5": 0.120000000000001,
+   "margin_balance": 15199.0,
+   "margin_chg5": -801.0,
+   "A": {
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
+   },
+   "B": {
+    "pass": true,
+    "themes": [
+     "AI伺服器／AI晶片"
+    ],
+    "revenue_yoy": [
+     {
+      "month": "2026-09",
+      "yoy": 76.68
+     },
+     {
+      "month": "2026-08",
+      "yoy": 177.45
+     },
+     {
+      "month": "2026-07",
+      "yoy": 131.31
+     }
+    ],
+    "revenue_all_positive": true,
+    "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +76.7%、08月 +177.4%、07月 +131.3%）"
+   },
+   "C": {
+    "status": "not_checked",
+    "ratings": []
+   },
+   "news": [],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -307,16 +1779,27 @@
    "avg_vol5": 1737988.8,
    "avg_vol20": 1398954.95,
    "vol_ratio": 1.24234793979606,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 194.44,
    "qfii_ratio": 27.37,
    "qfii_chg5": -0.05000000000000071,
    "margin_balance": 4494.0,
    "margin_chg5": -138.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -345,10 +1828,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -373,16 +1854,27 @@
    "avg_vol5": 11262105.4,
    "avg_vol20": 13062237.7,
    "vol_ratio": 0.8621880613916558,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 10.31,
    "qfii_ratio": 27.12,
    "qfii_chg5": 0.05000000000000071,
    "margin_balance": 8295.0,
    "margin_chg5": -553.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -409,10 +1901,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -437,16 +1927,27 @@
    "avg_vol5": 2756101.0,
    "avg_vol20": 2572346.4,
    "vol_ratio": 1.0714346248234685,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 27.99,
    "qfii_ratio": 46.77,
    "qfii_chg5": 0.39000000000000057,
    "margin_balance": 2440.0,
    "margin_chg5": -147.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -475,10 +1976,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -503,16 +2002,22 @@
    "avg_vol5": 2298031.8,
    "avg_vol20": 3046375.3,
    "vol_ratio": 0.7543495379574539,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 8.62,
    "qfii_ratio": 44.44,
    "qfii_chg5": 0.8499999999999943,
    "margin_balance": 10262.0,
    "margin_chg5": -287.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -541,10 +2046,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -569,16 +2072,27 @@
    "avg_vol5": 50436530.4,
    "avg_vol20": 43067496.85,
    "vol_ratio": 1.1711042918436991,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 18.49,
    "qfii_ratio": 6.5,
    "qfii_chg5": 0.3600000000000003,
    "margin_balance": 9358.0,
    "margin_chg5": -306.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -605,10 +2119,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -633,16 +2145,22 @@
    "avg_vol5": 19159644.6,
    "avg_vol20": 17623298.25,
    "vol_ratio": 1.087177004452047,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 17.45,
    "qfii_ratio": 32.7,
    "qfii_chg5": 0.7700000000000031,
    "margin_balance": 4900.0,
    "margin_chg5": -1139.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -669,10 +2187,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -697,16 +2213,27 @@
    "avg_vol5": 3991073.6,
    "avg_vol20": 3376500.8,
    "vol_ratio": 1.1820147058753845,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 20.34,
    "qfii_ratio": 45.97,
    "qfii_chg5": 0.240000000000002,
    "margin_balance": 2231.0,
    "margin_chg5": 78.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -733,10 +2260,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -761,16 +2286,27 @@
    "avg_vol5": 3234916.4,
    "avg_vol20": 2524924.4,
    "vol_ratio": 1.2811933695915807,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 20.36,
    "qfii_ratio": 16.48,
    "qfii_chg5": 1.1400000000000006,
    "margin_balance": 862.0,
    "margin_chg5": -58.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -797,10 +2333,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -892,16 +2426,27 @@
    "avg_vol5": 13207913.2,
    "avg_vol20": 10654642.75,
    "vol_ratio": 1.239639236144262,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 31.04,
    "qfii_ratio": 18.86,
    "qfii_chg5": 0.0799999999999983,
    "margin_balance": 578.0,
    "margin_chg5": 205.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -928,10 +2473,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1020,16 +2563,22 @@
    "avg_vol5": 9196916.6,
    "avg_vol20": 5966660.6,
    "vol_ratio": 1.5413842376085545,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 14.14,
    "qfii_ratio": 22.1,
    "qfii_chg5": 1.2800000000000011,
    "margin_balance": 10389.0,
    "margin_chg5": -647.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1058,10 +2607,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1086,16 +2633,22 @@
    "avg_vol5": 48190296.0,
    "avg_vol20": 41588836.4,
    "vol_ratio": 1.158731529213931,
-   "volume_up": null,
+   "volume_up": false,
    "pe": null,
    "qfii_ratio": 16.31,
    "qfii_chg5": 0.4999999999999982,
    "margin_balance": 38126.0,
    "margin_chg5": -1702.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1122,10 +2675,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1150,16 +2701,27 @@
    "avg_vol5": 48195126.0,
    "avg_vol20": 66024417.45,
    "vol_ratio": 0.7299591251448444,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 17.03,
    "qfii_ratio": 19.64,
    "qfii_chg5": 0.19000000000000128,
    "margin_balance": 109781.0,
    "margin_chg5": -2831.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1186,10 +2748,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1214,16 +2774,27 @@
    "avg_vol5": 20988116.0,
    "avg_vol20": 21783669.9,
    "vol_ratio": 0.9634793446810357,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 21.48,
    "qfii_ratio": 21.71,
    "qfii_chg5": 0.15000000000000213,
    "margin_balance": 1864.0,
    "margin_chg5": -483.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1250,10 +2821,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1285,9 +2854,20 @@
    "margin_balance": 2121.0,
    "margin_chg5": -183.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -1316,7 +2896,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -1343,16 +2922,27 @@
    "avg_vol5": 9960578.4,
    "avg_vol20": 8126711.6,
    "vol_ratio": 1.2256591460683803,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 25.14,
    "qfii_ratio": 19.82,
    "qfii_chg5": 0.35999999999999943,
    "margin_balance": 57.0,
    "margin_chg5": -59.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1379,10 +2969,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1407,16 +2995,27 @@
    "avg_vol5": 23232769.0,
    "avg_vol20": 23272376.6,
    "vol_ratio": 0.9982980852931023,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 16.96,
    "qfii_ratio": 27.42,
    "qfii_chg5": 0.14000000000000057,
    "margin_balance": 1080.0,
    "margin_chg5": -52.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1443,10 +3042,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1471,16 +3068,27 @@
    "avg_vol5": 32307093.0,
    "avg_vol20": 27168493.95,
    "vol_ratio": 1.1891381634718843,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 20.64,
    "qfii_ratio": 30.47,
    "qfii_chg5": 0.08999999999999986,
    "margin_balance": 5383.0,
    "margin_chg5": -303.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1507,10 +3115,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1535,16 +3141,27 @@
    "avg_vol5": 39865569.8,
    "avg_vol20": 34655908.2,
    "vol_ratio": 1.1503253520275656,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 18.74,
    "qfii_ratio": 33.59,
    "qfii_chg5": 0.6900000000000048,
    "margin_balance": 58880.0,
    "margin_chg5": -1773.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1571,10 +3188,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1606,9 +3221,15 @@
    "margin_balance": 360.0,
    "margin_chg5": -28.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1635,10 +3256,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1734,9 +3353,15 @@
    "margin_balance": 35698.0,
    "margin_chg5": -3468.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1763,10 +3388,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1798,9 +3421,20 @@
    "margin_balance": 4817.0,
    "margin_chg5": 469.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -1829,7 +3463,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -1863,9 +3496,15 @@
    "margin_balance": 6472.0,
    "margin_chg5": -550.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -1894,10 +3533,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -1993,9 +3630,15 @@
    "margin_balance": 5063.0,
    "margin_chg5": -2035.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2022,10 +3665,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2121,9 +3762,20 @@
    "margin_balance": 28232.0,
    "margin_chg5": -1143.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2152,10 +3804,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2187,9 +3837,20 @@
    "margin_balance": 6774.0,
    "margin_chg5": -1226.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2216,10 +3877,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2251,9 +3910,20 @@
    "margin_balance": 1296.0,
    "margin_chg5": -55.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -2282,7 +3952,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -2380,9 +4049,15 @@
    "margin_balance": 1019.0,
    "margin_chg5": -206.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2411,10 +4086,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2446,9 +4119,15 @@
    "margin_balance": 1845.0,
    "margin_chg5": -53.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2477,10 +4156,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2512,9 +4189,15 @@
    "margin_balance": 25353.0,
    "margin_chg5": -475.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2543,10 +4226,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2578,9 +4259,20 @@
    "margin_balance": 5071.0,
    "margin_chg5": 61.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -2609,7 +4301,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -2643,9 +4334,20 @@
    "margin_balance": 42022.0,
    "margin_chg5": -880.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -2674,7 +4376,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -2708,9 +4409,15 @@
    "margin_balance": 32000.0,
    "margin_chg5": 1159.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -2739,7 +4446,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -2773,9 +4479,20 @@
    "margin_balance": 25236.0,
    "margin_chg5": -3639.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2802,10 +4519,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2837,9 +4552,15 @@
    "margin_balance": 44832.0,
    "margin_chg5": 1720.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2866,10 +4587,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -2901,9 +4620,20 @@
    "margin_balance": 33303.0,
    "margin_chg5": 572.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -2932,10 +4662,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3033,9 +4761,20 @@
    "margin_balance": 355.0,
    "margin_chg5": -143.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3062,10 +4801,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3097,9 +4834,20 @@
    "margin_balance": 15317.0,
    "margin_chg5": -154.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -3128,7 +4876,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -3162,9 +4909,15 @@
    "margin_balance": 10646.0,
    "margin_chg5": -1080.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3193,10 +4946,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3288,16 +5039,27 @@
    "avg_vol5": 50938793.2,
    "avg_vol20": 42503948.8,
    "vol_ratio": 1.1984484886260733,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 15.09,
    "qfii_ratio": 35.95,
    "qfii_chg5": 1.8200000000000003,
    "margin_balance": 43199.0,
    "margin_chg5": -4450.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3326,10 +5088,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3354,16 +5114,27 @@
    "avg_vol5": 38067471.0,
    "avg_vol20": 41318130.1,
    "vol_ratio": 0.9213260839216922,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 16.15,
    "qfii_ratio": 39.85,
    "qfii_chg5": 0.28000000000000114,
    "margin_balance": 57768.0,
    "margin_chg5": -2824.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3392,10 +5163,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3420,16 +5189,22 @@
    "avg_vol5": 9492372.6,
    "avg_vol20": 11295102.8,
    "vol_ratio": 0.8403971852296908,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 14.03,
    "qfii_ratio": 23.0,
    "qfii_chg5": 0.120000000000001,
    "margin_balance": 15199.0,
    "margin_chg5": -801.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3458,10 +5233,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3550,16 +5323,27 @@
    "avg_vol5": 1737988.8,
    "avg_vol20": 1398954.95,
    "vol_ratio": 1.24234793979606,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 194.44,
    "qfii_ratio": 27.37,
    "qfii_chg5": -0.05000000000000071,
    "margin_balance": 4494.0,
    "margin_chg5": -138.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3588,10 +5372,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3616,16 +5398,27 @@
    "avg_vol5": 11262105.4,
    "avg_vol20": 13062237.7,
    "vol_ratio": 0.8621880613916558,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 10.31,
    "qfii_ratio": 27.12,
    "qfii_chg5": 0.05000000000000071,
    "margin_balance": 8295.0,
    "margin_chg5": -553.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3652,10 +5445,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3680,16 +5471,27 @@
    "avg_vol5": 2756101.0,
    "avg_vol20": 2572346.4,
    "vol_ratio": 1.0714346248234685,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 27.99,
    "qfii_ratio": 46.77,
    "qfii_chg5": 0.39000000000000057,
    "margin_balance": 2440.0,
    "margin_chg5": -147.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3718,10 +5520,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3746,16 +5546,22 @@
    "avg_vol5": 2298031.8,
    "avg_vol20": 3046375.3,
    "vol_ratio": 0.7543495379574539,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 8.62,
    "qfii_ratio": 44.44,
    "qfii_chg5": 0.8499999999999943,
    "margin_balance": 10262.0,
    "margin_chg5": -287.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3784,10 +5590,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3812,16 +5616,27 @@
    "avg_vol5": 50436530.4,
    "avg_vol20": 43067496.85,
    "vol_ratio": 1.1711042918436991,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 18.49,
    "qfii_ratio": 6.5,
    "qfii_chg5": 0.3600000000000003,
    "margin_balance": 9358.0,
    "margin_chg5": -306.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3848,10 +5663,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3876,16 +5689,22 @@
    "avg_vol5": 19159644.6,
    "avg_vol20": 17623298.25,
    "vol_ratio": 1.087177004452047,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 17.45,
    "qfii_ratio": 32.7,
    "qfii_chg5": 0.7700000000000031,
    "margin_balance": 4900.0,
    "margin_chg5": -1139.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3912,10 +5731,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -3940,16 +5757,27 @@
    "avg_vol5": 3991073.6,
    "avg_vol20": 3376500.8,
    "vol_ratio": 1.1820147058753845,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 20.34,
    "qfii_ratio": 45.97,
    "qfii_chg5": 0.240000000000002,
    "margin_balance": 2231.0,
    "margin_chg5": 78.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -3976,10 +5804,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4004,16 +5830,27 @@
    "avg_vol5": 3234916.4,
    "avg_vol20": 2524924.4,
    "vol_ratio": 1.2811933695915807,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 20.36,
    "qfii_ratio": 16.48,
    "qfii_chg5": 1.1400000000000006,
    "margin_balance": 862.0,
    "margin_chg5": -58.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -4040,10 +5877,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4135,16 +5970,27 @@
    "avg_vol5": 13207913.2,
    "avg_vol20": 10654642.75,
    "vol_ratio": 1.239639236144262,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 31.04,
    "qfii_ratio": 18.86,
    "qfii_chg5": 0.0799999999999983,
    "margin_balance": 578.0,
    "margin_chg5": 205.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -4171,10 +6017,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4263,16 +6107,22 @@
    "avg_vol5": 9196916.6,
    "avg_vol20": 5966660.6,
    "vol_ratio": 1.5413842376085545,
-   "volume_up": null,
+   "volume_up": true,
    "pe": 14.14,
    "qfii_ratio": 22.1,
    "qfii_chg5": 1.2800000000000011,
    "margin_balance": 10389.0,
    "margin_chg5": -647.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -4301,10 +6151,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4329,16 +6177,22 @@
    "avg_vol5": 48190296.0,
    "avg_vol20": 41588836.4,
    "vol_ratio": 1.158731529213931,
-   "volume_up": null,
+   "volume_up": false,
    "pe": null,
    "qfii_ratio": 16.31,
    "qfii_chg5": 0.4999999999999982,
    "margin_balance": 38126.0,
    "margin_chg5": -1702.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -4365,10 +6219,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4393,16 +6245,27 @@
    "avg_vol5": 48195126.0,
    "avg_vol20": 66024417.45,
    "vol_ratio": 0.7299591251448444,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 17.03,
    "qfii_ratio": 19.64,
    "qfii_chg5": 0.19000000000000128,
    "margin_balance": 109781.0,
    "margin_chg5": -2831.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -4429,10 +6292,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4457,16 +6318,27 @@
    "avg_vol5": 20988116.0,
    "avg_vol20": 21783669.9,
    "vol_ratio": 0.9634793446810357,
-   "volume_up": null,
+   "volume_up": false,
    "pe": 21.48,
    "qfii_ratio": 21.71,
    "qfii_chg5": 0.15000000000000213,
    "margin_balance": 1864.0,
    "margin_chg5": -483.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑前5%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑前5%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": true,
@@ -4493,10 +6365,8 @@
     "ratings": []
    },
    "news": [],
-   "selected": false,
-   "reasons": [
-    "A永續未能查證"
-   ],
+   "selected": true,
+   "reasons": [],
    "researched": false,
    "research_sources": []
   },
@@ -4528,9 +6398,20 @@
    "margin_balance": 2121.0,
    "margin_chg5": -183.0,
    "A": {
-    "pass": null,
-    "basis": "未查證（無手動清單、未啟用網路研究）",
-    "evidence": []
+    "pass": true,
+    "basis": "公司治理評鑑6%~20%（第十二屆（114年度），2026-04-30 公布）、臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股（00850持股 2026/10/22）",
+    "evidence": [
+     {
+      "title": "公司治理評鑑6%~20%",
+      "url": "https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf",
+      "date": "第十二屆（114年度），2026-04-30 公布"
+     },
+     {
+      "title": "臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股",
+      "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW",
+      "date": "00850持股 2026/10/22"
+     }
+    ]
    },
    "B": {
     "pass": false,
@@ -4559,7 +6440,6 @@
    "news": [],
    "selected": false,
    "reasons": [
-    "A永續未能查證",
     "B未來性未符合"
    ],
    "researched": false,
@@ -4573,7 +6453,8 @@
   "2026-07"
  ],
  "notes": [
-  "未設定 ANTHROPIC_API_KEY：永續性（除手動清單外）、投行評等與新聞未查證"
+  "未設定 ANTHROPIC_API_KEY：永續性（除手動清單外）、投行評等與新聞未查證",
+  "符合條件超過 20 檔，依買超金額排名保留前 20 檔後再依量增比排序"
  ],
  "sources": [
   {
@@ -4630,8 +6511,12 @@
   }
  ],
  "summary": {
-  "count": 0,
-  "top3": [],
+  "count": 20,
+  "top3": [
+   "2377 微星｜量增比 1.54｜5日法人買超 +21.7 億｜法人主導｜AI伺服器／AI晶片",
+   "2912 統一超｜量增比 1.28｜5日法人買超 +25.3 億｜法人主導",
+   "3443 創意｜量增比 1.24｜5日法人買超 +33.1 億｜AI伺服器／AI晶片"
+  ],
   "market_line": "近5日（2026-10-16～2026-10-22）三大法人合計賣超約 1,957 億元（外資 -2,590.7 億、投信 +764.1 億；上市 -1,741.1 億、上櫃 -216.2 億，依個股買賣超×收盤價估算）。"
  }
 }
