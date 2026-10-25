@@ -81,6 +81,39 @@ def taiwanindex():
     return html
 
 
+def taiwanindex_files():
+    """Download the 臺灣永續指數 files linked from its official page and pull out stock codes."""
+    out = {}
+    for fid in (198, 483):
+        url = f"https://backend.taiwanindex.com.tw/api/downloadFile/IndexFiles/{fid}/tw"
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=60) as r:
+                raw, cd, ct = r.read(), r.headers.get("Content-Disposition", ""), r.headers.get("Content-Type", "")
+        except Exception as e:  # noqa: BLE001
+            out[fid] = {"error": repr(e)}
+            continue
+        name = urllib.parse.unquote(cd)
+        text = ""
+        if raw[:4] == b"%PDF":
+            from pypdf import PdfReader
+            text = "\n".join(p.extract_text() or "" for p in PdfReader(io.BytesIO(raw)).pages)
+        elif raw[:2] == b"PK":
+            import openpyxl
+            wb = openpyxl.load_workbook(io.BytesIO(raw), read_only=True, data_only=True)
+            rows = []
+            for ws in wb.worksheets:
+                for row in ws.iter_rows(values_only=True):
+                    rows.append(" | ".join("" if v is None else str(v) for v in row))
+            text = "\n".join(rows)
+        else:
+            text = raw.decode("utf-8", "replace")
+        print(f"\n----- taiwanindex file {fid}: {name} {ct} {len(raw)} bytes -----\n{text[:2500]}", file=sys.stderr)
+        codes = sorted(set(re.findall(r"(?<![\d.])(\d{4})(?![\d.%])", text)))
+        out[fid] = {"name": name, "bytes": len(raw), "codes": codes}
+    return out
+
+
 def moneydj_00850():
     html = get("https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW").decode("utf-8", "replace")
     text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
@@ -95,6 +128,10 @@ try:
 except Exception as e:  # noqa: BLE001
     out["moneydj_00850"] = {"error": repr(e)}
 time.sleep(1)
+try:
+    out["taiwanindex_files"] = taiwanindex_files()
+except Exception as e:  # noqa: BLE001
+    out["taiwanindex_error"] = repr(e)
 try:
     out["cg"] = cg_pdf()
 except Exception as e:  # noqa: BLE001
