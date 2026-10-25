@@ -173,3 +173,42 @@ def fake_rss(url: str) -> str:
                    f"<pubDate>{d}</pubDate><source url='https://x'>{s}</source></item>"
                    for i, (t, s, d) in enumerate(items))
     return f"<?xml version='1.0'?><rss><channel>{body}</channel></rss>"
+
+
+def _rss_item(title, src, day, related=()):
+    rel = "".join(f'<li><a href="https://news.google.com/rss/articles/{abs(hash(t))}" target="_blank">{t}</a>'
+                  f'&nbsp;&nbsp;<font color="#6f6f6f">{s}</font></li>' for t, s in related)
+    desc = f"<description>{html_escape('<ol>' + rel + '</ol>')}</description>" if related else ""
+    return (f"<item><title>{title} - {src}</title><link>https://news.google.com/rss/articles/{abs(hash(title + src))}</link>"
+            f"<pubDate>{day} 08:00:00 GMT</pubDate>{desc}<source url='https://x'>{src}</source></item>")
+
+
+def html_escape(s):
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def fake_tech_rss(url: str) -> str:
+    """Google News tech feeds: one verified story per edition plus noise that must be dropped."""
+    if "hl=zh-TW" in url and "%E5%8D%8A%E5%B0%8E%E9%AB%94" in url:  # 半導體 query
+        items = [
+            _rss_item("台積電2奈米量產進度超前 蘋果搶首批產能", "經濟日報", "Thu, 22 Oct 2026",
+                      [("台積電2奈米量產進度超前 蘋果搶首批產能", "工商時報")]),
+            _rss_item("台積電2奈米量產進度超前，蘋果搶下首批產能", "中央社", "Thu, 22 Oct 2026"),
+            _rss_item("鴻海股價漲停 外資連三買", "鉅亨網", "Thu, 22 Oct 2026", [("鴻海股價漲停", "MoneyDJ")]),
+            _rss_item("新創發表固態電池樣品", "數位時代", "Thu, 22 Oct 2026"),
+        ]
+    elif "hl=en-US" in url and "semiconductor" in url:
+        items = [
+            _rss_item("Nvidia unveils new AI chip for data centers", "Reuters", "Thu, 22 Oct 2026",
+                      [("Nvidia launches AI chip aimed at data centers", "Bloomberg"),
+                       ("Nvidia's new data center AI chip is here", "The Verge")]),
+            _rss_item("Google reaches quantum error correction milestone", "Nature", "Thu, 22 Oct 2026"),
+            _rss_item("Old chip story everyone covered", "CNBC", "Sat, 10 Oct 2026", [("Old chip story", "WSJ")]),
+        ]
+    else:
+        items = []
+    return f"<?xml version='1.0'?><rss><channel>{''.join(items)}</channel></rss>"
+
+
+def fake_translate(url: str):
+    return [[["英偉達推出用於數據中心的新人工智能芯片", "Nvidia unveils new AI chip for data centers", None, None, 3]], None, "en"]

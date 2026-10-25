@@ -16,7 +16,7 @@
 | 2C 投行 | J.P. Morgan、BofA、Morgan Stanley、Goldman Sachs 近 3 個月評等（列出券商／評等／目標價／日期／連結；負面也列） | 自動搜尋 Google 新聞標題擷取（免費）；有 API 金鑰時再加上 Claude 網路搜尋 |
 | 入選 | A、B 皆符合，且 C 不是「只有負面評等」；最多 20 檔 | |
 | 3 量增 | 量增比＝5 日均量 ÷ 20 日均量，入選股依此排序，≥1.2 標「量增」 | 同步驟 1 |
-| 4 報告 | 摘要、精選表、候選池前 20 名對照表、個股新聞＋當日 5 則科技新聞、資料限制、Sources | 以上全部 |
+| 4 報告 | 摘要、精選表、候選池前 20 名對照表、個股新聞＋當日國內外科技新聞、資料限制、Sources | 以上全部；科技新聞免金鑰：Google 新聞 RSS 國內／國外各 5 則，同一事件需 2 家以上媒體報導才收錄，外文標題以 Google 翻譯轉繁中並附原文與所有來源連結 |
 
 另外補充：本益比（證交所 BWIBBU／櫃買本益比）、外資持股比率 5 日變化（MI_QFIIS／櫃買僑外資持股）、融資餘額 5 日增減（MI_MARGN／櫃買融資融券）。
 查不到的欄位一律顯示「—」，並寫入「資料限制說明」。
@@ -26,7 +26,7 @@
 1. **合併到 main**（排程只在預設分支執行）。
 2. **開啟 GitHub Pages**：Settings → Pages → Build and deployment → Source 選 *Deploy from a branch*，Branch 選 `main`、資料夾 `/docs`。網址會是 `https://<帳號>.github.io/<repo>/`。
 3. **設定 API 金鑰**（啟用條件 A／C 與新聞查證）：Settings → Secrets and variables → Actions → New repository secret，名稱 `ANTHROPIC_API_KEY`。
-   未設定時仍會產出報告，但永續性（除手動清單外）、投行評等、新聞會標示「未查證」，通常不會有個股入選。
+   未設定時仍會產出報告，但永續性（除手動清單外）、投行評等、個股新聞會標示「未查證」，通常不會有個股入選。
 4. （選用）Actions *Variables*：
    - `SCREENER_MODEL`：預設 `claude-opus-5-5`
    - `SCREENER_MAX_RESEARCH`：每日最多網路研究幾檔（預設 30；候選池前 20 名＋其餘通過條件 B 者）

@@ -150,10 +150,19 @@ function renderPool(rep) {
 function renderNews(rep) {
   const per = rep.picks.filter((s) => (s.news || []).length).map((s) => `<div class="card"><b>${esc(s.code)} ${esc(s.name)}</b>
     <ul class="news-list" style="margin-top:8px">${s.news.map((n) => `<li>${link(n.url, n.title || n.summary)}<div class="small">${esc(n.summary)}</div><div class="meta">${esc(n.source)}・${esc(n.date)}</div></li>`).join("")}</ul></div>`).join("");
-  const tech = (rep.tech_news || []).map((n) => `<li>${link(n.url, n.title)}<div class="small">${esc(n.summary)}</div><div class="meta">${esc(n.source)}・${esc(n.date)}</div></li>`).join("");
+  const techItem = (n) => {
+    const srcs = (n.sources || []).length ? n.sources : [n];
+    return `<li>${link(n.url, n.title)}${n.title_orig ? ` <span class="tag plain">機器翻譯</span><div class="small muted">原文：${esc(n.title_orig)}</div>` : ""}
+      <div class="small">${n.source_count ? `<span class="tag ok">${esc(n.source_count)} 家媒體報導</span>` : ""}${srcs.map((a) => link(a.url, a.source || "來源")).join("、")}</div>
+      <div class="meta">${esc(n.date)}</div></li>`;
+  };
+  const regions = [...new Set((rep.tech_news || []).map((n) => n.region || "國內外"))];
+  const tech = regions.map((r) => `<div class="card"><b>${esc(r)}媒體</b><ul class="news-list" style="margin-top:8px">${rep.tech_news.filter((n) => (n.region || "國內外") === r).map(techItem).join("")}</ul></div>`).join("");
   $("#news").innerHTML = `
     <h2>入選個股相關新聞（近一週）</h2>${per || '<div class="card empty">— 未取得</div>'}
-    <h2>當日國內外重要科技新聞</h2>${tech ? `<div class="card"><ul class="news-list">${tech}</ul></div>` : '<div class="card empty">— 未取得</div>'}`;
+    <h2>當日國內外重要科技新聞</h2>
+    <p class="small muted">同一事件需至少 2 家不同媒體報導才收錄，依報導家數排序；外文標題為機器翻譯，請點連結核對原文。</p>
+    ${tech || '<div class="card empty">— 未取得</div>'}`;
 }
 
 function renderNotes(rep, mdPath) {
