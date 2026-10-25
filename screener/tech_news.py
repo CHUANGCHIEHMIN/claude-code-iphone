@@ -21,7 +21,7 @@ from .net import fetch_json, fetch_text
 log = logging.getLogger(__name__)
 TPE = timezone(timedelta(hours=8))
 
-PER_REGION = 5
+PER_REGION = 10
 MIN_SOURCES = 2
 MAX_LINKS = 6
 
@@ -33,9 +33,11 @@ TOPIC = "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?{ed}"
 SEARCH = "https://news.google.com/rss/search?q={q}&{ed}"
 QUERIES = {
     "國內": ["(AI OR 人工智慧 OR 半導體 OR 晶片 OR 先進封裝 OR 矽光子 OR 量子)",
-             "(機器人 OR 低軌衛星 OR 儲能 OR 資安 OR 新藥 OR 電動車 OR 太空)"],
+             "(機器人 OR 低軌衛星 OR 儲能 OR 資安 OR 新藥 OR 電動車 OR 太空)",
+             "(輝達 OR 台積電 OR 蘋果 OR Google OR 微軟 OR OpenAI)"],
     "國外": ["(AI OR semiconductor OR chip OR quantum OR robotics)",
-             "(satellite OR space OR battery OR biotech OR cybersecurity OR breakthrough)"],
+             "(satellite OR space OR battery OR biotech OR cybersecurity OR breakthrough)",
+             "(Nvidia OR Apple OR Google OR Microsoft OR OpenAI OR TSMC)"],
 }
 TRANSLATE = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q={q}"
 
