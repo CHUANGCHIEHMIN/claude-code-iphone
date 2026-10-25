@@ -9,7 +9,7 @@ const pct = (v, d = 1, signed = true) => (v == null ? DASH : `${signed && v >= 0
 const num = (v, d = 2) => (v == null ? DASH : v.toLocaleString("zh-TW", { minimumFractionDigits: d, maximumFractionDigits: d }));
 const signCls = (v) => (v == null || v === 0 ? "" : v > 0 ? "up" : "down");
 const mark = (v) => (v === true ? '<span class="yes">✓</span>' : v === false ? '<span class="no">✗</span>' : '<span class="unk">?</span>');
-const C_LABEL = { positive: ["有正面評等", "ok"], negative_only: ["僅負面評等", "bad"], neutral: ["僅中立評等", "plain"], no_coverage: ["無覆蓋／查無公開報導", "plain"], not_checked: ["未查證", "warn"] };
+const C_LABEL = { positive: ["有正面評等", "ok"], negative_only: ["僅負面評等", "bad"], neutral: ["僅中立／未載明評等", "plain"], no_coverage: ["無覆蓋／查無公開報導", "plain"], not_checked: ["未查證", "warn"] };
 
 const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch { /* ignore */ } } };
 

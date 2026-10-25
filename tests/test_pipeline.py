@@ -158,7 +158,7 @@ def test_missing_tpex_day_is_noted(monkeypatch, tmp_path):
 
 
 def test_headline_extraction():
-    names = ("長榮", "長榮航", "鴻海", "廣達", "台積電", "緯創", "英業達", "緯穎")
+    names = ("長榮", "長榮航", "鴻海", "廣達", "台積電", "緯創", "英業達", "緯穎", "統一", "高力", "中鋼")
     assert news_ratings.extract("小摩將鴻海評等從中立調升至加碼，目標價上看300元", "鴻海", names) == \
         {"broker": "J.P. Morgan", "rating": "加碼", "target_price": 300.0}
     assert news_ratings.extract("美銀降評廣達至劣於大盤 目標價從350元下修至280元", "廣達", names)["rating"] == "劣於大盤"
@@ -175,3 +175,8 @@ def test_headline_extraction():
     assert news_ratings.extract("高盛調升台積電目標價至 3300 元 凸顯全球半導體龍頭價值", "台積電", names)["target_price"] == 3300.0
     assert news_ratings.extract("緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元", "緯創", names)["target_price"] == 265.0
     assert news_ratings.extract("最新宣布！台積電(2330)受惠AI基建爆發，小摩給予優於大盤評級", "台積電", names)["rating"] == "優於大盤"
+    # same-name foreign listings and unnamed "這檔" headlines are ignored
+    assert news_ratings.extract("《大行》高盛降統一(00220.HK)目標價至8.36元 料第三季銷售穩健", "統一", names) is None
+    assert news_ratings.extract("摩根大通維持高力國際集團(CIGI.US)持有評級，下調目標價至111美元", "高力", names) is None
+    assert news_ratings.extract("能源疑慮帶旺中鋼獲大哥狂買逾2億奪冠 「這檔背板股」得高盛喊買吸睛", "中鋼", names) is None
+    assert news_ratings.extract("輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威", "緯創", names)["rating"] == "喊買"

@@ -16,14 +16,15 @@ names.discard("")
 all_names = tuple(sorted(names))
 print("universe names:", len(all_names))
 
-rep = json.loads(Path("docs/data/reports/2026-10-22.json").read_text("utf-8"))
+idx = json.loads(Path("docs/data/index.json").read_text("utf-8"))
+rep = json.loads(Path(f"docs/data/reports/{idx['latest']}.json").read_text("utf-8"))
 stocks = [(s["code"], s["name"]) for s in rep["pool"][:30]]
 summary = {"positive": 0, "negative_only": 0, "neutral": 0, "no_coverage": 0}
 from screener.rules import classify_ratings  # noqa: E402
 
 for code, name in stocks:
-    rs = news_ratings.ratings_for(code, name, date(2026, 10, 22), all_names)
-    st = classify_ratings(rs, date(2026, 10, 22))["status"]
+    rs = news_ratings.ratings_for(code, name, date.fromisoformat(rep['asof']), all_names)
+    st = classify_ratings(rs, date.fromisoformat(rep['asof']))["status"]
     summary[st] += 1
     print(f"\n== {code} {name}: {st}")
     for r in rs:

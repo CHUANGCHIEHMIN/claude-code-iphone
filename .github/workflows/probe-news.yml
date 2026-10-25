@@ -1,8 +1,7 @@
 name: probe-news
+# 手動檢查：列出最新報告候選池前30檔從新聞標題擷取到的投行評等
 on:
-  push:
-    branches: ["claude/**"]
-    paths: ["tools/probe_news.py", "screener/news_ratings.py", ".github/workflows/probe-news.yml"]
+  workflow_dispatch:
 jobs:
   probe:
     runs-on: ubuntu-latest

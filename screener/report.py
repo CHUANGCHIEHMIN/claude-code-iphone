@@ -22,7 +22,7 @@ def mark(v) -> str:
     return {True: "✅", False: "❌", None: "❔"}[v]
 
 
-C_LABEL = {"positive": "✅ 有正面評等", "negative_only": "❌ 僅負面評等", "neutral": "➖ 僅中立評等",
+C_LABEL = {"positive": "✅ 有正面評等", "negative_only": "❌ 僅負面評等", "neutral": "➖ 僅中立／未載明評等",
            "no_coverage": "➖ 無覆蓋／查無公開報導", "not_checked": "❔ 未查證"}
 
 

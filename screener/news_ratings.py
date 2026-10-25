@@ -34,6 +34,9 @@ _TP_FINAL = re.compile(r"(?:至|到|上看|喊|為|調升|調高|上調|升|調�
 _TP_AFTER = re.compile(r"^目標價[^0-9！？!?，,。；;]{0,6}?" + _NUM + r"\s*元")
 _TP_BEFORE = re.compile(_NUM + r"\s*元(?:的)?目標價")
 _CLAUSE_END = re.compile(r"[！？!?，。；;｜|]")
+_FOREIGN = re.compile(r"\.(?:HK|US)\b|美元|港元|港幣|港股|美股|ADR", re.I)
+_UNNAMED = re.compile(r"這檔|此檔|該檔|[一1]檔|這家|這兩檔")
+MAX_GAP = 20  # broker must be mentioned within this many characters of the stock name
 
 
 def short_name(name: str) -> str:
@@ -88,8 +91,11 @@ def extract(title: str, name: str, all_names: tuple[str, ...] = ()) -> dict | No
     for other in map(short_name, all_names):
         if len(other) >= 2 and other not in own and not sn.startswith(other) and other in title:
             return None
+    # same-name companies listed abroad (統一 00220.HK, 高力 CIGI.US) and headlines about an unnamed "這檔"
+    if _FOREIGN.search(title) or _UNNAMED.search(title):
+        return None
     brokers = [(m.start(), canonical_broker(m.group(0))) for m in _BROKER_RE.finditer(title)]
-    brokers = [(p, b) for p, b in brokers if b]
+    brokers = [(p, b) for p, b in brokers if b and abs(p - pos) <= MAX_GAP]
     if not brokers:
         return None
     broker = min(brokers, key=lambda pb: abs(pb[0] - pos))[1]
