@@ -42,8 +42,13 @@ QUERIES = {
 TRANSLATE = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q={q}"
 
 # 股價、盤勢類標題不是科技新聞
-_MARKET = re.compile(r"漲停|跌停|盤中|收盤|股價|目標價|除息|ETF|台股|美股|個股|法人|外資|"
-                     r"\bstocks?\b|\bshares?\b|price target|Nasdaq|Dow\b|S&P|\bETF", re.I)
+_MARKET = re.compile(r"漲停|跌停|盤中|收盤|股價|目標價|除息|ETF|台股|美股|個股|法人|外資|台指期|夜盤|期指|ADR|標普|"
+                     r"大漲|大跌|暴漲|暴跌|狂殺|重挫|崩跌|財報|"
+                     r"\bstocks?\b|\bshares?\b|price target|Nasdaq|Dow\b|S&P|\bETF|earnings", re.I)
+# 掛著科技公司名、但與科技無關的社會新聞（天災、工安、活動）
+_OFFTOPIC = re.compile(r"颱風|地震|運動會|尾牙|工安|身亡|喪命|罹難|\d+死|遺孀|命案|車禍|\bkilled\b|\bdies\b", re.I)
+# 標題尾巴的媒體欄目名（「- 綜合」「| 財經焦點」「| 金融要聞| 產經」「- 台股 - 新聞」）
+_SECTION_TAIL = re.compile(r"\s*[|｜\-–—]\s*[\u4e00-\u9fff ]{1,6}\s*$")
 # 機器翻譯常見的大陸用語 → 台灣用語
 TW_TERMS = [("英偉達", "輝達"), ("芯片", "晶片"), ("人工智能", "人工智慧"), ("智能手機", "智慧型手機"),
             ("軟件", "軟體"), ("硬件", "硬體"), ("網絡", "網路"), ("互聯網", "網際網路"), ("數據中心", "資料中心"),
@@ -72,6 +77,8 @@ def _clean_title(title: str, src: str) -> str:
     title = html.unescape(title).strip()
     if src and title.endswith(" - " + src):
         title = title[: -len(src) - 3].strip()
+    while (m := _SECTION_TAIL.search(title)) and m.start() > 0:
+        title = title[: m.start()].rstrip()
     return title
 
 
@@ -112,11 +119,11 @@ def tokens(title: str) -> set[str]:
 
 def similar(a: set[str], b: set[str]) -> bool:
     shared = len(a & b)
-    return shared >= 3 and shared / max(1, min(len(a), len(b))) >= 0.5
+    return shared >= 6 or (shared >= 4 and shared / max(1, min(len(a), len(b))) >= 0.4)
 
 
 def cluster(groups: list[list[dict]]) -> list[list[dict]]:
-    """Merge RSS groups that report the same story (same link or similar headline)."""
+    """Merge RSS groups that report the same story (a shared link, or any two similar headlines)."""
     parent = list(range(len(groups)))
 
     def find(i):
@@ -125,11 +132,13 @@ def cluster(groups: list[list[dict]]) -> list[list[dict]]:
             i = parent[i]
         return i
 
-    toks = [tokens(g[0]["title"]) for g in groups]
+    toks = [[tokens(a["title"]) for a in g] for g in groups]
     urls = [{a["url"] for a in g} for g in groups]
     for i in range(len(groups)):
         for j in range(i):
-            if urls[i] & urls[j] or similar(toks[i], toks[j]):
+            if find(i) == find(j):
+                continue
+            if urls[i] & urls[j] or any(similar(x, y) for x in toks[i] for y in toks[j]):
                 parent[find(i)] = find(j)
     merged: dict[int, list[dict]] = {}
     for i, g in enumerate(groups):
@@ -142,7 +151,13 @@ def _source_key(s: str) -> str:
 
 
 def is_tech(title: str) -> bool:
-    return bool(title) and not _MARKET.search(title)
+    return bool(title) and not _MARKET.search(title) and not _OFFTOPIC.search(title)
+
+
+def relevant(lead: dict, articles: list[dict]) -> bool:
+    """The lead headline is tech news, and at most half the outlets frame it as market / off-topic news."""
+    off = sum(1 for a in articles if not is_tech(a["title"]))
+    return is_tech(lead["title"]) and off * 2 <= len(articles)
 
 
 def to_tw(text: str) -> str:
@@ -163,7 +178,7 @@ def stories(groups: list[list[dict]], asof: date) -> list[dict]:
     for g in cluster(groups):
         g = [a for a in g if a["url"] and (a["date"] is None or asof - timedelta(days=1) <= a["date"] <= asof + timedelta(days=1))]
         lead = next((a for a in g if a["date"]), None)
-        if lead is None or not is_tech(lead["title"]):
+        if lead is None or not relevant(lead, g):
             continue
         seen: dict[str, dict] = {}
         for a in [lead, *g]:
