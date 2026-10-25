@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import research, rules, sources
+from . import news_ratings, research, rules, sources
 
 log = logging.getLogger(__name__)
 TPE = timezone(timedelta(hours=8))
@@ -31,6 +31,9 @@ OFFICIAL_SOURCES = [
     {"name": "櫃買中心 融資融券餘額", "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/margin-trading/transactions.html"},
     {"name": "櫃買中心 個股本益比、殖利率、股價淨值比", "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/info/pe-ratio.html"},
     {"name": "公開資訊觀測站 每月營業收入彙總表", "url": "https://mopsov.twse.com.tw/mops/web/t21sc04_ifrs"},
+    {"name": "Google 新聞搜尋（投行評等新聞標題）", "url": "https://news.google.com/?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"},
+    {"name": "證交所公司治理中心 第十二屆公司治理評鑑結果", "url": "https://cgc.twse.com.tw/evaluationCorp/listCh"},
+    {"name": "MoneyDJ 元大臺灣ESG永續ETF(00850) 全部持股", "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW"},
     {"name": "證交所 OpenAPI 上市公司每月營業收入彙總表（產業別）", "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"},
     {"name": "櫃買中心 OpenAPI 上櫃公司每月營業收入彙總表（產業別）", "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap05_O"},
 ]
@@ -146,6 +149,10 @@ def enrich(pool: list[dict], days, notes: list) -> None:
     if first:
         m_first = {**_safe(sources.twse_margin, first, note=notes, label="上市融資(視窗首日)"),
                    **_safe(sources.tpex_margin, first, note=notes, label="上櫃融資(視窗首日)")}
+    if not m_now:
+        notes.append(f"{latest} 融資餘額尚未公布或取得失敗，融資5日增減顯示「—」")
+    if not q_now:
+        notes.append(f"{latest} 外資持股比率尚未公布或取得失敗，外資持股5日變化顯示「—」")
     pe = {**_safe(sources.twse_pe, latest, note=notes, label="上市本益比"),
           **_safe(sources.tpex_pe, latest, note=notes, label="上櫃本益比")}
     ind = _safe(sources.industries, note=notes, label="產業別")
@@ -250,6 +257,40 @@ def run_research(targets: list[dict], asof: date, cache_dir: Path) -> dict[str, 
     return out
 
 
+def run_news_ratings(pool: list[dict], asof: date, cache_dir: Path, all_names: tuple[str, ...],
+                     notes: list) -> dict[str, list[dict] | None]:
+    """Condition C from news headlines for every pool stock (free; independent of the API key)."""
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    out, failed = {}, 0
+    for s in pool:
+        p = cache_dir / f"{asof.isoformat()}_{s['code']}.json"
+        if p.exists():
+            out[s["code"]] = json.loads(p.read_text("utf-8"))
+            continue
+        try:
+            r = news_ratings.ratings_for(s["code"], s["name"], asof, all_names)
+        except Exception as e:  # noqa: BLE001
+            log.warning("news ratings failed %s: %r", s["code"], e)
+            out[s["code"]] = None
+            failed += 1
+            continue
+        p.write_text(json.dumps(r, ensure_ascii=False, indent=1), "utf-8")
+        out[s["code"]] = r
+    if failed:
+        notes.append(f"投行評等新聞搜尋有 {failed} 檔失敗，這些個股的條件C標示為未查證")
+    return out
+
+
+def _merge_ratings(a: list[dict], b: list[dict]) -> list[dict]:
+    seen, out = set(), []
+    for r in a + b:
+        key = (rules.canonical_broker(r.get("broker", "")), str(r.get("date", ""))[:10])
+        if key not in seen:
+            seen.add(key)
+            out.append(r)
+    return out
+
+
 # ---------------------------------------------------------------------- main
 def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict | None:
     asof = asof or today_tpe()
@@ -295,7 +336,10 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
     research_on = research.available()
     res = run_research(targets, latest, out_dir / "cache" / "research") if research_on else {}
     if not research_on:
-        notes.append("未設定 ANTHROPIC_API_KEY：永續性（除手動清單外）、投行評等與新聞未查證")
+        notes.append("未設定 ANTHROPIC_API_KEY：永續性僅依名單判定、個股新聞與科技新聞未取得；投行評等改由新聞標題擷取")
+
+    all_names = tuple(sorted({u["name"] for u in universe.values()}))
+    news_c = run_news_ratings(pool, latest, out_dir / "cache" / "news_ratings", all_names, notes)
 
     for s in pool:
         r = res.get(s["code"])
@@ -305,8 +349,9 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
             r = None
         s["A"] = condition_a(s, lists, r)
         s["B"] = condition_b(s, themes, rev, r)
-        c = rules.classify_ratings((r or {}).get("ratings") or [], latest)
-        if not s["researched"]:
+        nc = news_c.get(s["code"])
+        c = rules.classify_ratings(_merge_ratings((r or {}).get("ratings") or [], nc or []), latest)
+        if not s["researched"] and nc is None:
             c["status"] = "not_checked"
         s["C"] = c
         s["news"] = [n for n in ((r or {}).get("news") or []) if n.get("url")][:2]

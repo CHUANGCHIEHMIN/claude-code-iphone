@@ -151,3 +151,25 @@ def fake_fetch_text(url: str) -> str:
                     f"<td nowrap>900</td><td nowrap>800</td><td nowrap>1.0</td><Td nowrap>  {y:.2f}</td>"
                     f"<td nowrap>9,000</td><td nowrap>8,000</td><td nowrap>12.5</td><td align=center>-</td></tr>")
     return "<html><table>" + "".join(rows) + "</table></html>"
+
+
+def fake_rss(url: str) -> str:
+    """Google News RSS shaped response; ratings for 台積電 and 台泥 only."""
+    import urllib.parse
+
+    q = urllib.parse.unquote(url)
+    items = []
+    if '"台積電"' in q:
+        items = [
+            ("大摩調升台積電目標價至1,800元 維持加碼評等 - 鉅亨網", "鉅亨網", "Wed, 15 Oct 2026 08:00:00 GMT"),
+            ("大摩看好台積電、聯發科 AI需求強勁 - 經濟日報", "經濟日報", "Tue, 14 Oct 2026 08:00:00 GMT"),
+            ("大摩重申台積電加碼 目標價1,700元 - 工商時報", "工商時報", "Mon, 01 Sep 2026 08:00:00 GMT"),
+        ]
+    elif '"台泥"' in q:
+        items = [("高盛降評台泥至賣出 目標價25元 - MoneyDJ", "MoneyDJ", "Mon, 20 Oct 2026 08:00:00 GMT")]
+    elif '"台達電"' in q:
+        items = [("台達電子公司 - 中央社", "中央社", "Mon, 20 Oct 2026 08:00:00 GMT")]
+    body = "".join(f"<item><title>{t}</title><link>https://news.google.com/rss/articles/{i}</link>"
+                   f"<pubDate>{d}</pubDate><source url='https://x'>{s}</source></item>"
+                   for i, (t, s, d) in enumerate(items))
+    return f"<?xml version='1.0'?><rss><channel>{body}</channel></rss>"

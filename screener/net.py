@@ -13,7 +13,7 @@ log = logging.getLogger(__name__)
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) tw-chip-screener/1.0"
 # TWSE asks clients to stay under ~3 requests / 5 seconds per IP.
-MIN_INTERVAL = {"www.twse.com.tw": 2.2, "www.tpex.org.tw": 1.5}
+MIN_INTERVAL = {"www.twse.com.tw": 2.2, "www.tpex.org.tw": 1.5, "news.google.com": 1.5}
 _last_hit: dict[str, float] = {}
 
 

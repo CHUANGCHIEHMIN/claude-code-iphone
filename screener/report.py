@@ -22,7 +22,7 @@ def mark(v) -> str:
     return {True: "✅", False: "❌", None: "❔"}[v]
 
 
-C_LABEL = {"positive": "✅ 有正面評等", "negative_only": "❌ 僅負面評等", "neutral": "➖ 僅中立評等",
+C_LABEL = {"positive": "✅ 有正面評等", "negative_only": "❌ 僅負面評等", "neutral": "➖ 僅中立／未載明評等",
            "no_coverage": "➖ 無覆蓋／查無公開報導", "not_checked": "❔ 未查證"}
 
 
@@ -112,7 +112,7 @@ def render(rep: dict) -> str:
     L += [f"- {n}" for n in rep["notes"]] or ["- 無"]
     L.append("- 買超金額以每日三大法人買賣超股數 × 當日收盤價逐日加總估算，非實際成交均價。")
     L.append("- 「外資」為外資及陸資（含外資自營商）；外資持股5日變化為最新交易日與5個交易日前持股比率之差（百分點）。")
-    L.append("- 投行評等僅取自公開新聞報導，券商報告本身不公開，可能遺漏或有日期落差。")
+    L.append("- 投行評等取自公開新聞報導（自動擷取 Google 新聞標題中寫明券商、評等或目標價者），券商報告本身不公開，可能遺漏或誤判，請點連結核對。")
     L.append("- 本報告為資料整理，不構成投資建議。\n")
 
     L.append("## Sources")

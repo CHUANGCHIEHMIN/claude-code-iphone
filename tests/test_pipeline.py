@@ -3,7 +3,7 @@ from datetime import date
 
 import pytest
 
-from screener import net, pipeline, report, research, rules, sources
+from screener import net, news_ratings, pipeline, report, research, rules, sources
 from tests import fake_sources as fk
 
 
@@ -11,6 +11,7 @@ from tests import fake_sources as fk
 def offline(monkeypatch, tmp_path):
     monkeypatch.setattr(sources, "fetch_json", fk.fake_fetch_json)
     monkeypatch.setattr(sources, "fetch_text", fk.fake_fetch_text)
+    monkeypatch.setattr(news_ratings, "fetch_text", fk.fake_rss)
     monkeypatch.setattr(net, "MIN_INTERVAL", {})
     monkeypatch.setenv("SCREENER_NO_LLM", "1")
     monkeypatch.setattr(rules, "load_sustainability",
@@ -71,6 +72,12 @@ def test_full_pipeline(tmp_path):
     assert by["1101"]["B"]["pass"] is False   # 非成長主題且8月營收年減
     assert by["1101"]["A"]["pass"] is None
     assert by["2330"]["A"]["basis"] == "臺灣永續指數成分股"
+    # condition C from headlines: newest Morgan Stanley headline wins, vague headline ignored
+    c = by["2330"]["C"]
+    assert c["status"] == "positive" and len(c["ratings"]) == 1
+    assert c["ratings"][0]["target_price"] == 1800 and c["ratings"][0]["date"] == "2026-10-15"
+    assert by["1101"]["C"]["status"] == "negative_only"
+    assert by["2308"]["C"]["status"] == "no_coverage"
     picks = [s["code"] for s in rep["picks"]]
     assert set(picks) == {"2330", "3363", "2308"}
     assert picks[0] == "3363"  # sorted by volume ratio
@@ -148,3 +155,28 @@ def test_missing_tpex_day_is_noted(monkeypatch, tmp_path):
     monkeypatch.setattr(sources, "fetch_json", flaky)
     rep = pipeline.run(date(2026, 10, 24), tmp_path)
     assert any("2026-10-16 上櫃收盤行情取得失敗" in n for n in rep["notes"])
+
+
+def test_headline_extraction():
+    names = ("長榮", "長榮航", "鴻海", "廣達", "台積電", "緯創", "英業達", "緯穎", "統一", "高力", "中鋼")
+    assert news_ratings.extract("小摩將鴻海評等從中立調升至加碼，目標價上看300元", "鴻海", names) == \
+        {"broker": "J.P. Morgan", "rating": "加碼", "target_price": 300.0}
+    assert news_ratings.extract("美銀降評廣達至劣於大盤 目標價從350元下修至280元", "廣達", names)["rating"] == "劣於大盤"
+    assert news_ratings.extract("高盛喊進長榮航 目標價60元", "長榮", names) is None      # 長榮航 is a different stock
+    assert news_ratings.extract("高盛喊進長榮 目標價260元", "長榮", names)["target_price"] == 260.0
+    assert news_ratings.extract("大摩看好台積電、聯發科", "台積電", names) is None     # no rating / target price
+    assert news_ratings.extract("外資喊進鴻海", "鴻海", names) is None                 # not one of the 4 brokers
+    # list headlines naming several stocks are not attributed to any of them
+    assert news_ratings.extract("目標價1次看》鴻海、廣達、英業達、緯創 高盛完整評：這家強力買、1檔喊賣出", "廣達", names) is None
+    assert news_ratings.extract("18家台廠高盛喊「買進」 鴻海、緯穎、緯創入列", "鴻海", names) is None
+    # target price written before 目標價; the share price after it is ignored
+    assert news_ratings.extract("高盛列「首選」喊400元目標價！鴻海254元還能漲近6成？", "鴻海", names)["target_price"] == 400.0
+    assert news_ratings.extract("美銀喊「台積電估值太便宜」 目標價升至3,260元", "台積電", names)["target_price"] == 3260.0
+    assert news_ratings.extract("高盛調升台積電目標價至 3300 元 凸顯全球半導體龍頭價值", "台積電", names)["target_price"] == 3300.0
+    assert news_ratings.extract("緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元", "緯創", names)["target_price"] == 265.0
+    assert news_ratings.extract("最新宣布！台積電(2330)受惠AI基建爆發，小摩給予優於大盤評級", "台積電", names)["rating"] == "優於大盤"
+    # same-name foreign listings and unnamed "這檔" headlines are ignored
+    assert news_ratings.extract("《大行》高盛降統一(00220.HK)目標價至8.36元 料第三季銷售穩健", "統一", names) is None
+    assert news_ratings.extract("摩根大通維持高力國際集團(CIGI.US)持有評級，下調目標價至111美元", "高力", names) is None
+    assert news_ratings.extract("能源疑慮帶旺中鋼獲大哥狂買逾2億奪冠 「這檔背板股」得高盛喊買吸睛", "中鋼", names) is None
+    assert news_ratings.extract("輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威", "緯創", names)["rating"] == "喊買"

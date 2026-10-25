@@ -1,7 +1,7 @@
 name: daily-report
 on:
   schedule:
-    - cron: "17 14 * * 1-5"   # 每個交易日 22:17（台北時間）— 融資融券、外資持股等資料已公布
+    - cron: "0 13 * * *"   # 每天 21:00（台北時間）；休市日已有報告會自動略過
   workflow_dispatch:
     inputs:
       date:
