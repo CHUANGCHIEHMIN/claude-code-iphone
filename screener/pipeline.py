@@ -51,7 +51,7 @@ def _safe(fn, *a, default=None, note: list | None = None, label: str = ""):
 
 
 # ------------------------------------------------------------------ step 0/1
-def trading_days(asof: date, need: int = 21, max_back: int = 50) -> list[tuple[date, dict, dict]]:
+def trading_days(asof: date, need: int = 21, max_back: int = 50, notes: list | None = None) -> list[tuple[date, dict, dict]]:
     """Walk back from `asof`, keeping days where TWSE published a closing table."""
     days = []
     d = asof
@@ -60,6 +60,10 @@ def trading_days(asof: date, need: int = 21, max_back: int = 50) -> list[tuple[d
             tw = _safe(sources.twse_quotes, d, label=f"TWSE 收盤行情 {d}")
             if tw:
                 tp = _safe(sources.tpex_quotes, d, label=f"TPEx 收盤行情 {d}")
+                if not tp:  # TWSE traded that day, so an empty TPEx table means the download failed
+                    tp = _safe(sources.tpex_quotes, d, label=f"TPEx 收盤行情 {d}（重試）")
+                if not tp and notes is not None:
+                    notes.append(f"{d} 上櫃收盤行情取得失敗，上櫃個股該日成交量與買超金額缺漏")
                 days.append((d, tw, tp))
                 log.info("trading day %s: TWSE %d / TPEx %d quotes", d, len(tw), len(tp))
                 if len(days) >= need:
@@ -180,9 +184,12 @@ def revenue_months(asof: date, notes: list, need: int = 3) -> list[tuple[str, di
 
 # ---------------------------------------------------------------- conditions
 def condition_a(s: dict, lists: dict, res: dict | None) -> dict:
-    hits = [name for name, v in lists.items() if s["code"] in (v.get("codes") or [])]
+    hits = [(name, v) for name, v in lists.items() if s["code"] in (v.get("codes") or [])]
     if hits:
-        return {"pass": True, "basis": "、".join(hits) + "（手動清單）", "evidence": []}
+        basis = "、".join(name + (f"（{v['as_of']}）" if v.get("as_of") else "") for name, v in hits)
+        evidence = [{"title": name, "url": v["source"], "date": v.get("as_of", "")}
+                    for name, v in hits if str(v.get("source", "")).startswith("http")]
+        return {"pass": True, "basis": basis, "evidence": evidence}
     if res and res.get("sustainability"):
         r = res["sustainability"]
         ev = [e for e in (r.get("evidence") or []) if e.get("url")]
@@ -247,12 +254,12 @@ def run_research(targets: list[dict], asof: date, cache_dir: Path) -> dict[str, 
 def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict | None:
     asof = asof or today_tpe()
     notes: list[str] = []
-    days = trading_days(asof)
+    days = trading_days(asof, notes=notes)
     if len(days) < 6:
         raise RuntimeError(f"只取得 {len(days)} 個交易日資料，無法計算（需至少6日）")
     if not _safe(sources.twse_insti, days[0][0], label="T86 發布檢查"):
         notes.append(f"{days[0][0]} 三大法人資料尚未公布，改以前一交易日為基準")
-        days = trading_days(days[1][0], need=21)
+        days = trading_days(days[1][0], need=21, notes=notes)
     existing = out_dir / "reports" / f"{days[0][0].isoformat()}.json"
     if skip_existing and existing.exists():
         prev = json.loads(existing.read_text("utf-8"))

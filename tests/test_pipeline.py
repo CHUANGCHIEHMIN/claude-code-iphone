@@ -70,6 +70,7 @@ def test_full_pipeline(tmp_path):
     assert by["2330"]["B"]["pass"] is True and "先進製程與先進封裝" in by["2330"]["B"]["themes"]
     assert by["1101"]["B"]["pass"] is False   # 非成長主題且8月營收年減
     assert by["1101"]["A"]["pass"] is None
+    assert by["2330"]["A"]["basis"] == "臺灣永續指數成分股"
     picks = [s["code"] for s in rep["picks"]]
     assert set(picks) == {"2330", "3363", "2308"}
     assert picks[0] == "3363"  # sorted by volume ratio
@@ -110,3 +111,40 @@ def test_research_handles_pause_turn_and_collects_urls(monkeypatch):
     assert len(calls) == 2 and calls[1]["messages"][1]["role"] == "assistant"
     assert calls[0]["tools"][0]["type"] == "web_search_20260209"
     assert calls[0]["fallbacks"] == "default"
+
+
+def test_fetch_retries_incomplete_read(monkeypatch):
+    import http.client
+
+    calls = []
+
+    class Resp:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+        def read(self):
+            calls.append(1)
+            if len(calls) == 1:
+                raise http.client.IncompleteRead(b"partial")
+            return b'{"ok": true}'
+
+    monkeypatch.setattr(net.urllib.request, "urlopen", lambda req, timeout: Resp())
+    monkeypatch.setattr(net.time, "sleep", lambda s: None)
+    assert net.fetch_json("https://www.tpex.org.tw/x") == {"ok": True}
+    assert len(calls) == 2
+
+
+def test_missing_tpex_day_is_noted(monkeypatch, tmp_path):
+    real = fk.fake_fetch_json
+
+    def flaky(url):
+        if "dailyQuotes" in url and "2026/10/16" in url:
+            raise RuntimeError("fetch failed")
+        return real(url)
+
+    monkeypatch.setattr(sources, "fetch_json", flaky)
+    rep = pipeline.run(date(2026, 10, 24), tmp_path)
+    assert any("2026-10-16 上櫃收盤行情取得失敗" in n for n in rep["notes"])

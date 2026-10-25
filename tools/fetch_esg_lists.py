@@ -12,10 +12,12 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
-CG_PDF = ("https://cgc.twse.com.tw/static/20260430/8a828e179dd8817f019ddd4b86530000_"
-          "114年(第十二屆)公司治理評鑑系統評鑑結果暨評鑑程序說明.pdf")
+from fetch_esg_lists_meta import CG_PDF_URL as CG_PDF, MONEYDJ_URL  # noqa: E402
 
 
 def get(url) -> bytes:
@@ -115,7 +117,7 @@ def taiwanindex_files():
 
 
 def moneydj_00850():
-    html = get("https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW").decode("utf-8", "replace")
+    html = get(MONEYDJ_URL).decode("utf-8", "replace")
     text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
     date = re.search(r"資料日期：(\d{4}/\d{2}/\d{2})", text)
     rows = re.findall(r"([^\s()（）]+)\((\d{4})\.TW\)\s+([\d.]+)", text)

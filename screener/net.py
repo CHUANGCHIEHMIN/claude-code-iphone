@@ -1,6 +1,7 @@
 """HTTP helpers: polite rate limiting, retries, JSON / text decoding."""
 from __future__ import annotations
 
+import http.client
 import json
 import logging
 import time
@@ -33,7 +34,7 @@ def fetch_bytes(url: str, retries: int = 3, timeout: int = 40) -> bytes:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read()
-        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+        except (urllib.error.URLError, http.client.HTTPException, OSError) as e:  # incl. IncompleteRead, resets
             err = e
             log.warning("fetch failed (%s/%s) %s: %r", attempt + 1, retries, url, e)
             time.sleep(3 * (attempt + 1))
