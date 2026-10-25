@@ -49,7 +49,11 @@ python -m http.server -d docs 8000         # 開 http://localhost:8000
 ## 調整清單
 
 - `config/themes.json`：成長主題 → 股票代號對照表（初始清單為起點，請依需要增修）。
-- `config/sustainability.json`：依官方最新公布填入公司治理評鑑前 20%、永續指數成分股等代號；填了之後條件 A 不需 API 也能判定。
+- `config/sustainability.json`：條件A（永續）名單，目前內容：
+  - **公司治理評鑑前5%、6%~20%**：第十二屆（114年度，2026-04-30 公布），上市＋上櫃共 362 家，取自證交所公司治理中心評鑑結果 PDF。
+  - **臺灣永續指數（FTSE4Good TIP Taiwan ESG）成分股**：臺灣指數公司未公開成分股清單，改用追蹤此指數的元大 00850 ETF 全部持股（110 檔）。
+  - **MSCI ESG A 級以上**：沒有公開的整份名單，需要網路研究或手動填入。
+  - **更新方式**：臺灣永續指數每年 6 月、12 月定期審核，生效後到 Actions → **update-sustainability** → Run workflow，會重新下載並更新名單。
 
 ## 資料限制
 

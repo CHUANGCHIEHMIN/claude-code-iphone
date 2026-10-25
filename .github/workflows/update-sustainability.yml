@@ -1,0 +1,31 @@
+name: update-sustainability
+# 下載官方公司治理評鑑結果與臺灣永續指數持股，重建 config/sustainability.json（條件A名單）。
+# 臺灣永續指數每年6月、12月定期審核，審核生效後手動執行一次即可。
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pypdf openpyxl
+      - name: Fetch official lists
+        run: |
+          python tools/fetch_esg_lists.py 2> fetch.log | sed -n '/=====JSON=====/{n;p}' > esg_lists.json
+          grep -E '^\[(一、上市公司|二、上櫃公司)\]' fetch.log || true
+          test -s esg_lists.json
+      - name: Build config
+        run: cd tools && python build_sustainability.py ../esg_lists.json && cd .. && git diff --stat
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/sustainability.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Update sustainability lists"
+          git push origin "HEAD:$GITHUB_REF_NAME"
