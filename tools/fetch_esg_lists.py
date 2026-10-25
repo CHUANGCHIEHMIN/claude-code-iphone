@@ -26,17 +26,45 @@ def get(url) -> bytes:
         return r.read()
 
 
+TIER = re.compile(r"【評鑑結果列為\s*(.+?)，計\s*(\d+)\s*家(.*?)】")
+SECTION = re.compile(r"^\s*([一二三四五六七八九十]+)、(.+?)\s*$")
+CODE = re.compile(r"(?<![\d.])(\d{4})(?![\d.])\s+\S")
+
+
 def cg_pdf():
+    """Parse the evaluation PDF into {section: {tier: {"expected": n, "codes": [...]}}}."""
     from pypdf import PdfReader
 
     raw = get(CG_PDF)
     reader = PdfReader(io.BytesIO(raw))
-    print(f"PDF pages={len(reader.pages)} bytes={len(raw)}", file=sys.stderr)
     pages = [p.extract_text() or "" for p in reader.pages]
-    for i, t in enumerate(pages):
-        print(f"\n----- page {i + 1} -----", file=sys.stderr)
-        print(t[:6000], file=sys.stderr)
-    return pages
+    result, section, tier = {}, "（未分節）", None
+    for pno, text in enumerate(pages, 1):
+        for line in text.splitlines():
+            m = SECTION.match(line)
+            if m and len(m.group(2)) < 40 and "家" not in m.group(2):
+                section = f"{m.group(1)}、{m.group(2)}"
+                tier = None
+                continue
+            m = TIER.search(line)
+            if m:
+                tier = m.group(1).replace(" ", "")
+                result.setdefault(section, {})[tier] = {"expected": int(m.group(2)), "scope": m.group(3).strip(),
+                                                        "page": pno, "codes": []}
+                continue
+            if tier and "代號" not in line:
+                result[section][tier]["codes"] += CODE.findall(line)
+    for sec, tiers in result.items():
+        for t, v in tiers.items():
+            v["codes"] = sorted(set(v["codes"]))
+            v["ok"] = len(v["codes"]) == v["expected"]
+            print(f"[{sec}] {t}: expected {v['expected']} parsed {len(v['codes'])} p{v['page']} {v['scope']}",
+                  file=sys.stderr)
+    # print pages before the first tier for context (method notes / headings)
+    for pno in range(1, len(pages) + 1):
+        if "前5%" in pages[pno - 1] or "前 5%" in pages[pno - 1]:
+            print(f"\n----- page {pno} (mentions 前5%) -----\n{pages[pno - 1][:1500]}", file=sys.stderr)
+    return result
 
 
 def taiwanindex():
@@ -68,14 +96,8 @@ except Exception as e:  # noqa: BLE001
     out["moneydj_00850"] = {"error": repr(e)}
 time.sleep(1)
 try:
-    taiwanindex()
+    out["cg"] = cg_pdf()
 except Exception as e:  # noqa: BLE001
-    print("taiwanindex error", repr(e), file=sys.stderr)
-time.sleep(1)
-try:
-    pages = cg_pdf()
-    out["cg_pdf_pages"] = len(pages)
-except Exception as e:  # noqa: BLE001
-    out["cg_pdf_error"] = repr(e)
+    out["cg_error"] = repr(e)
 print("\n=====JSON=====")
 print(json.dumps(out, ensure_ascii=False))
