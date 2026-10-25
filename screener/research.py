@@ -1,4 +1,4 @@
-"""Web research via the Claude API (web search tool) for conditions A / B / C and news.
+"""Web research via the Claude API (web search tool) for conditions A / B / C and per-stock news.
 
 Only runs when ANTHROPIC_API_KEY (or another Anthropic credential) is configured.
 Every fact returned must carry a source URL; the pipeline treats missing data as「—」.
@@ -37,10 +37,6 @@ STOCK_PROMPT = """查證台股 {code} {name}（{market}，產業：{industry}）
   "ratings": [{{"broker": "Morgan Stanley", "rating": "Overweight", "target_price": 1234.0, "date": "YYYY-MM-DD", "source": "鉅亨網", "url": ""}}],
   "news": [{{"title": "", "summary": "一句改寫摘要", "source": "", "url": "", "date": "YYYY-MM-DD"}}]
 }}"""
-
-TECH_PROMPT = """請搜尋 {asof} 前後一兩天內國內外重要的新科技、科技突破或新技術新聞，挑選 5 則（優先：AI、半導體、量子、能源、太空、生技等），每則附一句自己改寫的繁體中文摘要。
-輸出 JSON：{{"items": [{{"title": "", "summary": "", "source": "", "url": "", "date": "YYYY-MM-DD"}}]}}"""
-
 
 def available() -> bool:
     if os.environ.get("SCREENER_NO_LLM"):
@@ -123,8 +119,3 @@ def research_stock(code: str, name: str, market: str, industry: str, asof: date)
     data["searched"] = urls[:20]
     return data
 
-
-def research_tech_news(asof: date) -> list[dict]:
-    data, _ = _ask(TECH_PROMPT.format(asof=asof.isoformat()))
-    items = (data or {}).get("items") or []
-    return [i for i in items if i.get("url")][:5]

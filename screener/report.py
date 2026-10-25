@@ -102,8 +102,14 @@ def render(rep: dict) -> str:
         L.append("- —（未取得）")
     L.append("\n### (b) 當日國內外重要科技新聞")
     if rep["tech_news"]:
-        for i, n in enumerate(rep["tech_news"], 1):
-            L.append(f"{i}. **{esc(n.get('title'))}** — {esc(n.get('summary'))}（{esc(n.get('source'))}）[連結]({url(n['url'])})")
+        for region in dict.fromkeys(n.get("region") or "國內外" for n in rep["tech_news"]):
+            L.append(f"#### {region}媒體")
+            for i, n in enumerate((n for n in rep["tech_news"] if (n.get("region") or "國內外") == region), 1):
+                orig = f"（原文：{esc(n['title_orig'])}；機器翻譯）" if n.get("title_orig") else ""
+                L.append(f"{i}. **{esc(n.get('title'))}**{orig} — {esc(n.get('date'))}")
+                links = n.get("sources") or [n]
+                L.append("   - " + "、".join(f"[{esc(a.get('source') or '來源')}]({url(a.get('url'))})" for a in links)
+                         + (f"（共 {n['source_count']} 家媒體報導）" if n.get("source_count") else ""))
     else:
         L.append("- —（未取得）")
     L.append("")
@@ -113,6 +119,7 @@ def render(rep: dict) -> str:
     L.append("- 買超金額以每日三大法人買賣超股數 × 當日收盤價逐日加總估算，非實際成交均價。")
     L.append("- 「外資」為外資及陸資（含外資自營商）；外資持股5日變化為最新交易日與5個交易日前持股比率之差（百分點）。")
     L.append("- 投行評等取自公開新聞報導（自動擷取 Google 新聞標題中寫明券商、評等或目標價者），券商報告本身不公開，可能遺漏或誤判，請點連結核對。")
+    L.append("- 科技新聞取自 Google 新聞 RSS，同一事件需至少 2 家不同媒體報導才收錄；外文標題為 Google 機器翻譯，摘要僅列報導媒體，內容請點連結核對。")
     L.append("- 本報告為資料整理，不構成投資建議。\n")
 
     L.append("## Sources")

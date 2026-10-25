@@ -3,7 +3,7 @@ from datetime import date
 
 import pytest
 
-from screener import net, news_ratings, pipeline, report, research, rules, sources
+from screener import net, news_ratings, pipeline, report, research, rules, sources, tech_news
 from tests import fake_sources as fk
 
 
@@ -12,6 +12,8 @@ def offline(monkeypatch, tmp_path):
     monkeypatch.setattr(sources, "fetch_json", fk.fake_fetch_json)
     monkeypatch.setattr(sources, "fetch_text", fk.fake_fetch_text)
     monkeypatch.setattr(news_ratings, "fetch_text", fk.fake_rss)
+    monkeypatch.setattr(tech_news, "fetch_text", fk.fake_tech_rss)
+    monkeypatch.setattr(tech_news, "fetch_json", fk.fake_translate)
     monkeypatch.setattr(net, "MIN_INTERVAL", {})
     monkeypatch.setenv("SCREENER_NO_LLM", "1")
     monkeypatch.setattr(rules, "load_sustainability",
@@ -180,3 +182,25 @@ def test_headline_extraction():
     assert news_ratings.extract("摩根大通維持高力國際集團(CIGI.US)持有評級，下調目標價至111美元", "高力", names) is None
     assert news_ratings.extract("能源疑慮帶旺中鋼獲大哥狂買逾2億奪冠 「這檔背板股」得高盛喊買吸睛", "中鋼", names) is None
     assert news_ratings.extract("輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威", "緯創", names)["rating"] == "喊買"
+
+
+def test_tech_news_cross_verified_and_translated():
+    items = tech_news.collect(date(2026, 10, 22), today=date(2026, 10, 25))
+    dom = [n for n in items if n["region"] == "國內"]
+    intl = [n for n in items if n["region"] == "國外"]
+    # 3 outlets on the 2nm story (related coverage + a similar headline from 中央社); stock-price and single-source items dropped
+    assert len(dom) == 1 and dom[0]["source_count"] == 3 and "2奈米" in dom[0]["title"]
+    assert {a["source"] for a in dom[0]["sources"]} == {"經濟日報", "工商時報", "中央社"}
+    assert dom[0]["title_orig"] is None
+    # English headline translated with Taiwan terms; old story outside the date window dropped
+    assert len(intl) == 1 and intl[0]["source_count"] == 3
+    assert intl[0]["title"] == "輝達推出用於資料中心的新人工智慧晶片"
+    assert intl[0]["title_orig"] == "Nvidia unveils new AI chip for data centers" and intl[0]["translated"]
+    assert all(a["url"].startswith("https://") for n in items for a in n["sources"])
+
+
+def test_tech_headline_similarity():
+    a = tech_news.tokens("台積電2奈米量產進度超前 蘋果搶首批產能")
+    assert tech_news.similar(a, tech_news.tokens("台積電2奈米量產進度超前，蘋果搶下首批產能"))
+    assert not tech_news.similar(a, tech_news.tokens("台積電法說會釋出第四季財測"))
+    assert not tech_news.is_tech("鴻海股價漲停 外資連三買")

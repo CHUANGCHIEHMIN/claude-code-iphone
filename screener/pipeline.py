@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import news_ratings, research, rules, sources
+from . import news_ratings, research, rules, sources, tech_news
 
 log = logging.getLogger(__name__)
 TPE = timezone(timedelta(hours=8))
@@ -32,6 +32,8 @@ OFFICIAL_SOURCES = [
     {"name": "櫃買中心 個股本益比、殖利率、股價淨值比", "url": "https://www.tpex.org.tw/zh-tw/mainboard/trading/info/pe-ratio.html"},
     {"name": "公開資訊觀測站 每月營業收入彙總表", "url": "https://mopsov.twse.com.tw/mops/web/t21sc04_ifrs"},
     {"name": "Google 新聞搜尋（投行評等新聞標題）", "url": "https://news.google.com/?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"},
+    {"name": "Google 新聞 RSS（國內外科技新聞，同一事件需 2 家以上媒體報導）", "url": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"},
+    {"name": "Google 翻譯（外文新聞標題機器翻譯）", "url": "https://translate.google.com/"},
     {"name": "證交所公司治理中心 第十二屆公司治理評鑑結果", "url": "https://cgc.twse.com.tw/evaluationCorp/listCh"},
     {"name": "MoneyDJ 元大臺灣ESG永續ETF(00850) 全部持股", "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW"},
     {"name": "證交所 OpenAPI 上市公司每月營業收入彙總表（產業別）", "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"},
@@ -336,7 +338,7 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
     research_on = research.available()
     res = run_research(targets, latest, out_dir / "cache" / "research") if research_on else {}
     if not research_on:
-        notes.append("未設定 ANTHROPIC_API_KEY：永續性僅依名單判定、個股新聞與科技新聞未取得；投行評等改由新聞標題擷取")
+        notes.append("未設定 ANTHROPIC_API_KEY：永續性僅依名單判定、個股新聞未取得；投行評等改由新聞標題擷取")
 
     all_names = tuple(sorted({u["name"] for u in universe.values()}))
     news_c = run_news_ratings(pool, latest, out_dir / "cache" / "news_ratings", all_names, notes)
@@ -365,7 +367,7 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
     if sum(1 for s in pool if s["selected"]) > MAX_PICKS:
         notes.append(f"符合條件超過 {MAX_PICKS} 檔，依買超金額排名保留前 {MAX_PICKS} 檔後再依量增比排序")
 
-    tech = research.research_tech_news(latest) if research_on else []
+    tech = _safe(tech_news.collect, latest, today_tpe(), notes, default=[], note=notes, label="科技新聞")
 
     market = market_summary(universe, days)
     report = {
