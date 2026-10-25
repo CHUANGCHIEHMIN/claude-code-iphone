@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T15:23:22+08:00",
+ "generated_at": "2026-10-25T15:34:00+08:00",
  "asof": "2026-10-22",
  "window": [
   "2026-10-16",
@@ -84,7 +84,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -157,7 +157,7 @@
     "basis": "近3月營收年增皆正（09月 +7.8%、08月 +4.8%、07月 +8.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -232,8 +232,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +97.8%、08月 +111.0%、07月 +158.4%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Morgan Stanley",
+      "rating": "優於大盤",
+      "target_price": null,
+      "date": "2026-08-03",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBZYUNaRXdMeUNHS1NPOHFWWFBLTGFmVDZ4dW02S0JhQjNndzl0MEMyRVp2VGdHVnduaS1EUkxtOVIzTFZTOXhmT2VOb3VUMWlCZXhmeS0zLWJwekJ3V1B3Qi1HZGI?oc=5",
+      "title": "Google CPU 如期投片拿下特斯拉 AI6，大摩重申創意優於大盤",
+      "via": "新聞標題",
+      "polarity": "positive"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -305,7 +317,7 @@
     "basis": "近3月營收年增皆正（09月 +20.9%、08月 +25.6%、07月 +3.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -378,7 +390,7 @@
     "basis": "近3月營收年增皆正（09月 +10.3%、08月 +8.5%、07月 +7.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -453,8 +465,42 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +87.2%、08月 +166.5%、07月 +60.8%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": "喊買",
+      "target_price": null,
+      "date": "2026-10-20",
+      "source": "聚財網",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1lSEYyTHA3Sm9JTDgza0QwU1d0WTFiMDRTdWM5aUZPbElqbVVzOUczdEo4eENrdmltT2U5Vi1mQmtwUmtnM0FvNlI5Ymk?oc=5",
+      "title": "輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威",
+      "via": "新聞標題",
+      "polarity": "positive"
+     },
+     {
+      "broker": "BofA",
+      "rating": null,
+      "target_price": 265.0,
+      "date": "2026-09-10",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OOTB0c2dSc2lGSkNsNkFjQTVJdEdrT3hNNmVINHVSYnZVd3hsdFV5eFI2Z0hUczl0SkV6S1RRUEgxalBEX2hnbGd2bTd4RnhoMVhrTTN4Y2NlMUlvbFlCUjFTZVE4SHpVUlRV?oc=5",
+      "title": "緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     },
+     {
+      "broker": "Morgan Stanley",
+      "rating": null,
+      "target_price": 275.0,
+      "date": "2026-08-05",
+      "source": "非凡新聞台",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE53ckFHX25oOHlwblZRVmZmTC1IN3N2alB0bno1SFVydzRiQkVEdWpRLVhoTEFsNi1tTFBGb185bV82bjExaTlpZEhKQ0dwTGtLZ0RrZW14MWgyYUN4c19z?oc=5",
+      "title": "熱門股／緯創Q2獲利首破百億元！股價創高後翻跌 大摩喊目標價275元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -526,7 +572,7 @@
     "basis": "近3月營收年增皆正（09月 +7.2%、08月 +19.3%、07月 +4.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -599,7 +645,7 @@
     "basis": "近3月營收年增皆正（09月 +25.0%、08月 +26.3%、07月 +26.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -672,7 +718,7 @@
     "basis": "近3月營收年增皆正（09月 +65.6%、08月 +50.3%、07月 +32.3%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -740,7 +786,7 @@
     "basis": "近3月營收年增皆正（09月 +27.1%、08月 +13.0%、07月 +21.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -813,7 +859,7 @@
     "basis": "近3月營收年增皆正（09月 +35.4%、08月 +14.5%、07月 +38.2%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -881,7 +927,7 @@
     "basis": "近3月營收年增皆正（09月 +86.9%、08月 +34.1%、07月 +11.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -956,7 +1002,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +23.4%、08月 +28.1%、07月 +32.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1029,7 +1075,7 @@
     "basis": "近3月營收年增皆正（09月 +67.2%、08月 +57.9%、07月 +79.0%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1102,7 +1148,7 @@
     "basis": "近3月營收年增皆正（09月 +16.4%、08月 +15.6%、07月 +4.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1177,8 +1223,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +38.4%、08月 +52.0%、07月 +54.2%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": null,
+      "target_price": 400.0,
+      "date": "2026-10-02",
+      "source": "FTNN 新聞網",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9PWjlEWUk1OGRoVVBnYmhGdURRU0Yxdl9RR19HNTNrQVlJcU9YVC0xUkRZV3BDaUpINW9QYldzVUI1VW8xcTk4WGYyYw?oc=5",
+      "title": "高盛列「首選」喊400元目標價！鴻海254元還能漲近6成？ AI伺服器一路旺到年底",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -1250,8 +1308,20 @@
     "basis": "近3月營收年增皆正（09月 +63.7%、08月 +48.6%、07月 +43.1%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "J.P. Morgan",
+      "rating": null,
+      "target_price": 332.0,
+      "date": "2026-08-20",
+      "source": "報新聞",
+      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxOTExaZ2hvcjZPR0NTRjM2UFhYNUZwUkZoWEhBdUt5LVpPN0wycmg4V3F5MTM3cTJHcnVqcFVpZTlGRC0zd0pfLXV3VUFOVVpGYmEtdUFVM2ZoMkdMQWlhX05zSzVIX29MX29kTWh2SUVsN1V1M21VbUQtUWcxdHhPSjdEeWxDNDE3OWVCNnBKSDd4dGcyaGJlV2p4dXF4SEctaDFzd2NIQ3JWODUwY05WWkdRUGI5cW02bXhxRlhDRDBudE81T2lYb0lwNnR1b2lUV1BzcW9tOE9PMEpMb3g1Z0FDYTdxR2dPUHQySWxBbkpQTm9tRVFYMVZPdmNBRHRDVFdlMElqX05IZ3duZ2pEeGVVSlVLRHBZOU8wc1ZyMG8yNkY3Yi0xU2FySDhFSld4b1lNTzhsYW9ORC1MZGVQUUN4VERQdkQ5WUhVVUd3VlVCT1MyYVZjakhsM2ZHWjgzRURXNUc4WF9PZw?oc=5",
+      "title": "摩根大通把長榮目標價調高到 332 元，但模型裡的 2027 年每股盈餘是下滑的",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -1320,7 +1390,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +76.7%、08月 +177.4%、07月 +131.3%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1390,7 +1460,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +370.3%、08月 +376.5%、07月 +377.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1463,7 +1533,7 @@
     "basis": "近3月營收年增皆正（09月 +256.7%、08月 +289.4%、07月 +291.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1540,8 +1610,42 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +87.2%、08月 +166.5%、07月 +60.8%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": "喊買",
+      "target_price": null,
+      "date": "2026-10-20",
+      "source": "聚財網",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1lSEYyTHA3Sm9JTDgza0QwU1d0WTFiMDRTdWM5aUZPbElqbVVzOUczdEo4eENrdmltT2U5Vi1mQmtwUmtnM0FvNlI5Ymk?oc=5",
+      "title": "輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威",
+      "via": "新聞標題",
+      "polarity": "positive"
+     },
+     {
+      "broker": "BofA",
+      "rating": null,
+      "target_price": 265.0,
+      "date": "2026-09-10",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OOTB0c2dSc2lGSkNsNkFjQTVJdEdrT3hNNmVINHVSYnZVd3hsdFV5eFI2Z0hUczl0SkV6S1RRUEgxalBEX2hnbGd2bTd4RnhoMVhrTTN4Y2NlMUlvbFlCUjFTZVE4SHpVUlRV?oc=5",
+      "title": "緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     },
+     {
+      "broker": "Morgan Stanley",
+      "rating": null,
+      "target_price": 275.0,
+      "date": "2026-08-05",
+      "source": "非凡新聞台",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE53ckFHX25oOHlwblZRVmZmTC1IN3N2alB0bno1SFVydzRiQkVEdWpRLVhoTEFsNi1tTFBGb185bV82bjExaTlpZEhKQ0dwTGtLZ0RrZW14MWgyYUN4c19z?oc=5",
+      "title": "熱門股／緯創Q2獲利首破百億元！股價創高後翻跌 大摩喊目標價275元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -1615,8 +1719,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +38.4%、08月 +52.0%、07月 +54.2%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": null,
+      "target_price": 400.0,
+      "date": "2026-10-02",
+      "source": "FTNN 新聞網",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9PWjlEWUk1OGRoVVBnYmhGdURRU0Yxdl9RR19HNTNrQVlJcU9YVC0xUkRZV3BDaUpINW9QYldzVUI1VW8xcTk4WGYyYw?oc=5",
+      "title": "高盛列「首選」喊400元目標價！鴻海254元還能漲近6成？ AI伺服器一路旺到年底",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -1685,7 +1801,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +76.7%、08月 +177.4%、07月 +131.3%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1747,7 +1863,7 @@
     "basis": "近3月營收年增皆正（09月 +82.1%、08月 +79.2%、07月 +68.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -1824,8 +1940,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +97.8%、08月 +111.0%、07月 +158.4%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Morgan Stanley",
+      "rating": "優於大盤",
+      "target_price": null,
+      "date": "2026-08-03",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBZYUNaRXdMeUNHS1NPOHFWWFBLTGFmVDZ4dW02S0JhQjNndzl0MEMyRVp2VGdHVnduaS1EUkxtOVIzTFZTOXhmT2VOb3VUMWlCZXhmeS0zLWJwekJ3V1B3Qi1HZGI?oc=5",
+      "title": "Google CPU 如期投片拿下特斯拉 AI6，大摩重申創意優於大盤",
+      "via": "新聞標題",
+      "polarity": "positive"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -1897,8 +2025,20 @@
     "basis": "近3月營收年增皆正（09月 +63.7%、08月 +48.6%、07月 +43.1%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "J.P. Morgan",
+      "rating": null,
+      "target_price": 332.0,
+      "date": "2026-08-20",
+      "source": "報新聞",
+      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxOTExaZ2hvcjZPR0NTRjM2UFhYNUZwUkZoWEhBdUt5LVpPN0wycmg4V3F5MTM3cTJHcnVqcFVpZTlGRC0zd0pfLXV3VUFOVVpGYmEtdUFVM2ZoMkdMQWlhX05zSzVIX29MX29kTWh2SUVsN1V1M21VbUQtUWcxdHhPSjdEeWxDNDE3OWVCNnBKSDd4dGcyaGJlV2p4dXF4SEctaDFzd2NIQ3JWODUwY05WWkdRUGI5cW02bXhxRlhDRDBudE81T2lYb0lwNnR1b2lUV1BzcW9tOE9PMEpMb3g1Z0FDYTdxR2dPUHQySWxBbkpQTm9tRVFYMVZPdmNBRHRDVFdlMElqX05IZ3duZ2pEeGVVSlVLRHBZOU8wc1ZyMG8yNkY3Yi0xU2FySDhFSld4b1lNTzhsYW9ORC1MZGVQUUN4VERQdkQ5WUhVVUd3VlVCT1MyYVZjakhsM2ZHWjgzRURXNUc4WF9PZw?oc=5",
+      "title": "摩根大通把長榮目標價調高到 332 元，但模型裡的 2027 年每股盈餘是下滑的",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -1972,7 +2112,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +23.4%、08月 +28.1%、07月 +32.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2042,7 +2182,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +370.3%、08月 +376.5%、07月 +377.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2115,7 +2255,7 @@
     "basis": "近3月營收年增皆正（09月 +65.6%、08月 +50.3%、07月 +32.3%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2183,7 +2323,7 @@
     "basis": "近3月營收年增皆正（09月 +86.9%、08月 +34.1%、07月 +11.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2256,7 +2396,7 @@
     "basis": "近3月營收年增皆正（09月 +25.0%、08月 +26.3%、07月 +26.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2329,7 +2469,7 @@
     "basis": "近3月營收年增皆正（09月 +7.8%、08月 +4.8%、07月 +8.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2394,7 +2534,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片、散熱；近3月營收年增皆正（09月 +153.8%、08月 +112.8%、07月 +57.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2469,7 +2609,7 @@
     "basis": "近3月營收年增皆正（09月 +20.9%、08月 +25.6%、07月 +3.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2531,7 +2671,7 @@
     "basis": "近3月營收年增皆正（09月 +15.9%、08月 +10.9%、07月 +12.2%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2603,7 +2743,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2671,7 +2811,7 @@
     "basis": "近3月營收年增皆正（09月 +27.1%、08月 +13.0%、07月 +21.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2744,7 +2884,7 @@
     "basis": "近3月營收年增皆正（09月 +256.7%、08月 +289.4%、07月 +291.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2817,7 +2957,7 @@
     "basis": "近3月營收年增皆正（09月 +16.4%、08月 +15.6%、07月 +4.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2890,7 +3030,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -2965,7 +3105,7 @@
     "basis": "近3月營收年增皆正（09月 +10.3%、08月 +8.5%、07月 +7.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3038,7 +3178,7 @@
     "basis": "近3月營收年增皆正（09月 +67.2%、08月 +57.9%、07月 +79.0%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3111,7 +3251,7 @@
     "basis": "近3月營收年增皆正（09月 +7.2%、08月 +19.3%、07月 +4.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3184,7 +3324,7 @@
     "basis": "近3月營收年增皆正（09月 +35.4%、08月 +14.5%、07月 +38.2%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3252,7 +3392,7 @@
     "basis": "近3月營收年增皆正（09月 +5.8%、08月 +3.8%、07月 +8.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3314,7 +3454,7 @@
     "basis": "近3月營收年增皆正（09月 +100.2%、08月 +91.6%、07月 +100.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3384,7 +3524,7 @@
     "basis": "近3月營收年增皆正（09月 +7.6%、08月 +10.6%、07月 +1.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3457,7 +3597,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3529,7 +3669,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +125.4%、08月 +98.4%、07月 +59.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3591,7 +3731,7 @@
     "basis": "近3月營收年增皆正（09月 +25.3%、08月 +24.8%、07月 +25.9%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3661,7 +3801,7 @@
     "basis": "近3月營收年增皆正（09月 +54.8%、08月 +54.3%、07月 +47.9%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3723,7 +3863,7 @@
     "basis": "近3月營收年增皆正（09月 +172.3%、08月 +153.0%、07月 +152.9%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3800,7 +3940,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +62.9%、08月 +35.8%、07月 +65.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3873,7 +4013,7 @@
     "basis": "近3月營收年增皆正（09月 +12.8%、08月 +21.1%、07月 +7.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -3946,7 +4086,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4010,7 +4150,7 @@
     "basis": "近3月營收年增皆正（09月 +41.1%、08月 +46.1%、07月 +46.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4082,7 +4222,7 @@
     "basis": "主題對照表：先進製程與先進封裝；近3月營收年增皆正（09月 +55.9%、08月 +54.3%、07月 +49.9%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4152,8 +4292,20 @@
     "basis": "主題對照表：先進製程與先進封裝；近3月營收年增皆正（09月 +13.5%、08月 +42.8%、07月 +23.8%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "Morgan Stanley",
+      "rating": null,
+      "target_price": 3330.0,
+      "date": "2026-09-09",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93RWNHQ0l0eEJfNFdyUFJzVzhUQlIyTDhLaUFaUXA1d1JaT0E5YTJhUURwcDEtU08tUVp1Q0dsUmRlajB3NlJOWm5mazlMN215ZEozZVY0SGM4eTh3c3lvQWZOZHZLREhwSmEyTkJB?oc=5",
+      "title": "看好量子運算安全商機！大摩點讚力旺、目標價喊上 3,330 元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -4222,7 +4374,7 @@
     "basis": "主題對照表：先進製程與先進封裝；近3月營收年增皆正（09月 +21.3%、08月 +36.7%、07月 +31.0%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4295,7 +4447,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4370,7 +4522,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4440,7 +4592,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4515,7 +4667,7 @@
     "basis": "近3月營收年增皆正（09月 +69.9%、08月 +56.2%、07月 +34.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4583,7 +4735,7 @@
     "basis": "近3月營收年增皆正（09月 +34.1%、08月 +32.6%、07月 +28.4%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4658,7 +4810,7 @@
     "basis": "主題對照表：機器人／自動化；近3月營收年增皆正（09月 +17.6%、08月 +38.4%、07月 +21.9%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4722,7 +4874,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +32.2%、08月 +29.1%、07月 +17.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4797,7 +4949,7 @@
     "basis": "近3月營收年增皆正（09月 +10.7%、08月 +7.1%、07月 +19.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4870,7 +5022,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -4942,8 +5094,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +55.5%、08月 +76.4%、07月 +77.4%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": "喊買",
+      "target_price": null,
+      "date": "2026-08-12",
+      "source": "東森電視",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zU05RWU1EQ3JVeTlOd241Y2xUTlVQYUlKckxyUjF5M1R6QWNYWVBzajliZ2l0T3lYdG51M3RLT2xMUHNIb3NIeGRfRTVPUVAzLXQ2LWJB?oc=5",
+      "title": "金像電HDI疑慮消散！ 里昂、高盛全喊買 最高看到1950元",
+      "via": "新聞標題",
+      "polarity": "positive"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -5004,7 +5168,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5084,8 +5248,42 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +87.2%、08月 +166.5%、07月 +60.8%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": "喊買",
+      "target_price": null,
+      "date": "2026-10-20",
+      "source": "聚財網",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1lSEYyTHA3Sm9JTDgza0QwU1d0WTFiMDRTdWM5aUZPbElqbVVzOUczdEo4eENrdmltT2U5Vi1mQmtwUmtnM0FvNlI5Ymk?oc=5",
+      "title": "輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威",
+      "via": "新聞標題",
+      "polarity": "positive"
+     },
+     {
+      "broker": "BofA",
+      "rating": null,
+      "target_price": 265.0,
+      "date": "2026-09-10",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OOTB0c2dSc2lGSkNsNkFjQTVJdEdrT3hNNmVINHVSYnZVd3hsdFV5eFI2Z0hUczl0SkV6S1RRUEgxalBEX2hnbGd2bTd4RnhoMVhrTTN4Y2NlMUlvbFlCUjFTZVE4SHpVUlRV?oc=5",
+      "title": "緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     },
+     {
+      "broker": "Morgan Stanley",
+      "rating": null,
+      "target_price": 275.0,
+      "date": "2026-08-05",
+      "source": "非凡新聞台",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE53ckFHX25oOHlwblZRVmZmTC1IN3N2alB0bno1SFVydzRiQkVEdWpRLVhoTEFsNi1tTFBGb185bV82bjExaTlpZEhKQ0dwTGtLZ0RrZW14MWgyYUN4c19z?oc=5",
+      "title": "熱門股／緯創Q2獲利首破百億元！股價創高後翻跌 大摩喊目標價275元",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -5159,8 +5357,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +38.4%、08月 +52.0%、07月 +54.2%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "Goldman Sachs",
+      "rating": null,
+      "target_price": 400.0,
+      "date": "2026-10-02",
+      "source": "FTNN 新聞網",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9PWjlEWUk1OGRoVVBnYmhGdURRU0Yxdl9RR19HNTNrQVlJcU9YVC0xUkRZV3BDaUpINW9QYldzVUI1VW8xcTk4WGYyYw?oc=5",
+      "title": "高盛列「首選」喊400元目標價！鴻海254元還能漲近6成？ AI伺服器一路旺到年底",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -5229,7 +5439,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +76.7%、08月 +177.4%、07月 +131.3%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5291,7 +5501,7 @@
     "basis": "近3月營收年增皆正（09月 +82.1%、08月 +79.2%、07月 +68.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5368,8 +5578,20 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +97.8%、08月 +111.0%、07月 +158.4%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "positive",
+    "ratings": [
+     {
+      "broker": "Morgan Stanley",
+      "rating": "優於大盤",
+      "target_price": null,
+      "date": "2026-08-03",
+      "source": "TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBZYUNaRXdMeUNHS1NPOHFWWFBLTGFmVDZ4dW02S0JhQjNndzl0MEMyRVp2VGdHVnduaS1EUkxtOVIzTFZTOXhmT2VOb3VUMWlCZXhmeS0zLWJwekJ3V1B3Qi1HZGI?oc=5",
+      "title": "Google CPU 如期投片拿下特斯拉 AI6，大摩重申創意優於大盤",
+      "via": "新聞標題",
+      "polarity": "positive"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -5441,8 +5663,20 @@
     "basis": "近3月營收年增皆正（09月 +63.7%、08月 +48.6%、07月 +43.1%）"
    },
    "C": {
-    "status": "not_checked",
-    "ratings": []
+    "status": "neutral",
+    "ratings": [
+     {
+      "broker": "J.P. Morgan",
+      "rating": null,
+      "target_price": 332.0,
+      "date": "2026-08-20",
+      "source": "報新聞",
+      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxOTExaZ2hvcjZPR0NTRjM2UFhYNUZwUkZoWEhBdUt5LVpPN0wycmg4V3F5MTM3cTJHcnVqcFVpZTlGRC0zd0pfLXV3VUFOVVpGYmEtdUFVM2ZoMkdMQWlhX05zSzVIX29MX29kTWh2SUVsN1V1M21VbUQtUWcxdHhPSjdEeWxDNDE3OWVCNnBKSDd4dGcyaGJlV2p4dXF4SEctaDFzd2NIQ3JWODUwY05WWkdRUGI5cW02bXhxRlhDRDBudE81T2lYb0lwNnR1b2lUV1BzcW9tOE9PMEpMb3g1Z0FDYTdxR2dPUHQySWxBbkpQTm9tRVFYMVZPdmNBRHRDVFdlMElqX05IZ3duZ2pEeGVVSlVLRHBZOU8wc1ZyMG8yNkY3Yi0xU2FySDhFSld4b1lNTzhsYW9ORC1MZGVQUUN4VERQdkQ5WUhVVUd3VlVCT1MyYVZjakhsM2ZHWjgzRURXNUc4WF9PZw?oc=5",
+      "title": "摩根大通把長榮目標價調高到 332 元，但模型裡的 2027 年每股盈餘是下滑的",
+      "via": "新聞標題",
+      "polarity": "neutral"
+     }
+    ]
    },
    "news": [],
    "selected": true,
@@ -5516,7 +5750,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +23.4%、08月 +28.1%、07月 +32.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5586,7 +5820,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片；近3月營收年增皆正（09月 +370.3%、08月 +376.5%、07月 +377.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5659,7 +5893,7 @@
     "basis": "近3月營收年增皆正（09月 +65.6%、08月 +50.3%、07月 +32.3%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5727,7 +5961,7 @@
     "basis": "近3月營收年增皆正（09月 +86.9%、08月 +34.1%、07月 +11.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5800,7 +6034,7 @@
     "basis": "近3月營收年增皆正（09月 +25.0%、08月 +26.3%、07月 +26.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5873,7 +6107,7 @@
     "basis": "近3月營收年增皆正（09月 +7.8%、08月 +4.8%、07月 +8.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -5938,7 +6172,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片、散熱；近3月營收年增皆正（09月 +153.8%、08月 +112.8%、07月 +57.6%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6013,7 +6247,7 @@
     "basis": "近3月營收年增皆正（09月 +20.9%、08月 +25.6%、07月 +3.7%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6075,7 +6309,7 @@
     "basis": "近3月營收年增皆正（09月 +15.9%、08月 +10.9%、07月 +12.2%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6147,7 +6381,7 @@
     "basis": "主題對照表：AI伺服器／AI晶片"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6215,7 +6449,7 @@
     "basis": "近3月營收年增皆正（09月 +27.1%、08月 +13.0%、07月 +21.8%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6288,7 +6522,7 @@
     "basis": "近3月營收年增皆正（09月 +256.7%、08月 +289.4%、07月 +291.5%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6361,7 +6595,7 @@
     "basis": "近3月營收年增皆正（09月 +16.4%、08月 +15.6%、07月 +4.1%）"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6434,7 +6668,7 @@
     "basis": "非成長主題且近3月營收年增未全為正"
    },
    "C": {
-    "status": "not_checked",
+    "status": "no_coverage",
     "ratings": []
    },
    "news": [],
@@ -6453,7 +6687,7 @@
   "2026-07"
  ],
  "notes": [
-  "未設定 ANTHROPIC_API_KEY：永續性（除手動清單外）、投行評等與新聞未查證",
+  "未設定 ANTHROPIC_API_KEY：永續性僅依名單判定、個股新聞與科技新聞未取得；投行評等改由新聞標題擷取",
   "符合條件超過 20 檔，依買超金額排名保留前 20 檔後再依量增比排序"
  ],
  "sources": [
@@ -6500,6 +6734,18 @@
   {
    "name": "公開資訊觀測站 每月營業收入彙總表",
    "url": "https://mopsov.twse.com.tw/mops/web/t21sc04_ifrs"
+  },
+  {
+   "name": "Google 新聞搜尋（投行評等新聞標題）",
+   "url": "https://news.google.com/?hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+  },
+  {
+   "name": "證交所公司治理中心 第十二屆公司治理評鑑結果",
+   "url": "https://cgc.twse.com.tw/evaluationCorp/listCh"
+  },
+  {
+   "name": "MoneyDJ 元大臺灣ESG永續ETF(00850) 全部持股",
+   "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW"
   },
   {
    "name": "證交所 OpenAPI 上市公司每月營業收入彙總表（產業別）",

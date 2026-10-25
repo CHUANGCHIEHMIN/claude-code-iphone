@@ -1,0 +1,32 @@
+[
+ {
+  "broker": "Goldman Sachs",
+  "rating": "喊買",
+  "target_price": null,
+  "date": "2026-10-20",
+  "source": "聚財網",
+  "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1lSEYyTHA3Sm9JTDgza0QwU1d0WTFiMDRTdWM5aUZPbElqbVVzOUczdEo4eENrdmltT2U5Vi1mQmtwUmtnM0FvNlI5Ymk?oc=5",
+  "title": "輝達GTC點火、高盛喊買！緯創大漲5%領軍 AI代工股集體發威",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "BofA",
+  "rating": null,
+  "target_price": 265.0,
+  "date": "2026-09-10",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OOTB0c2dSc2lGSkNsNkFjQTVJdEdrT3hNNmVINHVSYnZVd3hsdFV5eFI2Z0hUczl0SkV6S1RRUEgxalBEX2hnbGd2bTd4RnhoMVhrTTN4Y2NlMUlvbFlCUjFTZVE4SHpVUlRV?oc=5",
+  "title": "緯創 AI 伺服器出貨翻倍，美銀喊目標價 265 元",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "Morgan Stanley",
+  "rating": null,
+  "target_price": 275.0,
+  "date": "2026-08-05",
+  "source": "非凡新聞台",
+  "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE53ckFHX25oOHlwblZRVmZmTC1IN3N2alB0bno1SFVydzRiQkVEdWpRLVhoTEFsNi1tTFBGb185bV82bjExaTlpZEhKQ0dwTGtLZ0RrZW14MWgyYUN4c19z?oc=5",
+  "title": "熱門股／緯創Q2獲利首破百億元！股價創高後翻跌 大摩喊目標價275元",
+  "via": "新聞標題"
+ }
+]
