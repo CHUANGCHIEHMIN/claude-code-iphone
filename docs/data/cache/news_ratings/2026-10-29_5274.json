@@ -1,0 +1,22 @@
+[
+ {
+  "broker": "Morgan Stanley",
+  "rating": null,
+  "target_price": 24000.0,
+  "date": "2026-10-08",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9zcDNISzZCcFdNTHl6UEt2U2FUX1NkZldkVjRtOEI0RGhYQXUzOUwwMG80YVhtemlnV2Z1RTBqc1VQT0xhU1l5VmwxdjNXZ1FNYzZPMzJsbzFNbG5aMHZYdEpNRTA2UWJy?oc=5",
+  "title": "Marvell 新品成威脅？大摩力挺信驊：短期難撼動 BMC 地位、目標價上看 24,000 元",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "J.P. Morgan",
+  "rating": "優於大盤",
+  "target_price": 23000.0,
+  "date": "2026-09-07",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbzcwckZqUVRuUEpncmlWTTBFMS1kdlVManJQZzZyV3ZzZ3JHRmpyVEdrOVhvaW8tQ216YWFyeEtocEx1SUdyUHpQd3FTUEo2cEVoS0lxRnk5Z1g5THVPZm9WaTI1ZGFkbkE3ZGNLVTlTVElTN2NCT251VE02alh1TEJscWU2NFdxZnRVV2tyYW9JVVEzSUt0bTdNbXJUZWE5SUlJMFNlcFJDdlJnaXV5YTZLdi1ZQ0MwajRlWQ?oc=5",
+  "title": "信驊營收展望超預期，小摩力挺優於大盤評等目標價提升至 23,000 元",
+  "via": "新聞標題"
+ }
+]
