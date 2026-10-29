@@ -25,14 +25,13 @@ def _throttle(host: str) -> None:
     _last_hit[host] = time.monotonic()
 
 
-def fetch_bytes(url: str, retries: int = 3, timeout: int = 40, data: bytes | None = None,
-                headers: dict | None = None) -> bytes:
+def fetch_bytes(url: str, retries: int = 3, timeout: int = 40) -> bytes:
     host = urlparse(url).hostname or ""
     err: Exception | None = None
     for attempt in range(retries):
         _throttle(host)
         try:
-            req = urllib.request.Request(url, data=data, headers={"User-Agent": UA, "Accept": "*/*", **(headers or {})})
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read()
         except (urllib.error.URLError, http.client.HTTPException, OSError) as e:  # incl. IncompleteRead, resets

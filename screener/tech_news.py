@@ -16,9 +16,7 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 
-import json
-
-from .net import fetch_bytes, fetch_json, fetch_text
+from .net import fetch_json, fetch_text
 
 log = logging.getLogger(__name__)
 TPE = timezone(timedelta(hours=8))
@@ -43,8 +41,6 @@ QUERIES = {
 }
 # 免金鑰翻譯：依序嘗試，前一個被擋（GitHub Actions 的 IP 常被 Google 回 429）就換下一個
 GOOGLE_TR = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q={q}"
-EDGE_AUTH = "https://edge.microsoft.com/translate/auth"
-EDGE_TR = "https://api-edge.cognitive.microsofttranslator.com/translate?to=zh-Hant&api-version=3.0"
 MYMEMORY_TR = "https://api.mymemory.translated.net/get?q={q}&langpair=en|zh-TW"
 
 # 股價、盤勢類標題不是科技新聞
@@ -181,14 +177,6 @@ def _google(texts: list[str]) -> list[str]:
     return out
 
 
-def _edge(texts: list[str]) -> list[str]:
-    token = fetch_bytes(EDGE_AUTH, retries=1).decode().strip()
-    body = json.dumps([{"Text": t} for t in texts]).encode()
-    raw = fetch_bytes(EDGE_TR, retries=1, data=body,
-                      headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
-    return [r["translations"][0]["text"] for r in json.loads(raw)]
-
-
 def _mymemory(texts: list[str]) -> list[str]:
     out = []
     for t in texts:
@@ -200,7 +188,7 @@ def _mymemory(texts: list[str]) -> list[str]:
     return out
 
 
-PROVIDERS = [("Google 翻譯", _google), ("Microsoft 翻譯", _edge), ("MyMemory", _mymemory)]
+PROVIDERS = [("Google 翻譯", _google), ("MyMemory", _mymemory)]
 
 
 def translate_many(texts: list[str]) -> list[str | None]:
