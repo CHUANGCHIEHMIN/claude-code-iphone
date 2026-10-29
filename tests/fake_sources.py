@@ -210,5 +210,5 @@ def fake_tech_rss(url: str) -> str:
     return f"<?xml version='1.0'?><rss><channel>{''.join(items)}</channel></rss>"
 
 
-def fake_translate(url: str):
+def fake_translate(url: str, **kw):
     return [[["英偉達推出用於數據中心的新人工智能芯片", "Nvidia unveils new AI chip for data centers", None, None, 3]], None, "en"]

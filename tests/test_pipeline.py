@@ -224,3 +224,26 @@ def test_tech_news_merges_same_event_through_any_headline():
     ]
     out = tech_news.stories(groups, d)
     assert len(out) == 1 and out[0]["count"] == 4
+
+
+def test_translation_falls_back_when_google_is_blocked(monkeypatch):
+    def google_429(url, **kw):
+        raise RuntimeError("HTTPError 429: Too Many Requests")
+
+    def edge(url, data=None, **kw):
+        if "auth" in url:
+            return b"tok"
+        texts = [t["Text"] for t in json.loads(data)]
+        return json.dumps([{"translations": [{"text": "英偉達發布新芯片"}]} for _ in texts]).encode()
+
+    monkeypatch.setattr(tech_news, "fetch_json", google_429)
+    monkeypatch.setattr(tech_news, "fetch_bytes", edge)
+    assert tech_news.translate_many(["Nvidia unveils chip", "Apple news"]) == ["輝達發布新晶片", "輝達發布新晶片"]
+
+    # every translator blocked → original title kept and the report says so
+    monkeypatch.setattr(tech_news, "fetch_bytes", google_429)
+    notes = []
+    items = tech_news.collect(date(2026, 10, 22), today=date(2026, 10, 25), notes=notes)
+    intl = [n for n in items if n["region"] == "國外"][0]
+    assert intl["title"] == intl["title_orig"] and not intl["translated"]
+    assert any("翻譯失敗" in n for n in notes)
