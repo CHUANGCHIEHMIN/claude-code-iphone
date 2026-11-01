@@ -1,0 +1,47 @@
+name: backtest
+# 回補歷史行情與三大法人資料（data/history/），再跑回測，結果寫入 docs/data/backtest.json 與 docs/reports/backtest.md。
+# 第一次約需 1～2 小時（3 年約 730 個交易日）；之後每週六只補新日期，幾分鐘即可完成。
+on:
+  schedule:
+    - cron: "0 2 * * 6"   # 每週六 10:00（台北）
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "回補幾年資料"
+        required: false
+        default: "3"
+      max_minutes:
+        description: "本次最多下載幾分鐘（未完成的下次會接著補）"
+        required: false
+        default: "300"
+permissions:
+  contents: write
+concurrency:
+  group: backtest
+  cancel-in-progress: false
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q tests
+      - name: Backfill history
+        env:
+          YEARS: ${{ inputs.years || '3' }}
+          MAX_MINUTES: ${{ inputs.max_minutes || '300' }}
+        run: python -m screener.backfill --years "$YEARS" --max-minutes "$MAX_MINUTES"
+      - name: Run backtest
+        run: python -m screener.backtest
+      - name: Commit
+        env:
+          COMMIT_MSG: "history + backtest"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          tools/commit_report.sh "$GITHUB_REF_NAME"

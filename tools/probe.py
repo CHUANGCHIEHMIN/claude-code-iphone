@@ -38,6 +38,16 @@ URLS = [
     ("tpex_basic", "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"),
     ("tpex_rev", "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap05_O"),
     ("tpex_qfii_openapi", "https://www.tpex.org.tw/openapi/v1/tpex_3insti_qfii"),
+    ("twse_fmtqik", f"https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date={D}&response=json"),
+    ("twse_punish_rwd", "https://www.twse.com.tw/rwd/zh/announcement/punish?response=json"),
+    ("twse_notice_rwd", "https://www.twse.com.tw/rwd/zh/announcement/notice?response=json"),
+    ("twse_punish_openapi", "https://openapi.twse.com.tw/v1/announcement/punish"),
+    ("twse_notice_openapi", "https://openapi.twse.com.tw/v1/announcement/notice"),
+    ("tpex_disposal_openapi", "https://www.tpex.org.tw/openapi/v1/tpex_disposal_information"),
+    ("tpex_warning_openapi", "https://www.tpex.org.tw/openapi/v1/tpex_trading_warning_information"),
+    ("tpex_disposal_new", "https://www.tpex.org.tw/www/zh-tw/bulletin/disposal?response=json"),
+    ("tpex_warning_new", "https://www.tpex.org.tw/www/zh-tw/bulletin/attention?response=json"),
+    ("tpex_index_new", f"https://www.tpex.org.tw/www/zh-tw/indexInfo/inx?date={SLASH}&response=json"),
     ("mops_rev_sii", f"https://mopsov.twse.com.tw/nas/t21/sii/t21sc03_{int(Y) - 1911}_9_0.html"),
     ("mops_rev_otc", f"https://mopsov.twse.com.tw/nas/t21/otc/t21sc03_{int(Y) - 1911}_9_0.html"),
 ]
@@ -103,7 +113,8 @@ for name, url in URLS:
             print("  fields", short(t.get("fields"), 1500))
             if t.get("groups"):
                 print("  groups", short(t.get("groups"), 800))
-            print("  first", short((t.get("data") or [])[:3], 2400))
+            nrows = 40 if "指數" in str(t.get("title")) else 3
+            print("  first", short((t.get("data") or [])[:nrows], 2400 if nrows == 3 else 6000))
             print("  other", {k: short(v, 300) for k, v in t.items() if k not in ("data", "fields", "title")})
         for k, v in js.items():
             if k.startswith(("data", "fields", "groups")) and k not in ("data", "fields"):

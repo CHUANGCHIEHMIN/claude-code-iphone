@@ -33,6 +33,10 @@ def main() -> None:
     rep = pipeline.run(asof, out / "data", skip_existing=args.skip_existing)
     if rep is not None:
         write(rep, out)
+        gh = os.environ.get("GITHUB_OUTPUT")
+        if gh:
+            with open(gh, "a", encoding="utf-8") as fh:
+                fh.write(f"new_report={rep['asof']}\n")
 
 
 def write(rep: dict, out: Path) -> None:

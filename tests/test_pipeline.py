@@ -16,6 +16,7 @@ def offline(monkeypatch, tmp_path):
     monkeypatch.setattr(tech_news, "fetch_json", fk.fake_translate)
     monkeypatch.setattr(net, "MIN_INTERVAL", {})
     monkeypatch.setenv("SCREENER_NO_LLM", "1")
+    monkeypatch.setenv("SCREENER_HISTORY_DIR", str(tmp_path / "history"))
     monkeypatch.setattr(rules, "load_sustainability",
                         lambda: {"臺灣永續指數成分股": {"codes": ["2330", "3363", "2308"]}})
 
