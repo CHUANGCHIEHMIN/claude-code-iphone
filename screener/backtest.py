@@ -69,10 +69,7 @@ def _agg(rs: list[float], xs: list[float]) -> dict | None:
 def run(store: history.Store, start: date, end: date, p: dict, themes: dict, lists: dict,
         industries: dict[str, str] | None = None) -> dict:
     taiex = store.taiex()
-    stored = set(store.days())
-    cal = [d for d in sorted(date.fromisoformat(x) for x in taiex) if d in stored and d <= end]
-    if not cal:
-        cal = [d for d in sorted(stored) if d <= end]
+    cal = [d for d in store.days() if d <= end]  # stored days are trading days by construction
     if len(cal) < 30:
         raise RuntimeError(f"歷史資料只有 {len(cal)} 個交易日，至少需要 30 日（請先執行 backfill）")
     split = date.fromisoformat(p["backtest"]["split"])

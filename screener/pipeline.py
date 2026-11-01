@@ -318,7 +318,7 @@ def _merge_ratings(a: list[dict], b: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------- main
-def ensure_taiex(store: history.Store, latest: date, notes: list, months: int = 4) -> dict[str, float]:
+def ensure_taiex(store: history.Store, latest: date, notes: list, months: int = 5) -> dict[str, float]:
     """加權指數收盤（FMTQIK 月表）：當月每次重抓，過去月份已存過就不再抓。"""
     have = store.taiex()
     y, m = latest.year, latest.month

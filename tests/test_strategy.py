@@ -173,3 +173,20 @@ def test_performance_groups(tmp_path):
     assert g["量增（≥1.2）"]["h1"]["avg"] == pytest.approx(0.1)
     assert g["量增（≥1.2）"]["h1"]["excess"] == pytest.approx(0.09)
     assert g["綜合分數前半"]["h1"]["n"] == 1
+
+
+def test_backfill_retries_cut_off_tpex_download(monkeypatch, tmp_path):
+    calls = {"n": 0}
+    real = fk.fake_fetch_json
+
+    def flaky(url):
+        if "dailyQuotes" in url and "2026/10/22" in url:
+            calls["n"] += 1
+            if calls["n"] <= 2:  # fails both tries in the first pass, then works in the second pass
+                raise RuntimeError("fetch failed: IncompleteRead(712418 bytes read)")
+        return real(url)
+
+    monkeypatch.setattr(sources, "fetch_json", flaky)
+    st = history.Store(tmp_path / "h")
+    out = backfill.run(date(2026, 10, 20), date(2026, 10, 22), st, 5)
+    assert out["failed"] == [] and out["remaining"] == 0 and st.has(date(2026, 10, 22))

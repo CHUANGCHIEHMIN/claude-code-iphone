@@ -8,39 +8,9 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q -r requirements.txt
-      - run: python -m pytest -q tests
-      - name: Live daily report (not committed)
-        run: |
-          python -m screener --no-llm 2>&1 | grep -vE "INFO (screener.net|urllib)" | tail -40
-          python - <<'PY'
-          import json, glob
-          f = sorted(glob.glob("docs/data/reports/*.json"))[-1]
-          r = json.load(open(f))
-          print("REPORT", r["asof"], "regime", r["market"]["regime"])
-          for s in r["picks"]:
-              print(s["code"], s["name"], s["signal"], s["signal_reasons"], s["score"], s["tech"].get("atr"), s.get("disposal"), s.get("attention"), s.get("new_entry"), s.get("order"))
-          print("PORTFOLIO", json.dumps({k: r["portfolio"][k] for k in ("equity", "orders")}, ensure_ascii=False))
-          print("NOTES", r["notes"])
-          p = json.load(open("docs/data/performance.json"))
-          print("PERF", json.dumps(p["groups"][:3], ensure_ascii=False))
-          PY
-          ls -la data/history/*/ | tail -8
-      - name: Backfill 2 years and backtest (validation, not committed)
-        run: |
-          python -m screener.backfill --years 2.1 --max-minutes 105 2>&1 | grep -vE "INFO (screener.net|urllib)|saved 20" | tail -30
-          du -sh data/history
-          python -m screener.backtest
-          cat docs/reports/backtest.md
-          python - <<'PY'
-          import json
-          b = json.load(open("docs/data/backtest.json"))
-          for s in b["strategies"]:
-              print(s["name"], json.dumps({k: s.get(k) for k in ("all", "train", "test", "exit_reasons")}, ensure_ascii=False))
-          PY
+      - run: python tools/probe.py ${{ github.event.inputs.date || '20261022' }} twse_t86,twse_mi_index,twse_qfiis,twse_margin,twse_bwibbu,tpex_3insti_new,tpex_quotes_new,tpex_pe_new,tpex_margin_new,tpex_qfii_new,twse_fmtqik,twse_punish_rwd,twse_notice_rwd,twse_punish_openapi,twse_notice_openapi,tpex_disposal_openapi,tpex_warning_openapi,tpex_disposal_new,tpex_warning_new,tpex_index_new

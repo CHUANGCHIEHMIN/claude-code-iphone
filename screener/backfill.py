@@ -26,11 +26,21 @@ def months(start: date, end: date) -> list[date]:
     return out
 
 
+def _twice(fn, d: date) -> dict:
+    """TPEx sometimes cuts its ~2MB responses short (IncompleteRead) or answers empty; try once more."""
+    try:
+        got = fn(d)
+    except Exception as e:  # noqa: BLE001
+        log.warning("%s %s failed once: %r", fn.__name__, d, e)
+        got = {}
+    return got or fn(d)
+
+
 def fetch_day(d: date) -> tuple[dict, dict, dict, dict]:
     tw_q = sources.twse_quotes(d)
-    tp_q = sources.tpex_quotes(d) or sources.tpex_quotes(d)
+    tp_q = _twice(sources.tpex_quotes, d)
     tw_f = sources.twse_insti(d)
-    tp_f = sources.tpex_insti(d) or sources.tpex_insti(d)
+    tp_f = _twice(sources.tpex_insti, d)
     return tw_q, tp_q, tw_f, tp_f
 
 
@@ -55,9 +65,12 @@ def run(start: date, end: date, store: history.Store, max_minutes: float = 300) 
     todo = [d for d in reversed(cal) if not store.has(d)]
     log.info("%d trading days in range, %d to download", len(cal), len(todo))
     saved, failed = 0, []
+    todo = todo + todo  # second pass retries the days that failed in the first
     for d in todo:
+        if store.has(d):
+            continue
         if not budget():
-            log.warning("time budget reached; %d days left for the next run", len(todo) - saved - len(failed))
+            log.warning("time budget reached; the remaining days are downloaded by the next run")
             break
         try:
             snap = fetch_day(d)
@@ -67,7 +80,7 @@ def run(start: date, end: date, store: history.Store, max_minutes: float = 300) 
             continue
         if store.save(d, *snap):
             saved += 1
-            log.info("saved %s (%d/%d)", d, saved, len(todo))
+            log.info("saved %s (%d/%d)", d, saved, len(todo) // 2)
         else:
             failed.append(d.isoformat())
             log.warning("%s incomplete (TWSE %d / TPEx %d quotes, flows %d / %d)", d, *map(len, snap))
@@ -86,7 +99,8 @@ def run(start: date, end: date, store: history.Store, max_minutes: float = 300) 
             continue
         store.save_revenue(ym, rev)
         rev_saved += 1
-    out = {"days_in_range": len(cal), "saved": saved, "failed": failed,
+    out = {"days_in_range": len(cal), "saved": saved,
+           "failed": sorted({d for d in failed if not store.has(date.fromisoformat(d))}),
            "remaining": len([d for d in cal if not store.has(d)]), "revenue_saved": rev_saved}
     log.info("backfill done: %s", out)
     return out
