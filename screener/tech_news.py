@@ -39,7 +39,9 @@ QUERIES = {
              "(satellite OR space OR battery OR biotech OR cybersecurity OR breakthrough)",
              "(Nvidia OR Apple OR Google OR Microsoft OR OpenAI OR TSMC)"],
 }
-TRANSLATE = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q={q}"
+# 免金鑰翻譯：依序嘗試，前一個被擋（GitHub Actions 的 IP 常被 Google 回 429）就換下一個
+GOOGLE_TR = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh-TW&dt=t&q={q}"
+MYMEMORY_TR = "https://api.mymemory.translated.net/get?q={q}&langpair=en|zh-TW"
 
 # 股價、盤勢類標題不是科技新聞
 _MARKET = re.compile(r"漲停|跌停|盤中|收盤|股價|目標價|除息|ETF|台股|美股|個股|法人|外資|台指期|夜盤|期指|ADR|標普|"
@@ -166,10 +168,50 @@ def to_tw(text: str) -> str:
     return text
 
 
+def _google(texts: list[str]) -> list[str]:
+    """One request for all titles, one per line."""
+    data = fetch_json(GOOGLE_TR.format(q=urllib.parse.quote("\n".join(texts))), retries=1)
+    out = "".join(seg[0] for seg in (data[0] or []) if seg and seg[0]).strip().split("\n")
+    if len(out) != len(texts):
+        raise RuntimeError(f"google returned {len(out)} lines for {len(texts)}")
+    return out
+
+
+def _mymemory(texts: list[str]) -> list[str]:
+    out = []
+    for t in texts:
+        d = fetch_json(MYMEMORY_TR.format(q=urllib.parse.quote(t)), retries=1)
+        tr = (d.get("responseData") or {}).get("translatedText") or ""
+        if d.get("responseStatus") not in (200, "200") or not tr or "MYMEMORY WARNING" in tr:
+            raise RuntimeError(f"mymemory: {d.get('responseDetails') or d.get('responseStatus')}")
+        out.append(html.unescape(tr))
+    return out
+
+
+PROVIDERS = [("Google 翻譯", _google), ("MyMemory", _mymemory)]
+
+
+def translate_many(texts: list[str]) -> list[str | None]:
+    """Traditional Chinese for each text (None where every free translator failed)."""
+    out: list[str | None] = [None] * len(texts)
+    for name, fn in PROVIDERS:
+        todo = [i for i, v in enumerate(out) if v is None]
+        if not todo:
+            break
+        try:
+            res = fn([texts[i] for i in todo])
+        except Exception as e:  # blocked / rate limited → try the next translator
+            log.warning("%s failed: %r", name, e)
+            continue
+        for i, r in zip(todo, res):
+            r = to_tw((r or "").strip())
+            if r and _CJK.search(r):
+                out[i] = r
+    return out
+
+
 def translate(text: str) -> str:
-    data = fetch_json(TRANSLATE.format(q=urllib.parse.quote(text)))
-    out = "".join(seg[0] for seg in (data[0] or []) if seg and seg[0])
-    return to_tw(out.strip()) or text
+    return translate_many([text])[0] or text
 
 
 def stories(groups: list[list[dict]], asof: date) -> list[dict]:
@@ -207,16 +249,18 @@ def collect(asof: date, today: date | None = None, notes: list | None = None) ->
         picked = stories(groups, asof)[:PER_REGION]
         if notes is not None and len(picked) < PER_REGION:
             notes.append(f"{region}科技新聞僅 {len(picked)} 則經 {MIN_SOURCES} 家以上媒體報導，未滿 {PER_REGION} 則不補足")
+        foreign = [s["lead"]["title"] for s in picked
+                   if len(_CJK.findall(s["lead"]["title"])) < len(s["lead"]["title"]) * 0.3]
+        zh = dict(zip(foreign, translate_many(foreign))) if foreign else {}
+        failed = sum(1 for v in zh.values() if v is None)
+        if notes is not None and failed:
+            notes.append(f"{region}科技新聞有 {failed} 則外文標題翻譯失敗，暫以原文顯示")
         for s in picked:
             lead = s["lead"]
             title, orig = to_tw(lead["title"]), None
-            if len(_CJK.findall(lead["title"])) < len(lead["title"]) * 0.3:
+            if lead["title"] in zh:
                 orig = lead["title"]
-                try:
-                    title = translate(orig)
-                except Exception as e:
-                    log.warning("translate failed %r: %r", orig, e)
-                    title = orig
+                title = zh[orig] or orig
             names = "、".join(a["source"] for a in s["links"])
             items.append({
                 "region": region,
