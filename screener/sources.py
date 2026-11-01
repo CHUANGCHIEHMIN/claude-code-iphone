@@ -39,6 +39,7 @@ def twse_quotes(d: date) -> dict[str, dict]:
     ic, iname = col(f, "證券代號"), col(f, "證券名稱")
     ivol, ival, iclose = col(f, "成交股數"), col(f, "成交金額"), col(f, "收盤價")
     isign, idiff, ipe = col(f, "漲跌(+/-)"), col(f, "漲跌價差"), col(f, "本益比")
+    iopen, ihigh, ilow = col(f, "開盤價"), col(f, "最高價"), col(f, "最低價")
     out = {}
     for r in t.data:
         code = norm(r[ic])
@@ -49,8 +50,14 @@ def twse_quotes(d: date) -> dict[str, dict]:
             "name": norm(r[iname]), "close": num(r[iclose]), "volume": num(r[ivol]) or 0.0,
             "value": num(r[ival]) or 0.0, "diff": diff,
             "pe": num(r[ipe]) if ipe is not None else None,
+            **_ohl(r, iopen, ihigh, ilow),
         }
     return out
+
+
+def _ohl(r, iopen, ihigh, ilow) -> dict:
+    g = lambda i: num(r[i]) if i is not None and i < len(r) else None  # noqa: E731
+    return {"open": g(iopen), "high": g(ihigh), "low": g(ilow)}
 
 
 def tpex_quotes(d: date) -> dict[str, dict]:
@@ -63,11 +70,13 @@ def tpex_quotes(d: date) -> dict[str, dict]:
     f = t.fields
     ic, iname, iclose, idiff = col(f, "代號"), col(f, "名稱"), col(f, "收盤"), col(f, "漲跌")
     ivol, ival = col(f, "成交股數"), col(f, "成交金額")
+    iopen, ihigh, ilow = col(f, "開盤"), col(f, "最高"), col(f, "最低")
     out = {}
     for r in t.data:
         out[norm(r[ic])] = {
             "name": norm(r[iname]), "close": num(r[iclose]), "volume": num(r[ivol]) or 0.0,
             "value": num(r[ival]) or 0.0, "diff": num(r[idiff]), "pe": None,
+            **_ohl(r, iopen, ihigh, ilow),
         }
     return out
 
@@ -233,4 +242,79 @@ def mops_revenue(year: int, month: int) -> dict[str, dict]:
                 tds = [norm(x) for x in _TD.findall(rest)]
                 if len(tds) >= 5:
                     out[code] = {"revenue": num(tds[0]), "yoy": num(tds[4])}
+    return out
+
+
+# ------------------------------------------------------------- market index
+_ROC_DATE = re.compile(r"(\d{2,4})[/-]?(\d{2})[/-]?(\d{2})")
+
+
+def roc_date(s) -> date | None:
+    """'115/10/30', '1151030', '2026/10/30', '20261030' -> date."""
+    m = _ROC_DATE.search(norm(s))
+    if not m:
+        return None
+    y, mth, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    if y < 1000:
+        y += 1911
+    try:
+        return date(y, mth, d)
+    except ValueError:
+        return None
+
+
+def taiex_month(d: date) -> dict[str, float]:
+    """發行量加權股價指數 daily closes for the month containing `d` (FMTQIK) -> {iso date: close}."""
+    js = fetch_json(f"{TWSE}/afterTrading/FMTQIK?date={d.strftime('%Y%m01')}&response=json")
+    t = find_table(extract_tables(js), "日期", "發行量加權股價指數")
+    if not t:
+        return {}
+    idt, ix = col(t.fields, "日期"), col(t.fields, "發行量加權股價指數")
+    out = {}
+    for r in t.data:
+        dd, v = roc_date(r[idt]), num(r[ix])
+        if dd and v:
+            out[dd.isoformat()] = v
+    return out
+
+
+# ------------------------------------------------------ 處置股 / 注意股
+def _period(s) -> tuple[date | None, date | None]:
+    parts = re.split(r"[~～]", norm(s))
+    if len(parts) != 2:
+        return None, None
+    return roc_date(parts[0]), roc_date(parts[1])
+
+
+def disposal(on: date) -> dict[str, str]:
+    """上市＋上櫃處置股中，處置期間涵蓋 `on` 或之後者 -> {code: '處置期間 起～迄'}."""
+    out: dict[str, str] = {}
+    js = fetch_json(f"{TWSE}/announcement/punish?response=json")
+    t = find_table(extract_tables(js), "證券代號", "處置起迄時間")
+    if t:
+        ic, ip = col(t.fields, "證券代號"), col(t.fields, "處置起迄時間")
+        for r in t.data:
+            a, b = _period(r[ip])
+            if b and b >= on:
+                out[norm(r[ic])] = f"{a}～{b}"
+    for r in fetch_json("https://www.tpex.org.tw/openapi/v1/tpex_disposal_information") or []:
+        a, b = _period(r.get("DispositionPeriod", ""))
+        code = norm(r.get("SecuritiesCompanyCode", ""))
+        if code and b and b >= on:
+            out[code] = f"{a}～{b}"
+    return out
+
+
+def attention(d: date) -> set[str]:
+    """當日公布注意交易資訊的上市＋上櫃股票代號."""
+    out: set[str] = set()
+    js = fetch_json(f"{TWSE}/announcement/notice?startDate={ymd(d)}&endDate={ymd(d)}&querytype=1&response=json")
+    t = find_table(extract_tables(js), "證券代號", "注意交易資訊")
+    if t:
+        ic = col(t.fields, "證券代號")
+        out |= {norm(r[ic]) for r in t.data}
+    for r in fetch_json("https://www.tpex.org.tw/openapi/v1/tpex_trading_warning_information") or []:
+        if roc_date(r.get("Date", "")) == d:
+            out.add(norm(r.get("SecuritiesCompanyCode", "")))
+    out.discard("")
     return out

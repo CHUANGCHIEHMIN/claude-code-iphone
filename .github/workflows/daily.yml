@@ -29,6 +29,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m pytest -q tests
       - name: Generate report
+        id: gen
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SCREENER_MODEL: ${{ vars.SCREENER_MODEL }}
@@ -49,3 +50,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           tools/commit_report.sh "$GITHUB_REF_NAME"
+      - name: Notify (Telegram, optional)
+        if: steps.gen.outputs.new_report != ''
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: python -m screener.notify "docs/data/reports/${{ steps.gen.outputs.new_report }}.json"

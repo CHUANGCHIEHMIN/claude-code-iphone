@@ -64,17 +64,30 @@ def render(rep: dict) -> str:
     if not rep["picks"]:
         L.append("今日無個股同時符合所有條件。\n")
     else:
-        L.append("| 代號 | 名稱 | 產業 | 收盤 | 5日漲跌 | 5日法人買超 | 外資 | 投信 | 買超/成交值 | 量增比 | 永續依據 | 未來性依據 | 投行評等 | 本益比 | 外資持股5日變化 | 融資5日增減(張) |")
-        L.append("|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|---:|---:|---:|")
+        L.append("| 代號 | 名稱 | 訊號 | 分數 | 產業 | 收盤 | 5日漲跌 | 5日法人買超 | 外資 | 投信 | 買超/成交值 | 量增比 | 永續依據 | 未來性依據 | 投行評等 | 本益比 | 外資持股5日變化 | 融資5日增減(張) |")
+        L.append("|---|---|---|---:|---|---:|---:|---:|---:|---:|---:|---:|---|---|---|---:|---:|---:|")
         for s in rep["picks"]:
             ratio = pct(s["net_ratio"], signed=False) + (" **法人主導**" if s["dominant"] else "")
             vr = fnum(s["vol_ratio"]) + (" **量增**" if s.get("volume_up") else "")
             L.append("| " + " | ".join(esc(x) for x in [
-                s["code"], s["name"], s["industry"], fnum(s["close"]), pct(s["chg5"]),
+                s["code"], s["name"], (s.get("signal") or DASH) + ("：" + "、".join(s["signal_reasons"]) if s.get("signal_reasons") else ""),
+                fnum(s.get("score"), "{:.0f}"), s["industry"], fnum(s["close"]), pct(s["chg5"]),
                 yi(s["net_amt"]), yi(s["foreign_amt"]), yi(s["trust_amt"]), ratio, vr,
                 s["A"]["basis"], s["B"]["basis"], ratings_text(s["C"]), fnum(s["pe"], "{:.1f}"),
                 fnum(s["qfii_chg5"], "{:+.2f}pp"), fnum(s["margin_chg5"], "{:+,.0f}"),
             ]) + " |")
+        L.append("")
+
+    reg = (rep.get("market") or {}).get("regime")
+    pf = rep.get("portfolio")
+    if reg or pf:
+        L.append("### 大盤濾網與模擬持股")
+        if reg and reg.get("taiex"):
+            L.append(f"- 大盤{reg['state']}：加權指數 {fnum(reg['taiex'], '{:,.0f}')}、60日均線 {fnum(reg['ma'], '{:,.0f}')}；每天最多新增 {reg['max_entries']} 檔。")
+        if pf:
+            L.append(f"- 模擬帳戶淨值 {pf['equity']:,.0f} 元（{pct(pf['equity'] / pf['capital'] - 1)}），持有 {len(pf['positions'])} 檔。")
+            L.append("- 明日開盤買進：" + ("、".join(f"{o['code']} {o['name']}（預估停損 {o['est_stop']:,.2f}）" for o in pf["orders"]) or "無"))
+            L.append("- 明日開盤賣出：" + ("、".join(f"{x['code']} {x['name']}（{x['exit_order']}）" for x in pf["exits"]) or "無"))
         L.append("")
 
     L.append("## 3. 候選池前20名對照表（依5日買超金額）")

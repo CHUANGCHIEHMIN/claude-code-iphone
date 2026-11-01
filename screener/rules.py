@@ -107,8 +107,10 @@ def revenue_all_positive(rev: list[dict]) -> bool | None:
 
 
 def decide(stock: dict) -> tuple[bool, list[str]]:
-    """入選規則：A 與 B 皆符合，且 C 不是「只有負面評等」。回傳 (是否入選, 未入選原因)."""
+    """入選規則：A 與 B 皆符合，C 不是「只有負面評等」，且非處置股。回傳 (是否入選, 未入選原因)."""
     reasons = []
+    if stock.get("disposal"):
+        reasons.append("處置股")
     if stock["A"]["pass"] is not True:
         reasons.append("A永續未符合" if stock["A"]["pass"] is False else "A永續未能查證")
     if stock["B"]["pass"] is not True:

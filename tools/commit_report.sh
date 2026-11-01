@@ -5,7 +5,7 @@
 set -euo pipefail
 branch="${1:?branch}"
 tmp=$(mktemp -d)
-git ls-files --others --modified --exclude-standard docs/data docs/reports | while read -r f; do
+git ls-files --others --modified --exclude-standard docs/data docs/reports data/history | while read -r f; do
   [ "$f" = "docs/data/index.json" ] && continue
   [ -f "$f" ] || continue
   mkdir -p "$tmp/$(dirname "$f")"
@@ -17,9 +17,10 @@ for attempt in 1 2 3; do
   cp -r "$tmp/." .
   python -m screener --reindex
   git add docs/data docs/reports
+  if [ -d data/history ]; then git add data/history; fi
   if git diff --cached --quiet; then echo "no changes"; exit 0; fi
   day=$(python -c "import json;print(json.load(open('docs/data/index.json'))['latest'])")
-  git commit -qm "report: $day"
+  git commit -qm "${COMMIT_MSG:-report: $day}"
   if git push -q origin "HEAD:$branch"; then echo "pushed report $day"; exit 0; fi
   echo "push attempt $attempt failed; retrying" >&2
   sleep 5

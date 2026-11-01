@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import news_ratings, research, rules, sources, tech_news
+from . import history, news_ratings, performance, portfolio, research, rules, signals, sources, tech_news
 
 log = logging.getLogger(__name__)
 TPE = timezone(timedelta(hours=8))
@@ -18,6 +18,7 @@ COMPARE_SIZE = 20
 MAX_PICKS = 20
 DOMINANT_RATIO = 0.10
 VOLUME_UP = 1.2
+NEED_DAYS = 26  # 20日均線＋5日斜率、20日高點、ATR(14) 所需的交易日數
 
 OFFICIAL_SOURCES = [
     {"name": "臺灣證券交易所 三大法人買賣超日報 (T86)", "url": "https://www.twse.com.tw/zh/trading/foreign/t86.html"},
@@ -37,6 +38,9 @@ OFFICIAL_SOURCES = [
     {"name": "證交所公司治理中心 第十二屆公司治理評鑑結果", "url": "https://cgc.twse.com.tw/evaluationCorp/listCh"},
     {"name": "MoneyDJ 元大臺灣ESG永續ETF(00850) 全部持股", "url": "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00850.TW"},
     {"name": "證交所 OpenAPI 上市公司每月營業收入彙總表（產業別）", "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"},
+    {"name": "臺灣證券交易所 市場成交資訊（發行量加權股價指數，FMTQIK）", "url": "https://www.twse.com.tw/zh/trading/historical/fmtqik.html"},
+    {"name": "臺灣證券交易所 處置有價證券／注意有價證券", "url": "https://www.twse.com.tw/zh/announcement/punish.html"},
+    {"name": "櫃買中心 OpenAPI 處置有價證券／注意股票資訊", "url": "https://www.tpex.org.tw/openapi/"},
     {"name": "櫃買中心 OpenAPI 上櫃公司每月營業收入彙總表（產業別）", "url": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap05_O"},
 ]
 
@@ -56,12 +60,23 @@ def _safe(fn, *a, default=None, note: list | None = None, label: str = ""):
 
 
 # ------------------------------------------------------------------ step 0/1
-def trading_days(asof: date, need: int = 21, max_back: int = 50, notes: list | None = None) -> list[tuple[date, dict, dict]]:
-    """Walk back from `asof`, keeping days where TWSE published a closing table."""
+def trading_days(asof: date, need: int = NEED_DAYS, max_back: int = 60, notes: list | None = None,
+                 store: history.Store | None = None, stored_flows: dict | None = None) -> list[tuple[date, dict, dict]]:
+    """Walk back from `asof`, keeping days where TWSE published a closing table (stored days are reused)."""
     days = []
     d = asof
     for _ in range(max_back):
         if d.weekday() < 5:
+            snap = store.load(d) if store else None
+            if snap:
+                tw, tp, tw_f, tp_f = snap
+                days.append((d, tw, tp))
+                if stored_flows is not None:
+                    stored_flows[d] = (tw_f, tp_f)
+                if len(days) >= need:
+                    break
+                d -= timedelta(days=1)
+                continue
             tw = _safe(sources.twse_quotes, d, label=f"TWSE 收盤行情 {d}")
             if tw:
                 tp = _safe(sources.tpex_quotes, d, label=f"TPEx 收盤行情 {d}")
@@ -77,8 +92,10 @@ def trading_days(asof: date, need: int = 21, max_back: int = 50, notes: list | N
     return days
 
 
-def build_universe(days, notes: list) -> dict[str, dict]:
+def build_universe(days, notes: list, stored_flows: dict | None = None,
+                   flows_out: dict | None = None) -> dict[str, dict]:
     """Aggregate 5-day institutional flows + 20-day volume for every common stock."""
+    stored_flows = stored_flows or {}
     last5 = days[:5]
     stocks: dict[str, dict] = {}
     for idx, (d, tw_q, tp_q) in enumerate(days[:20]):
@@ -101,8 +118,10 @@ def build_universe(days, notes: list) -> dict[str, dict]:
                         s["close"] = q["close"]
                         s["pe_quote"] = q.get("pe")
     for d, tw_q, tp_q in last5:
-        for market, fetch, quotes in (("上市", sources.twse_insti, tw_q), ("上櫃", sources.tpex_insti, tp_q)):
-            flows = _safe(fetch, d, note=notes, label=f"{market}三大法人 {d}")
+        got = []
+        for k, (market, fetch, quotes) in enumerate((("上市", sources.twse_insti, tw_q), ("上櫃", sources.tpex_insti, tp_q))):
+            flows = stored_flows[d][k] if d in stored_flows else _safe(fetch, d, note=notes, label=f"{market}三大法人 {d}")
+            got.append(flows)
             if not flows:
                 notes.append(f"{d} {market}三大法人資料為空")
             for code, f in flows.items():
@@ -120,6 +139,8 @@ def build_universe(days, notes: list) -> dict[str, dict]:
                 s["trust_sh"] += f["trust"]
                 s["net_sh"] += f["total"]
                 s["days_with_flow"] += 1
+        if flows_out is not None:
+            flows_out[d] = tuple(got)
     prev_close_day = days[5][0].isoformat() if len(days) > 5 else None
     for s in stocks.values():
         v5, v20 = s.pop("vol5"), s.pop("vol20")
@@ -172,7 +193,8 @@ def enrich(pool: list[dict], days, notes: list) -> None:
             and mf["prev"] is not None else None
 
 
-def revenue_months(asof: date, notes: list, need: int = 3) -> list[tuple[str, dict]]:
+def revenue_months(asof: date, notes: list, need: int = 3,
+                   store: history.Store | None = None) -> list[tuple[str, dict]]:
     out = []
     y, m = asof.year, asof.month
     if asof.day <= 10:  # 上月營收須於每月10日前公布，10日前上月資料尚不完整
@@ -184,6 +206,8 @@ def revenue_months(asof: date, notes: list, need: int = 3) -> list[tuple[str, di
         rev = _safe(sources.mops_revenue, y, m, note=notes, label=f"月營收 {y}-{m:02d}")
         if len(rev) > 500:
             out.append((f"{y}-{m:02d}", rev))
+            if store:
+                _safe(store.save_revenue, f"{y}-{m:02d}", rev, label="月營收存檔")
         elif not out:
             continue  # 當月尚未公布完畢，往前一個月
         if len(out) >= need:
@@ -294,28 +318,72 @@ def _merge_ratings(a: list[dict], b: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------- main
-def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict | None:
+def ensure_taiex(store: history.Store, latest: date, notes: list, months: int = 4) -> dict[str, float]:
+    """加權指數收盤（FMTQIK 月表）：當月每次重抓，過去月份已存過就不再抓。"""
+    have = store.taiex()
+    y, m = latest.year, latest.month
+    for k in range(months):
+        first = date(y, m, 1)
+        ym = first.strftime("%Y-%m")
+        if k == 0 or sum(1 for d in have if d.startswith(ym)) < 15:
+            got = _safe(sources.taiex_month, first, note=notes, label=f"加權指數 {ym}")
+            if got:
+                store.save_taiex(got)
+        y, m = (y - 1, 12) if m == 1 else (y, m - 1)
+    return store.taiex()
+
+
+def build_series(codes: set[str], days, flows: dict) -> dict[str, dict]:
+    out = {}
+    for d, tw_q, tp_q in reversed(days):
+        tw_f, tp_f = flows.get(d, ({}, {}))
+        for code in codes:
+            q = tw_q.get(code) or tp_q.get(code)
+            if not q or q.get("close") is None:
+                continue
+            f = (tw_f or {}).get(code) or (tp_f or {}).get(code) if d in flows else None
+            if d in flows and f is None:
+                f = {"foreign": 0.0, "trust": 0.0, "total": 0.0}  # 當日無法人進出
+            signals.append(out.setdefault(code, signals.new_series()), d.isoformat(), q, f)
+    return out
+
+
+def previous_report(out_dir: Path, latest: date) -> dict | None:
+    prev = sorted(p for p in (out_dir / "reports").glob("*.json") if p.stem < latest.isoformat())
+    return json.loads(prev[-1].read_text("utf-8")) if prev else None
+
+
+def run(asof: date | None, out_dir: Path, skip_existing: bool = False,
+        history_dir: Path | None = None) -> dict | None:
     asof = asof or today_tpe()
     notes: list[str] = []
-    days = trading_days(asof, notes=notes)
+    store = history.Store(history_dir)
+    stored_flows: dict = {}
+    days = trading_days(asof, notes=notes, store=store, stored_flows=stored_flows)
     if len(days) < 6:
         raise RuntimeError(f"只取得 {len(days)} 個交易日資料，無法計算（需至少6日）")
-    if not _safe(sources.twse_insti, days[0][0], label="T86 發布檢查"):
+    if days[0][0] not in stored_flows and not _safe(sources.twse_insti, days[0][0], label="T86 發布檢查"):
         notes.append(f"{days[0][0]} 三大法人資料尚未公布，改以前一交易日為基準")
-        days = trading_days(days[1][0], need=21, notes=notes)
+        stored_flows = {}
+        days = trading_days(days[1][0], notes=notes, store=store, stored_flows=stored_flows)
     existing = out_dir / "reports" / f"{days[0][0].isoformat()}.json"
     if skip_existing and existing.exists():
         prev = json.loads(existing.read_text("utf-8"))
         if prev.get("research_enabled") or not research.available():
             log.info("report for %s already exists; skipping", days[0][0])
             return None
-    if len(days) < 21:
-        notes.append(f"僅取得 {len(days)} 個交易日行情，20日均量以可得天數計算")
+    if len(days) < NEED_DAYS:
+        notes.append(f"僅取得 {len(days)} 個交易日行情，均線等技術指標以可得天數計算")
     latest = days[0][0]
     window = [d.isoformat() for d, _, _ in days[:5]][::-1]
     log.info("window %s – %s", window[0], window[-1])
+    strategy = signals.load_strategy()
 
-    universe = build_universe(days, notes)
+    flows: dict = dict(stored_flows)
+    universe = build_universe(days, notes, stored_flows, flows)
+    for d, tw_q, tp_q in days[:5]:
+        if d in flows:
+            _safe(store.save, d, tw_q, tp_q, *flows[d], label=f"每日快照 {d}")
     ranked = sorted((s for s in universe.values() if s["days_with_flow"] and s["net_amt"] > 0),
                     key=lambda s: s["net_amt"], reverse=True)
     pool = ranked[:POOL_SIZE]
@@ -326,9 +394,16 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
 
     themes = rules.load_themes()
     lists = rules.load_sustainability()
-    rev = revenue_months(latest, notes)
+    rev = revenue_months(latest, notes, store=store)
     if len(rev) < 3:
         notes.append(f"月營收僅取得 {len(rev)} 個月，營收年增條件可能無法判定")
+
+    # 處置股／注意股（官方只提供近期名單，回補舊日期報告時不套用）
+    recent = (today_tpe() - latest).days <= 7
+    disposal = _safe(sources.disposal, latest + timedelta(days=1), note=notes, label="處置股名單") if recent else {}
+    attention = _safe(sources.attention, latest, default=set(), note=notes, label="注意股名單") if recent else set()
+    if not recent:
+        notes.append("處置股、注意股名單僅提供近期資料，本次（非近期日期）未套用")
 
     # 先以對照表/營收判定 B，決定哪些需要網路研究（控制 API 成本）
     for s in pool:
@@ -342,6 +417,15 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
 
     all_names = tuple(sorted({u["name"] for u in universe.values()}))
     news_c = run_news_ratings(pool, latest, out_dir / "cache" / "news_ratings", all_names, notes)
+
+    # 技術面、籌碼連續性、進場訊號（用近 NEED_DAYS 日行情）
+    pf_path = out_dir / "portfolio.json"
+    pf_doc = portfolio.load(pf_path) or {}
+    held = set((pf_doc.get("state") or {}).get("positions", {})) | \
+        {o["code"] for o in (pf_doc.get("state") or {}).get("orders", [])}
+    series = build_series({s["code"] for s in pool} | held, days, flows)
+    prev_rep = previous_report(out_dir, latest)
+    prev_picks = {s["code"] for s in (prev_rep or {}).get("picks", [])}
 
     for s in pool:
         r = res.get(s["code"])
@@ -358,18 +442,54 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
         s["C"] = c
         s["news"] = [n for n in ((r or {}).get("news") or []) if n.get("url")][:2]
         s["research_sources"] = (r or {}).get("searched", [])
+        s["disposal"] = disposal.get(s["code"])
+        s["attention"] = s["code"] in attention
+        f = signals.features(series[s["code"]], strategy) if s["code"] in series else None
+        s["tech"] = {k: (round(v, 4) if isinstance(v, float) else v) for k, v in (f or {}).items()}
+        s["buy_days"] = f["buy_days"] if f else None
+        s["trust_streak"] = f["trust_streak"] if f else None
+        s["trust_ratio"] = (s["trust_amt"] / s["value5"]) if s["value5"] else None
+        base = (s["margin_balance"] - s["margin_chg5"]) if s.get("margin_balance") is not None \
+            and s.get("margin_chg5") is not None else None
+        s["margin_pct5"] = (s["margin_chg5"] / base) if base else None
+        if f:
+            s["signal"], s["signal_reasons"] = signals.entry_signal(
+                f, strategy, disposal=bool(s["disposal"]), attention=s["attention"], margin_pct=s["margin_pct5"])
+        else:
+            s["signal"], s["signal_reasons"] = signals.WATCH, ["歷史股價不足"]
         s["selected"], s["reasons"] = rules.decide(s)
+
+    for s, sc in zip(pool, signals.percentile_scores(pool, signals.SCORE_KEYS)):
+        bonus = {"positive": 5, "negative_only": -5}.get(s["C"]["status"], 0)
+        s["score"] = max(0.0, min(100.0, sc + bonus))
 
     picks = [s for s in pool if s["selected"]][:MAX_PICKS]
     picks.sort(key=lambda s: (s["vol_ratio"] is not None, s["vol_ratio"] or 0), reverse=True)
     for s in picks:
         s["volume_up"] = bool(s["vol_ratio"] and s["vol_ratio"] >= VOLUME_UP)
+        s["new_entry"] = bool(prev_rep) and s["code"] not in prev_picks
     if sum(1 for s in pool if s["selected"]) > MAX_PICKS:
         notes.append(f"符合條件超過 {MAX_PICKS} 檔，依買超金額排名保留前 {MAX_PICKS} 檔後再依量增比排序")
+
+    # 大盤濾網、模擬持股
+    taiex = ensure_taiex(store, latest, notes)
+    reg = signals.regime(taiex, latest.isoformat(), strategy)
+    if reg["state"] == "未知":
+        notes.append("加權指數歷史不足，大盤濾網暫不套用")
+    cands = sorted((s for s in picks if s["signal"] == signals.ENTER), key=lambda s: s["score"], reverse=True)
+    cand_rows = [{"code": s["code"], "name": s["name"], "industry": s.get("industry"), "close": s["close"],
+                  "atr": (s["tech"] or {}).get("atr")} for s in cands]
+    quotes_by_day = [(d.isoformat(), {**tp_q, **tw_q}) for d, tw_q, tp_q in reversed(days)]
+    pf = _safe(portfolio.update, pf_path, strategy, quotes_by_day, series, cand_rows, reg["max_entries"],
+               latest.isoformat(), taiex, notes, note=notes, label="模擬持股")
+    ordered = {o["code"] for o in (pf or {}).get("orders", [])}
+    for s in picks:
+        s["order"] = s["code"] in ordered
 
     tech = _safe(tech_news.collect, latest, today_tpe(), notes, default=[], note=notes, label="科技新聞")
 
     market = market_summary(universe, days)
+    market["regime"] = reg
     report = {
         "generated_at": datetime.now(TPE).isoformat(timespec="seconds"),
         "asof": latest.isoformat(),
@@ -377,16 +497,45 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False) -> dict |
         "research_enabled": research_on,
         "model": research.MODEL if research_on else None,
         "market": market,
+        "strategy": {k: v for k, v in strategy.items() if k != "backtest"},
         "picks": [public(s) for s in picks],
         "pool": [public(s) for s in pool],
         "compare": [public(s) for s in pool[:COMPARE_SIZE]],
+        "portfolio": pf or None,
         "tech_news": tech,
         "revenue_months": [m for m, _ in rev],
         "notes": sorted(set(notes), key=notes.index),
         "sources": OFFICIAL_SOURCES,
     }
     report["summary"] = summary_text(report)
+    write_performance(out_dir, store, days, taiex, strategy, report, notes)
     return report
+
+
+def write_performance(out_dir: Path, store: history.Store, days, taiex: dict, strategy: dict,
+                      report: dict, notes: list) -> None:
+    """Score every past report's picks (including today's, written by the caller) against later prices."""
+    prices: dict[str, dict[str, tuple]] = {}
+    first = min([p.stem for p in (out_dir / "reports").glob("*.json")] + [report["asof"]])
+    for d in store.days():
+        if d.isoformat() < first:
+            continue
+        rows = store.rows(d) or []
+        prices[d.isoformat()] = {r["code"]: (r["open"], r["close"]) for r in rows}
+    for d, tw_q, tp_q in days:
+        day = prices.setdefault(d.isoformat(), {})
+        for q in (tw_q, tp_q):
+            for code, x in q.items():
+                day.setdefault(code, (x.get("open"), x.get("close")))
+    c = strategy["costs"]
+    cost = c["fee"] * c["fee_discount"] * 2 + c["tax"]
+    try:
+        perf = performance.compute(out_dir / "reports", prices, taiex, cost, extra=report)
+    except Exception as e:  # noqa: BLE001
+        log.warning("performance failed: %r", e)
+        notes.append(f"績效追蹤計算失敗：{e}")
+        return
+    (out_dir / "performance.json").write_text(json.dumps(perf, ensure_ascii=False, indent=1), "utf-8")
 
 
 def market_summary(universe: dict, days) -> dict:
@@ -401,7 +550,8 @@ def market_summary(universe: dict, days) -> dict:
 
 KEYS = ("code name market industry rank close chg5 net_amt foreign_amt trust_amt dealer_amt foreign_sh "
         "trust_sh net_sh value5 net_ratio dominant avg_vol5 avg_vol20 vol_ratio volume_up pe qfii_ratio "
-        "qfii_chg5 margin_balance margin_chg5 A B C news selected reasons researched research_sources").split()
+        "qfii_chg5 margin_balance margin_chg5 margin_pct5 A B C news selected reasons researched research_sources "
+        "buy_days trust_streak trust_ratio score tech signal signal_reasons disposal attention new_entry order").split()
 
 
 def public(s: dict) -> dict:

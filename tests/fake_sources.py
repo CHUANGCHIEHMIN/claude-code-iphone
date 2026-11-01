@@ -53,6 +53,27 @@ def fake_fetch_json(url: str):
     if m:
         s = "".join(m.groups()) if len(m.groups()) > 1 else m.group(1)
         d = date(int(s[:4]), int(s[4:6]), int(s[6:]))
+    if "tpex_disposal_information" in url:
+        return [{"Date": "1151021", "SecuritiesCompanyCode": "6488", "CompanyName": "環球晶",
+                 "DispositionPeriod": "1151022~1151104"}]
+    if "tpex_trading_warning_information" in url:
+        return [{"Date": "1151022", "SecuritiesCompanyCode": "3363", "CompanyName": "上詮"}]
+    if "announcement/punish" in url:
+        return {"stat": "OK", "fields": ["編號", "公布日期", "證券代號", "證券名稱", "累計", "處置條件", "處置起迄時間"],
+                "data": [[1, "115/10/20", "1101", "台泥", 1, "連續三次", "115/10/21～115/11/03"],
+                         [2, "115/09/01", "2330", "台積電", 1, "連續三次", "115/09/02～115/09/08"]]}
+    if "announcement/notice" in url:
+        return {"stat": "OK", "fields": ["編號", "證券代號", "證券名稱", "累計次數", "注意交易資訊", "日期"], "data": []}
+    if "FMTQIK" in url:
+        first = date(int(url.split("date=")[1][:4]), int(url.split("date=")[1][4:6]), 1)
+        data, dd = [], first
+        while dd.month == first.month:
+            if is_trading(dd):
+                data.append([f"{dd.year - 1911}/{dd.month:02d}/{dd.day:02d}", "1", "1", "1",
+                             f"{20000 + 10 * _seq(dd):,.2f}", "1"])
+            dd += timedelta(days=1)
+        return {"stat": "OK", "fields": ["日期", "成交股數", "成交金額", "成交筆數", "發行量加權股價指數", "漲跌點數"],
+                "data": data}
     if "openapi" in url:
         rows = [{"公司代號": c, "產業別": ind} for c, ind in
                 [("2330", "半導體業"), ("2317", "其他電子業"), ("1101", "水泥工業"), ("2308", "電子零組件業"),
@@ -68,7 +89,8 @@ def fake_fetch_json(url: str):
         data = []
         for c, (n, p, v) in TWSE_STOCKS.items():
             px, vol = price(c, p, d), volume(c, v, d)
-            data.append([c, n, _comma(vol), "1", _comma(int(vol * px)), "", "", "", f"{px:.2f}",
+            data.append([c, n, _comma(vol), "1", _comma(int(vol * px)), f"{px * 0.99:.2f}", f"{px * 1.01:.2f}",
+                         f"{px * 0.98:.2f}", f"{px:.2f}",
                          "<p style= color:red>+</p>", "1.00", "", "", "", "", "20.50"])
         return {"stat": "OK", "date": d.strftime("%Y%m%d"),
                 "tables": [{"title": "價格指數", "fields": ["指數", "收盤指數"], "data": [["x", "1"]]},
@@ -117,7 +139,8 @@ def fake_fetch_json(url: str):
         data = []
         for c, (n, p, v) in TPEX_STOCKS.items():
             px, vol = price(c, p, d), volume(c, v, d)
-            data.append([c, n, f"{px:.2f}", "+0.50 ", "", "", "", "", _comma(vol), _comma(int(vol * px)), "1"])
+            data.append([c, n, f"{px:.2f}", "+0.50 ", f"{px * 0.99:.2f}", f"{px * 1.01:.2f}", f"{px * 0.98:.2f}", "",
+                         _comma(vol), _comma(int(vol * px)), "1"])
         return {"date": ds, "stat": "ok", "tables": [{"title": "上櫃股票行情", "fields": fields, "data": data}]}
     if "insti/qfii" in url:
         fields = ["排行", "代號", "名稱", "發行股數(A)", "僑外資及陸資尚可投資股數B=A*F-C", "僑外資及陸資持有股數(C)",
