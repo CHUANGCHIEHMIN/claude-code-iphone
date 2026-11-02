@@ -30,6 +30,14 @@ def P():
     return signals.load_strategy()
 
 
+def with_pullback(monkeypatch):
+    """The fake market has flat volume, so only pullback entries fire there; turn them on for flow tests."""
+    p = P()
+    p["entry"]["pullback_entry"] = True
+    monkeypatch.setattr(signals, "load_strategy", lambda: json.loads(json.dumps(p)))
+    return p
+
+
 def test_history_round_trip(tmp_path):
     st = history.Store(tmp_path / "h")
     d = date(2026, 10, 22)
@@ -46,13 +54,13 @@ def test_history_round_trip(tmp_path):
     assert st.days() == [d]
 
 
-def test_backfill_and_backtest(tmp_path):
+def test_backfill_and_backtest(monkeypatch, tmp_path):
     st = history.Store(tmp_path / "h")
     out = backfill.run(date(2026, 9, 1), date(2026, 10, 22), st, 5)
     assert out["remaining"] == 0 and out["saved"] == len(st.days()) > 30
     assert "2026-10-22" in st.taiex() and "2026-10-23" not in st.taiex()  # holiday
     assert st.revenue("2026-08")["2330"] == 30.5
-    p = P()
+    p = with_pullback(monkeypatch)
     p["backtest"]["split"] = "2026-10-10"
     bt = backtest.run(st, date(2026, 10, 8), date(2026, 10, 22), p, rules.load_themes(),
                       {"l": {"codes": ["2330", "3363", "2308"]}})
@@ -79,6 +87,10 @@ def test_entry_signals():
     assert f["atr"] == pytest.approx(2.0)
     st, why = signals.entry_signal(f, p)
     assert st == signals.WATCH  # trending but not a volume breakout nor near the 10-day average
+    near = {**f, "close": f["ma_pull"] * 1.01}
+    assert signals.entry_signal(near, p)[0] == signals.WATCH  # pullback entries are off by default
+    p2 = {**p, "entry": {**p["entry"], "pullback_entry": True}}
+    assert signals.entry_signal(near, p2)[0] == signals.ENTER
     assert signals.entry_signal(f, p, disposal=True)[0] == signals.EXCLUDED
     assert signals.entry_signal(f, p, attention=True) == (signals.HOT, ["注意股"])
     assert signals.entry_signal(f, p, margin_pct=0.2)[0] == signals.HOT
@@ -111,6 +123,8 @@ def test_engine_entry_stop_and_gap():
 
 def test_engine_close_based_exits():
     p = P()
+    assert p["exit"]["trail_after"] is None  # off by default; checked here with the old setting
+    p["exit"]["trail_after"] = 0.10
     eng = Engine(p)
     eng.plan("d0", [{"code": "A", "name": "甲", "close": 100, "atr": 2}], 1)
     eng.on_open("d1", {"A": {"open": 100}})
@@ -123,11 +137,39 @@ def test_engine_close_based_exits():
     eng2 = Engine(p)
     eng2.plan("d0", [{"code": "A", "name": "甲", "close": 100, "atr": 2}], 1)
     eng2.on_open("d1", {"A": {"open": 100}})
-    eng2.on_close("d1", {"A": {"open": 100, "low": 99, "close": 101}}, {"A": {"inst_sell_streak": 3}})
+    n = p["exit"]["inst_sell_days"]
+    eng2.on_close("d1", {"A": {"open": 100, "low": 99, "close": 101}}, {"A": {"inst_sell_streak": n - 1}})
+    assert eng2.s["exit_orders"] == {}
+    eng2.on_close("d2", {"A": {"open": 100, "low": 99, "close": 101}}, {"A": {"inst_sell_streak": n}})
     assert eng2.s["exit_orders"] == {"A": "inst"}
 
 
-def test_portfolio_rerun_is_idempotent(tmp_path):
+def test_engine_breakeven_stop():
+    p = P()
+    eng = Engine(p)
+    eng.plan("d0", [{"code": "A", "name": "甲", "close": 100, "atr": 2}], 1)
+    eng.on_open("d1", {"A": {"open": 100}})
+    eng.on_close("d1", {"A": {"open": 100, "low": 99, "close": 109}}, {})
+    assert eng.s["positions"]["A"]["stop"] == 96.0  # +9%: still the ATR stop
+    eng.on_close("d2", {"A": {"open": 109, "low": 108, "close": 111}}, {})
+    assert eng.s["positions"]["A"]["stop"] == 100  # closed 10%+ above cost → stop moved to cost
+    eng.on_close("d3", {"A": {"open": 104, "low": 99.5, "close": 101}}, {})
+    t = eng.s["trades"][0]
+    assert t["exit"] == 100 and t["reason"] == "保本停損" and "A" not in eng.s["positions"]
+
+
+def test_weak_market_blocks_new_entries():
+    p = P()
+    taiex = {f"2026-{m:02d}-{d:02d}": 100.0 for m in (7, 8, 9) for d in range(1, 29)}
+    taiex["2026-09-30"] = 90.0
+    reg = signals.regime(taiex, "2026-09-30", p)
+    assert reg["state"] == "弱勢" and reg["max_entries"] == 0
+    eng = Engine(p)
+    assert eng.plan("d0", [{"code": "A", "name": "甲", "close": 100, "atr": 2}], reg["max_entries"]) == []
+
+
+def test_portfolio_rerun_is_idempotent(monkeypatch, tmp_path):
+    with_pullback(monkeypatch)
     out = tmp_path / "data"
     for d in ("2026-10-19", "2026-10-20", "2026-10-21"):
         rep = pipeline.run(date.fromisoformat(d), out)

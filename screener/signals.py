@@ -123,6 +123,8 @@ def entry_signal(f: dict, p: dict, *, disposal: bool = False, attention: bool = 
         return WATCH, [f"{e['ma']}日均線未上彎"]
     if f["breakout"] and (f["vol_ratio"] or 0) >= e["vol_ratio_min"]:
         return ENTER, [f"突破前{e['breakout_days']}日高點且量增"]
+    if not e.get("pullback_entry"):
+        return WATCH, [f"趨勢向上，等待量增突破前{e['breakout_days']}日高點"]
     if f["ma_pull"] and 0 <= f["close"] / f["ma_pull"] - 1 <= e["pullback_pct"]:
         return ENTER, [f"拉回至{e['pullback_ma']}日均線 {e['pullback_pct'] * 100:.0f}% 內"]
     return WATCH, ["趨勢向上，等待突破（量增）或拉回"]

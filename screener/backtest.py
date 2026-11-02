@@ -284,6 +284,8 @@ def main() -> None:
         ind = sources.industries()
     except Exception:  # noqa: BLE001
         ind = {}
+    store.save_industries(ind)
+    ind = ind if len(ind) >= 500 else store.industries()
     bt = run(store, start, end, p, rules.load_themes(), rules.load_sustainability(), ind)
     out = Path(args.out)
     (out / "data").mkdir(parents=True, exist_ok=True)

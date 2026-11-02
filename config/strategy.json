@@ -1,11 +1,12 @@
 {
   "_說明": "進出場、風控與回測參數。數字為常見起始值，請以回測結果（網站「績效」頁）調整；改動後下一次報告與回測即生效。",
   "entry": {
-    "_說明": "隔日進場訊號：收盤站上 ma 日均線且均線較 slope_days 日前上彎，並且（突破前 breakout_days 日高點且量增比≥vol_ratio_min，或收盤在 pullback_ma 日均線上方 pullback_pct 以內）。隔日開盤跳空超過 max_gap_up 或接近漲停則放棄。",
+    "_說明": "隔日進場訊號：收盤站上 ma 日均線且均線較 slope_days 日前上彎，並且突破前 breakout_days 日高點且量增比≥vol_ratio_min。pullback_entry 為 true 時，收盤在 pullback_ma 日均線上方 pullback_pct 以內也算可進場（3 年回測中拉回進場在調參期拖累績效，預設關閉）。隔日開盤跳空超過 max_gap_up 或接近漲停則放棄。",
     "ma": 20,
     "slope_days": 5,
     "breakout_days": 20,
     "vol_ratio_min": 1.2,
+    "pullback_entry": false,
     "pullback_ma": 10,
     "pullback_pct": 0.03,
     "max_gap_up": 0.03
@@ -18,20 +19,21 @@
     "attention_is_overheat": true
   },
   "exit": {
-    "_說明": "初始停損＝進場價−atr_mult×ATR(atr_n)，最多 max_stop_pct；獲利達 trail_after 後收盤跌破 trail_ma 日均線出場；外資＋投信連 inst_sell_days 日賣超出場；持有 time_stop_days 日仍未獲利 time_stop_min_gain 出場。",
+    "_說明": "初始停損＝進場價−atr_mult×ATR(atr_n)，最多 max_stop_pct；收盤曾獲利 breakeven_after 後停損上移到成本（保本）；外資＋投信連 inst_sell_days 日賣超出場；持有 time_stop_days 日仍未獲利 time_stop_min_gain 出場。trail_after 不是 null 時，另加「獲利達 trail_after 後收盤跌破 trail_ma 日均線出場」（3 年回測中會太早賣掉強勢股，預設關閉）。",
     "atr_n": 14,
     "atr_mult": 2.0,
     "max_stop_pct": 0.08,
-    "trail_after": 0.10,
+    "breakeven_after": 0.10,
+    "trail_after": null,
     "trail_ma": 10,
-    "inst_sell_days": 3,
+    "inst_sell_days": 5,
     "time_stop_days": 20,
     "time_stop_min_gain": 0.03
   },
   "market": {
-    "_說明": "大盤濾網：加權指數收盤低於 ma 日均線時視為弱勢，每天新進場最多 weak_max_entries 檔（強勢時最多 strong_max_entries 檔）。",
+    "_說明": "大盤濾網：加權指數收盤低於 ma 日均線時視為弱勢，每天新進場最多 weak_max_entries 檔（0＝弱勢不進場，3 年回測中弱勢時的突破進場平均虧損）；強勢時最多 strong_max_entries 檔。已持有的股票照出場規則處理。",
     "ma": 60,
-    "weak_max_entries": 1,
+    "weak_max_entries": 0,
     "strong_max_entries": 3
   },
   "portfolio": {

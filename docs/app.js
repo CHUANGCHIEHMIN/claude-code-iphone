@@ -198,8 +198,8 @@ function renderNotes(rep, mdPath) {
       <li>條件 A 永續、B 未來性（成長產業或近 3 月營收年增皆正）、C 投行評等（J.P. Morgan、BofA、Morgan Stanley、Goldman Sachs 近 3 個月）。A、B 皆符合且 C 非僅負面者入選，最多 20 檔。</li>
       <li>量增比＝近 5 日均量 ÷ 近 20 日均量，≥1.2 標「量增」，入選股依此排序。</li>
       <li>綜合分數（0–100）：候選池內「買超占成交值、投信買超占成交值、5 日買超天數、量增比」四項的百分位平均；C 有正面評等 +5、僅負面 −5。只用於排序參考與模擬持股的優先順序。</li>
-      <li>進場訊號（隔日開盤適用）：處置股＝排除；5 日漲幅 >15%、高於 20 日均線 >15%、融資 5 日增加 >10% 或注意股＝過熱；收盤站上上彎的 20 日均線，且突破前 20 日高點並量增、或拉回至 10 日均線 3% 內＝可進場；其餘＝觀察。參數在 config/strategy.json。</li>
-      <li>大盤濾網：加權指數低於 60 日均線時為弱勢，模擬持股每天最多新增 1 檔（強勢 3 檔）。</li></ol></div>
+      <li>進場訊號（隔日開盤適用）：處置股＝排除；5 日漲幅 >15%、高於 20 日均線 >15%、融資 5 日增加 >10% 或注意股＝過熱；收盤站上上彎的 20 日均線，且突破前 20 日高點並量增＝可進場；其餘＝觀察。參數在 config/strategy.json。</li>
+      <li>大盤濾網：加權指數低於 60 日均線時為弱勢，模擬持股暫停新進場（強勢時每天最多 3 檔）。</li></ol></div>
     <h2>資料限制說明</h2>
     <div class="card small"><ul class="notes" style="margin:0;padding-left:20px">
       ${(rep.notes || []).map((n) => `<li>${esc(n)}</li>`).join("")}
@@ -221,7 +221,7 @@ function regimeCard(r) {
   const cls = r.state === "強勢" ? "ok" : r.state === "弱勢" ? "bad" : "plain";
   return `<div class="card small"><span class="tag ${cls}">大盤${esc(r.state)}</span>
     加權指數 <b class="num">${num(r.taiex, 0)}</b>・60 日均線 <span class="num">${num(r.ma, 0)}</span>（${esc(r.date)}）。
-    模擬持股每天最多新增 <b>${esc(r.max_entries)}</b> 檔。</div>`;
+    ${r.max_entries ? `模擬持股每天最多新增 <b>${esc(r.max_entries)}</b> 檔。` : "模擬持股<b>暫停新進場</b>，已持有的照出場規則處理。"}</div>`;
 }
 
 function orderList(pf) {
@@ -258,7 +258,7 @@ function renderPortfolio(pf) {
   const x = STRATEGY?.exit, pfp = STRATEGY?.portfolio;
   $("#portfolio").innerHTML = `
     <h2>模擬持股（${esc(pf.started || "")} 起，初始資金 ${(pf.capital / 1e4).toLocaleString("zh-TW")} 萬）</h2>
-    <p class="small muted">每天依「可進場」訊號（依綜合分數排序）在隔日開盤買進，並依停損、移動停利、法人連賣、時間停損自動出場。已扣手續費與證交稅。</p>
+    <p class="small muted">每天依「可進場」訊號（依綜合分數排序）在隔日開盤買進，並依停損（獲利後上移到成本）、法人連賣、時間停損自動出場。已扣手續費與證交稅。</p>
     ${portfolioBrief(pf).replace("<h2>模擬持股</h2>", "")}
     <h2>目前持股</h2>
     ${pos ? `<div class="table-wrap"><table><thead><tr><th class="sticky">股票</th><th class="r">股數</th><th>進場日</th><th class="r">成本</th><th class="r">收盤</th><th class="r">報酬</th><th class="r">停損</th><th class="r">持有日</th><th>狀態</th></tr></thead><tbody>${pos}</tbody></table></div>` : '<div class="card empty">目前沒有持股</div>'}
@@ -269,7 +269,8 @@ function renderPortfolio(pf) {
     ${trades ? `<div class="table-wrap"><table><thead><tr><th class="sticky">股票</th><th>進場</th><th>出場</th><th class="r">買價</th><th class="r">賣價</th><th class="r">報酬</th><th class="r">損益(元)</th><th class="r">天數</th><th>原因</th></tr></thead><tbody>${trades}</tbody></table></div>` : '<div class="card empty">尚無平倉紀錄</div>'}
     ${x && pfp ? `<h2>規則</h2><div class="card small"><ul style="margin:0;padding-left:20px">
       <li>停損：進場價 − ${x.atr_mult}×ATR(${x.atr_n})，最多 −${(x.max_stop_pct * 100).toFixed(0)}%；盤中觸及即出場。</li>
-      <li>移動停利：曾獲利 ${(x.trail_after * 100).toFixed(0)}% 以上後，收盤跌破 ${x.trail_ma} 日均線，隔日開盤出場。</li>
+      ${x.breakeven_after != null ? `<li>保本：收盤曾獲利 ${(x.breakeven_after * 100).toFixed(0)}% 以上後，停損上移到成本。</li>` : ""}
+      ${x.trail_after != null ? `<li>移動停利：曾獲利 ${(x.trail_after * 100).toFixed(0)}% 以上後，收盤跌破 ${x.trail_ma} 日均線，隔日開盤出場。</li>` : ""}
       <li>法人轉賣：外資＋投信連 ${x.inst_sell_days} 日賣超，隔日開盤出場。</li>
       <li>時間停損：持有 ${x.time_stop_days} 日仍未獲利 ${(x.time_stop_min_gain * 100).toFixed(0)}%，隔日開盤出場。</li>
       <li>部位：每筆最多虧損總資產 ${(pfp.risk_per_trade * 100).toFixed(0)}%，最多 ${pfp.max_positions} 檔，同產業最多 ${pfp.max_per_industry} 檔；隔日開盤跳空 >${(STRATEGY.entry.max_gap_up * 100).toFixed(0)}% 或接近漲停不追價。</li>
