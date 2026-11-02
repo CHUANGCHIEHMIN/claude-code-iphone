@@ -2,7 +2,8 @@
 
 Timeline for one trading day:
   on_open(day, bars)      execute yesterday's orders at today's open (exits first, then entries)
-  on_close(day, bars, f)  intraday stop-loss, then close-based exit signals → tomorrow's exit orders; mark equity
+  on_close(day, bars, f)  intraday stop-loss (raised to cost once a close is breakeven_after above it),
+                          then close-based exit signals → tomorrow's exit orders; mark equity
   plan(day, candidates)   today's entry signals → tomorrow's entry orders (position limits, industry cap)
 
 bars: {code: {"open", "high", "low", "close"}}; f: {code: features dict from signals.features}
@@ -12,8 +13,8 @@ from __future__ import annotations
 import math
 
 ALL_EXITS = ("stop", "trail", "inst", "time")
-REASON = {"stop": "停損", "trail": "移動停利（跌破均線）", "inst": "法人連續賣超", "time": "時間停損",
-          "hold": "持有期滿"}
+REASON = {"stop": "停損", "breakeven": "保本停損", "trail": "移動停利（跌破均線）", "inst": "法人連續賣超",
+          "time": "時間停損", "hold": "持有期滿"}
 
 
 def new_state(capital: float) -> dict:
@@ -91,17 +92,21 @@ class Engine:
             pos["days"] += 1
             low, op = b.get("low") or b["close"], b.get("open") or b["close"]
             if "stop" in self.exits and low <= pos["stop"]:
-                self._sell(day, code, min(op, pos["stop"]), "stop")
+                self._sell(day, code, min(op, pos["stop"]), "breakeven" if pos["stop"] >= pos["entry"] else "stop")
                 continue
             pos["last"] = b["close"]
             pos["peak"] = max(pos["peak"], b["close"])
+            be = x.get("breakeven_after")
+            if "stop" in self.exits and be is not None and pos["peak"] / pos["entry"] - 1 >= be:
+                pos["stop"] = max(pos["stop"], pos["entry"])  # 保本：之後最多回到成本出場
             if code in self.s["exit_orders"]:
                 continue
             f = feats.get(code) or {}
             gain = b["close"] / pos["entry"] - 1
             if self.fixed_hold and pos["days"] >= self.fixed_hold:
                 self.s["exit_orders"][code] = "hold"
-            elif "trail" in self.exits and pos["peak"] / pos["entry"] - 1 >= x["trail_after"] \
+            elif "trail" in self.exits and x.get("trail_after") is not None \
+                    and pos["peak"] / pos["entry"] - 1 >= x["trail_after"] \
                     and f.get("ma_trail") and b["close"] < f["ma_trail"]:
                 self.s["exit_orders"][code] = "trail"
             elif "inst" in self.exits and f.get("inst_sell_streak", 0) >= x["inst_sell_days"]:

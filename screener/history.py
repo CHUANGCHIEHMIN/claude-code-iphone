@@ -155,3 +155,16 @@ class Store:
         p = self.root / "revenue" / f"{ym}.json"
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), "utf-8")
+
+    # ------------------------------------------------------------- industries
+    def industries(self) -> dict[str, str]:
+        p = self.root / "industries.json"
+        return json.loads(p.read_text("utf-8")) if p.exists() else {}
+
+    def save_industries(self, ind: dict[str, str]) -> None:
+        """產業別對照（回測的同產業上限用；抓不到時沿用上次存的）。"""
+        if len(ind) < 500:
+            return
+        self.root.mkdir(parents=True, exist_ok=True)
+        body = json.dumps(dict(sorted(ind.items())), ensure_ascii=False, separators=(",", ":"))
+        (self.root / "industries.json").write_text(body, "utf-8")

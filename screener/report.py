@@ -83,7 +83,8 @@ def render(rep: dict) -> str:
     if reg or pf:
         L.append("### 大盤濾網與模擬持股")
         if reg and reg.get("taiex"):
-            L.append(f"- 大盤{reg['state']}：加權指數 {fnum(reg['taiex'], '{:,.0f}')}、60日均線 {fnum(reg['ma'], '{:,.0f}')}；每天最多新增 {reg['max_entries']} 檔。")
+            cap = f"每天最多新增 {reg['max_entries']} 檔" if reg["max_entries"] else "暫停新進場（已持有的照出場規則處理）"
+            L.append(f"- 大盤{reg['state']}：加權指數 {fnum(reg['taiex'], '{:,.0f}')}、60日均線 {fnum(reg['ma'], '{:,.0f}')}；{cap}。")
         if pf:
             L.append(f"- 模擬帳戶淨值 {pf['equity']:,.0f} 元（{pct(pf['equity'] / pf['capital'] - 1)}），持有 {len(pf['positions'])} 檔。")
             L.append("- 明日開盤買進：" + ("、".join(f"{o['code']} {o['name']}（預估停損 {o['est_stop']:,.2f}）" for o in pf["orders"]) or "無"))
