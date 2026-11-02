@@ -4,7 +4,7 @@
 
 - **網站**：`docs/`（GitHub Pages 靜態網站，讀取 `docs/data/` 的 JSON）
 - **資料管線**：`screener/`（Python 3.12，標準庫＋Anthropic SDK）
-- **排程**：`.github/workflows/daily-report`，每天 21:00（台北）執行並把報告 commit 回 repo；休市日已有報告會自動略過
+- **排程**：`.github/workflows/daily-report`，每天 20:00（台北）執行（GitHub 排程常延遲 30～60 分鐘）並把報告 commit 回 repo；休市日已有報告會自動略過
 - **回測**：`.github/workflows/backtest.yml`，每週六 10:00（台北）補歷史資料並重跑回測，也可手動執行
 
 ## 選股流程
