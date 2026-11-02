@@ -1,0 +1,29 @@
+{
+ "state": {
+  "capital": 1000000,
+  "cash": 1000000,
+  "positions": {},
+  "orders": [],
+  "exit_orders": {},
+  "trades": [],
+  "equity": [
+   [
+    "2026-11-02",
+    1000000
+   ]
+  ],
+  "last_day": "2026-11-02",
+  "started": "2026-11-02"
+ },
+ "prev": {
+  "capital": 1000000,
+  "cash": 1000000,
+  "positions": {},
+  "orders": [],
+  "exit_orders": {},
+  "trades": [],
+  "equity": [],
+  "last_day": null,
+  "started": "2026-11-02"
+ }
+}
