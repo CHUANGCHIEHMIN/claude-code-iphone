@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T14:04:00+00:00",
+ "generated_at": "2026-11-04T13:59:45+00:00",
  "horizons": [
   1,
   5,
@@ -11,24 +11,24 @@
   {
    "name": "全部入選股",
    "h1": {
-    "n": 120,
-    "win_rate": 0.3167,
-    "avg": -0.0115,
+    "n": 140,
+    "win_rate": 0.3286,
+    "avg": -0.0121,
     "median": -0.0089,
-    "avg_win": 0.0179,
-    "avg_loss": -0.0252,
-    "excess": -0.0016,
-    "beat_rate": 0.4167
+    "avg_win": 0.0164,
+    "avg_loss": -0.0261,
+    "excess": -0.0024,
+    "beat_rate": 0.4214
    },
    "h5": {
-    "n": 40,
-    "win_rate": 0.15,
-    "avg": -0.046,
-    "median": -0.0395,
+    "n": 60,
+    "win_rate": 0.1,
+    "avg": -0.0692,
+    "median": -0.0548,
     "avg_win": 0.0179,
-    "avg_loss": -0.0573,
-    "excess": -0.0035,
-    "beat_rate": 0.525
+    "avg_loss": -0.0789,
+    "excess": -0.0119,
+    "beat_rate": 0.45
    },
    "h10": null,
    "h20": null
@@ -36,24 +36,24 @@
   {
    "name": "量增（≥1.2）",
    "h1": {
-    "n": 33,
-    "win_rate": 0.2727,
-    "avg": -0.0152,
+    "n": 37,
+    "win_rate": 0.2703,
+    "avg": -0.0159,
     "median": -0.0204,
-    "avg_win": 0.0271,
-    "avg_loss": -0.0311,
-    "excess": -0.007,
-    "beat_rate": 0.2727
+    "avg_win": 0.0255,
+    "avg_loss": -0.0312,
+    "excess": -0.0077,
+    "beat_rate": 0.2703
    },
    "h5": {
-    "n": 12,
+    "n": 18,
     "win_rate": 0.0,
-    "avg": -0.0572,
-    "median": -0.0576,
+    "avg": -0.071,
+    "median": -0.0685,
     "avg_win": null,
-    "avg_loss": -0.0572,
+    "avg_loss": -0.071,
     "excess": -0.0117,
-    "beat_rate": 0.5
+    "beat_rate": 0.3889
    },
    "h10": null,
    "h20": null
@@ -61,24 +61,24 @@
   {
    "name": "非量增",
    "h1": {
-    "n": 87,
-    "win_rate": 0.3333,
-    "avg": -0.0101,
+    "n": 103,
+    "win_rate": 0.3495,
+    "avg": -0.0108,
     "median": -0.0059,
-    "avg_win": 0.0151,
-    "avg_loss": -0.0228,
-    "excess": 0.0005,
-    "beat_rate": 0.4713
+    "avg_win": 0.0139,
+    "avg_loss": -0.024,
+    "excess": -0.0005,
+    "beat_rate": 0.4757
    },
    "h5": {
-    "n": 28,
-    "win_rate": 0.2143,
-    "avg": -0.0412,
-    "median": -0.0367,
+    "n": 42,
+    "win_rate": 0.1429,
+    "avg": -0.0684,
+    "median": -0.052,
     "avg_win": 0.0179,
-    "avg_loss": -0.0573,
-    "excess": -0.0,
-    "beat_rate": 0.5357
+    "avg_loss": -0.0828,
+    "excess": -0.012,
+    "beat_rate": 0.4762
    },
    "h10": null,
    "h20": null
@@ -86,24 +86,24 @@
   {
    "name": "法人主導（買超占成交值≥10%）",
    "h1": {
-    "n": 93,
-    "win_rate": 0.3011,
-    "avg": -0.0115,
+    "n": 108,
+    "win_rate": 0.3148,
+    "avg": -0.0121,
     "median": -0.0086,
-    "avg_win": 0.0146,
-    "avg_loss": -0.0228,
-    "excess": -0.002,
-    "beat_rate": 0.3978
+    "avg_win": 0.0136,
+    "avg_loss": -0.0239,
+    "excess": -0.0027,
+    "beat_rate": 0.4074
    },
    "h5": {
-    "n": 33,
-    "win_rate": 0.1515,
-    "avg": -0.0393,
-    "median": -0.0341,
+    "n": 48,
+    "win_rate": 0.1042,
+    "avg": -0.0622,
+    "median": -0.052,
     "avg_win": 0.0189,
-    "avg_loss": -0.0496,
-    "excess": 0.0027,
-    "beat_rate": 0.5758
+    "avg_loss": -0.0716,
+    "excess": -0.0062,
+    "beat_rate": 0.5
    },
    "h10": null,
    "h20": null
@@ -111,14 +111,14 @@
   {
    "name": "新進榜",
    "h1": {
-    "n": 2,
-    "win_rate": 0.0,
-    "avg": -0.0382,
-    "median": -0.0382,
-    "avg_win": null,
-    "avg_loss": -0.0382,
-    "excess": -0.0023,
-    "beat_rate": 0.5
+    "n": 9,
+    "win_rate": 0.3333,
+    "avg": -0.0187,
+    "median": -0.0194,
+    "avg_win": 0.0101,
+    "avg_loss": -0.0331,
+    "excess": -0.0043,
+    "beat_rate": 0.4444
    },
    "h5": null,
    "h10": null,
@@ -127,14 +127,14 @@
   {
    "name": "訊號：觀察",
    "h1": {
-    "n": 15,
-    "win_rate": 0.0667,
-    "avg": -0.0449,
-    "median": -0.0444,
-    "avg_win": 0.0061,
-    "avg_loss": -0.0485,
-    "excess": -0.009,
-    "beat_rate": 0.3333
+    "n": 32,
+    "win_rate": 0.2188,
+    "avg": -0.031,
+    "median": -0.0295,
+    "avg_win": 0.0089,
+    "avg_loss": -0.0421,
+    "excess": -0.0097,
+    "beat_rate": 0.375
    },
    "h5": null,
    "h10": null,
@@ -143,14 +143,14 @@
   {
    "name": "訊號：過熱",
    "h1": {
-    "n": 5,
-    "win_rate": 0.0,
-    "avg": -0.0319,
-    "median": -0.0378,
-    "avg_win": null,
-    "avg_loss": -0.0319,
-    "excess": 0.004,
-    "beat_rate": 0.4
+    "n": 8,
+    "win_rate": 0.25,
+    "avg": -0.019,
+    "median": -0.0073,
+    "avg_win": 0.0078,
+    "avg_loss": -0.028,
+    "excess": 0.0065,
+    "beat_rate": 0.5
    },
    "h5": null,
    "h10": null,
@@ -159,14 +159,14 @@
   {
    "name": "綜合分數前半",
    "h1": {
-    "n": 10,
-    "win_rate": 0.1,
-    "avg": -0.0248,
-    "median": -0.029,
-    "avg_win": 0.0061,
-    "avg_loss": -0.0282,
-    "excess": 0.0111,
-    "beat_rate": 0.6
+    "n": 20,
+    "win_rate": 0.25,
+    "avg": -0.0189,
+    "median": -0.0181,
+    "avg_win": 0.0112,
+    "avg_loss": -0.0289,
+    "excess": 0.0032,
+    "beat_rate": 0.55
    },
    "h5": null,
    "h10": null,
@@ -175,14 +175,14 @@
   {
    "name": "綜合分數後半",
    "h1": {
-    "n": 10,
-    "win_rate": 0.0,
-    "avg": -0.0585,
-    "median": -0.0587,
-    "avg_win": null,
-    "avg_loss": -0.0585,
-    "excess": -0.0226,
-    "beat_rate": 0.1
+    "n": 20,
+    "win_rate": 0.2,
+    "avg": -0.0383,
+    "median": -0.0484,
+    "avg_win": 0.0054,
+    "avg_loss": -0.0492,
+    "excess": -0.0162,
+    "beat_rate": 0.25
    },
    "h5": null,
    "h10": null,
@@ -191,9 +191,26 @@
  ],
  "by_day": [
   {
-   "date": "2026-11-03",
+   "date": "2026-11-04",
    "n": 20,
    "h1": null,
+   "h5": null,
+   "h10": null,
+   "h20": null
+  },
+  {
+   "date": "2026-11-03",
+   "n": 20,
+   "h1": {
+    "n": 20,
+    "win_rate": 0.4,
+    "avg": -0.0156,
+    "median": -0.0112,
+    "avg_win": 0.009,
+    "avg_loss": -0.0319,
+    "excess": -0.0073,
+    "beat_rate": 0.45
+   },
    "h5": null,
    "h10": null,
    "h20": null
@@ -262,7 +279,16 @@
     "excess": -0.0162,
     "beat_rate": 0.25
    },
-   "h5": null,
+   "h5": {
+    "n": 20,
+    "win_rate": 0.0,
+    "avg": -0.1156,
+    "median": -0.1127,
+    "avg_win": null,
+    "avg_loss": -0.1156,
+    "excess": -0.0287,
+    "beat_rate": 0.3
+   },
    "h10": null,
    "h20": null
   },
@@ -321,6 +347,266 @@
  ],
  "rows": [
   {
+   "date": "2026-11-04",
+   "code": "8210",
+   "name": "勤誠",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 51.3,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "6446",
+   "name": "藥華藥",
+   "volume_up": true,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 59.7,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "4904",
+   "name": "遠傳",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 78.8,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "3533",
+   "name": "嘉澤",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 50.0,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "3532",
+   "name": "台勝科",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": true,
+   "signal": "過熱",
+   "score": 35.7,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "3105",
+   "name": "穩懋",
+   "volume_up": true,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 40.1,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "3045",
+   "name": "台灣大",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 76.3,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "3035",
+   "name": "智原",
+   "volume_up": true,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 36.0,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2886",
+   "name": "兆豐金",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 64.0,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2618",
+   "name": "長榮航",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 76.3,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2615",
+   "name": "萬海",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 36.7,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2610",
+   "name": "華航",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 53.6,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2609",
+   "name": "陽明",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 49.7,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2603",
+   "name": "長榮",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 49.0,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2412",
+   "name": "中華電",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 76.8,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2379",
+   "name": "瑞昱",
+   "volume_up": true,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 70.7,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2317",
+   "name": "鴻海",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 28.8,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "2059",
+   "name": "川湖",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 64.9,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "1802",
+   "name": "台玻",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 36.5,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-04",
+   "code": "1216",
+   "name": "統一",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 49.7,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
    "date": "2026-11-03",
    "code": "8299",
    "name": "群聯",
@@ -330,8 +616,10 @@
    "signal": "觀察",
    "score": 33.9,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 1745.0,
+   "r1": -0.0258,
+   "x1": -0.0175
   },
   {
    "date": "2026-11-03",
@@ -343,8 +631,10 @@
    "signal": "觀察",
    "score": 37.8,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 661.0,
+   "r1": -0.0465,
+   "x1": -0.0382
   },
   {
    "date": "2026-11-03",
@@ -356,8 +646,10 @@
    "signal": "觀察",
    "score": 52.3,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 1210.0,
+   "r1": 0.027,
+   "x1": 0.0353
   },
   {
    "date": "2026-11-03",
@@ -369,8 +661,10 @@
    "signal": "觀察",
    "score": 58.9,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 103.0,
+   "r1": -0.0203,
+   "x1": -0.012
   },
   {
    "date": "2026-11-03",
@@ -382,8 +676,10 @@
    "signal": "觀察",
    "score": 46.2,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 1795.0,
+   "r1": 0.008,
+   "x1": 0.0163
   },
   {
    "date": "2026-11-03",
@@ -395,8 +691,10 @@
    "signal": "觀察",
    "score": 49.5,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 7000.0,
+   "r1": 0.0105,
+   "x1": 0.0188
   },
   {
    "date": "2026-11-03",
@@ -408,8 +706,10 @@
    "signal": "觀察",
    "score": 45.7,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 525.0,
+   "r1": -0.0513,
+   "x1": -0.043
   },
   {
    "date": "2026-11-03",
@@ -421,8 +721,10 @@
    "signal": "過熱",
    "score": 80.9,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 133.0,
+   "r1": 0.0091,
+   "x1": 0.0174
   },
   {
    "date": "2026-11-03",
@@ -434,8 +736,10 @@
    "signal": "觀察",
    "score": 37.8,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 195.0,
+   "r1": -0.0288,
+   "x1": -0.0205
   },
   {
    "date": "2026-11-03",
@@ -447,8 +751,10 @@
    "signal": "觀察",
    "score": 40.3,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 53.1,
+   "r1": 0.0016,
+   "x1": 0.0099
   },
   {
    "date": "2026-11-03",
@@ -460,8 +766,10 @@
    "signal": "過熱",
    "score": 45.2,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 69.2,
+   "r1": -0.0087,
+   "x1": -0.0004
   },
   {
    "date": "2026-11-03",
@@ -473,8 +781,10 @@
    "signal": "觀察",
    "score": 69.9,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 44.1,
+   "r1": -0.0137,
+   "x1": -0.0054
   },
   {
    "date": "2026-11-03",
@@ -486,8 +796,10 @@
    "signal": "觀察",
    "score": 51.3,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 62.4,
+   "r1": -0.0074,
+   "x1": 0.0009
   },
   {
    "date": "2026-11-03",
@@ -499,8 +811,10 @@
    "signal": "觀察",
    "score": 54.6,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 264.5,
+   "r1": 0.0073,
+   "x1": 0.0156
   },
   {
    "date": "2026-11-03",
@@ -512,8 +826,10 @@
    "signal": "過熱",
    "score": 74.2,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 159.5,
+   "r1": 0.0066,
+   "x1": 0.0149
   },
   {
    "date": "2026-11-03",
@@ -525,8 +841,10 @@
    "signal": "觀察",
    "score": 69.6,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 756.0,
+   "r1": -0.0164,
+   "x1": -0.0081
   },
   {
    "date": "2026-11-03",
@@ -538,8 +856,10 @@
    "signal": "觀察",
    "score": 51.0,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 247.5,
+   "r1": -0.036,
+   "x1": -0.0277
   },
   {
    "date": "2026-11-03",
@@ -551,8 +871,10 @@
    "signal": "觀察",
    "score": 56.8,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 9355.0,
+   "r1": -0.0861,
+   "x1": -0.0778
   },
   {
    "date": "2026-11-03",
@@ -564,8 +886,10 @@
    "signal": "觀察",
    "score": 41.1,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 69.2,
+   "r1": -0.0418,
+   "x1": -0.0335
   },
   {
    "date": "2026-11-03",
@@ -577,8 +901,10 @@
    "signal": "觀察",
    "score": 44.4,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-04",
+   "entry": 80.3,
+   "r1": 0.0016,
+   "x1": 0.0099
   },
   {
    "date": "2026-11-02",
@@ -1493,7 +1819,9 @@
    "entry_date": "2026-10-29",
    "entry": 2070.0,
    "r1": -0.0155,
-   "x1": -0.0013
+   "x1": -0.0013,
+   "r5": -0.1787,
+   "x5": -0.0918
   },
   {
    "date": "2026-10-28",
@@ -1508,7 +1836,9 @@
    "entry_date": "2026-10-29",
    "entry": 71.8,
    "r1": -0.0377,
-   "x1": -0.0235
+   "x1": -0.0235,
+   "r5": -0.1775,
+   "x5": -0.0906
   },
   {
    "date": "2026-10-28",
@@ -1523,7 +1853,9 @@
    "entry_date": "2026-10-29",
    "entry": 102.5,
    "r1": -0.0437,
-   "x1": -0.0295
+   "x1": -0.0295,
+   "r5": -0.0534,
+   "x5": 0.0335
   },
   {
    "date": "2026-10-28",
@@ -1538,7 +1870,9 @@
    "entry_date": "2026-10-29",
    "entry": 220.0,
    "r1": -0.0827,
-   "x1": -0.0685
+   "x1": -0.0685,
+   "r5": -0.2092,
+   "x5": -0.1223
   },
   {
    "date": "2026-10-28",
@@ -1553,7 +1887,9 @@
    "entry_date": "2026-10-29",
    "entry": 108.0,
    "r1": -0.0381,
-   "x1": -0.0239
+   "x1": -0.0239,
+   "r5": -0.0657,
+   "x5": 0.0212
   },
   {
    "date": "2026-10-28",
@@ -1568,7 +1904,9 @@
    "entry_date": "2026-10-29",
    "entry": 6500.0,
    "r1": -0.0204,
-   "x1": -0.0062
+   "x1": -0.0062,
+   "r5": -0.0135,
+   "x5": 0.0734
   },
   {
    "date": "2026-10-28",
@@ -1583,7 +1921,9 @@
    "entry_date": "2026-10-29",
    "entry": 8190.0,
    "r1": -0.0726,
-   "x1": -0.0584
+   "x1": -0.0584,
+   "r5": -0.1363,
+   "x5": -0.0494
   },
   {
    "date": "2026-10-28",
@@ -1598,7 +1938,9 @@
    "entry_date": "2026-10-29",
    "entry": 193.5,
    "r1": -0.0315,
-   "x1": -0.0173
+   "x1": -0.0173,
+   "r5": -0.0958,
+   "x5": -0.0089
   },
   {
    "date": "2026-10-28",
@@ -1613,7 +1955,9 @@
    "entry_date": "2026-10-29",
    "entry": 594.0,
    "r1": -0.0059,
-   "x1": 0.0083
+   "x1": 0.0083,
+   "r5": -0.1615,
+   "x5": -0.0746
   },
   {
    "date": "2026-10-28",
@@ -1628,7 +1972,9 @@
    "entry_date": "2026-10-29",
    "entry": 598.0,
    "r1": -0.0092,
-   "x1": 0.005
+   "x1": 0.005,
+   "r5": -0.1139,
+   "x5": -0.027
   },
   {
    "date": "2026-10-28",
@@ -1643,7 +1989,9 @@
    "entry_date": "2026-10-29",
    "entry": 73.6,
    "r1": -0.0086,
-   "x1": 0.0056
+   "x1": 0.0056,
+   "r5": -0.068,
+   "x5": 0.0189
   },
   {
    "date": "2026-10-28",
@@ -1658,7 +2006,9 @@
    "entry_date": "2026-10-29",
    "entry": 482.0,
    "r1": -0.0162,
-   "x1": -0.002
+   "x1": -0.002,
+   "r5": -0.176,
+   "x5": -0.0891
   },
   {
    "date": "2026-10-28",
@@ -1673,7 +2023,9 @@
    "entry_date": "2026-10-29",
    "entry": 330.0,
    "r1": -0.042,
-   "x1": -0.0278
+   "x1": -0.0278,
+   "r5": -0.0887,
+   "x5": -0.0018
   },
   {
    "date": "2026-10-28",
@@ -1688,7 +2040,9 @@
    "entry_date": "2026-10-29",
    "entry": 785.0,
    "r1": 0.0055,
-   "x1": 0.0197
+   "x1": 0.0197,
+   "r5": -0.0527,
+   "x5": 0.0342
   },
   {
    "date": "2026-10-28",
@@ -1703,7 +2057,9 @@
    "entry_date": "2026-10-29",
    "entry": 168.0,
    "r1": -0.0532,
-   "x1": -0.039
+   "x1": -0.039,
+   "r5": -0.1094,
+   "x5": -0.0225
   },
   {
    "date": "2026-10-28",
@@ -1718,7 +2074,9 @@
    "entry_date": "2026-10-29",
    "entry": 63.1,
    "r1": -0.0326,
-   "x1": -0.0184
+   "x1": -0.0184,
+   "r5": -0.1114,
+   "x5": -0.0245
   },
   {
    "date": "2026-10-28",
@@ -1733,7 +2091,9 @@
    "entry_date": "2026-10-29",
    "entry": 174.5,
    "r1": -0.0286,
-   "x1": -0.0144
+   "x1": -0.0144,
+   "r5": -0.1939,
+   "x5": -0.107
   },
   {
    "date": "2026-10-28",
@@ -1748,7 +2108,9 @@
    "entry_date": "2026-10-29",
    "entry": 37.8,
    "r1": -0.0361,
-   "x1": -0.0219
+   "x1": -0.0219,
+   "r5": -0.1255,
+   "x5": -0.0386
   },
   {
    "date": "2026-10-28",
@@ -1763,7 +2125,9 @@
    "entry_date": "2026-10-29",
    "entry": 250.0,
    "r1": -0.0138,
-   "x1": 0.0004
+   "x1": 0.0004,
+   "r5": -0.0456,
+   "x5": 0.0413
   },
   {
    "date": "2026-10-28",
@@ -1778,7 +2142,9 @@
    "entry_date": "2026-10-29",
    "entry": 318.0,
    "r1": -0.0246,
-   "x1": -0.0104
+   "x1": -0.0104,
+   "r5": -0.1356,
+   "x5": -0.0487
   },
   {
    "date": "2026-10-27",
