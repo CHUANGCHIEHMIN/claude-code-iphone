@@ -1,6 +1,12 @@
 {
- "latest": "2026-11-04",
+ "latest": "2026-11-05",
  "reports": [
+  {
+   "date": "2026-11-05",
+   "count": 20,
+   "generated_at": "2026-11-05T20:59:16+08:00",
+   "research": false
+  },
   {
    "date": "2026-11-04",
    "count": 20,
