@@ -1,7 +1,7 @@
 name: daily-report
 on:
   schedule:
-    - cron: "0 13 * * *"   # 每天 21:00（台北時間）；休市日已有報告會自動略過
+    - cron: "0 12 * * *"   # 每天 20:00（台北時間）；GitHub 排程常延遲 30～60 分鐘，約 21:00 前出報告；休市日已有報告會自動略過
   workflow_dispatch:
     inputs:
       date:

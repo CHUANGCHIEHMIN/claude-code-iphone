@@ -1,6 +1,6 @@
 """Track what happened to every past pick: returns 1/5/10/20 trading days later, vs 加權指數.
 
-Entry = open of the trading day after the report (the report comes out at 21:00, so the report-day
+Entry = open of the trading day after the report (the report comes out in the evening, so the report-day
 close cannot be traded). Exit = close h trading days after entry (day 1 = entry day). Returns are net of
 round-trip costs. Benchmark = 加權指數 close on the report day → close on the same exit day.
 """
