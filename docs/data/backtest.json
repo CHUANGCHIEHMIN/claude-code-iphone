@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-02T02:43:19+00:00",
+ "generated_at": "2026-11-07T02:43:20+00:00",
  "period": [
   "2023-12-18",
-  "2026-10-30"
+  "2026-11-06"
  ],
  "split": "2025-07-01",
- "days": 693,
+ "days": 698,
  "horizons": [
   5,
   10,
   20
  ],
  "cost": 0.00585,
- "bench_return": 1.5613,
+ "bench_return": 1.2491,
  "taiex_curve": [
   [
    "2023-12-18",
@@ -569,6 +569,10 @@
   [
    "2026-10-28",
    47035.6
+  ],
+  [
+   "2026-11-04",
+   42948.9
   ]
  ],
  "variants": [
@@ -579,28 +583,28 @@
    "picks_per_day": 19.9,
    "all": {
     "h5": {
-     "n": 13671,
-     "win_rate": 0.4766,
-     "avg": 0.0028,
-     "median": -0.0027,
-     "excess": -0.0047,
+     "n": 13771,
+     "win_rate": 0.4737,
+     "avg": 0.0021,
+     "median": -0.003,
+     "excess": -0.0048,
      "beat_rate": 0.418
     },
     "h10": {
-     "n": 13566,
-     "win_rate": 0.5133,
-     "avg": 0.0136,
-     "median": 0.0022,
-     "excess": -0.0018,
-     "beat_rate": 0.4368
+     "n": 13666,
+     "win_rate": 0.512,
+     "avg": 0.013,
+     "median": 0.002,
+     "excess": -0.0015,
+     "beat_rate": 0.4391
     },
     "h20": {
-     "n": 13368,
-     "win_rate": 0.5491,
-     "avg": 0.0391,
-     "median": 0.015,
-     "excess": 0.007,
-     "beat_rate": 0.4569
+     "n": 13468,
+     "win_rate": 0.5459,
+     "avg": 0.0372,
+     "median": 0.014,
+     "excess": 0.0063,
+     "beat_rate": 0.4557
     }
    },
    "train": {
@@ -631,28 +635,28 @@
    },
    "test": {
     "h5": {
-     "n": 6355,
-     "win_rate": 0.5026,
-     "avg": 0.0092,
-     "median": 0.0008,
-     "excess": -0.0026,
-     "beat_rate": 0.4308
+     "n": 6455,
+     "win_rate": 0.496,
+     "avg": 0.0076,
+     "median": -0.0008,
+     "excess": -0.0028,
+     "beat_rate": 0.4307
     },
     "h10": {
-     "n": 6255,
-     "win_rate": 0.544,
-     "avg": 0.0279,
-     "median": 0.0102,
-     "excess": 0.0037,
-     "beat_rate": 0.4468
+     "n": 6355,
+     "win_rate": 0.5408,
+     "avg": 0.0264,
+     "median": 0.009,
+     "excess": 0.0041,
+     "beat_rate": 0.4518
     },
     "h20": {
-     "n": 6052,
-     "win_rate": 0.6059,
-     "avg": 0.0732,
-     "median": 0.0364,
-     "excess": 0.0222,
-     "beat_rate": 0.4749
+     "n": 6152,
+     "win_rate": 0.598,
+     "avg": 0.0686,
+     "median": 0.0337,
+     "excess": 0.0206,
+     "beat_rate": 0.472
     }
    }
   },
@@ -663,28 +667,28 @@
    "picks_per_day": 50.0,
    "all": {
     "h5": {
-     "n": 34368,
-     "win_rate": 0.4486,
-     "avg": -0.0007,
+     "n": 34618,
+     "win_rate": 0.446,
+     "avg": -0.0014,
      "median": -0.0059,
      "excess": -0.0083,
-     "beat_rate": 0.3965
+     "beat_rate": 0.397
     },
     "h10": {
-     "n": 34088,
-     "win_rate": 0.4774,
-     "avg": 0.0068,
-     "median": -0.0038,
-     "excess": -0.0085,
-     "beat_rate": 0.4044
+     "n": 34338,
+     "win_rate": 0.4757,
+     "avg": 0.0061,
+     "median": -0.0041,
+     "excess": -0.0083,
+     "beat_rate": 0.4062
     },
     "h20": {
-     "n": 33593,
-     "win_rate": 0.4999,
-     "avg": 0.0237,
-     "median": -0.0,
-     "excess": -0.0082,
-     "beat_rate": 0.4027
+     "n": 33843,
+     "win_rate": 0.4971,
+     "avg": 0.0222,
+     "median": -0.0006,
+     "excess": -0.0086,
+     "beat_rate": 0.4022
     }
    },
    "train": {
@@ -715,28 +719,28 @@
    },
    "test": {
     "h5": {
-     "n": 15983,
-     "win_rate": 0.4704,
-     "avg": 0.0047,
-     "median": -0.004,
-     "excess": -0.0071,
-     "beat_rate": 0.4022
+     "n": 16233,
+     "win_rate": 0.4645,
+     "avg": 0.0032,
+     "median": -0.0059,
+     "excess": -0.0072,
+     "beat_rate": 0.4033
     },
     "h10": {
-     "n": 15715,
-     "win_rate": 0.5052,
-     "avg": 0.0184,
-     "median": 0.0011,
-     "excess": -0.0057,
-     "beat_rate": 0.4096
+     "n": 15965,
+     "win_rate": 0.5011,
+     "avg": 0.0168,
+     "median": 0.0003,
+     "excess": -0.0055,
+     "beat_rate": 0.4135
     },
     "h20": {
-     "n": 15219,
-     "win_rate": 0.5453,
-     "avg": 0.0526,
-     "median": 0.0143,
-     "excess": 0.0015,
-     "beat_rate": 0.409
+     "n": 15469,
+     "win_rate": 0.5386,
+     "avg": 0.0487,
+     "median": 0.0124,
+     "excess": 0.0005,
+     "beat_rate": 0.4077
     }
    }
   },
@@ -747,28 +751,28 @@
    "picks_per_day": 20.0,
    "all": {
     "h5": {
-     "n": 13748,
-     "win_rate": 0.47,
-     "avg": 0.0022,
-     "median": -0.0041,
-     "excess": -0.0054,
-     "beat_rate": 0.4175
+     "n": 13848,
+     "win_rate": 0.4671,
+     "avg": 0.0014,
+     "median": -0.0046,
+     "excess": -0.0055,
+     "beat_rate": 0.4174
     },
     "h10": {
-     "n": 13640,
-     "win_rate": 0.506,
-     "avg": 0.0118,
-     "median": 0.0012,
-     "excess": -0.0034,
-     "beat_rate": 0.4343
+     "n": 13740,
+     "win_rate": 0.5047,
+     "avg": 0.0111,
+     "median": 0.001,
+     "excess": -0.0033,
+     "beat_rate": 0.4362
     },
     "h20": {
-     "n": 13444,
-     "win_rate": 0.5343,
-     "avg": 0.0353,
-     "median": 0.0107,
-     "excess": 0.0034,
-     "beat_rate": 0.447
+     "n": 13544,
+     "win_rate": 0.5312,
+     "avg": 0.0335,
+     "median": 0.0096,
+     "excess": 0.0028,
+     "beat_rate": 0.4458
     }
    },
    "train": {
@@ -799,28 +803,28 @@
    },
    "test": {
     "h5": {
-     "n": 6391,
-     "win_rate": 0.4977,
-     "avg": 0.0093,
-     "median": -0.0005,
-     "excess": -0.0026,
-     "beat_rate": 0.434
+     "n": 6491,
+     "win_rate": 0.4911,
+     "avg": 0.0075,
+     "median": -0.0014,
+     "excess": -0.0029,
+     "beat_rate": 0.4335
     },
     "h10": {
-     "n": 6293,
-     "win_rate": 0.5357,
-     "avg": 0.0266,
-     "median": 0.009,
-     "excess": 0.0024,
-     "beat_rate": 0.4453
+     "n": 6393,
+     "win_rate": 0.5323,
+     "avg": 0.0249,
+     "median": 0.008,
+     "excess": 0.0026,
+     "beat_rate": 0.4492
     },
     "h20": {
-     "n": 6091,
-     "win_rate": 0.5902,
-     "avg": 0.0723,
-     "median": 0.0324,
-     "excess": 0.0212,
-     "beat_rate": 0.4676
+     "n": 6191,
+     "win_rate": 0.5825,
+     "avg": 0.0678,
+     "median": 0.0305,
+     "excess": 0.0196,
+     "beat_rate": 0.4647
     }
    }
   },
@@ -831,28 +835,28 @@
    "picks_per_day": 19.9,
    "all": {
     "h5": {
-     "n": 13670,
-     "win_rate": 0.4685,
-     "avg": 0.0022,
-     "median": -0.003,
-     "excess": -0.0054,
-     "beat_rate": 0.408
+     "n": 13770,
+     "win_rate": 0.4658,
+     "avg": 0.0017,
+     "median": -0.0033,
+     "excess": -0.0053,
+     "beat_rate": 0.4095
     },
     "h10": {
-     "n": 13567,
-     "win_rate": 0.5048,
-     "avg": 0.0118,
-     "median": 0.0008,
-     "excess": -0.0035,
-     "beat_rate": 0.4252
+     "n": 13667,
+     "win_rate": 0.5037,
+     "avg": 0.0115,
+     "median": 0.0006,
+     "excess": -0.003,
+     "beat_rate": 0.4286
     },
     "h20": {
-     "n": 13368,
-     "win_rate": 0.5422,
-     "avg": 0.0357,
-     "median": 0.0115,
-     "excess": 0.0036,
-     "beat_rate": 0.4431
+     "n": 13468,
+     "win_rate": 0.5397,
+     "avg": 0.0344,
+     "median": 0.0109,
+     "excess": 0.0035,
+     "beat_rate": 0.4433
     }
    },
    "train": {
@@ -883,28 +887,28 @@
    },
    "test": {
     "h5": {
-     "n": 6354,
-     "win_rate": 0.4943,
-     "avg": 0.008,
-     "median": -0.0007,
-     "excess": -0.0039,
-     "beat_rate": 0.4161
+     "n": 6454,
+     "win_rate": 0.4882,
+     "avg": 0.0067,
+     "median": -0.0014,
+     "excess": -0.0037,
+     "beat_rate": 0.4193
     },
     "h10": {
-     "n": 6255,
-     "win_rate": 0.5367,
-     "avg": 0.0245,
-     "median": 0.0078,
-     "excess": 0.0003,
-     "beat_rate": 0.4326
+     "n": 6355,
+     "win_rate": 0.5339,
+     "avg": 0.0237,
+     "median": 0.0072,
+     "excess": 0.0013,
+     "beat_rate": 0.4398
     },
     "h20": {
-     "n": 6052,
-     "win_rate": 0.5947,
-     "avg": 0.0676,
-     "median": 0.0305,
-     "excess": 0.0167,
-     "beat_rate": 0.4575
+     "n": 6152,
+     "win_rate": 0.5884,
+     "avg": 0.0642,
+     "median": 0.0282,
+     "excess": 0.0162,
+     "beat_rate": 0.4577
     }
    }
   },
@@ -915,28 +919,28 @@
    "picks_per_day": 19.9,
    "all": {
     "h5": {
-     "n": 13669,
-     "win_rate": 0.47,
-     "avg": 0.0028,
-     "median": -0.003,
-     "excess": -0.0048,
-     "beat_rate": 0.4122
+     "n": 13769,
+     "win_rate": 0.4673,
+     "avg": 0.0022,
+     "median": -0.0034,
+     "excess": -0.0047,
+     "beat_rate": 0.4135
     },
     "h10": {
-     "n": 13569,
-     "win_rate": 0.5051,
-     "avg": 0.0123,
-     "median": 0.0009,
-     "excess": -0.003,
-     "beat_rate": 0.4266
+     "n": 13669,
+     "win_rate": 0.5039,
+     "avg": 0.0119,
+     "median": 0.0007,
+     "excess": -0.0026,
+     "beat_rate": 0.4294
     },
     "h20": {
-     "n": 13369,
-     "win_rate": 0.5395,
-     "avg": 0.0367,
-     "median": 0.0112,
-     "excess": 0.0046,
-     "beat_rate": 0.4436
+     "n": 13469,
+     "win_rate": 0.5369,
+     "avg": 0.0351,
+     "median": 0.0103,
+     "excess": 0.0042,
+     "beat_rate": 0.4431
     }
    },
    "train": {
@@ -967,28 +971,28 @@
    },
    "test": {
     "h5": {
-     "n": 6354,
-     "win_rate": 0.4953,
-     "avg": 0.0093,
-     "median": -0.0006,
-     "excess": -0.0025,
-     "beat_rate": 0.4238
+     "n": 6454,
+     "win_rate": 0.489,
+     "avg": 0.0081,
+     "median": -0.0014,
+     "excess": -0.0024,
+     "beat_rate": 0.4264
     },
     "h10": {
-     "n": 6257,
-     "win_rate": 0.5391,
-     "avg": 0.0259,
-     "median": 0.0083,
-     "excess": 0.0017,
-     "beat_rate": 0.4387
+     "n": 6357,
+     "win_rate": 0.5359,
+     "avg": 0.0248,
+     "median": 0.0074,
+     "excess": 0.0025,
+     "beat_rate": 0.4447
     },
     "h20": {
-     "n": 6053,
-     "win_rate": 0.5946,
-     "avg": 0.0699,
-     "median": 0.031,
-     "excess": 0.0189,
-     "beat_rate": 0.4608
+     "n": 6153,
+     "win_rate": 0.5878,
+     "avg": 0.0658,
+     "median": 0.0289,
+     "excess": 0.0178,
+     "beat_rate": 0.4593
     }
    }
   },
@@ -999,28 +1003,28 @@
    "picks_per_day": 17.7,
    "all": {
     "h5": {
-     "n": 12139,
-     "win_rate": 0.4489,
-     "avg": 0.0007,
-     "median": -0.0045,
-     "excess": -0.0068,
-     "beat_rate": 0.393
+     "n": 12238,
+     "win_rate": 0.4463,
+     "avg": 0.0003,
+     "median": -0.0048,
+     "excess": -0.0065,
+     "beat_rate": 0.3958
     },
     "h10": {
-     "n": 12038,
-     "win_rate": 0.484,
-     "avg": 0.0077,
-     "median": -0.002,
-     "excess": -0.0066,
-     "beat_rate": 0.4046
+     "n": 12138,
+     "win_rate": 0.4825,
+     "avg": 0.0074,
+     "median": -0.0021,
+     "excess": -0.0061,
+     "beat_rate": 0.4086
     },
     "h20": {
-     "n": 11837,
-     "win_rate": 0.5153,
-     "avg": 0.0238,
-     "median": 0.0031,
-     "excess": -0.0065,
-     "beat_rate": 0.4036
+     "n": 11936,
+     "win_rate": 0.5134,
+     "avg": 0.0229,
+     "median": 0.0027,
+     "excess": -0.0061,
+     "beat_rate": 0.4057
     }
    },
    "train": {
@@ -1051,28 +1055,28 @@
    },
    "test": {
     "h5": {
-     "n": 5575,
-     "win_rate": 0.4739,
-     "avg": 0.0059,
-     "median": -0.0024,
-     "excess": -0.0062,
-     "beat_rate": 0.3966
+     "n": 5674,
+     "win_rate": 0.4679,
+     "avg": 0.0049,
+     "median": -0.0028,
+     "excess": -0.0056,
+     "beat_rate": 0.4025
     },
     "h10": {
-     "n": 5474,
-     "win_rate": 0.5132,
-     "avg": 0.0186,
-     "median": 0.0021,
-     "excess": -0.005,
-     "beat_rate": 0.4032
+     "n": 5574,
+     "win_rate": 0.5093,
+     "avg": 0.0177,
+     "median": 0.0015,
+     "excess": -0.0038,
+     "beat_rate": 0.4121
     },
     "h20": {
-     "n": 5273,
-     "win_rate": 0.5634,
-     "avg": 0.0471,
-     "median": 0.0158,
-     "excess": -0.0022,
-     "beat_rate": 0.4032
+     "n": 5372,
+     "win_rate": 0.5583,
+     "avg": 0.0446,
+     "median": 0.0149,
+     "excess": -0.0014,
+     "beat_rate": 0.408
     }
    }
   },
@@ -1083,28 +1087,28 @@
    "picks_per_day": 7.8,
    "all": {
     "h5": {
-     "n": 5366,
-     "win_rate": 0.4713,
-     "avg": 0.0039,
-     "median": -0.0032,
-     "excess": -0.0045,
-     "beat_rate": 0.415
+     "n": 5394,
+     "win_rate": 0.4689,
+     "avg": 0.0033,
+     "median": -0.0037,
+     "excess": -0.0046,
+     "beat_rate": 0.4147
     },
     "h10": {
-     "n": 5302,
-     "win_rate": 0.5151,
-     "avg": 0.0164,
-     "median": 0.0027,
-     "excess": -0.0021,
-     "beat_rate": 0.434
+     "n": 5362,
+     "win_rate": 0.5138,
+     "avg": 0.0158,
+     "median": 0.0025,
+     "excess": -0.0014,
+     "beat_rate": 0.4386
     },
     "h20": {
-     "n": 5232,
-     "win_rate": 0.5426,
-     "avg": 0.0427,
-     "median": 0.013,
-     "excess": 0.0068,
-     "beat_rate": 0.443
+     "n": 5265,
+     "win_rate": 0.5394,
+     "avg": 0.0407,
+     "median": 0.0119,
+     "excess": 0.0059,
+     "beat_rate": 0.4408
     }
    },
    "train": {
@@ -1135,28 +1139,28 @@
    },
    "test": {
     "h5": {
-     "n": 2485,
-     "win_rate": 0.5022,
-     "avg": 0.0111,
-     "median": 0.0004,
-     "excess": -0.0004,
-     "beat_rate": 0.4487
+     "n": 2513,
+     "win_rate": 0.4966,
+     "avg": 0.0098,
+     "median": -0.0007,
+     "excess": -0.0006,
+     "beat_rate": 0.4477
     },
     "h10": {
-     "n": 2424,
-     "win_rate": 0.5474,
-     "avg": 0.0319,
-     "median": 0.0111,
-     "excess": 0.0052,
-     "beat_rate": 0.4509
+     "n": 2484,
+     "win_rate": 0.5439,
+     "avg": 0.0303,
+     "median": 0.0092,
+     "excess": 0.0065,
+     "beat_rate": 0.4605
     },
     "h20": {
-     "n": 2351,
-     "win_rate": 0.6091,
-     "avg": 0.0805,
-     "median": 0.0418,
-     "excess": 0.0261,
-     "beat_rate": 0.4747
+     "n": 2384,
+     "win_rate": 0.6011,
+     "avg": 0.0755,
+     "median": 0.0383,
+     "excess": 0.0238,
+     "beat_rate": 0.4694
     }
    }
   },
@@ -1164,31 +1168,31 @@
    "key": "trust3",
    "name": "現行規則＋投信連買3日",
    "desc": "現行名單中投信連續買超≥3日",
-   "picks_per_day": 7.8,
+   "picks_per_day": 7.9,
    "all": {
     "h5": {
-     "n": 5392,
-     "win_rate": 0.4644,
-     "avg": 0.0011,
-     "median": -0.0045,
+     "n": 5424,
+     "win_rate": 0.462,
+     "avg": 0.0004,
+     "median": -0.0059,
      "excess": -0.006,
      "beat_rate": 0.4049
     },
     "h10": {
-     "n": 5349,
-     "win_rate": 0.4941,
-     "avg": 0.0106,
-     "median": -0.0008,
-     "excess": -0.0042,
-     "beat_rate": 0.4184
+     "n": 5393,
+     "win_rate": 0.493,
+     "avg": 0.0098,
+     "median": -0.0009,
+     "excess": -0.0041,
+     "beat_rate": 0.4204
     },
     "h20": {
-     "n": 5276,
-     "win_rate": 0.5212,
-     "avg": 0.0303,
-     "median": 0.0053,
-     "excess": 0.0022,
-     "beat_rate": 0.4392
+     "n": 5313,
+     "win_rate": 0.5185,
+     "avg": 0.0287,
+     "median": 0.0044,
+     "excess": 0.0017,
+     "beat_rate": 0.4389
     }
    },
    "train": {
@@ -1219,28 +1223,28 @@
    },
    "test": {
     "h5": {
-     "n": 2222,
-     "win_rate": 0.4968,
-     "avg": 0.0099,
-     "median": -0.0007,
-     "excess": -0.0024,
-     "beat_rate": 0.4343
+     "n": 2254,
+     "win_rate": 0.4907,
+     "avg": 0.008,
+     "median": -0.0015,
+     "excess": -0.0027,
+     "beat_rate": 0.4339
     },
     "h10": {
-     "n": 2178,
-     "win_rate": 0.5455,
-     "avg": 0.0314,
-     "median": 0.0111,
+     "n": 2222,
+     "win_rate": 0.5419,
+     "avg": 0.0292,
+     "median": 0.009,
      "excess": 0.0051,
-     "beat_rate": 0.4509
+     "beat_rate": 0.455
     },
     "h20": {
-     "n": 2105,
-     "win_rate": 0.6133,
-     "avg": 0.0797,
-     "median": 0.0418,
-     "excess": 0.0276,
-     "beat_rate": 0.4884
+     "n": 2142,
+     "win_rate": 0.605,
+     "avg": 0.0749,
+     "median": 0.0388,
+     "excess": 0.0259,
+     "beat_rate": 0.4869
     }
    }
   },
@@ -1251,28 +1255,28 @@
    "picks_per_day": 16.0,
    "all": {
     "h5": {
-     "n": 10964,
-     "win_rate": 0.4743,
-     "avg": 0.0017,
-     "median": -0.0026,
-     "excess": -0.0056,
-     "beat_rate": 0.4114
+     "n": 11061,
+     "win_rate": 0.4708,
+     "avg": 0.0009,
+     "median": -0.003,
+     "excess": -0.0057,
+     "beat_rate": 0.4116
     },
     "h10": {
-     "n": 10864,
-     "win_rate": 0.5091,
-     "avg": 0.0108,
-     "median": 0.0014,
-     "excess": -0.0039,
-     "beat_rate": 0.4282
+     "n": 10964,
+     "win_rate": 0.5076,
+     "avg": 0.0101,
+     "median": 0.0012,
+     "excess": -0.0036,
+     "beat_rate": 0.4312
     },
     "h20": {
-     "n": 10737,
-     "win_rate": 0.5451,
-     "avg": 0.0322,
-     "median": 0.0125,
-     "excess": 0.0026,
-     "beat_rate": 0.4501
+     "n": 10793,
+     "win_rate": 0.5432,
+     "avg": 0.0312,
+     "median": 0.0119,
+     "excess": 0.0023,
+     "beat_rate": 0.45
     }
    },
    "train": {
@@ -1303,28 +1307,28 @@
    },
    "test": {
     "h5": {
-     "n": 4458,
-     "win_rate": 0.5072,
-     "avg": 0.0095,
-     "median": 0.0017,
-     "excess": -0.0032,
-     "beat_rate": 0.4235
+     "n": 4555,
+     "win_rate": 0.4981,
+     "avg": 0.0073,
+     "median": -0.0004,
+     "excess": -0.0035,
+     "beat_rate": 0.4237
     },
     "h10": {
-     "n": 4358,
-     "win_rate": 0.548,
-     "avg": 0.027,
-     "median": 0.0094,
-     "excess": 0.0012,
-     "beat_rate": 0.4362
+     "n": 4458,
+     "win_rate": 0.5433,
+     "avg": 0.025,
+     "median": 0.0083,
+     "excess": 0.0019,
+     "beat_rate": 0.4435
     },
     "h20": {
-     "n": 4231,
-     "win_rate": 0.6117,
-     "avg": 0.0681,
-     "median": 0.0328,
-     "excess": 0.0168,
-     "beat_rate": 0.4623
+     "n": 4287,
+     "win_rate": 0.606,
+     "avg": 0.065,
+     "median": 0.0315,
+     "excess": 0.0161,
+     "beat_rate": 0.4619
     }
    }
   },
@@ -1335,28 +1339,28 @@
    "picks_per_day": 0.9,
    "all": {
     "h5": {
-     "n": 595,
-     "win_rate": 0.442,
-     "avg": -0.0021,
+     "n": 598,
+     "win_rate": 0.4398,
+     "avg": -0.0023,
      "median": -0.0059,
-     "excess": -0.009,
-     "beat_rate": 0.4
+     "excess": -0.0089,
+     "beat_rate": 0.4013
     },
     "h10": {
-     "n": 585,
-     "win_rate": 0.4957,
-     "avg": 0.01,
-     "median": -0.0007,
-     "excess": -0.0052,
-     "beat_rate": 0.4359
+     "n": 595,
+     "win_rate": 0.4941,
+     "avg": 0.0092,
+     "median": -0.0013,
+     "excess": -0.0045,
+     "beat_rate": 0.4437
     },
     "h20": {
-     "n": 572,
-     "win_rate": 0.5629,
-     "avg": 0.0351,
-     "median": 0.0092,
-     "excess": 0.0022,
-     "beat_rate": 0.451
+     "n": 576,
+     "win_rate": 0.5608,
+     "avg": 0.0338,
+     "median": 0.0088,
+     "excess": 0.0018,
+     "beat_rate": 0.4497
     }
    },
    "train": {
@@ -1387,28 +1391,28 @@
    },
    "test": {
     "h5": {
-     "n": 240,
-     "win_rate": 0.4917,
-     "avg": 0.0056,
-     "median": -0.0011,
-     "excess": -0.0048,
-     "beat_rate": 0.425
+     "n": 243,
+     "win_rate": 0.4856,
+     "avg": 0.005,
+     "median": -0.0015,
+     "excess": -0.0045,
+     "beat_rate": 0.428
     },
     "h10": {
-     "n": 230,
-     "win_rate": 0.5522,
-     "avg": 0.0296,
-     "median": 0.0058,
-     "excess": 0.0041,
-     "beat_rate": 0.4826
+     "n": 240,
+     "win_rate": 0.5458,
+     "avg": 0.0269,
+     "median": 0.0042,
+     "excess": 0.0055,
+     "beat_rate": 0.5
     },
     "h20": {
-     "n": 217,
-     "win_rate": 0.659,
-     "avg": 0.0712,
-     "median": 0.0352,
-     "excess": 0.0155,
-     "beat_rate": 0.4839
+     "n": 221,
+     "win_rate": 0.6516,
+     "avg": 0.0671,
+     "median": 0.0347,
+     "excess": 0.0143,
+     "beat_rate": 0.4796
     }
    }
   }
@@ -1418,19 +1422,19 @@
    "key": "full",
    "name": "完整出場規則",
    "all": {
-    "trades": 168,
-    "win_rate": 0.375,
-    "avg_ret": 0.0622,
+    "trades": 172,
+    "win_rate": 0.3663,
+    "avg_ret": 0.0596,
     "avg_win": 0.2454,
-    "avg_loss": -0.0476,
-    "payoff": 5.15,
-    "avg_days": 23.4,
-    "total_return": 2.0235,
-    "cagr": 0.4787,
+    "avg_loss": -0.0478,
+    "payoff": 5.14,
+    "avg_days": 23.1,
+    "total_return": 1.853,
+    "cagr": 0.4448,
     "max_drawdown": -0.1708,
     "start": "2023-12-18",
-    "end": "2026-10-30",
-    "bench_return": 1.5613
+    "end": "2026-11-06",
+    "bench_return": 1.2491
    },
    "train": {
     "trades": 96,
@@ -1448,22 +1452,22 @@
     "bench_return": 0.2608
    },
    "test": {
-    "trades": 72,
-    "win_rate": 0.3611,
-    "avg_ret": 0.0848,
+    "trades": 76,
+    "win_rate": 0.3421,
+    "avg_ret": 0.0777,
     "avg_win": 0.333,
-    "avg_loss": -0.0554,
-    "payoff": 6.01,
-    "avg_days": 20.5,
-    "total_return": 1.3033,
-    "cagr": 0.8757,
+    "avg_loss": -0.055,
+    "payoff": 6.05,
+    "avg_days": 20.1,
+    "total_return": 1.1734,
+    "cagr": 0.7795,
     "max_drawdown": -0.166,
     "start": "2025-07-01",
-    "end": "2026-10-30",
-    "bench_return": 1.0046
+    "end": "2026-11-06",
+    "bench_return": 0.7603
    },
    "exit_reasons": {
-    "停損": 69,
+    "停損": 73,
     "法人連續賣超": 44,
     "時間停損": 42,
     "保本停損": 13
@@ -2026,11 +2030,71 @@
      2982141
     ],
     [
-     "2026-10-30",
-     3023534
+     "2026-11-04",
+     2961915
+    ],
+    [
+     "2026-11-06",
+     2852992
     ]
    ],
    "recent_trades": [
+    {
+     "code": "1216",
+     "name": "統一",
+     "industry": "食品工業",
+     "entry_date": "2026-10-16",
+     "entry": 79.9,
+     "exit_date": "2026-11-06",
+     "exit": 77.53,
+     "shares": 4619,
+     "days": 14,
+     "pnl": -13058,
+     "ret": -0.0353,
+     "reason": "停損"
+    },
+    {
+     "code": "2603",
+     "name": "長榮",
+     "industry": "航運業",
+     "entry_date": "2026-10-14",
+     "entry": 260.0,
+     "exit_date": "2026-11-06",
+     "exit": 240.0,
+     "shares": 1436,
+     "days": 16,
+     "pnl": -30777,
+     "ret": -0.0823,
+     "reason": "停損"
+    },
+    {
+     "code": "2912",
+     "name": "統一超",
+     "industry": "貿易百貨",
+     "entry_date": "2026-10-20",
+     "entry": 226.0,
+     "exit_date": "2026-11-04",
+     "exit": 219.57,
+     "shares": 1492,
+     "days": 10,
+     "pnl": -11524,
+     "ret": -0.0341,
+     "reason": "停損"
+    },
+    {
+     "code": "2885",
+     "name": "元大金",
+     "industry": "金融保險業",
+     "entry_date": "2026-10-19",
+     "entry": 72.9,
+     "exit_date": "2026-11-03",
+     "exit": 69.64,
+     "shares": 1318,
+     "days": 10,
+     "pnl": -4840,
+     "ret": -0.0503,
+     "reason": "停損"
+    },
     {
      "code": "6147",
      "name": "頎邦",
@@ -2184,62 +2248,6 @@
      "pnl": -30676,
      "ret": -0.0854,
      "reason": "停損"
-    },
-    {
-     "code": "2395",
-     "name": "研華",
-     "industry": "電腦及週邊設備業",
-     "entry_date": "2026-05-05",
-     "entry": 391.0,
-     "exit_date": "2026-07-27",
-     "exit": 586.0,
-     "shares": 880,
-     "days": 57,
-     "pnl": 168828,
-     "ret": 0.49,
-     "reason": "法人連續賣超"
-    },
-    {
-     "code": "2801",
-     "name": "彰銀",
-     "industry": "金融保險業",
-     "entry_date": "2026-06-15",
-     "entry": 22.95,
-     "exit_date": "2026-07-15",
-     "exit": 23.6,
-     "shares": 14992,
-     "days": 20,
-     "pnl": 7689,
-     "ret": 0.0223,
-     "reason": "時間停損"
-    },
-    {
-     "code": "3037",
-     "name": "欣興",
-     "industry": "電子零組件業",
-     "entry_date": "2026-01-14",
-     "entry": 255.5,
-     "exit_date": "2026-07-09",
-     "exit": 890.0,
-     "shares": 297,
-     "days": 114,
-     "pnl": 187169,
-     "ret": 2.463,
-     "reason": "法人連續賣超"
-    },
-    {
-     "code": "2618",
-     "name": "長榮航",
-     "industry": "航運業",
-     "entry_date": "2026-06-18",
-     "entry": 43.3,
-     "exit_date": "2026-07-08",
-     "exit": 40.0,
-     "shares": 8281,
-     "days": 14,
-     "pnl": -29304,
-     "ret": -0.0816,
-     "reason": "停損"
     }
    ]
   },
@@ -2247,19 +2255,19 @@
    "key": "stop_hold10",
    "name": "停損＋固定持有10日",
    "all": {
-    "trades": 293,
-    "win_rate": 0.4846,
-    "avg_ret": 0.0136,
-    "avg_win": 0.0805,
-    "avg_loss": -0.0494,
-    "payoff": 1.63,
-    "avg_days": 7.8,
-    "total_return": 0.5987,
-    "cagr": 0.1804,
+    "trades": 299,
+    "win_rate": 0.4849,
+    "avg_ret": 0.0131,
+    "avg_win": 0.0791,
+    "avg_loss": -0.0491,
+    "payoff": 1.61,
+    "avg_days": 7.9,
+    "total_return": 0.5834,
+    "cagr": 0.175,
     "max_drawdown": -0.1253,
     "start": "2023-12-18",
-    "end": "2026-10-30",
-    "bench_return": 1.5613
+    "end": "2026-11-06",
+    "bench_return": 1.2491
    },
    "train": {
     "trades": 162,
@@ -2277,23 +2285,23 @@
     "bench_return": 0.2608
    },
    "test": {
-    "trades": 131,
-    "win_rate": 0.4656,
-    "avg_ret": 0.0228,
-    "avg_win": 0.1088,
-    "avg_loss": -0.0521,
-    "payoff": 2.09,
-    "avg_days": 7.4,
-    "total_return": 0.4565,
-    "cagr": 0.3277,
+    "trades": 137,
+    "win_rate": 0.4672,
+    "avg_ret": 0.0214,
+    "avg_win": 0.1044,
+    "avg_loss": -0.0514,
+    "payoff": 2.03,
+    "avg_days": 7.5,
+    "total_return": 0.4426,
+    "cagr": 0.3126,
     "max_drawdown": -0.0579,
     "start": "2025-07-01",
-    "end": "2026-10-30",
-    "bench_return": 1.0046
+    "end": "2026-11-06",
+    "bench_return": 0.7603
    },
    "exit_reasons": {
-    "停損": 103,
-    "持有期滿": 186,
+    "停損": 104,
+    "持有期滿": 191,
     "保本停損": 4
    },
    "equity_curve": [
@@ -2854,11 +2862,99 @@
      1626303
     ],
     [
-     "2026-10-30",
-     1598678
+     "2026-11-04",
+     1583374
+    ],
+    [
+     "2026-11-06",
+     1583374
     ]
    ],
    "recent_trades": [
+    {
+     "code": "2377",
+     "name": "微星",
+     "industry": "電腦及週邊設備業",
+     "entry_date": "2026-10-19",
+     "entry": 160.0,
+     "exit_date": "2026-11-04",
+     "exit": 154.5,
+     "shares": 1158,
+     "days": 10,
+     "pnl": -7425,
+     "ret": -0.04,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "3034",
+     "name": "聯詠",
+     "industry": "半導體業",
+     "entry_date": "2026-10-19",
+     "entry": 581.0,
+     "exit_date": "2026-11-03",
+     "exit": 549.0,
+     "shares": 351,
+     "days": 10,
+     "pnl": -12375,
+     "ret": -0.0606,
+     "reason": "停損"
+    },
+    {
+     "code": "2912",
+     "name": "統一超",
+     "industry": "貿易百貨",
+     "entry_date": "2026-10-16",
+     "entry": 224.0,
+     "exit_date": "2026-11-03",
+     "exit": 224.5,
+     "shares": 904,
+     "days": 10,
+     "pnl": -735,
+     "ret": -0.0036,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "4904",
+     "name": "遠傳",
+     "industry": "通信網路業",
+     "entry_date": "2026-10-16",
+     "entry": 112.0,
+     "exit_date": "2026-11-03",
+     "exit": 113.0,
+     "shares": 1809,
+     "days": 10,
+     "pnl": 616,
+     "ret": 0.003,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "2885",
+     "name": "元大金",
+     "industry": "金融保險業",
+     "entry_date": "2026-10-15",
+     "entry": 72.4,
+     "exit_date": "2026-11-02",
+     "exit": 72.9,
+     "shares": 2850,
+     "days": 10,
+     "pnl": 212,
+     "ret": 0.001,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "1216",
+     "name": "統一",
+     "industry": "食品工業",
+     "entry_date": "2026-10-15",
+     "entry": 78.4,
+     "exit_date": "2026-11-02",
+     "exit": 81.9,
+     "shares": 2632,
+     "days": 10,
+     "pnl": 7964,
+     "ret": 0.0385,
+     "reason": "持有期滿"
+    },
     {
      "code": "3231",
      "name": "緯創",
@@ -2984,90 +3080,6 @@
      "pnl": 12842,
      "ret": 0.0643,
      "reason": "持有期滿"
-    },
-    {
-     "code": "2412",
-     "name": "中華電",
-     "industry": "通信網路業",
-     "entry_date": "2026-09-15",
-     "entry": 143.5,
-     "exit_date": "2026-10-01",
-     "exit": 144.0,
-     "shares": 1387,
-     "days": 10,
-     "pnl": -474,
-     "ret": -0.0024,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "2890",
-     "name": "永豐金",
-     "industry": "金融保險業",
-     "entry_date": "2026-09-03",
-     "entry": 42.5,
-     "exit_date": "2026-09-17",
-     "exit": 45.5,
-     "shares": 4749,
-     "days": 10,
-     "pnl": 13003,
-     "ret": 0.0643,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "3006",
-     "name": "晶豪科",
-     "industry": "半導體業",
-     "entry_date": "2026-09-11",
-     "entry": 304.0,
-     "exit_date": "2026-09-14",
-     "exit": 279.68,
-     "shares": 658,
-     "days": 2,
-     "pnl": -17102,
-     "ret": -0.0854,
-     "reason": "停損"
-    },
-    {
-     "code": "5274",
-     "name": "信驊",
-     "industry": "半導體業",
-     "entry_date": "2026-09-09",
-     "entry": 19565.0,
-     "exit_date": "2026-09-10",
-     "exit": 17999.8,
-     "shares": 10,
-     "days": 2,
-     "pnl": -16727,
-     "ret": -0.0854,
-     "reason": "停損"
-    },
-    {
-     "code": "3045",
-     "name": "台灣大",
-     "industry": "通信網路業",
-     "entry_date": "2026-08-26",
-     "entry": 115.0,
-     "exit_date": "2026-09-09",
-     "exit": 117.5,
-     "shares": 1768,
-     "days": 10,
-     "pnl": 3211,
-     "ret": 0.0158,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "2603",
-     "name": "長榮",
-     "industry": "航運業",
-     "entry_date": "2026-08-18",
-     "entry": 232.0,
-     "exit_date": "2026-09-01",
-     "exit": 231.5,
-     "shares": 873,
-     "days": 10,
-     "pnl": -1619,
-     "ret": -0.008,
-     "reason": "持有期滿"
     }
    ]
   },
@@ -3075,19 +3087,19 @@
    "key": "hold10",
    "name": "固定持有10日（無停損）",
    "all": {
-    "trades": 275,
-    "win_rate": 0.5309,
-    "avg_ret": 0.0137,
-    "avg_win": 0.0774,
-    "avg_loss": -0.0584,
+    "trades": 280,
+    "win_rate": 0.5321,
+    "avg_ret": 0.0135,
+    "avg_win": 0.0761,
+    "avg_loss": -0.0578,
     "payoff": 1.32,
     "avg_days": 10.0,
-    "total_return": 0.5195,
-    "cagr": 0.1594,
+    "total_return": 0.473,
+    "cagr": 0.1456,
     "max_drawdown": -0.1853,
     "start": "2023-12-18",
-    "end": "2026-10-30",
-    "bench_return": 1.5613
+    "end": "2026-11-06",
+    "bench_return": 1.2491
    },
    "train": {
     "trades": 153,
@@ -3105,22 +3117,22 @@
     "bench_return": 0.2608
    },
    "test": {
-    "trades": 122,
-    "win_rate": 0.541,
-    "avg_ret": 0.0288,
-    "avg_win": 0.1013,
-    "avg_loss": -0.0568,
-    "payoff": 1.79,
+    "trades": 127,
+    "win_rate": 0.5433,
+    "avg_ret": 0.0277,
+    "avg_win": 0.0975,
+    "avg_loss": -0.0554,
+    "payoff": 1.76,
     "avg_days": 10.0,
-    "total_return": 0.5159,
-    "cagr": 0.3684,
+    "total_return": 0.4695,
+    "cagr": 0.3308,
     "max_drawdown": -0.0849,
     "start": "2025-07-01",
-    "end": "2026-10-30",
-    "bench_return": 1.0046
+    "end": "2026-11-06",
+    "bench_return": 0.7603
    },
    "exit_reasons": {
-    "持有期滿": 275
+    "持有期滿": 280
    },
    "equity_curve": [
     [
@@ -3680,11 +3692,85 @@
      1534892
     ],
     [
-     "2026-10-30",
-     1519484
+     "2026-11-04",
+     1502858
+    ],
+    [
+     "2026-11-06",
+     1472956
     ]
    ],
    "recent_trades": [
+    {
+     "code": "2912",
+     "name": "統一超",
+     "industry": "貿易百貨",
+     "entry_date": "2026-10-16",
+     "entry": 224.0,
+     "exit_date": "2026-11-03",
+     "exit": 224.5,
+     "shares": 858,
+     "days": 10,
+     "pnl": -697,
+     "ret": -0.0036,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "4904",
+     "name": "遠傳",
+     "industry": "通信網路業",
+     "entry_date": "2026-10-16",
+     "entry": 112.0,
+     "exit_date": "2026-11-03",
+     "exit": 113.0,
+     "shares": 1717,
+     "days": 10,
+     "pnl": 584,
+     "ret": 0.003,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "2885",
+     "name": "元大金",
+     "industry": "金融保險業",
+     "entry_date": "2026-10-15",
+     "entry": 72.4,
+     "exit_date": "2026-11-02",
+     "exit": 72.9,
+     "shares": 2715,
+     "days": 10,
+     "pnl": 202,
+     "ret": 0.001,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "2609",
+     "name": "陽明",
+     "industry": "航運業",
+     "entry_date": "2026-10-15",
+     "entry": 65.0,
+     "exit_date": "2026-11-02",
+     "exit": 63.5,
+     "shares": 3024,
+     "days": 10,
+     "pnl": -5666,
+     "ret": -0.0288,
+     "reason": "持有期滿"
+    },
+    {
+     "code": "1216",
+     "name": "統一",
+     "industry": "食品工業",
+     "entry_date": "2026-10-15",
+     "entry": 78.4,
+     "exit_date": "2026-11-02",
+     "exit": 81.9,
+     "shares": 2507,
+     "days": 10,
+     "pnl": 7586,
+     "ret": 0.0385,
+     "reason": "持有期滿"
+    },
     {
      "code": "2603",
      "name": "長榮",
@@ -3823,76 +3909,6 @@
      "days": 10,
      "pnl": 12294,
      "ret": 0.0643,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "3045",
-     "name": "台灣大",
-     "industry": "通信網路業",
-     "entry_date": "2026-08-26",
-     "entry": 115.0,
-     "exit_date": "2026-09-09",
-     "exit": 117.5,
-     "shares": 1671,
-     "days": 10,
-     "pnl": 3035,
-     "ret": 0.0158,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "2603",
-     "name": "長榮",
-     "industry": "航運業",
-     "entry_date": "2026-08-18",
-     "entry": 232.0,
-     "exit_date": "2026-09-01",
-     "exit": 231.5,
-     "shares": 826,
-     "days": 10,
-     "pnl": -1532,
-     "ret": -0.008,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "2376",
-     "name": "技嘉",
-     "industry": "電腦及週邊設備業",
-     "entry_date": "2026-08-14",
-     "entry": 390.0,
-     "exit_date": "2026-08-28",
-     "exit": 348.5,
-     "shares": 500,
-     "days": 10,
-     "pnl": -21799,
-     "ret": -0.1116,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "4938",
-     "name": "和碩",
-     "industry": "電腦及週邊設備業",
-     "entry_date": "2026-08-14",
-     "entry": 95.3,
-     "exit_date": "2026-08-28",
-     "exit": 89.6,
-     "shares": 2047,
-     "days": 10,
-     "pnl": -12757,
-     "ret": -0.0653,
-     "reason": "持有期滿"
-    },
-    {
-     "code": "2615",
-     "name": "萬海",
-     "industry": "航運業",
-     "entry_date": "2026-07-22",
-     "entry": 85.2,
-     "exit_date": "2026-08-05",
-     "exit": 86.2,
-     "shares": 2289,
-     "days": 10,
-     "pnl": 1138,
-     "ret": 0.0058,
      "reason": "持有期滿"
     }
    ]
