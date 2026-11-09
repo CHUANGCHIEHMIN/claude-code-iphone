@@ -221,50 +221,50 @@ def draw_1f():
     # stair: flight A up (band1), cut after 7th riser; landing & flight B overhead (hidden)
     stair_flight(fl, FLIGHT_A, BAND1, "A-STAIR", upto=FLIGHT_A[6])
     break_line(fl, FLIGHT_A[6] + 12, BAND1)
-    rect(fl, FLIGHT_A[0], CENTER[0], 1219, CENTER[1], "A-STAIR")          # stringer / handrail
-    line(fl, (FLIGHT_A[0], BAND1[1]), (FLIGHT_A[6] + 12, BAND1[1]), "A-STAIR")
+    rect(fl, FLIGHT_A[0], CENTER[0], 1225 - 7.5, CENTER[1], "A-STAIR")      # stringer / handrail wall
     stair_flight(fl, FLIGHT_B, BAND2, "A-HIDDEN")
     rect(fl, LANDING_X[0], BAND2[0], LANDING_X[1], BAND1[1], "A-HIDDEN")
-    arrow_path(fl, [(FLIGHT_A[0] + 12, 445), (FLIGHT_A[6] + 2, 445)], "上19", (FLIGHT_A[0] - 20, 445))
+    arrow_path(fl, [(FLIGHT_A[0] + 12, 455), (FLIGHT_A[6] + 2, 455)], "上19", (FLIGHT_A[0] - 20, 455))
+    # 2F balcony above the rear service yard
+    rect(fl, 1309.5, 7.5, 1407.5, 286.5, "A-HIDDEN")
     # kitchen
-    rect(fl, 975, 10, 1045, 80, "A-FIXT")
-    line(fl, (975, 10), (1045, 80), "A-FIXT"); line(fl, (975, 80), (1045, 10), "A-FIXT")
-    text(fl, 1010, 92, "冰箱", h=9, layer="A-FIXT")
-    rect(fl, 1050, 10, 1296, 70, "A-FIXT")
-    rect(fl, 1062, 18, 1142, 62, "A-FIXT"); circle(fl, (1102, 40), 3, "A-FIXT")
-    rect(fl, 1205, 16, 1285, 64, "A-FIXT")
-    circle(fl, (1226, 40), 10, "A-FIXT"); circle(fl, (1264, 40), 10, "A-FIXT")
+    rect(fl, 955, 7.5, 1033, 88, "A-FIXT")
+    line(fl, (955, 7.5), (1033, 88), "A-FIXT"); line(fl, (955, 88), (1033, 7.5), "A-FIXT")
+    text(fl, 994, 100, "冰箱", h=9, layer="A-FIXT")
+    rect(fl, 1036, 7.5, 1294.5, 68, "A-FIXT")
+    rect(fl, 1048, 15, 1128, 60, "A-FIXT"); circle(fl, (1088, 38), 3, "A-FIXT")
+    rect(fl, 1198, 14, 1272, 62, "A-FIXT")
+    circle(fl, (1216, 38), 10, "A-FIXT"); circle(fl, (1254, 38), 10, "A-FIXT")
     # toilet
-    wc(fl, (1335, 489, 1385, 509), (1360, 465))
-    basin(fl, (1347, 335, 1392, 390), (1371, 362), rx=15, ry=19)
+    wc(fl, (1308, 481.5, 1358, 501.5), (1333, 458))
+    basin(fl, (1340, 326, 1384.5, 382), (1362, 354), rx=15, ry=19)
     # site context
-    rect(fl, 0, 10, 440, 524, "A-SITE")
+    rect(fl, 0, 7.5, 452.5, 526.5, "A-SITE")
     pline(fl, [(25, 300), (420, 300), (430, 315), (430, 445), (420, 460), (25, 460), (15, 445), (15, 315)],
           "A-SITE", closed=True)
     rect(fl, 257, 214, 394, 496, "A-HIDDEN")
     text(fl, 325, 355, "汙水處理設備(6人份)", h=10, layer="A-SITE", rot=90)
     text(fl, 220, 120, "停車位", h=20, layer="A-SITE")
-    pline(fl, [(0, 615), (1500, 537)], "A-SITE-PL")
-    line(fl, (1500, 537), (1500, -40), "A-SITE-PL")
+    k = 0.052   # property-line slope (from photo, schematic)
+    pline(fl, [(0, 615), (1500, 615 - k * 1500)], "A-SITE-PL")
+    line(fl, (1500, 615 - k * 1500), (1500, -40), "A-SITE-PL")
     text(fl, 1000, 585, "地界線(位置示意)", h=11, layer="A-SITE-PL", rot=-3)
-    k = 0.052   # property-line slope (from photo)
-    pline(fl, [(0, 615), (460, 615 - k * 460), (460, 534), (444, 534), (444, 615 - k * 444 - 16), (0, 599)],
-          "A-SITE-FENCE", closed=True)   # north fence t16 along property line, return to building
+    pline(fl, [(0, 615), (460, 615 - k * 460), (460, 541.5), (444, 541.5), (444, 615 - k * 444 - 16), (0, 599)],
+          "A-SITE-FENCE", closed=True)
     text(fl, 150, 575, "圍牆 H200 t16", h=10, layer="A-SITE", rot=-3)
     rect(fl, 1484, 0, 1500, 517, "A-SITE-FENCE")
     text(fl, 1530, 260, "圍牆 H200 t16  L=517", h=10, layer="A-SITE", rot=90)
     text(fl, 1450, 160, "後側空地", h=11, layer="A-SITE", rot=90)
     # room labels
-    text(fl, 700, 300, "客廳", h=22); text(fl, 1090, 260, "餐廳", h=20)
+    text(fl, 700, 300, "客廳", h=22); text(fl, 1090, 250, "餐廳", h=20)
     text(fl, 1160, 110, "廚房", h=20); text(fl, 1290, 470, "廁所", h=15)
-    text(fl, 1350, 140, "工作陽台", h=12)
-    text(fl, 1350, 120, "(推估)", h=9)
+    text(fl, 1356, 150, "後院/工作陽台", h=10)
     circle(fl, (760, 200), 30, "A-ANNO-TEXT"); text(fl, 760, 200, "B7", h=24, style="DIMTXT")
     text(fl, 760, 145, "住宅 +30", h=16)
-    for t, x, y in (("W2", 505, 360), ("D1", 505, 150), ("W7", 1300, 435), ("D4", 1262, 366),
-                    ("D2", 1352, 245), ("W4", 1268, 125)):
+    for t, x, y in (("W2", 505, 350), ("D1", 505, 115), ("W7", 1432, 430), ("D4", 1195, 340),
+                    ("D2", 1270, 243), ("W4", 1268, 120)):
         tag(fl, x, y, t)
-    # dimensions
+    # dimensions (wall centrelines, as on original sheet)
     hchain(fl, [0, 1500], 760, 534)
     hchain(fl, [0, 460, 1392, 1500], 715, 534)
     hchain(fl, [311, 460, 968, 1225, 1392, 1500], 670, 534)
@@ -281,11 +281,11 @@ def draw_upper(F):
     for o in F["openings"]:
         draw_opening(fl, o)
     be = F["bal_end"]
-    # decorative louver panel (裝飾板)
-    rect(fl, 337, be + 10, 345, 509, "A-FIXT")
-    y = be + 18
-    while y < 505:
-        line(fl, (331, y), (337, y), "A-FIXT"); y += 8
+    # decorative louver panel (裝飾板) on CL X341
+    rect(fl, 337.5, be + 7.5, 344.5, 526.5, "A-FIXT")
+    y = be + 15
+    while y < 522:
+        line(fl, (331, y), (337.5, y), "A-FIXT"); y += 8
     # stair centre wall + landing
     rect(fl, 1095, CENTER[0], LANDING_X[0], CENTER[1], "A-STAIR")
     line(fl, (LANDING_X[0], BAND2[0]), (LANDING_X[0], BAND1[1]), "A-STAIR")
@@ -303,43 +303,43 @@ def draw_upper(F):
         rect(fl, FLIGHT_C[0] - 6, BAND1[0], FLIGHT_C[0], BAND1[1], "A-STAIR")   # guard rail at void edge
         arrow_path(fl, [(FLIGHT_D[0] + 12, 345), (1345, 345), (1345, 455), (FLIGHT_C[0] + 14, 455)],
                    "下17", (FLIGHT_D[0] - 22, 345))
-        rect(fl, 1312, 14, 1388, 110, "A-HIDDEN")
-        line(fl, (1312, 14), (1388, 110), "A-HIDDEN"); line(fl, (1312, 110), (1388, 14), "A-HIDDEN")
-        text(fl, 1350, 125, "設備位置(推估)", h=8, layer="A-FIXT")
+        rect(fl, 1310, 8, 1390, 85, "A-HIDDEN")
+        line(fl, (1310, 8), (1390, 85), "A-HIDDEN"); line(fl, (1310, 85), (1390, 8), "A-HIDDEN")
+        text(fl, 1350, 98, "設備位置(推估)", h=8, layer="A-FIXT")
         lvl = "+710"
     # bath 1
     b1s, b1e = F["bath1_s"], F["bath1_e"]
     if fl == "2F":
-        rect(fl, 455, b1s + 10, 525, 494, "A-FIXT")
-        pline(fl, [(462, b1s + 20), (518, b1s + 20), (518, 484), (462, 484)], "A-FIXT", closed=True)
-        circle(fl, (490, b1s + 30), 3, "A-FIXT")
-        line(fl, (599, b1s + 6), (599, 509), "A-FIXT")
-        wc(fl, (615, 489, 665, 509), (640, 465))
-        basin(fl, (690, 455, b1e - 6, 509), (724, 482))
+        rect(fl, 449, 348, 519, 505, "A-FIXT")                                  # bathtub 70x157
+        rect(fl, 456, 356, 512, 497, "A-FIXT")
+        circle(fl, (484, 366), 3, "A-FIXT")
+        line(fl, (599, b1s + 7.5), (599, 526.5), "A-FIXT")                      # glass screen
+        wc(fl, (615, 506.5, 665, 526.5), (640, 482))
+        basin(fl, (690, 472, b1e - 7.5, 526.5), (724, 499))
     else:
-        line(fl, (543, b1s + 6), (543, 488), "A-FIXT")
-        circle(fl, (497, 440), 4, "A-FIXT"); circle(fl, (497, 500), 3, "A-FIXT")
-        wc(fl, (570, 489, 620, 509), (595, 465))
-        basin(fl, (630, 459, b1e - 6, 509), (668, 484), rx=18, ry=13)
+        line(fl, (543, b1s + 7.5), (543, 488), "A-FIXT")                         # shower screen
+        circle(fl, (497, 445), 4, "A-FIXT"); circle(fl, (497, 515), 3, "A-FIXT")
+        wc(fl, (570, 506.5, 620, 526.5), (595, 482))
+        basin(fl, (630, 476, b1e - 7.5, 526.5), (667, 501), rx=18, ry=13)
     # bath 2
     bw, bn = F["bath2_w"], F["bath2_n"]
-    basin(fl, (bw + 6, bn - 52, bw + 51, bn - 6), (bw + 28, bn - 29), rx=15, ry=17)
-    wc(fl, (bw + 6, bn - 125, bw + 26, bn - 75), (bw + 50, bn - 100), horizontal=True)
-    line(fl, (bw + 6, 104), (920, 104), "A-FIXT")
+    basin(fl, (bw + 7.5, bn - 55, bw + 50, bn - 7.5), (bw + 29, bn - 31), rx=15, ry=17)
+    wc(fl, (bw + 7.5, bn - 125, bw + 27.5, bn - 75), (bw + 51, bn - 100), horizontal=True)
+    line(fl, (bw + 7.5, 104), (920, 104), "A-FIXT")
     circle(fl, (bw + 22, 40), 4, "A-FIXT"); circle(fl, (900, 55), 3, "A-FIXT")
     # labels
     text(fl, 610, 190, "臥室", h=22); text(fl, 1150, 170, "臥室", h=22)
-    text(fl, 560 if fl == "2F" else 600, b1s + 60 if fl == "2F" else b1s + 40, "浴廁", h=15)
+    text(fl, 560 if fl == "2F" else 600, 420 if fl == "2F" else 430, "浴廁", h=15)
     text(fl, 905, bn - 85, "浴廁", h=15)
     text(fl, 372, 180, "陽台", h=18); text(fl, 1350, 175, "陽台", h=15)
-    text(fl, 388, 475, "裝飾板", h=12)
+    text(fl, 388, 490, "裝飾板", h=12)
     circle(fl, (866, 400), 28, "A-ANNO-TEXT"); text(fl, 866, 400, "B7", h=22, style="DIMTXT")
     text(fl, 866, 345, "住宅 " + lvl, h=15)
     w5c = sum(o["rect"][1] + o["rect"][3] for o in F["openings"] if o["tag"] == "W5") / 2
-    d4c = [o for o in F["openings"] if o["tag"] == "D4"]
-    for t, x, y in (("W5", 388, w5c - 25), ("DW1", 490, 120), ("D4", (d4c[0]["rect"][0] + d4c[0]["rect"][2]) / 2, b1s + 45),
-                    ("D3", 1005, 420), ("D4", 1005, (d4c[1]["rect"][1] + d4c[1]["rect"][3]) / 2),
-                    ("D3", 1085, 250), ("W8", 1350, 325), ("DW2", 1265, 160)):
+    d4 = [o for o in F["openings"] if o["tag"] == "D4"]
+    for t, x, y in (("W5", 388, w5c - 25), ("DW1", 490, 170), ("D4", b1e + 35, b1s + 45),
+                    ("D3", 1005, 415), ("D4", 1005, (d4[1]["rect"][1] + d4[1]["rect"][3]) / 2),
+                    ("D3", 1090, 250), ("W8", 1340, 330), ("DW2", 1265, 150)):
         tag(fl, x, y, t)
     # dimensions (as on original sheets)
     hchain(fl, [311, 441, 1392], 720, 534)
@@ -350,8 +350,8 @@ def draw_upper(F):
     hchain(fl, [1302, 1392], 340, 340)
     hchain(fl, [1302, 1400, 1500], 200, 200)
     if fl == "3F":
-        vchain(fl, [0, 374, 534], 690, 690)
-        vchain(fl, [270, 534], 940, 940)
+        vchain(fl, [0, 374, 534], 556, 556)
+        vchain(fl, [270, 534], 822, 822)
 
 
 draw_1f()
@@ -365,14 +365,14 @@ for F in FLOORS:
     line(fl, (380, -158), (1120, -158), "A-TITLE")
 
 NOTES = (
-    "B7戶 平面圖（依原圖照片判讀重繪，非原始CAD）\\P"
-    "1. 單位：cm。尺寸鍊數值依原圖標註；原圖無標註者依照片比例推估。\\P"
-    "2. 牆厚假設：北側外牆25（外緣對齊尺寸線）；東側外牆/陽台女兒牆16（中心線X=1400）；"
-    "西側外牆20（中心線 1F=460、2F/3F=441）；分戶牆20；室內隔間12（中心線）。\\P"
-    "3. 高程（依剖面A3-11/12/13）：GL±0、1FL+30、2FL+390、3FL+710、RFL+1030、女兒牆頂約+1170。\\P"
-    "4. 樓梯：1F→2F 19級@18.95=360；2F→3F 17級@18.82=320；踏面推估25；扶手高90。陽台欄杆高110。\\P"
-    "5. 結構柱、梁未繪（照片解析度不足），請依結構圖補繪。門窗寬度為推估，請依門窗表修正。\\P"
-    "6. 2F浴廁(含浴缸)東牆X=765、3F浴廁東牆X=711，兩層不同，依照片判讀，請確認。"
+    "B7戶 平面圖 rev.2（依原圖照片判讀重繪，非原始CAD）\\P"
+    "1. 單位：cm。尺寸鍊均為牆中心線（依原圖）；原圖無標註者依圖面比例量取。\\P"
+    "2. 外牆、分戶牆、隔間牆、女兒牆厚度均為15。\\P"
+    "3. 北側外牆於X=968處退縮25：X968以西中心線Y=534，以東中心線Y=509（即右側尺寸鍊25/215/294）。\\P"
+    "4. 西側外牆：1F中心線X=460（149=311→460），2F/3F中心線X=441（130=311→441），二三樓外牆較一樓外推19。\\P"
+    "5. 高程：GL±0、1FL+30、2FL+390、3FL+710、RFL+1030；1F層高360、2F/3F層高320；女兒牆頂約+1170。\\P"
+    "6. 樓梯：1F→2F 19級@18.95=360；2F→3F 17級@18.82=320；踏面25（依圖面比例）；梯寬約92。\\P"
+    "7. 結構柱未繪（柱尺寸照片無法判讀）。門窗寬度依圖面比例量取，請以門窗表核對。"
 )
 mt = msp.add_mtext(NOTES, dxfattribs={"layer": "A-TITLE", "style": "CHT", "char_height": 14})
 mt.set_location((OFFSETS["1F"], -230))
