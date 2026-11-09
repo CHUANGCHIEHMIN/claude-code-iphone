@@ -1,4 +1,4 @@
-"""B7 unit geometry (cm).  rev.2
+"""B7 unit geometry (cm).  rev.3 (columns added)
 X: from west property line (east = +).  Y: from B6/B7 party-wall centreline (north = +).
 All dimension-chain values are WALL CENTRELINES; every wall is 15 cm (h = 7.5 each side).
 North wall: CL Y=534 west of axis X968, CL Y=509 east of it (25 cm step, per photos).
@@ -46,9 +46,24 @@ def on_h(y, a, b):   # opening rect in a horizontal wall on CL y
     return (a, y - H, b, y + H)
 
 
+# Structural columns read from the plan photos (rev.3, sizes estimated from drawing scale).
+# A/C columns centred on the column axes X460 / X1392 (the 1F chain 460|932 runs column-to-column).
+COLUMNS = {
+    "A1": (430, -15, 490, 15),          # 60x30, on party wall
+    "A2": (430, 511.5, 490, 541.5),     # 60x30, flush with north face
+    "B1": (908, -15, 968, 15),          # 60x30, on party wall
+    "B2": (935.5, 481.5, 975.5, 541.5), # 40x60, at the 25 cm north-wall step
+    "C1": (1362, -17.5, 1422, 17.5),    # 60x35, on party wall
+    "C2": (1362, 481.5, 1422, 516.5),   # 60x35, flush with east-part north face
+    "C3": (1392, 276.5, 1422, 311.5),   # 30x35, end of partition Y294
+}
+# 30 cm wing walls / beams from the column A line out to the balcony face X311 (the "34" on 1F)
+WINGS = [W(311 - H, 511.5, 430, 541.5), W(311 - H, -15, 430, 15)]
+
+
 def north_walls(x_west):
-    return [wh(N_W, x_west, X_STEP + H), wh(N_E, X_STEP - H, 1392 + H),
-            wv(X_STEP, N_E - H, N_W + H)]
+    return WINGS + [wh(N_W, 430, X_STEP + H), wh(N_E, X_STEP - H, 1392 + H),
+                    wv(X_STEP, N_E - H, N_W + H)]
 
 
 # ---------------------------------------------------------------- 1F  (FL +30, storey 360)

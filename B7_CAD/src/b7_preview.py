@@ -15,7 +15,7 @@ doc.styles.get("DIMTXT").dxf.font = "DejaVuSans.ttf"
 msp = doc.modelspace()
 # preview-only recolour for white paper (DXF keeps standard CAD colours)
 for name, col in {"A-ANNO-TAG": 30, "A-STAIR": 30, "A-WIND": 5, "A-WALL-LOW": 5,
-                  "A-DOOR": 94, "A-FIXT": 6, "A-ANNO-TEXT": 7, "A-SITE": 8}.items():
+                  "A-DOOR": 94, "A-FIXT": 6, "A-ANNO-TEXT": 7, "A-SITE": 8, "S-COLS": 7}.items():
     doc.layers.get(name).color = col
 
 cfg = Configuration(background_policy=BackgroundPolicy.WHITE,

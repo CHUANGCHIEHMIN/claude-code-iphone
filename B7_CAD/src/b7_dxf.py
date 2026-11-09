@@ -6,7 +6,7 @@ from shapely.geometry import box
 from shapely.ops import unary_union
 
 sys.path.insert(0, sys.argv[1])
-from b7_model import (FLOORS, F1, F2, F3, BAND1, BAND2, CENTER, LANDING_X,
+from b7_model import (COLUMNS, FLOORS, F1, F2, F3, BAND1, BAND2, CENTER, LANDING_X,
                       FLIGHT_A, FLIGHT_B, FLIGHT_C, FLIGHT_D, LEVELS)
 
 OUT = sys.argv[2]
@@ -21,7 +21,7 @@ msp = doc.modelspace()
 LAYERS = {
     "A-WALL": 7, "A-WALL-PATT": 8, "A-WALL-LOW": 4, "A-DOOR": 3, "A-WIND": 4,
     "A-STAIR": 2, "A-FIXT": 6, "A-HIDDEN": 8, "A-ANNO-DIMS": 1, "A-ANNO-TEXT": 7,
-    "A-ANNO-TAG": 2, "A-SITE": 8, "A-SITE-PL": 1, "A-SITE-FENCE": 7, "A-TITLE": 7,
+    "A-ANNO-TAG": 2, "S-COLS": 7, "S-COLS-PATT": 250, "A-SITE": 8, "A-SITE-PL": 1, "A-SITE-FENCE": 7, "A-TITLE": 7,
 }
 for name, color in LAYERS.items():
     doc.layers.add(name, color=color)
@@ -124,11 +124,16 @@ def poly_to_dxf(fl, geom, layer, hatch_layer, pattern):
 def draw_walls(F):
     fl = F["name"]
     holes = unary_union([box(*o["rect"]) for o in F["openings"]])
-    full = unary_union([box(*w["rect"]) for w in F["walls"] if w["kind"] != "low"]).difference(holes)
+    cols = [box(*c) for c in COLUMNS.values()]
+    full = unary_union([box(*w["rect"]) for w in F["walls"] if w["kind"] != "low"] + cols).difference(holes)
     low = unary_union([box(*w["rect"]) for w in F["walls"] if w["kind"] == "low"]).difference(
         unary_union([box(*w["rect"]) for w in F["walls"] if w["kind"] != "low"]))
     poly_to_dxf(fl, full.simplify(0.01), "A-WALL", "A-WALL-PATT", "SOLID")
     poly_to_dxf(fl, low.simplify(0.01), "A-WALL-LOW", "A-WALL-LOW", "ANSI31")
+    for name, (x0, y0, x1, y1) in COLUMNS.items():          # RC columns: outline + dark fill
+        rect(fl, x0, y0, x1, y1, "S-COLS")
+        h = msp.add_hatch(color=250, dxfattribs={"layer": "S-COLS-PATT"})
+        h.paths.add_polyline_path([P(fl, x0, y0), P(fl, x1, y0), P(fl, x1, y1), P(fl, x0, y1)], is_closed=True)
 
 
 def opening_axes(o):
@@ -228,11 +233,11 @@ def draw_1f():
     # 2F balcony above the rear service yard
     rect(fl, 1309.5, 7.5, 1407.5, 286.5, "A-HIDDEN")
     # kitchen
-    rect(fl, 955, 7.5, 1033, 88, "A-FIXT")
-    line(fl, (955, 7.5), (1033, 88), "A-FIXT"); line(fl, (955, 88), (1033, 7.5), "A-FIXT")
-    text(fl, 994, 100, "冰箱", h=9, layer="A-FIXT")
-    rect(fl, 1036, 7.5, 1294.5, 68, "A-FIXT")
-    rect(fl, 1048, 15, 1128, 60, "A-FIXT"); circle(fl, (1088, 38), 3, "A-FIXT")
+    rect(fl, 970, 7.5, 1048, 88, "A-FIXT")
+    line(fl, (970, 7.5), (1048, 88), "A-FIXT"); line(fl, (970, 88), (1048, 7.5), "A-FIXT")
+    text(fl, 1009, 100, "冰箱", h=9, layer="A-FIXT")
+    rect(fl, 1051, 7.5, 1294.5, 68, "A-FIXT")
+    rect(fl, 1063, 15, 1143, 60, "A-FIXT"); circle(fl, (1103, 38), 3, "A-FIXT")
     rect(fl, 1198, 14, 1272, 62, "A-FIXT")
     circle(fl, (1216, 38), 10, "A-FIXT"); circle(fl, (1254, 38), 10, "A-FIXT")
     # toilet
@@ -282,9 +287,9 @@ def draw_upper(F):
         draw_opening(fl, o)
     be = F["bal_end"]
     # decorative louver panel (裝飾板) on CL X341
-    rect(fl, 337.5, be + 7.5, 344.5, 526.5, "A-FIXT")
+    rect(fl, 337.5, be + 7.5, 344.5, 511.5, "A-FIXT")
     y = be + 15
-    while y < 522:
+    while y < 508:
         line(fl, (331, y), (337.5, y), "A-FIXT"); y += 8
     # stair centre wall + landing
     rect(fl, 1095, CENTER[0], LANDING_X[0], CENTER[1], "A-STAIR")
@@ -303,9 +308,9 @@ def draw_upper(F):
         rect(fl, FLIGHT_C[0] - 6, BAND1[0], FLIGHT_C[0], BAND1[1], "A-STAIR")   # guard rail at void edge
         arrow_path(fl, [(FLIGHT_D[0] + 12, 345), (1345, 345), (1345, 455), (FLIGHT_C[0] + 14, 455)],
                    "下17", (FLIGHT_D[0] - 22, 345))
-        rect(fl, 1310, 8, 1390, 85, "A-HIDDEN")
-        line(fl, (1310, 8), (1390, 85), "A-HIDDEN"); line(fl, (1310, 85), (1390, 8), "A-HIDDEN")
-        text(fl, 1350, 98, "設備位置(推估)", h=8, layer="A-FIXT")
+        rect(fl, 1310, 20, 1390, 97, "A-HIDDEN")
+        line(fl, (1310, 20), (1390, 97), "A-HIDDEN"); line(fl, (1310, 97), (1390, 20), "A-HIDDEN")
+        text(fl, 1350, 110, "設備位置(推估)", h=8, layer="A-FIXT")
         lvl = "+710"
     # bath 1
     b1s, b1e = F["bath1_s"], F["bath1_e"]
@@ -332,7 +337,7 @@ def draw_upper(F):
     text(fl, 560 if fl == "2F" else 600, 420 if fl == "2F" else 430, "浴廁", h=15)
     text(fl, 905, bn - 85, "浴廁", h=15)
     text(fl, 372, 180, "陽台", h=18); text(fl, 1350, 175, "陽台", h=15)
-    text(fl, 388, 490, "裝飾板", h=12)
+    text(fl, 388, 480, "裝飾板", h=12)
     circle(fl, (866, 400), 28, "A-ANNO-TEXT"); text(fl, 866, 400, "B7", h=22, style="DIMTXT")
     text(fl, 866, 345, "住宅 " + lvl, h=15)
     w5c = sum(o["rect"][1] + o["rect"][3] for o in F["openings"] if o["tag"] == "W5") / 2
@@ -358,6 +363,13 @@ draw_1f()
 draw_upper(F2)
 draw_upper(F3)
 
+# column labels
+for F in FLOORS:
+    for name, (x0, y0, x1, y1) in COLUMNS.items():
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        oy = 32 if cy < 270 else -32
+        text(F["name"], cx, cy + oy, name, h=8, layer="S-COLS", style="DIMTXT")
+
 # titles
 for F in FLOORS:
     fl = F["name"]
@@ -365,14 +377,15 @@ for F in FLOORS:
     line(fl, (380, -158), (1120, -158), "A-TITLE")
 
 NOTES = (
-    "B7戶 平面圖 rev.2（依原圖照片判讀重繪，非原始CAD）\\P"
+    "B7戶 平面圖 rev.3（依原圖照片判讀重繪，非原始CAD）\\P"
     "1. 單位：cm。尺寸鍊均為牆中心線（依原圖）；原圖無標註者依圖面比例量取。\\P"
     "2. 外牆、分戶牆、隔間牆、女兒牆厚度均為15。\\P"
     "3. 北側外牆於X=968處退縮25：X968以西中心線Y=534，以東中心線Y=509（即右側尺寸鍊25/215/294）。\\P"
     "4. 西側外牆：1F中心線X=460（149=311→460），2F/3F中心線X=441（130=311→441），二三樓外牆較一樓外推19。\\P"
     "5. 高程：GL±0、1FL+30、2FL+390、3FL+710、RFL+1030；1F層高360、2F/3F層高320；女兒牆頂約+1170。\\P"
     "6. 樓梯：1F→2F 19級@18.95=360；2F→3F 17級@18.82=320；踏面25（依圖面比例）；梯寬約92。\\P"
-    "7. 結構柱未繪（柱尺寸照片無法判讀）。門窗寬度依圖面比例量取，請以門窗表核對。"
+    "7. 結構柱依照片比例量取（推估）：A1/A2、B1 60x30；B2 40x60；C1/C2 60x35；C3 30x35。A、C柱以柱中心線X=460/1392定位。\\P"
+    "8. 門窗寬度依圖面比例量取，請以門窗表核對。"
 )
 mt = msp.add_mtext(NOTES, dxfattribs={"layer": "A-TITLE", "style": "CHT", "char_height": 14})
 mt.set_location((OFFSETS["1F"], -230))
