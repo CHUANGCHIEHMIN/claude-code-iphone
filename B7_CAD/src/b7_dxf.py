@@ -6,7 +6,7 @@ from shapely.geometry import box
 from shapely.ops import unary_union
 
 sys.path.insert(0, sys.argv[1])
-from b7_model import (COLUMNS, FLOORS, F1, F2, F3, BAND1, BAND2, CENTER, LANDING_X,
+from b7_model import (BEAMS, WINDER_X, COLUMNS, FLOORS, F1, F2, F3, BAND1, BAND2, CENTER, LANDING_X,
                       FLIGHT_A, FLIGHT_B, FLIGHT_C, FLIGHT_D, LEVELS)
 
 OUT = sys.argv[2]
@@ -21,12 +21,13 @@ msp = doc.modelspace()
 LAYERS = {
     "A-WALL": 7, "A-WALL-PATT": 8, "A-WALL-LOW": 4, "A-DOOR": 3, "A-WIND": 4,
     "A-STAIR": 2, "A-FIXT": 6, "A-HIDDEN": 8, "A-ANNO-DIMS": 1, "A-ANNO-TEXT": 7,
-    "A-ANNO-TAG": 2, "S-COLS": 7, "S-COLS-PATT": 250, "A-SITE": 8, "A-SITE-PL": 1, "A-SITE-FENCE": 7, "A-TITLE": 7,
+    "A-ANNO-TAG": 2, "S-COLS": 7, "S-COLS-PATT": 250, "S-BEAM": 8, "A-SITE": 8, "A-SITE-PL": 1, "A-SITE-FENCE": 7, "A-TITLE": 7,
 }
 for name, color in LAYERS.items():
     doc.layers.add(name, color=color)
 doc.layers.get("A-HIDDEN").dxf.linetype = "DASHED"
 doc.layers.get("A-SITE-PL").dxf.linetype = "DASHDOT"
+doc.layers.get("S-BEAM").dxf.linetype = "DASHED"
 
 cht = doc.styles.add("CHT", font="msjh.ttc")
 cht.set_extended_font_data(family="Microsoft JhengHei")
@@ -223,21 +224,28 @@ def draw_1f():
     draw_walls(F)
     for o in F["openings"]:
         draw_opening(fl, o)
-    # stair: flight A up (band1), cut after 7th riser; landing & flight B overhead (hidden)
-    stair_flight(fl, FLIGHT_A, BAND1, "A-STAIR", upto=FLIGHT_A[6])
-    break_line(fl, FLIGHT_A[6] + 12, BAND1)
-    rect(fl, FLIGHT_A[0], CENTER[0], 1225 - 7.5, CENTER[1], "A-STAIR")      # stringer / handrail wall
+    # stair flight A: 2 winders in the corner X968-1052 (enter from the south, turn east),
+    # straight R3..R13 (t=25); plan cut after R8, upper part / landing / flight B dashed
+    wx0, wx1 = WINDER_X
+    b2_south = COLUMNS["B2"][1]
+    line(fl, (wx0, CENTER[0]), (wx1, CENTER[0]), "A-STAIR")                 # R1 (first riser)
+    line(fl, (wx0, b2_south), (wx1, CENTER[1]), "A-STAIR")                 # R2 (winder)
+    line(fl, (wx0, CENTER[0]), (wx0, b2_south), "A-STAIR")                 # open west edge on axis X968
+    stair_flight(fl, FLIGHT_A, BAND1, "A-STAIR", upto=FLIGHT_A[5])
+    break_line(fl, FLIGHT_A[5] + 12, BAND1)
+    rect(fl, wx1, CENTER[0], 1225 - 7.5, CENTER[1], "A-STAIR")             # handrail / stringer
     stair_flight(fl, FLIGHT_B, BAND2, "A-HIDDEN")
+    rect(fl, FLIGHT_B[0], BAND2[0], LANDING_X[0], BAND2[1], "A-HIDDEN")
     rect(fl, LANDING_X[0], BAND2[0], LANDING_X[1], BAND1[1], "A-HIDDEN")
-    arrow_path(fl, [(FLIGHT_A[0] + 12, 455), (FLIGHT_A[6] + 2, 455)], "上19", (FLIGHT_A[0] - 20, 455))
+    arrow_path(fl, [(1010, CENTER[0] + 5), (1010, 452), (FLIGHT_A[5] + 2, 452)], "上19", (1000, 375))
     # 2F balcony above the rear service yard
     rect(fl, 1309.5, 7.5, 1407.5, 286.5, "A-HIDDEN")
     # kitchen
-    rect(fl, 970, 7.5, 1048, 88, "A-FIXT")
-    line(fl, (970, 7.5), (1048, 88), "A-FIXT"); line(fl, (970, 88), (1048, 7.5), "A-FIXT")
-    text(fl, 1009, 100, "冰箱", h=9, layer="A-FIXT")
-    rect(fl, 1051, 7.5, 1294.5, 68, "A-FIXT")
-    rect(fl, 1063, 15, 1143, 60, "A-FIXT"); circle(fl, (1103, 38), 3, "A-FIXT")
+    rect(fl, 1000, 15, 1070, 88, "A-FIXT")
+    line(fl, (1000, 15), (1070, 88), "A-FIXT"); line(fl, (1000, 88), (1070, 15), "A-FIXT")
+    text(fl, 1035, 100, "冰箱", h=9, layer="A-FIXT")
+    rect(fl, 1073, 7.5, 1294.5, 68, "A-FIXT")
+    rect(fl, 1085, 15, 1165, 60, "A-FIXT"); circle(fl, (1125, 38), 3, "A-FIXT")
     rect(fl, 1198, 14, 1272, 62, "A-FIXT")
     circle(fl, (1216, 38), 10, "A-FIXT"); circle(fl, (1254, 38), 10, "A-FIXT")
     # toilet
@@ -363,6 +371,18 @@ draw_1f()
 draw_upper(F2)
 draw_upper(F3)
 
+# beams (dashed long edges) + per-plan disclaimers
+for F in FLOORS:
+    fl = F["name"]
+    for name, (x0, y0, x1, y1) in BEAMS.items():
+        if (x1 - x0) >= (y1 - y0):
+            segs = [((x0, y0), (x1, y0)), ((x0, y1), (x1, y1))]
+        else:
+            segs = [((x0, y0), (x0, y1)), ((x1, y0), (x1, y1))]
+        for a, b in segs:
+            line(fl, a, b, "S-BEAM", ltscale=2.5)
+    text(fl, 750, -185, "※ 柱：依圖面比例繪製，非實際尺寸　　梁（虛線）：30x60", h=14, layer="A-TITLE")
+
 # column labels
 for F in FLOORS:
     for name, (x0, y0, x1, y1) in COLUMNS.items():
@@ -377,15 +397,16 @@ for F in FLOORS:
     line(fl, (380, -158), (1120, -158), "A-TITLE")
 
 NOTES = (
-    "B7戶 平面圖 rev.3（依原圖照片判讀重繪，非原始CAD）\\P"
+    "B7戶 平面圖 rev.4（依原圖照片判讀重繪，非原始CAD）\\P"
     "1. 單位：cm。尺寸鍊均為牆中心線（依原圖）；原圖無標註者依圖面比例量取。\\P"
     "2. 外牆、分戶牆、隔間牆、女兒牆厚度均為15。\\P"
     "3. 北側外牆於X=968處退縮25：X968以西中心線Y=534，以東中心線Y=509（即右側尺寸鍊25/215/294）。\\P"
     "4. 西側外牆：1F中心線X=460（149=311→460），2F/3F中心線X=441（130=311→441），二三樓外牆較一樓外推19。\\P"
     "5. 高程：GL±0、1FL+30、2FL+390、3FL+710、RFL+1030；1F層高360、2F/3F層高320；女兒牆頂約+1170。\\P"
-    "6. 樓梯：1F→2F 19級@18.95=360；2F→3F 17級@18.82=320；踏面25（依圖面比例）；梯寬約92。\\P"
-    "7. 結構柱依照片比例量取（推估）：A1/A2、B1 60x30；B2 40x60；C1/C2 60x35；C3 30x35。A、C柱以柱中心線X=460/1392定位。\\P"
-    "8. 門窗寬度依圖面比例量取，請以門窗表核對。"
+    "6. 樓梯：1F→2F 19級@18.95=360（1F起步2階扇形踏步，自X=968轉向東）；2F→3F 17級@18.82=320；踏面25；梯寬約92。\\P"
+    "7. 柱：依圖面比例繪製，非實際尺寸（A、B、C柱以柱中心線X=460/968/1392定位），請依結構圖修正。\\P"
+    "8. 梁（虛線，S-BEAM圖層）：30x60。\\P"
+    "9. 門窗寬度依圖面比例量取，請以門窗表核對。"
 )
 mt = msp.add_mtext(NOTES, dxfattribs={"layer": "A-TITLE", "style": "CHT", "char_height": 14})
 mt.set_location((OFFSETS["1F"], -230))

@@ -1,4 +1,4 @@
-"""B7 unit geometry (cm).  rev.3 (columns added)
+"""B7 unit geometry (cm).  rev.4 (columns by scale, beams 30x60, 1F winders)
 X: from west property line (east = +).  Y: from B6/B7 party-wall centreline (north = +).
 All dimension-chain values are WALL CENTRELINES; every wall is 15 cm (h = 7.5 each side).
 North wall: CL Y=534 west of axis X968, CL Y=509 east of it (25 cm step, per photos).
@@ -51,11 +51,23 @@ def on_h(y, a, b):   # opening rect in a horizontal wall on CL y
 COLUMNS = {
     "A1": (430, -15, 490, 15),          # 60x30, on party wall
     "A2": (430, 511.5, 490, 541.5),     # 60x30, flush with north face
-    "B1": (908, -15, 968, 15),          # 60x30, on party wall
-    "B2": (935.5, 481.5, 975.5, 541.5), # 40x60, at the 25 cm north-wall step
+    "B1": (938, -15, 998, 15),          # 60x30, on party wall, centred on axis X968
+    "B2": (948, 481.5, 988, 541.5),     # 40x60, at the 25 cm north-wall step, centred on X968
     "C1": (1362, -17.5, 1422, 17.5),    # 60x35, on party wall
     "C2": (1362, 481.5, 1422, 516.5),   # 60x35, flush with east-part north face
     "C3": (1392, 276.5, 1422, 311.5),   # 30x35, end of partition Y294
+}
+# Beams 30x60 (user-confirmed size); plan rects, top flush with the slab above.
+BEAM_SIZE = (30, 60)
+BEAMS = {
+    "N1": (490, 511.5, 948, 541.5),    # north, A2-B2
+    "N2": (988, 486.5, 1362, 516.5),   # north (stepped part), B2-C2
+    "S1": (490, -15, 938, 15),         # party wall, A1-B1
+    "S2": (998, -15, 1362, 15),        # party wall, B1-C1
+    "W":  (430, 15, 460, 511.5),       # west, A1-A2
+    "E":  (1377, 17.5, 1407, 481.5),   # east, C1-C2
+    "B":  (953, 15, 983, 481.5),       # axis X968, B1-B2
+    "M":  (983, 279, 1377, 309),       # along partition Y294, B-C
 }
 # 30 cm wing walls / beams from the column A line out to the balcony face X311 (the "34" on 1F)
 WINGS = [W(311 - H, 511.5, 430, 541.5), W(311 - H, -15, 430, 15)]
@@ -133,7 +145,10 @@ BAND1 = (409.5, N_E - H)      # north flight
 CENTER = (394.5, 409.5)       # 15 cm centre wall
 BAND2 = (294 + H, 394.5)      # south flight
 LANDING_X = (1302, 1392 - H)
-FLIGHT_A = [1002 + TREAD * i for i in range(13)]   # 1F -> landing, band1, 13 risers
+# 1F flight A (13 risers): R1-R2 are winders in the corner X968-1052 (start from the south,
+# turning east), R3-R13 straight at 25 cm up to the landing edge X1302.
+WINDER_X = (968.0, 1052.0)
+FLIGHT_A = [1052 + TREAD * i for i in range(11)]   # R3..R13
 FLIGHT_B = [1177 + TREAD * i for i in range(6)]    # landing -> 2F, band2, 6 risers
 FLIGHT_C = [1102 + TREAD * i for i in range(9)]    # 2F -> landing, band1, 9 risers
 FLIGHT_D = [1127 + TREAD * i for i in range(8)]    # landing -> 3F, band2, 8 risers
