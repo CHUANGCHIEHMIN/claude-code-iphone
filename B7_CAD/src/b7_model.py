@@ -67,7 +67,7 @@ BEAMS = {
     "W":  (430, 15, 460, 511.5),       # west, A1-A2
     "E":  (1377, 17.5, 1407, 481.5),   # east, C1-C2
     "B":  (953, 15, 983, 481.5),       # axis X968, B1-B2
-    "M":  (983, 279, 1377, 309),       # along partition Y294, B-C
+    "M":  (983, 271.5, 1377, 301.5),   # along partition Y294 (north face flush), B-C
 }
 # 30 cm wing walls / beams from the column A line out to the balcony face X311 (the "34" on 1F)
 WINGS = [W(311 - H, 511.5, 430, 541.5), W(311 - H, -15, 430, 15)]
