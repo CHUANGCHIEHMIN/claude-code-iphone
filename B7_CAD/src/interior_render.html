@@ -1,0 +1,262 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#fff}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+
+const Q = new URLSearchParams(location.search);
+const W = +(Q.get('w') || 1920), H = +(Q.get('h') || 1080);
+const r = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+r.setSize(W, H); r.setPixelRatio(1); document.body.appendChild(r.domElement);
+r.outputColorSpace = THREE.SRGBColorSpace;
+r.toneMapping = THREE.ACESFilmicToneMapping; r.toneMappingExposure = +(Q.get('exp') || 1.0);
+r.shadowMap.enabled = true; r.shadowMap.type = THREE.PCFSoftShadowMap;
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0xf2f4f6);
+const pm = new THREE.PMREMGenerator(r);
+scene.environment = pm.fromScene(new RoomEnvironment(r), 0.04).texture;
+
+// model cm (X east, Y north, Z up)  ->  three m (x, y up, z = -Y)
+const V = (X, Y, Z) => new THREE.Vector3(X / 100, Z / 100, -Y / 100);
+const F = 30;   // 1F finished floor level (cm)
+const ENV = +(Q.get('env') || 0.35);
+
+// ---------------------------------------------------------------- procedural textures
+function cnv(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return [c, c.getContext('2d')]; }
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+function grain(g, x, y, w, h, base, dark, lines, amp) {
+  g.fillStyle = base; g.fillRect(x, y, w, h);
+  for (let i = 0; i < lines; i++) {
+    const yy = y + rnd() * h, a = 0.04 + rnd() * 0.10, ph = rnd() * 6.28, fr = 0.002 + rnd() * 0.006;
+    g.strokeStyle = `rgba(${dark},${a})`; g.lineWidth = 0.6 + rnd() * 1.6; g.beginPath();
+    for (let xx = x; xx <= x + w; xx += 6) { const yv = yy + Math.sin(xx * fr + ph) * amp; xx === x ? g.moveTo(xx, yv) : g.lineTo(xx, yv); }
+    g.stroke();
+  }
+}
+function floorTex() {            // light oak planks, 2.4 m x 2.4 m tile, planks run along X
+  const [c, g] = cnv(2048, 2048); const ppm = 2048 / 2.4, pw = 0.19 * ppm;
+  for (let row = 0; row * pw < 2048; row++) {
+    let x = -rnd() * 1.2 * ppm;
+    while (x < 2048) {
+      const len = (0.9 + rnd() * 0.9) * ppm, v = (rnd() - 0.5) * 18;
+      const base = `rgb(${222 + v},${203 + v},${172 + v * 0.8})`;
+      grain(g, x, row * pw, len, pw, base, '120,85,45', 26, 3);
+      g.strokeStyle = 'rgba(110,80,50,0.35)'; g.lineWidth = 1.5; g.strokeRect(x, row * pw, len, pw);
+      x += len;
+    }
+  }
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace;
+  t.anisotropy = 8; t.repeat.set(1 / 2.4, 1 / 2.4); return t;
+}
+function slabTex(base, dark, lines) {   // single wood slab
+  const [c, g] = cnv(1024, 512); grain(g, 0, 0, 1024, 512, base, dark, lines, 10);
+  for (let k = 0; k < 3; k++) {         // a few knots
+    const x = 150 + rnd() * 720, y = 80 + rnd() * 350;
+    for (let i = 0; i < 6; i++) { g.strokeStyle = `rgba(${dark},0.18)`; g.beginPath(); g.ellipse(x, y, 10 + i * 7, 4 + i * 3, 0, 0, 6.3); g.stroke(); }
+  }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+}
+function noiseTex(base, amp, size = 256) {
+  const [c, g] = cnv(size, size); const im = g.createImageData(size, size);
+  for (let i = 0; i < size * size; i++) { const n = (rnd() - 0.5) * amp; im.data[i * 4] = base[0] + n; im.data[i * 4 + 1] = base[1] + n; im.data[i * 4 + 2] = base[2] + n; im.data[i * 4 + 3] = 255; }
+  g.putImageData(im, 0, 0); const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace; return t;
+}
+function flutedNormal(ribs) {   // vertical reeded-glass ribs
+  const [c, g] = cnv(512, 4); const im = g.createImageData(512, 4);
+  for (let x = 0; x < 512; x++) {
+    const t = ((x * ribs / 512) % 1), nx = Math.sin((t - 0.5) * Math.PI) * 0.95, nz = Math.sqrt(1 - nx * nx);
+    for (let y = 0; y < 4; y++) { const i = (y * 512 + x) * 4; im.data[i] = (nx * 0.5 + 0.5) * 255; im.data[i + 1] = 128; im.data[i + 2] = (nz * 0.5 + 0.5) * 255; im.data[i + 3] = 255; }
+  }
+  g.putImageData(im, 0, 0); const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; return t;
+}
+
+// ---------------------------------------------------------------- materials
+const M = {
+  plaster: new THREE.MeshStandardMaterial({color: 0xf4f1eb, roughness: 0.92, envMapIntensity: ENV}),
+  ceiling: new THREE.MeshStandardMaterial({color: 0xf7f5f1, roughness: 0.95, envMapIntensity: ENV}),
+  floor: new THREE.MeshStandardMaterial({map: floorTex(), roughness: 0.55, envMapIntensity: ENV}),
+  oakLight: new THREE.MeshStandardMaterial({map: slabTex('rgb(226,206,174)', '120,85,45', 160), roughness: 0.6, envMapIntensity: ENV}),
+  log: new THREE.MeshStandardMaterial({map: slabTex('rgb(202,160,116)', '98,62,30', 230), roughness: 0.5, envMapIntensity: ENV}),
+  leather: new THREE.MeshPhysicalMaterial({color: 0xeadfcd, roughness: 0.45, clearcoat: 0.18, clearcoatRoughness: 0.45, envMapIntensity: ENV}),
+  boucle: new THREE.MeshStandardMaterial({map: noiseTex([236, 229, 216], 26), roughness: 1, envMapIntensity: ENV}),
+  linen: new THREE.MeshStandardMaterial({map: noiseTex([228, 220, 205], 18), roughness: 1, envMapIntensity: ENV}),
+  rug: new THREE.MeshStandardMaterial({map: noiseTex([233, 226, 213], 30, 512), roughness: 1, envMapIntensity: ENV}),
+  cabinet: new THREE.MeshStandardMaterial({color: 0xf2efe9, roughness: 0.55, envMapIntensity: ENV}),
+  stone: new THREE.MeshStandardMaterial({color: 0xf5f3ef, roughness: 0.22, envMapIntensity: ENV}),
+  blackGlass: new THREE.MeshStandardMaterial({color: 0x141414, roughness: 0.38, metalness: 0.0, envMapIntensity: 0.4}),
+  steel: new THREE.MeshStandardMaterial({color: 0xcfcfcf, roughness: 0.3, metalness: 0.9, envMapIntensity: 1}),
+  champagne: new THREE.MeshStandardMaterial({color: 0xd8cfc0, roughness: 0.35, metalness: 0.5, envMapIntensity: 1}),
+  sinkDark: new THREE.MeshStandardMaterial({color: 0x9a9a98, roughness: 0.4, metalness: 0.6}),
+  ceramic: new THREE.MeshStandardMaterial({color: 0xffffff, roughness: 0.2, envMapIntensity: ENV}),
+  glassClear: new THREE.MeshStandardMaterial({color: 0xdfeaf0, roughness: 0.05, transparent: true, opacity: 0.12, depthWrite: false}),
+  fluted: new THREE.MeshPhysicalMaterial({color: 0xf6f8f6, roughness: 0.22, transmission: 1, thickness: 0.02, ior: 1.5,
+                                         normalMap: flutedNormal(16), normalScale: new THREE.Vector2(3, 3), envMapIntensity: 0.8}),
+  lampGlow: new THREE.MeshStandardMaterial({color: 0xfff3dd, emissive: 0xffe2b0, emissiveIntensity: 2.2}),
+  downlight: new THREE.MeshStandardMaterial({color: 0xffffff, emissive: 0xfff1d6, emissiveIntensity: 3}),
+  leaf: new THREE.MeshStandardMaterial({color: 0x6f8a5a, roughness: 0.8, flatShading: true}),
+  pot: new THREE.MeshStandardMaterial({color: 0xe9e4dc, roughness: 0.7}),
+  wire: new THREE.MeshStandardMaterial({color: 0x2a2a2a, roughness: 0.5}),
+};
+
+// soft contact shadows (blurred rounded rectangles on the floor)
+const blobTex = (() => { const [c, g] = cnv(256, 256); g.filter = 'blur(22px)'; g.fillStyle = '#000';
+  g.beginPath(); g.roundRect(56, 56, 144, 144, 30); g.fill(); const t = new THREE.CanvasTexture(c); return t; })();
+function blob(x0, y0, x1, y1, op, z = 0.4) {
+  const mx = (x1 - x0) * 0.28 + 6, my = (y1 - y0) * 0.28 + 6;
+  const w = (x1 - x0 + 2 * mx) / 100, d = (y1 - y0 + 2 * my) / 100;
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshBasicMaterial({map: blobTex, transparent: true, opacity: op, depthWrite: false, color: 0x5a4a38}));
+  m.rotation.x = -Math.PI / 2; m.position.copy(V((x0 + x1) / 2, (y0 + y1) / 2, F + z)); m.renderOrder = 1; scene.add(m);
+}
+function addMesh(geo, mat, pos, {cast = true, recv = true} = {}) {
+  const m = new THREE.Mesh(geo, mat); m.position.copy(pos); m.castShadow = cast; m.receiveShadow = recv; scene.add(m); return m;
+}
+function box(x0, y0, x1, y1, z0, z1, mat, rad = 0, opt) {
+  const w = (x1 - x0) / 100, h = (z1 - z0) / 100, d = (y1 - y0) / 100;
+  const geo = rad > 0 ? new RoundedBoxGeometry(w, h, d, 4, Math.min(rad / 100, w / 2.01, h / 2.01, d / 2.01)) : new THREE.BoxGeometry(w, h, d);
+  return addMesh(geo, mat, V((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2), opt);
+}
+function cyl(x, y, rTop, rBot, z0, z1, mat, seg = 32, opt) {
+  return addMesh(new THREE.CylinderGeometry(rTop / 100, rBot / 100, (z1 - z0) / 100, seg), mat, V(x, y, (z0 + z1) / 2), opt);
+}
+function sphere(x, y, z, rad, mat, opt) { return addMesh(new THREE.SphereGeometry(rad / 100, 32, 16), mat, V(x, y, z), opt); }
+
+// ---------------------------------------------------------------- building shell from the B7 model
+new GLTFLoader().load('B7_model.glb', gltf => {
+  gltf.scene.traverse(o => {
+    if (!o.isMesh) return;
+    if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals();
+    const n = (o.name + ' ' + (o.parent ? o.parent.name : ''));
+    if (/1F_counter/.test(n)) { o.visible = false; return; }
+    if (/_glass/.test(n)) { o.material = M.glassClear; o.castShadow = false; return; }
+    if (/_stair/.test(n)) o.material = M.oakLight;
+    else if (/_door/.test(n)) o.material = M.oakLight;
+    else if (/_fixture/.test(n)) o.material = M.ceramic;
+    else if (/GL_/.test(n)) o.material = new THREE.MeshStandardMaterial({color: 0xc9cbc4, roughness: 1});
+    else if (/_slab|_beam/.test(n)) o.material = M.ceiling;
+    else o.material = M.plaster;
+    o.castShadow = true; o.receiveShadow = true;
+  });
+  scene.add(gltf.scene);
+  build();
+});
+
+function build() {
+  // ---------------- light-oak floor over the 1F living / dining / kitchen
+  const sh = new THREE.Shape([[467.5, 7.5], [1294.5, 7.5], [1294.5, 286.5], [1217.5, 286.5], [1217.5, 501.5],
+                              [975.5, 501.5], [975.5, 526.5], [467.5, 526.5]].map(([x, y]) => new THREE.Vector2(x / 100, y / 100)));
+  const fg = new THREE.ShapeGeometry(sh); fg.rotateX(-Math.PI / 2);
+  const fl = new THREE.Mesh(fg, M.floor); fl.position.y = F / 100 + 0.002; fl.receiveShadow = true; scene.add(fl);
+  // skirting
+  box(467.5, 7.5, 1294.5, 8.7, F, F + 8, M.plaster); box(467.5, 525.3, 960.5, 526.5, F, F + 8, M.plaster);
+
+  // ---------------- entry: slim reeded-glass screen (replaces the 34 cm cabinet)
+  const sx0 = 584, sx1 = 596, sy0 = 7.5, sy1 = 152, top = 375;
+  box(sx0, sy0, sx1, sy1, F, F + 12, M.oakLight);                       // plinth
+  box(sx0, sy1 - 5, sx1, sy1, F + 12, top, M.oakLight);                // end stile
+  box(sx0, sy0, sx1, sy0 + 4, F + 12, top, M.oakLight);                // wall stile
+  box(sx0, sy0, sx1, sy1, top - 6, top, M.oakLight);                   // head
+  const gl = box(sx0 + 4, sy0 + 4, sx1 - 4, sy1 - 5, F + 12, top - 6, M.fluted, 0, {cast: false});
+  M.fluted.normalMap.repeat.set((sy1 - sy0) / 40, 1);
+
+  // ---------------- living: TV wall, light leather sofa, armchair, coffee table, rug
+  box(540, 488, 920, 526.5, F + 18, F + 52, M.oakLight);                 // floating TV console
+  box(648, 521.5, 812, 525.5, F + 108, F + 200, M.blackGlass);          // 75" TV
+  box(610, 345, 880, 492, F, F + 1.2, M.rug, 0, {cast: false});
+  const sx = 576, sy = 250;                                             // sofa (faces north)
+  box(sx + 6, sy + 6, sx + 229, sy + 82, F + 4, F + 14, M.wire, 1);     // recessed plinth
+  box(sx, sy, sx + 235, sy + 88, F + 14, F + 40, M.leather, 5);         // base
+  for (let i = 0; i < 3; i++) {
+    const a = sx + 19 + i * 65.7, b = a + 65.7;
+    box(a + 0.5, sy + 24, b - 0.5, sy + 88, F + 40, F + 52, M.leather, 5);          // seat cushion
+    box(a + 0.5, sy + 2, b - 0.5, sy + 26, F + 38, F + 82, M.leather, 7);           // back cushion
+  }
+  box(sx, sy, sx + 19, sy + 88, F + 14, F + 62, M.leather, 6);          // arms
+  box(sx + 216, sy, sx + 235, sy + 88, F + 14, F + 62, M.leather, 6);
+  box(sx + 30, sy + 50, sx + 70, sy + 62, F + 50, F + 86, M.linen, 5);  // throw cushion
+  // armchair (faces west)
+  box(822, 356, 898, 430, F + 14, F + 40, M.boucle, 6);
+  box(830, 364, 880, 422, F + 40, F + 50, M.boucle, 6);
+  box(878, 356, 898, 430, F + 38, F + 80, M.boucle, 8);
+  box(822, 356, 898, 368, F + 14, F + 60, M.boucle, 5); box(822, 418, 898, 430, F + 14, F + 60, M.boucle, 5);
+  // coffee table (light oak) + side table
+  box(668, 375, 748, 455, F + 34, F + 38, M.oakLight, 1);
+  box(672, 379, 744, 451, F + 6, F + 34, M.cabinet, 1);
+  cyl(866, 300, 22, 22, F + 50, F + 53, M.oakLight); cyl(866, 300, 2, 2, F, F + 50, M.wire);
+  cyl(700, 418, 7, 5, F + 38, F + 52, M.pot);                         // vase
+  // plant by the TV wall
+  cyl(505, 490, 20, 16, F, F + 45, M.pot);
+  cyl(505, 490, 1.5, 1.5, F + 45, F + 150, M.wire);
+  [[505, 490, 175, 30], [490, 478, 150, 24], [520, 500, 135, 22], [500, 505, 195, 20], [515, 476, 165, 18]].forEach(([x, y, z, rr]) => {
+    const m = addMesh(new THREE.IcosahedronGeometry(rr / 100, 1), M.leaf, V(x, y, F + z)); m.rotation.set(rnd(), rnd(), rnd());
+  });
+
+  // ---------------- dining: solid-wood table, bench on the north side, chairs on the south side
+  box(660, 70, 900, 160, F + 70, F + 75, M.log, 0.5);                   // 240 x 90 solid-wood top
+  box(676, 82, 682, 148, F, F + 70, M.log); box(878, 82, 884, 148, F, F + 70, M.log);
+  box(682, 112, 878, 118, F + 58, F + 64, M.log);                       // stretcher
+  box(690, 166, 870, 204, F + 38, F + 42, M.log, 0.5);                  // bench (north side)
+  box(700, 170, 860, 200, F + 42, F + 47, M.linen, 2);
+  box(700, 168, 706, 202, F, F + 38, M.log); box(854, 168, 860, 202, F, F + 38, M.log);
+  [715, 780, 845].forEach(cx => {                                       // chairs (south side, facing north)
+    box(cx - 22, 24, cx + 22, 66, F + 42, F + 47, M.linen, 2);
+    box(cx - 22, 22, cx + 22, 26, F + 47, F + 86, M.oakLight, 1);
+    [[cx - 20, 26], [cx + 18, 26], [cx - 20, 62], [cx + 18, 62]].forEach(([x, y]) => box(x, y, x + 2.5, y + 2.5, F, F + 42, M.oakLight));
+  });
+  cyl(780, 115, 9, 6, F + 75, F + 95, M.pot);                          // centrepiece
+  // linear pendant over the table
+  box(705, 112, 855, 118, F + 182, F + 186, M.champagne);
+  box(708, 113, 852, 117, F + 181.5, F + 182, M.lampGlow, 0, {cast: false});
+  [712, 848].forEach(x => cyl(x, 115, 0.2, 0.2, F + 186, 375, M.wire, 6));
+
+  // ---------------- kitchen
+  box(976, 158, 1157, 239, F, F + 86, M.cabinet, 1);                    // island
+  box(974, 156, 1159, 241, F + 86, F + 90, M.stone, 0.5);
+  box(1045, 182, 1095, 220, F + 89, F + 90.2, M.sinkDark, 0, {cast: false});
+  cyl(1070, 226, 1.2, 1.2, F + 90, F + 122, M.steel, 12); box(1068, 212, 1072, 227, F + 118, F + 122, M.steel);
+  [1030, 1100].forEach(x => {                                           // stools (north side)
+    cyl(x, 262, 19, 19, F + 64, F + 69, M.oakLight); cyl(x, 262, 3, 15, F, F + 64, M.oakLight, 24);
+  });
+  [1035, 1100].forEach(x => { sphere(x, 198, F + 205, 12, M.lampGlow, {cast: false}); cyl(x, 198, 0.2, 0.2, F + 217, 375, M.wire, 6); });
+  box(976, 7.5, 1061, 82, F, F + 186, M.champagne, 1);                  // fridge W85 D75
+  box(1063, 7.5, 1134, 70, F, F + 228, M.cabinet, 0.5);                 // tall pantry / oven
+  box(1078, 70, 1119, 70.6, F + 105, F + 160, M.blackGlass, 0, {cast: false});
+  box(1134, 7.5, 1294.5, 70, F, F + 86, M.cabinet, 0.5);                // back counter
+  box(1134, 7.5, 1294.5, 72, F + 86, F + 90, M.stone, 0.5);
+  box(1150, 20, 1215, 58, F + 89, F + 90.2, M.sinkDark, 0, {cast: false});
+  box(1134, 7.5, 1294.5, 42, F + 150, F + 228, M.cabinet, 0.5);        // wall cabinets
+  box(1234, 72, 1294.5, 190, F, F + 86, M.cabinet, 0.5);                // side counter under W4
+  box(1232, 72, 1294.5, 192, F + 86, F + 90, M.stone, 0.5);
+  box(1242, 112, 1288, 172, F + 90, F + 90.6, M.blackGlass, 0, {cast: false});
+
+  // ---------------- contact shadows
+  [[576, 250, 811, 338, 0.55], [822, 356, 898, 430, 0.45], [540, 488, 920, 526.5, 0.25], [668, 375, 748, 455, 0.4],
+   [976, 158, 1157, 239, 0.55], [690, 166, 870, 204, 0.35], [665, 75, 895, 155, 0.3], [976, 7.5, 1294.5, 72, 0.35],
+   [1234, 72, 1294.5, 190, 0.35], [584, 7.5, 596, 152, 0.3], [1012, 244, 1048, 280, 0.3], [1082, 244, 1118, 280, 0.3]]
+    .forEach(([a, b, c, d, o]) => blob(a, b, c, d, o));
+  [715, 780, 845].forEach(cx => blob(cx - 22, 22, cx + 22, 66, 0.3));
+
+  // ---------------- ceiling downlights (emissive)
+  [[560, 330], [700, 330], [840, 330], [560, 440], [700, 440], [840, 440], [1000, 300], [1180, 120], [1180, 230], [1080, 450]]
+    .forEach(([x, y]) => cyl(x, y, 4.5, 4.5, 374.5, 374.9, M.downlight, 24, {cast: false, recv: false}));
+
+  // ---------------- lighting
+  const sun = new THREE.DirectionalLight(0xffecd2, +(Q.get('sun') || 3.2));
+  sun.position.copy(V(-250, 340, 560)); sun.target.position.copy(V(820, 230, 30)); scene.add(sun.target);
+  sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.02;
+  Object.assign(sun.shadow.camera, {left: -9, right: 9, top: 9, bottom: -9, near: 0.5, far: 30}); scene.add(sun);
+  scene.add(new THREE.HemisphereLight(0xf2f5f8, 0xd9ccb8, +(Q.get('hemi') || 0.9)));
+  const pts = [[780, 115, F + 172, 6], [1035, 198, F + 188, 3], [1100, 198, F + 188, 3], [640, 380, 320, 6], [820, 380, 320, 6],
+               [1180, 160, 320, 5], [1080, 450, 320, 4], [520, 120, 320, 3]];
+  const k = +(Q.get('pt') || 1.0);
+  pts.forEach(([x, y, z, i]) => { const p = new THREE.PointLight(0xffd8a6, i * k, 0, 2); p.position.copy(V(x, y, z)); scene.add(p); });
+
+  // ---------------- camera: standing in the front door (D1), eye 158 cm, level (two-point perspective)
+  const cam = new THREE.PerspectiveCamera(+(Q.get('fov') || 56), W / H, 0.05, 200);
+  const cx = +(Q.get('cx') || 478), cy = +(Q.get('cy') || 118);
+  const tx = +(Q.get('tx') || 1200), ty = +(Q.get('ty') || 300);
+  cam.position.copy(V(cx, cy, F + 158)); cam.lookAt(V(tx, ty, F + 158));
+  r.render(scene, cam); r.render(scene, cam);
+  document.title = 'done';
+}
+</script></body></html>
