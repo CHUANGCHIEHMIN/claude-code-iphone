@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {GLTFExporter} from 'three/addons/exporters/GLTFExporter.js';
 
 const Q = new URLSearchParams(location.search);
 const W = +(Q.get('w') || 1920), H = +(Q.get('h') || 1080);
@@ -106,8 +107,9 @@ function blob(x0, y0, x1, y1, op, z = 0.4) {
   const mx = (x1 - x0) * 0.28 + 6, my = (y1 - y0) * 0.28 + 6;
   const w = (x1 - x0 + 2 * mx) / 100, d = (y1 - y0 + 2 * my) / 100;
   const m = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshBasicMaterial({map: blobTex, transparent: true, opacity: op, depthWrite: false, color: 0x5a4a38}));
-  m.rotation.x = -Math.PI / 2; m.position.copy(V((x0 + x1) / 2, (y0 + y1) / 2, F + z)); m.renderOrder = 1; scene.add(m);
+  m.rotation.x = -Math.PI / 2; m.position.copy(V((x0 + x1) / 2, (y0 + y1) / 2, F + z)); m.renderOrder = 1; m.name = 'blob'; scene.add(m);
 }
+Object.entries(M).forEach(([k, m]) => m.name = k);
 function addMesh(geo, mat, pos, {cast = true, recv = true} = {}) {
   const m = new THREE.Mesh(geo, mat); m.position.copy(pos); m.castShadow = cast; m.receiveShadow = recv; scene.add(m); return m;
 }
@@ -129,6 +131,7 @@ new GLTFLoader().load('B7_model.glb', gltf => {
     const n = (o.name + ' ' + (o.parent ? o.parent.name : ''));
     if (/1F_counter/.test(n)) { o.visible = false; return; }
     if (/_glass/.test(n)) { o.material = M.glassClear; o.castShadow = false; return; }
+    o.userData.shell = true;
     if (/_stair/.test(n)) o.material = M.oakLight;
     else if (/_door/.test(n)) o.material = M.oakLight;
     else if (/_fixture/.test(n)) o.material = M.ceramic;
@@ -257,6 +260,12 @@ function build() {
   const tx = +(Q.get('tx') || 1200), ty = +(Q.get('ty') || 300);
   cam.position.copy(V(cx, cy, F + 158)); cam.lookAt(V(tx, ty, F + 158));
   r.render(scene, cam); r.render(scene, cam);
-  document.title = 'done';
+  if (Q.get('export')) {
+    scene.traverse(o => { if (o.name === 'blob') o.visible = false; });
+    new GLTFExporter().parse(scene, buf => {
+      const u8 = new Uint8Array(buf); let s = ''; for (let i = 0; i < u8.length; i += 32768) s += String.fromCharCode.apply(null, u8.subarray(i, i + 32768));
+      window.__glb = btoa(s); document.title = 'exported';
+    }, e => { document.title = 'ERR ' + e; }, {binary: true, onlyVisible: true, maxTextureSize: 2048});
+  } else document.title = 'done';
 }
 </script></body></html>
