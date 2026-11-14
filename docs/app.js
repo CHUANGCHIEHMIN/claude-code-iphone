@@ -221,7 +221,8 @@ function regimeCard(r) {
   const cls = r.state === "強勢" ? "ok" : r.state === "弱勢" ? "bad" : "plain";
   return `<div class="card small"><span class="tag ${cls}">大盤${esc(r.state)}</span>
     加權指數 <b class="num">${num(r.taiex, 0)}</b>・60 日均線 <span class="num">${num(r.ma, 0)}</span>（${esc(r.date)}）。
-    ${r.max_entries ? `模擬持股每天最多新增 <b>${esc(r.max_entries)}</b> 檔。` : "模擬持股<b>暫停新進場</b>，已持有的照出場規則處理。"}</div>`;
+    ${r.max_entries ? `模擬持股每天最多新增 <b>${esc(r.max_entries)}</b> 檔。` : "模擬持股<b>暫停新進場</b>，已持有的照出場規則處理。"}
+    ${r.crash ? `<div><span class="tag ok">大跌買點</span> ${esc(r.crash.date)} 收盤距 20 日高點 <b class="num">${num(r.crash.drawdown * 100, 1)}%</b>，不要求突破訊號，改買入選清單綜合分數最高的股票${r.crash.days_left ? `（還有 ${esc(r.crash.days_left)} 個交易日）` : "（今天是最後一天）"}。</div>` : ""}</div>`;
 }
 
 function orderList(pf) {
