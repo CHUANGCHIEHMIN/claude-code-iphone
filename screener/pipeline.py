@@ -476,7 +476,10 @@ def run(asof: date | None, out_dir: Path, skip_existing: bool = False,
     reg = signals.regime(taiex, latest.isoformat(), strategy)
     if reg["state"] == "未知":
         notes.append("加權指數歷史不足，大盤濾網暫不套用")
-    cands = sorted((s for s in picks if s["signal"] == signals.ENTER), key=lambda s: s["score"], reverse=True)
+    if reg.get("crash"):
+        notes.append(f"大跌買點：加權指數 {reg['crash']['date']} 收盤距 {strategy['market'].get('crash_lookback', 20)} 日高點 "
+                     f"{reg['crash']['drawdown'] * 100:.1f}%，模擬持股暫不要求突破訊號，買入選清單綜合分數前幾檔")
+    cands = signals.entry_candidates(picks, reg)
     cand_rows = [{"code": s["code"], "name": s["name"], "industry": s.get("industry"), "close": s["close"],
                   "atr": (s["tech"] or {}).get("atr")} for s in cands]
     quotes_by_day = [(d.isoformat(), {**tp_q, **tw_q}) for d, tw_q, tp_q in reversed(days)]
