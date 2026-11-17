@@ -20,6 +20,52 @@ def fit_width(text, h, avail, wmax=0.85, wmin=0.45):
 BANDS = None
 
 
+OBST_LAYERS = ('50_其他尺寸', '46_文字', '44_空間名稱', '26_樓梯、扶手、車道')
+OBST = None
+MASKED = [0]
+
+
+def collect_obstacles(msp):
+    from ezdxf import bbox as ezbbox
+    boxes = []
+    for e in msp:
+        if e.dxf.layer not in OBST_LAYERS:
+            continue
+        if e.dxftype() == 'LINE':
+            a, b = e.dxf.start, e.dxf.end
+            boxes.append((min(a.x, b.x) - 1, min(a.y, b.y) - 1, max(a.x, b.x) + 1, max(a.y, b.y) + 1))
+        elif e.dxftype() in ('TEXT', 'MTEXT'):
+            ext = ezbbox.extents([e], fast=True)
+            if ext.has_data:
+                boxes.append((ext.extmin.x, ext.extmin.y, ext.extmax.x, ext.extmax.y))
+    return np.array(boxes) if boxes else np.zeros((0, 4))
+
+
+def text_box(text, h, wf, r, ins, align):
+    w = h * wf * sum(1.0 if ord(ch) > 0x2E80 else 0.58 for ch in text)
+    x, y = ins
+    if r % 180 == 0:
+        x0 = x if align == 'L' else x - w / 2
+        return (x0, y - h / 2, x0 + w, y + h / 2)
+    return (x - h / 2, y - w / 2, x + h / 2, y + w / 2)
+
+
+def put_text(msp, text, h, wf, r, ins, align, layer):
+    """TEXT normally; MTEXT with a background mask where it would sit on base dimensions / base text."""
+    bx = text_box(text, h, wf, r, ins, align)
+    hit = OBST is not None and len(OBST) and np.any((OBST[:, 0] < bx[2]) & (OBST[:, 2] > bx[0]) & (OBST[:, 1] < bx[3]) & (OBST[:, 3] > bx[1]))
+    if hit:
+        m = msp.add_mtext('\\W%.3f;%s' % (wf, text), dxfattribs={'layer': layer, 'style': 'CHT', 'char_height': h,
+                                                                  'rotation': r, 'attachment_point': 4 if align == 'L' else 5})
+        m.dxf.insert = ins
+        m.set_bg_color('canvas', scale=1.2)
+        MASKED[0] += 1
+        return m
+    e = msp.add_text(text, height=h, rotation=r, dxfattribs={'layer': layer, 'style': 'CHT', 'width': wf})
+    e.set_placement(ins, align=TextEntityAlignment.MIDDLE_LEFT if align == 'L' else TextEntityAlignment.MIDDLE_CENTER)
+    return e
+
+
 def floor_of(reg, y):
     if BANDS:
         for fl, y0, y1 in BANDS:
@@ -59,6 +105,8 @@ def write(cfg, base_path, reg_path, data_path, out_path, legend_rows_extra=()):
         if lname not in doc.layers:
             doc.layers.add(lname, color=aci, linetype=lt)
     msp = doc.modelspace()
+    global OBST
+    OBST = collect_obstacles(msp); MASKED[0] = 0
     s_of = {fl: reg[fl]['T'][0] for fl in FLOORS}
     used = {}
     # ---- symbols
@@ -101,16 +149,14 @@ def write(cfg, base_path, reg_path, data_path, out_path, legend_rows_extra=()):
             for k, line in enumerate(lines):
                 yk = b[1] + lh * (k + 0.5)
                 hh = round(lh * s * 0.92 * TEXT_SCALE, 1)
-                e = msp.add_text(line, height=hh, dxfattribs={'layer': layer, 'style': 'CHT', 'width': fit_width(line, hh, (b[2] - b[0]) * s)})
-                e.set_placement(to_base(reg, fl, b[0], yk), align=TextEntityAlignment.MIDDLE_LEFT)
+                put_text(msp, line, hh, fit_width(line, hh, (b[2] - b[0]) * s), 0, to_base(reg, fl, b[0], yk), 'L', layer)
             continue
         avail = ((b[2] - b[0]) if r % 180 == 0 else (b[3] - b[1])) * s
         wf = fit_width(t['text'], h, avail) if len(t['text']) > 1 else 0.85
-        e = msp.add_text(t['text'], height=round(h, 1), rotation=r, dxfattribs={'layer': layer, 'style': 'CHT', 'width': wf})
         if r % 360 == 0 and len(t['text']) > 1:
-            e.set_placement(to_base(reg, fl, b[0], cy), align=TextEntityAlignment.MIDDLE_LEFT)
+            put_text(msp, t['text'], round(h, 1), wf, r, to_base(reg, fl, b[0], cy), 'L', layer)
         else:
-            e.set_placement(to_base(reg, fl, cx, cy), align=TextEntityAlignment.MIDDLE_CENTER)
+            put_text(msp, t['text'], round(h, 1), wf, r, to_base(reg, fl, cx, cy), 'C', layer)
     # ---- residual routes / leaders (floor by vertices inside a plan; else inherit from a touching assigned line)
     items = []
     for rsd in data['residual']:
@@ -160,6 +206,7 @@ def write(cfg, base_path, reg_path, data_path, out_path, legend_rows_extra=()):
     rows += list(legend_rows_extra)
     draw_table(msp, lay, rows, X0 + 120, Y1 - 200, cfg)
     doc.saveas(out_path)
+    print('masked texts', MASKED[0])
     return used
 
 
@@ -190,6 +237,8 @@ def draw_table(msp, lay, rows, x, ytop, cfg, rh=70, widths=(260, 560, 900, 140))
             cols = [name, note, str(n)]
         xx = x + widths[0]
         for w, c, align in zip(widths[1:], cols, ('L', 'L', 'C')):
+            if not str(c).strip():
+                xx += w; continue
             t = msp.add_text(c, height=22, dxfattribs={'layer': lay, 'style': 'CHT', 'width': 0.9})
             if align == 'L':
                 t.set_placement((xx + 15, cy), align=TextEntityAlignment.MIDDLE_LEFT)

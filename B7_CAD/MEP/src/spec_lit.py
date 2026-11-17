@@ -45,4 +45,46 @@ def templates(page):
 
 
 def post(page, insts):
-    return spec_rec.post(page, insts, CKT_DIGITS, M)
+    insts = spec_rec.post(page, insts, CKT_DIGITS, M)
+    return wire_ticks(page, insts)
+
+
+def wire_ticks(page, insts):
+    """group magenta tick strokes crossing a lighting wire -> L_WIRE{n} blocks (導線根數)."""
+    import math
+    import numpy as np
+    ctree = page.trees[C][0]
+    ticks = []
+    for p in page.paths:
+        if p['id'] in page.consumed or p['key'] != M or p['type'] != 'line' or not (3.0 <= p['len'] <= 9.5):
+            continue
+        a, b = p['P'][0], p['P'][-1]
+        mid = (a + b) / 2; d = (b - a) / np.hypot(*(b - a))
+        if not ctree.query_ball_point(mid, 1.3):
+            continue
+        ticks.append(dict(id=p['id'], mid=mid, d=d, len=p['len'], ang=math.degrees(math.atan2(d[1], d[0])) % 180))
+    n = len(ticks); parent = list(range(n))
+    def f(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]; i = parent[i]
+        return i
+    for i in range(n):
+        for j in range(i + 1, n):
+            ti, tj = ticks[i], ticks[j]
+            da = abs(ti['ang'] - tj['ang']); da = min(da, 180 - da)
+            disp = tj['mid'] - ti['mid']
+            if da < 8 and abs(ti['len'] - tj['len']) < 1.5 and np.hypot(*disp) < 3.2 and abs(np.dot(disp, ti['d'])) < 1.0:
+                parent[f(i)] = f(j)
+    groups = {}
+    for i in range(n):
+        groups.setdefault(f(i), []).append(ticks[i])
+    for g in groups.values():
+        if len(g) < 2:
+            continue
+        mid = np.mean([t['mid'] for t in g], axis=0); d = g[0]['d']
+        tick_paper = math.degrees(math.atan2(-d[1], d[0]))
+        for t in g:
+            page.consumed[t['id']] = 'wire'
+        insts.append(dict(name=f'L_WIRE{min(len(g), 6)}', kind='block', payload={}, rot=(tick_paper - 90) % 180, at=mid,
+                          cons=[t['id'] for t in g], score=(1, 1)))
+    return insts

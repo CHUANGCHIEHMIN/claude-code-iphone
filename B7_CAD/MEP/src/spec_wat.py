@@ -40,6 +40,7 @@ def templates(page):
         dict(name='P_HTR', region=region_of(page, [6581, 6582, 6583, 6584], 0.3), colors={C}, kind='block', rots=(0,)),
         dict(name='P_GV', region=region_of(page, [298, 299, 300, 301], 0.3), colors={Y}, kind='block', rots=(0, 90)),
         dict(name='P_WM', region=region_of(page, [291, 292], 0.3), colors={Y}, kind='block', rots=(0,)),
+        dict(name='P_MIX', region=region_of(page, [8178], 0.3), colors={C}, kind='block'),
         dict(name='P_OUT_C', region=region_of(page, [792], 0.3), colors={C}, kind='block', rots=(0,)),
         dict(name='P_OUT_H', region=region_of(page, [800], 0.3), colors={R}, kind='block', rots=(0,)),
     ]

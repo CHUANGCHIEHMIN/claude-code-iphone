@@ -70,5 +70,7 @@ def templates(page):
         dict(name='D_CO_O1', region=box(378, 3.0, 0.4), colors={O}, kind='block', rots=(0, 90), precision=0.7),
         dict(name='D_CO_O2', region=box(280, 0.4, 3.0), colors={O}, kind='block', rots=(0, 90), precision=0.7),
         dict(name='D_CO_Y', region=box(282, 0.4, 3.0), colors={Y}, kind='block', rots=(0, 90), precision=0.7),
+        dict(name='D_FIXDRAIN', region=region_of(page, [1107, 1108], 0.3), colors={R, Y}, kind='block'),
+        dict(name='D_TRAP', region=region_of(page, [246, 247, 248], 0.3), colors={Y}, kind='block'),
         dict(name='D_SPOUT', region=box(1112, 0.3, 0.3), colors={O}, kind='block', rots=(0,)),
     ]

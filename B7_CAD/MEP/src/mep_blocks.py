@@ -77,6 +77,11 @@ def build(doc):
     _c(b, 10); _fill(b, [(0, -10)] + [(10 * math.cos(math.radians(a)), 10 * math.sin(math.radians(a))) for a in range(-90, 91, 15)])
     b = define(doc, 'L_SW', '開關', 'S:單切 S3:三路 SF:排風機，多字為多連', '照明')
     _att(b, 'TYPE', 15, default='S')
+    for n in range(2, 7):
+        b = define(doc, f'L_WIRE{n}', f'導線根數({n}條)', '短劃數=導線根數', '照明')
+        for k in range(n):
+            x = (k - (n - 1) / 2) * 4.5
+            _l(b, (x, -7.5), (x, 7.5))
     # ---------------- 電信
     b = define(doc, 'T_TC', '電信出線口(TC)', '電話/網路', '電信')
     _c(b, 15); _t(b, 'TC', 11)
@@ -84,11 +89,15 @@ def build(doc):
     _c(b, 15); _t(b, 'TVC', 8.5)
     b = define(doc, 'T_BOX', '電信箱', '箱名依註記(如DD1B7)', '電信')
     _pl(b, [(-22.5, -5.5), (22.5, -5.5), (22.5, 5.5), (-22.5, 5.5)], close=True); _fill(b, [(-22.5, -5.5), (22.5, -5.5), (22.5, 5.5), (-22.5, 5.5)])
+    b = define(doc, 'T_RISER', '配管立管(上/下)', '管徑依昇位圖', '電信')
+    _c(b, 5)
     b = define(doc, 'T_NO', '出線口編號', '', '電信')
     _pl(b, [(-18, -18), (18, -18), (18, 18), (-18, 18)], close=True); _att(b, 'NO', 22, default='1')
     # ---------------- 給水
     b = define(doc, 'P_OUT', '給水栓/器具給水出口', '冷水(CW)藍、熱水(HW)紅', '給水')
     _c(b, 6.5); _l(b, (-6.5, 0), (-18, 0)); _l(b, (-13, -6), (-13, 6))
+    b = define(doc, 'P_MIX', '冷熱水混合龍頭', '淋浴/浴缸', '給水')
+    _pl(b, [(-14, 0), (14, 8), (14, -8)], close=True)
     b = define(doc, 'P_EH', '儲熱式電能熱水器', '1φ220V 4KW', '給水')
     _c(b, 25); _t(b, 'EH', 18)
     b = define(doc, 'P_HTR', '電熱水器(廚下/小型)', '', '給水')
@@ -118,6 +127,9 @@ def build(doc):
     _c(b, 7); _l(b, (-4, 0), (4, 0)); _l(b, (0, -4), (0, 4))
     b = define(doc, 'D_MH', '排水陰井', '', '排水')
     _c(b, 19); _c(b, 14)
+    b = define(doc, 'D_FIXDRAIN', '浴廁器具排水接口', '依原圖符號', '排水')
+    _pl(b, [(-9, -9), (9, -9), (9, 9), (-9, 9)], close=True); _pl(b, [(-6, 0), (5, 6), (5, -6)], close=True)
     b = define(doc, 'D_TRAP', '存水彎(P-TRAP)', '', '排水')
-    _pl(b, [(-8, 8), (-8, -4), (0, -8), (8, -4), (8, 8)])
+    _pl(b, [(-9.6, 9.7), (9.6, 9.7), (9.6, -9.7), (-9.6, -9.7)])
+    b.add_arc((9.6, 7.5), 7.5, -90, 90, dxfattribs={'layer': '0'})
     return LEGEND

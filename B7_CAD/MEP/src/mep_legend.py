@@ -32,7 +32,7 @@ for key, name in SHEETS:
             rows.append((b, t, n, cnt[b], cfg))
     rows_by_sys.append((name, cfg, rows))
 
-doc = ezdxf.new('R2018', setup=True)
+doc = ezdxf.new('R2013', setup=['linetypes'])
 doc.header['$INSUNITS'] = 5
 st = doc.styles.add('CHT', font='msjh.ttc'); st.set_extended_font_data(family='Microsoft JhengHei')
 mep_blocks.build(doc)

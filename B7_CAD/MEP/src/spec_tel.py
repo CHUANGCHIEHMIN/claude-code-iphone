@@ -31,6 +31,8 @@ def templates(page):
         dict(name='T_TV', region=region_of(page, [1333], 0.4), colors={Y}, kind='block', rots=(0,)),
         dict(name='T_BOX', region=region_of(page, [1340, 1341], 0.2), colors={C}, kind='block', rots=(0,)),
         dict(name='T_BOX1', region=region_of(page, [141, 142, 143], 0.2), colors={C}, kind='block', rots=(0,)),
+        dict(name='T_RISER_G', region=region_of(page, [162], 0.2), colors={G}, kind='block', rots=(0,)),
+        dict(name='T_RISER_R', region=region_of(page, [165], 0.2), colors={R}, kind='block', rots=(0,)),
         dict(name='T_NO', region=region_of(page, [1376], 0.2), colors={M}, kind='block', rots=(0,), precision=0.0,
              exclude_ids=[1377]),
         dict(name='T_CNO', region=region_of(page, [1378], 0.2), colors={M}, kind='block', rots=(0,), precision=0.0,
