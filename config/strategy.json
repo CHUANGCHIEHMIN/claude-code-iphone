@@ -31,10 +31,14 @@
     "time_stop_min_gain": 0.03
   },
   "market": {
-    "_說明": "大盤濾網：加權指數收盤低於 ma 日均線時視為弱勢，每天新進場最多 weak_max_entries 檔（0＝弱勢不進場，3 年回測中弱勢時的突破進場平均虧損）；強勢時最多 strong_max_entries 檔。已持有的股票照出場規則處理。",
+    "_說明": "大盤濾網：加權指數收盤低於 ma 日均線時視為弱勢，每天新進場最多 weak_max_entries 檔（0＝弱勢不進場，3 年回測中弱勢時的突破進場平均虧損）；強勢時最多 strong_max_entries 檔。已持有的股票照出場規則處理。大跌買點：加權指數收盤距 crash_lookback 日高點跌幅達 crash_drawdown 起的 crash_window 個交易日內（含當天），不論強弱勢，每天最多買 crash_max_entries 檔，且不要求突破訊號，改買入選清單中綜合分數最高、未過熱的股票（2020～2026 七年回測：總報酬 +626% vs 原規則 +340%，最大回撤相近；獲利集中在 2020/3、2025/4 兩次 V 型反彈）。crash_drawdown 設為 null 即關閉。",
     "ma": 60,
     "weak_max_entries": 0,
-    "strong_max_entries": 3
+    "strong_max_entries": 3,
+    "crash_drawdown": 0.15,
+    "crash_lookback": 20,
+    "crash_window": 5,
+    "crash_max_entries": 3
   },
   "portfolio": {
     "_說明": "模擬持股：初始資金 capital 元，每筆最多虧損總資產的 risk_per_trade，同時最多 max_positions 檔、同一產業最多 max_per_industry 檔，單檔市值不超過總資產÷max_positions。",

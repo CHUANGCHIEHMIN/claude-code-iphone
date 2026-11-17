@@ -85,6 +85,11 @@ def render(rep: dict) -> str:
         if reg and reg.get("taiex"):
             cap = f"每天最多新增 {reg['max_entries']} 檔" if reg["max_entries"] else "暫停新進場（已持有的照出場規則處理）"
             L.append(f"- 大盤{reg['state']}：加權指數 {fnum(reg['taiex'], '{:,.0f}')}、60日均線 {fnum(reg['ma'], '{:,.0f}')}；{cap}。")
+            if reg.get("crash"):
+                c = reg["crash"]
+                L.append(f"- 大跌買點：{c['date']} 收盤距20日高點 {c['drawdown'] * 100:.1f}%，"
+                         f"不要求突破訊號，改買入選清單綜合分數前 {c['max_entries']} 檔"
+                         + (f"（還有 {c['days_left']} 個交易日）。" if c["days_left"] else "（今天是最後一天）。"))
         if pf:
             L.append(f"- 模擬帳戶淨值 {pf['equity']:,.0f} 元（{pct(pf['equity'] / pf['capital'] - 1)}），持有 {len(pf['positions'])} 檔。")
             L.append("- 明日開盤買進：" + ("、".join(f"{o['code']} {o['name']}（預估停損 {o['est_stop']:,.2f}）" for o in pf["orders"]) or "無"))

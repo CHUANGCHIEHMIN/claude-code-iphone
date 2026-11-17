@@ -178,7 +178,7 @@ def run(store: history.Store, start: date, end: date, p: dict, themes: dict, lis
                 for h in horizons:
                     due.setdefault(i + h, []).append((ev, "exit", h))
         reg = signals.regime(taiex, iso, p)
-        cands = sorted((st for st in base if st["signal"] == signals.ENTER), key=lambda st: st["score"], reverse=True)
+        cands = signals.entry_candidates(base, reg)
         rows_c = [{"code": st["code"], "name": st["name"], "industry": st["industry"],
                    "close": st["f"]["close"], "atr": st["f"]["atr"]} for st in cands]
         for eng in engines.values():

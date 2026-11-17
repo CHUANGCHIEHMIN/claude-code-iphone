@@ -28,6 +28,8 @@ def message(rep: dict, site: str | None = None) -> str:
     if reg.get("taiex"):
         L.append(f"大盤：{reg['state']}（加權 {reg['taiex']:,.0f}／60日均 {reg['ma']:,.0f}）" if reg.get("ma")
                  else f"大盤：{reg['state']}")
+    if reg.get("crash"):
+        L.append(f"⚡ 大跌買點：距20日高點 {reg['crash']['drawdown'] * 100:.1f}%，模擬持股改買清單分數前幾檔")
     L.append(f"入選 {len(rep.get('picks') or [])} 檔")
     buys = pf.get("orders") or []
     if buys:

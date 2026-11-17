@@ -148,16 +148,46 @@ def percentile_scores(rows: list[dict], keys: tuple[str, ...]) -> list[float]:
 SCORE_KEYS = ("net_ratio", "trust_ratio", "buy_days", "vol_ratio")
 
 
+def crash(closes: list[float], days: list[str], p: dict) -> dict | None:
+    """大跌買點：最近 crash_window 個交易日內，曾有一天收盤距 crash_lookback 日高點跌幅 ≥ crash_drawdown."""
+    m = p["market"]
+    dd_min, look, win = m.get("crash_drawdown"), m.get("crash_lookback", 20), m.get("crash_window", 5)
+    if not dd_min or not closes:
+        return None
+    for j in range(len(closes) - 1, max(-1, len(closes) - 1 - win), -1):
+        hi = max(closes[max(0, j - look): j + 1])
+        dd = closes[j] / hi - 1
+        if dd <= -dd_min:
+            return {"date": days[j], "drawdown": round(dd, 4), "days_left": win - (len(closes) - 1 - j) - 1,
+                    "max_entries": m.get("crash_max_entries", m["strong_max_entries"])}
+    return None
+
+
 def regime(taiex: dict[str, float], asof: str, p: dict) -> dict:
-    """大盤濾網：加權指數 vs N 日均線."""
+    """大盤濾網：加權指數 vs N 日均線；大跌後幾天另列「大跌買點」."""
     days = sorted(d for d in taiex if d <= asof)
     n = p["market"]["ma"]
     closes = [taiex[d] for d in days]
     ma = sma(closes, n)
     last = closes[-1] if closes else None
+    cr = crash(closes, days, p)
     if ma is None or last is None:
-        return {"state": "未知", "taiex": last, "ma": ma, "date": days[-1] if days else None,
-                "max_entries": p["market"]["strong_max_entries"]}
-    weak = last < ma
-    return {"state": "弱勢" if weak else "強勢", "taiex": last, "ma": ma, "date": days[-1],
-            "max_entries": p["market"]["weak_max_entries" if weak else "strong_max_entries"]}
+        out = {"state": "未知", "taiex": last, "ma": ma, "date": days[-1] if days else None,
+               "max_entries": p["market"]["strong_max_entries"]}
+    else:
+        weak = last < ma
+        out = {"state": "弱勢" if weak else "強勢", "taiex": last, "ma": ma, "date": days[-1],
+               "max_entries": p["market"]["weak_max_entries" if weak else "strong_max_entries"]}
+    out["crash"] = cr
+    if cr:
+        out["max_entries"] = cr["max_entries"]
+    return out
+
+
+def entry_candidates(stocks: list[dict], reg: dict) -> list[dict]:
+    """模擬持股的進場候選（依綜合分數排序）：平常只取「可進場」；大跌買點期間取清單中所有未過熱、未排除的股票."""
+    if reg.get("crash"):
+        ok = [s for s in stocks if s["signal"] not in (HOT, EXCLUDED)]
+    else:
+        ok = [s for s in stocks if s["signal"] == ENTER]
+    return sorted(ok, key=lambda s: s["score"], reverse=True)

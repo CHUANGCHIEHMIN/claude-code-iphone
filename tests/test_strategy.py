@@ -168,6 +168,27 @@ def test_weak_market_blocks_new_entries():
     assert eng.plan("d0", [{"code": "A", "name": "甲", "close": 100, "atr": 2}], reg["max_entries"]) == []
 
 
+def test_crash_window_buys_list_without_breakout():
+    p = P()
+    days = [f"2026-{m:02d}-{d:02d}" for m in (7, 8, 9) for d in range(1, 29)]
+    taiex = {d: 100.0 for d in days}
+    taiex[days[-3]] = 84.0  # 16% below the 20-day high → 大跌買點 for 5 trading days
+    taiex[days[-2]] = 86.0
+    taiex[days[-1]] = 88.0
+    reg = signals.regime(taiex, days[-1], p)
+    assert reg["state"] == "弱勢" and reg["crash"]["date"] == days[-3]
+    assert reg["crash"]["days_left"] == 2 and reg["max_entries"] == 3
+    stocks = [{"code": "A", "signal": signals.WATCH, "score": 50}, {"code": "B", "signal": signals.HOT, "score": 90},
+              {"code": "C", "signal": signals.ENTER, "score": 40}, {"code": "D", "signal": signals.EXCLUDED, "score": 99}]
+    assert [s["code"] for s in signals.entry_candidates(stocks, reg)] == ["A", "C"]
+    later = {**taiex, **{f"2026-10-{d:02d}": 88.0 for d in range(1, 4)}}
+    reg2 = signals.regime(later, "2026-10-03", p)  # the drop is now 6 trading days back → window over
+    assert reg2["crash"] is None and reg2["max_entries"] == 0
+    assert [s["code"] for s in signals.entry_candidates(stocks, reg2)] == ["C"]
+    p["market"]["crash_drawdown"] = None
+    assert signals.regime(taiex, days[-1], p)["crash"] is None
+
+
 def test_portfolio_rerun_is_idempotent(monkeypatch, tmp_path):
     with_pullback(monkeypatch)
     out = tmp_path / "data"
