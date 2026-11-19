@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T20:07:58+00:00",
+ "generated_at": "2026-11-19T20:07:08+00:00",
  "horizons": [
   1,
   5,
@@ -11,170 +11,170 @@
   {
    "name": "全部入選股",
    "h1": {
-    "n": 340,
-    "win_rate": 0.3735,
-    "avg": -0.0117,
-    "median": -0.009,
+    "n": 360,
+    "win_rate": 0.3528,
+    "avg": -0.0145,
+    "median": -0.0108,
     "avg_win": 0.0235,
-    "avg_loss": -0.0327,
-    "excess": -0.0042,
-    "beat_rate": 0.4
+    "avg_loss": -0.0352,
+    "excess": -0.0049,
+    "beat_rate": 0.3972
    },
    "h5": {
-    "n": 260,
-    "win_rate": 0.2731,
-    "avg": -0.0447,
-    "median": -0.0444,
-    "avg_win": 0.071,
-    "avg_loss": -0.0881,
-    "excess": -0.0074,
-    "beat_rate": 0.4577
+    "n": 280,
+    "win_rate": 0.2607,
+    "avg": -0.0523,
+    "median": -0.0461,
+    "avg_win": 0.0707,
+    "avg_loss": -0.0957,
+    "excess": -0.01,
+    "beat_rate": 0.45
    },
    "h10": {
-    "n": 160,
-    "win_rate": 0.1062,
-    "avg": -0.0904,
-    "median": -0.0756,
-    "avg_win": 0.0424,
-    "avg_loss": -0.1062,
-    "excess": -0.0208,
-    "beat_rate": 0.4813
+    "n": 180,
+    "win_rate": 0.15,
+    "avg": -0.0825,
+    "median": -0.0685,
+    "avg_win": 0.0479,
+    "avg_loss": -0.1055,
+    "excess": -0.0122,
+    "beat_rate": 0.5111
    },
    "h20": null
   },
   {
    "name": "量增（≥1.2）",
    "h1": {
-    "n": 121,
-    "win_rate": 0.405,
-    "avg": -0.0099,
-    "median": -0.0101,
+    "n": 127,
+    "win_rate": 0.3858,
+    "avg": -0.0132,
+    "median": -0.011,
     "avg_win": 0.0287,
-    "avg_loss": -0.0362,
-    "excess": -0.0062,
-    "beat_rate": 0.3223
+    "avg_loss": -0.0395,
+    "excess": -0.0076,
+    "beat_rate": 0.315
    },
    "h5": {
-    "n": 86,
-    "win_rate": 0.3721,
-    "avg": -0.0247,
-    "median": -0.0238,
-    "avg_win": 0.0787,
-    "avg_loss": -0.086,
-    "excess": 0.0087,
-    "beat_rate": 0.5233
+    "n": 96,
+    "win_rate": 0.3438,
+    "avg": -0.0366,
+    "median": -0.0326,
+    "avg_win": 0.0795,
+    "avg_loss": -0.0973,
+    "excess": 0.0047,
+    "beat_rate": 0.5104
    },
    "h10": {
-    "n": 41,
-    "win_rate": 0.0732,
-    "avg": -0.0813,
-    "median": -0.0815,
-    "avg_win": 0.1003,
-    "avg_loss": -0.0957,
-    "excess": -0.0118,
-    "beat_rate": 0.5122
+    "n": 48,
+    "win_rate": 0.1875,
+    "avg": -0.0626,
+    "median": -0.0731,
+    "avg_win": 0.0869,
+    "avg_loss": -0.0971,
+    "excess": 0.0079,
+    "beat_rate": 0.5625
    },
    "h20": null
   },
   {
    "name": "非量增",
    "h1": {
-    "n": 219,
-    "win_rate": 0.3562,
-    "avg": -0.0127,
-    "median": -0.0087,
+    "n": 233,
+    "win_rate": 0.3348,
+    "avg": -0.0152,
+    "median": -0.0103,
     "avg_win": 0.0202,
-    "avg_loss": -0.0309,
-    "excess": -0.003,
-    "beat_rate": 0.4429
+    "avg_loss": -0.033,
+    "excess": -0.0034,
+    "beat_rate": 0.4421
    },
    "h5": {
-    "n": 174,
-    "win_rate": 0.2241,
-    "avg": -0.0545,
-    "median": -0.0464,
-    "avg_win": 0.0646,
-    "avg_loss": -0.0889,
-    "excess": -0.0154,
-    "beat_rate": 0.4253
+    "n": 184,
+    "win_rate": 0.2174,
+    "avg": -0.0606,
+    "median": -0.049,
+    "avg_win": 0.0635,
+    "avg_loss": -0.095,
+    "excess": -0.0176,
+    "beat_rate": 0.4185
    },
    "h10": {
-    "n": 119,
-    "win_rate": 0.1176,
-    "avg": -0.0935,
-    "median": -0.0695,
-    "avg_win": 0.03,
-    "avg_loss": -0.11,
-    "excess": -0.0239,
-    "beat_rate": 0.4706
+    "n": 132,
+    "win_rate": 0.1364,
+    "avg": -0.0897,
+    "median": -0.066,
+    "avg_win": 0.0284,
+    "avg_loss": -0.1084,
+    "excess": -0.0195,
+    "beat_rate": 0.4924
    },
    "h20": null
   },
   {
    "name": "法人主導（買超占成交值≥10%）",
    "h1": {
-    "n": 223,
-    "win_rate": 0.3587,
-    "avg": -0.0127,
-    "median": -0.0086,
+    "n": 234,
+    "win_rate": 0.3419,
+    "avg": -0.0139,
+    "median": -0.0095,
     "avg_win": 0.0164,
-    "avg_loss": -0.0289,
-    "excess": -0.0039,
-    "beat_rate": 0.4036
+    "avg_loss": -0.0296,
+    "excess": -0.0035,
+    "beat_rate": 0.4103
    },
    "h5": {
-    "n": 179,
-    "win_rate": 0.2626,
-    "avg": -0.0462,
-    "median": -0.0397,
-    "avg_win": 0.0469,
-    "avg_loss": -0.0794,
-    "excess": -0.008,
-    "beat_rate": 0.4916
+    "n": 191,
+    "win_rate": 0.2565,
+    "avg": -0.0503,
+    "median": -0.041,
+    "avg_win": 0.0475,
+    "avg_loss": -0.084,
+    "excess": -0.0076,
+    "beat_rate": 0.4921
    },
    "h10": {
-    "n": 122,
-    "win_rate": 0.1066,
-    "avg": -0.0914,
-    "median": -0.0698,
-    "avg_win": 0.0322,
-    "avg_loss": -0.1061,
-    "excess": -0.0211,
-    "beat_rate": 0.5
+    "n": 135,
+    "win_rate": 0.1407,
+    "avg": -0.0849,
+    "median": -0.0649,
+    "avg_win": 0.036,
+    "avg_loss": -0.1047,
+    "excess": -0.0141,
+    "beat_rate": 0.5259
    },
    "h20": null
   },
   {
    "name": "新進榜",
    "h1": {
-    "n": 57,
-    "win_rate": 0.4211,
-    "avg": -0.0124,
-    "median": -0.0099,
+    "n": 64,
+    "win_rate": 0.375,
+    "avg": -0.0177,
+    "median": -0.0111,
     "avg_win": 0.0244,
-    "avg_loss": -0.0391,
-    "excess": -0.0072,
-    "beat_rate": 0.386
+    "avg_loss": -0.0429,
+    "excess": -0.0082,
+    "beat_rate": 0.3906
    },
    "h5": {
-    "n": 39,
-    "win_rate": 0.359,
-    "avg": -0.0256,
-    "median": -0.0329,
+    "n": 43,
+    "win_rate": 0.3256,
+    "avg": -0.043,
+    "median": -0.0429,
     "avg_win": 0.0753,
-    "avg_loss": -0.0821,
-    "excess": -0.0108,
-    "beat_rate": 0.4359
+    "avg_loss": -0.1001,
+    "excess": -0.0194,
+    "beat_rate": 0.4186
    },
    "h10": {
-    "n": 13,
-    "win_rate": 0.3077,
-    "avg": -0.0742,
-    "median": -0.0453,
+    "n": 16,
+    "win_rate": 0.25,
+    "avg": -0.0841,
+    "median": -0.0604,
     "avg_win": 0.0548,
-    "avg_loss": -0.1315,
-    "excess": -0.0012,
-    "beat_rate": 0.5385
+    "avg_loss": -0.1303,
+    "excess": -0.0106,
+    "beat_rate": 0.5
    },
    "h20": null
   },
@@ -200,151 +200,177 @@
     "excess": 0.0585,
     "beat_rate": 1.0
    },
-   "h10": null,
+   "h10": {
+    "n": 2,
+    "win_rate": 1.0,
+    "avg": 0.0792,
+    "median": 0.0792,
+    "avg_win": 0.0792,
+    "avg_loss": null,
+    "excess": 0.1549,
+    "beat_rate": 1.0
+   },
    "h20": null
   },
   {
    "name": "訊號：觀察",
    "h1": {
-    "n": 172,
-    "win_rate": 0.4186,
-    "avg": -0.0093,
-    "median": -0.0109,
+    "n": 190,
+    "win_rate": 0.3789,
+    "avg": -0.0147,
+    "median": -0.0136,
     "avg_win": 0.0272,
-    "avg_loss": -0.0356,
-    "excess": -0.0054,
-    "beat_rate": 0.3953
+    "avg_loss": -0.0402,
+    "excess": -0.007,
+    "beat_rate": 0.3842
    },
    "h5": {
-    "n": 125,
-    "win_rate": 0.384,
-    "avg": -0.0181,
-    "median": -0.03,
-    "avg_win": 0.0707,
-    "avg_loss": -0.0735,
-    "excess": -0.011,
-    "beat_rate": 0.424
+    "n": 135,
+    "win_rate": 0.363,
+    "avg": -0.0257,
+    "median": -0.0325,
+    "avg_win": 0.0697,
+    "avg_loss": -0.0801,
+    "excess": -0.0111,
+    "beat_rate": 0.4296
    },
    "h10": {
-    "n": 48,
-    "win_rate": 0.125,
-    "avg": -0.083,
-    "median": -0.0636,
-    "avg_win": 0.0544,
-    "avg_loss": -0.1027,
-    "excess": -0.0084,
-    "beat_rate": 0.5625
+    "n": 60,
+    "win_rate": 0.2,
+    "avg": -0.0707,
+    "median": -0.0566,
+    "avg_win": 0.0515,
+    "avg_loss": -0.1012,
+    "excess": 0.0042,
+    "beat_rate": 0.6
    },
    "h20": null
   },
   {
    "name": "訊號：過熱",
    "h1": {
-    "n": 61,
-    "win_rate": 0.2459,
-    "avg": -0.0298,
+    "n": 63,
+    "win_rate": 0.2381,
+    "avg": -0.0294,
     "median": -0.016,
     "avg_win": 0.0197,
-    "avg_loss": -0.0459,
-    "excess": -0.0088,
-    "beat_rate": 0.3443
+    "avg_loss": -0.0448,
+    "excess": -0.0078,
+    "beat_rate": 0.3651
    },
    "h5": {
-    "n": 29,
-    "win_rate": 0.4138,
-    "avg": 0.0075,
-    "median": -0.0059,
-    "avg_win": 0.1103,
-    "avg_loss": -0.065,
-    "excess": 0.0292,
-    "beat_rate": 0.6207
+    "n": 39,
+    "win_rate": 0.3333,
+    "avg": -0.0413,
+    "median": -0.0135,
+    "avg_win": 0.1097,
+    "avg_loss": -0.1169,
+    "excess": 0.0025,
+    "beat_rate": 0.5128
    },
    "h10": {
-    "n": 12,
+    "n": 18,
     "win_rate": 0.3333,
-    "avg": -0.0612,
+    "avg": -0.0567,
     "median": -0.0403,
-    "avg_win": 0.0152,
-    "avg_loss": -0.0994,
-    "excess": 0.0147,
-    "beat_rate": 0.8333
+    "avg_win": 0.0306,
+    "avg_loss": -0.1004,
+    "excess": 0.0191,
+    "beat_rate": 0.7778
    },
    "h20": null
   },
   {
    "name": "綜合分數前半",
    "h1": {
-    "n": 120,
-    "win_rate": 0.375,
-    "avg": -0.0131,
-    "median": -0.0106,
+    "n": 130,
+    "win_rate": 0.3462,
+    "avg": -0.0157,
+    "median": -0.0121,
     "avg_win": 0.0203,
-    "avg_loss": -0.0332,
-    "excess": -0.0044,
-    "beat_rate": 0.425
+    "avg_loss": -0.0348,
+    "excess": -0.0043,
+    "beat_rate": 0.4308
    },
    "h5": {
-    "n": 80,
-    "win_rate": 0.4375,
-    "avg": -0.0074,
-    "median": -0.0115,
-    "avg_win": 0.0544,
-    "avg_loss": -0.0556,
-    "excess": 0.0035,
-    "beat_rate": 0.5625
+    "n": 90,
+    "win_rate": 0.4,
+    "avg": -0.021,
+    "median": -0.0164,
+    "avg_win": 0.0558,
+    "avg_loss": -0.0723,
+    "excess": 0.0007,
+    "beat_rate": 0.5444
    },
    "h10": {
-    "n": 30,
-    "win_rate": 0.2333,
-    "avg": -0.0694,
-    "median": -0.0471,
-    "avg_win": 0.0413,
-    "avg_loss": -0.1031,
-    "excess": 0.0055,
-    "beat_rate": 0.7
+    "n": 40,
+    "win_rate": 0.3,
+    "avg": -0.0551,
+    "median": -0.0455,
+    "avg_win": 0.0505,
+    "avg_loss": -0.1004,
+    "excess": 0.02,
+    "beat_rate": 0.725
    },
    "h20": null
   },
   {
    "name": "綜合分數後半",
    "h1": {
-    "n": 120,
-    "win_rate": 0.375,
-    "avg": -0.0154,
-    "median": -0.0135,
+    "n": 130,
+    "win_rate": 0.3462,
+    "avg": -0.0201,
+    "median": -0.0155,
     "avg_win": 0.031,
-    "avg_loss": -0.0432,
-    "excess": -0.0067,
-    "beat_rate": 0.35
+    "avg_loss": -0.0471,
+    "excess": -0.0087,
+    "beat_rate": 0.3385
    },
    "h5": {
-    "n": 80,
-    "win_rate": 0.35,
-    "avg": -0.0167,
-    "median": -0.0327,
-    "avg_win": 0.1074,
-    "avg_loss": -0.0835,
-    "excess": -0.0058,
-    "beat_rate": 0.4
+    "n": 90,
+    "win_rate": 0.3222,
+    "avg": -0.0341,
+    "median": -0.0443,
+    "avg_win": 0.1043,
+    "avg_loss": -0.1,
+    "excess": -0.0124,
+    "beat_rate": 0.3889
    },
    "h10": {
-    "n": 30,
-    "win_rate": 0.1,
-    "avg": -0.088,
-    "median": -0.0721,
-    "avg_win": 0.0327,
-    "avg_loss": -0.1014,
-    "excess": -0.0131,
-    "beat_rate": 0.5333
+    "n": 40,
+    "win_rate": 0.2,
+    "avg": -0.0725,
+    "median": -0.0604,
+    "avg_win": 0.0442,
+    "avg_loss": -0.1016,
+    "excess": 0.0026,
+    "beat_rate": 0.575
    },
    "h20": null
   }
  ],
  "by_day": [
   {
-   "date": "2026-11-18",
+   "date": "2026-11-19",
    "n": 20,
    "h1": null,
+   "h5": null,
+   "h10": null,
+   "h20": null
+  },
+  {
+   "date": "2026-11-18",
+   "n": 20,
+   "h1": {
+    "n": 20,
+    "win_rate": 0.0,
+    "avg": -0.0615,
+    "median": -0.066,
+    "avg_win": null,
+    "avg_loss": -0.0615,
+    "excess": -0.0175,
+    "beat_rate": 0.35
+   },
    "h5": null,
    "h10": null,
    "h20": null
@@ -413,7 +439,16 @@
     "excess": -0.0262,
     "beat_rate": 0.05
    },
-   "h5": null,
+   "h5": {
+    "n": 20,
+    "win_rate": 0.1,
+    "avg": -0.1519,
+    "median": -0.1464,
+    "avg_win": 0.061,
+    "avg_loss": -0.1756,
+    "excess": -0.0436,
+    "beat_rate": 0.35
+   },
    "h10": null,
    "h20": null
   },
@@ -544,7 +579,16 @@
     "excess": 0.0659,
     "beat_rate": 0.7
    },
-   "h10": null,
+   "h10": {
+    "n": 20,
+    "win_rate": 0.5,
+    "avg": -0.0191,
+    "median": 0.0046,
+    "avg_win": 0.0572,
+    "avg_loss": -0.0954,
+    "excess": 0.0566,
+    "beat_rate": 0.75
+   },
    "h20": null
   },
   {
@@ -830,6 +874,266 @@
  ],
  "rows": [
   {
+   "date": "2026-11-19",
+   "code": "9933",
+   "name": "中鼎",
+   "volume_up": true,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 81.1,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "8299",
+   "name": "群聯",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 48.0,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "6669",
+   "name": "緯穎",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 56.5,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "6510",
+   "name": "精測",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 55.1,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "6274",
+   "name": "台燿",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "過熱",
+   "score": 14.8,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3665",
+   "name": "貿聯-KY",
+   "volume_up": true,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 78.5,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3661",
+   "name": "世芯-KY",
+   "volume_up": true,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 66.3,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3653",
+   "name": "健策",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 61.2,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3533",
+   "name": "嘉澤",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 60.6,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3443",
+   "name": "創意",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 31.6,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3045",
+   "name": "台灣大",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 52.6,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3017",
+   "name": "奇鋐",
+   "volume_up": true,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 51.0,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "3008",
+   "name": "大立光",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 38.3,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2618",
+   "name": "長榮航",
+   "volume_up": false,
+   "dominant": true,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 66.3,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2412",
+   "name": "中華電",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "過熱",
+   "score": 36.7,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2383",
+   "name": "台光電",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "觀察",
+   "score": 20.7,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2382",
+   "name": "廣達",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 52.0,
+   "score_half": "high",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2360",
+   "name": "致茂",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": false,
+   "signal": "過熱",
+   "score": 32.1,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2303",
+   "name": "聯電",
+   "volume_up": false,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 12.9,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
+   "date": "2026-11-19",
+   "code": "2059",
+   "name": "川湖",
+   "volume_up": true,
+   "dominant": false,
+   "new_entry": true,
+   "signal": "觀察",
+   "score": 47.3,
+   "score_half": "low",
+   "entry_date": null,
+   "entry": null
+  },
+  {
    "date": "2026-11-18",
    "code": "9933",
    "name": "中鼎",
@@ -839,8 +1143,10 @@
    "signal": "過熱",
    "score": 75.0,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 58.0,
+   "r1": -0.0298,
+   "x1": 0.0142
   },
   {
    "date": "2026-11-18",
@@ -852,8 +1158,10 @@
    "signal": "觀察",
    "score": 50.9,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 1485.0,
+   "r1": -0.0561,
+   "x1": -0.0121
   },
   {
    "date": "2026-11-18",
@@ -865,8 +1173,10 @@
    "signal": "觀察",
    "score": 74.5,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 2835.0,
+   "r1": -0.0795,
+   "x1": -0.0355
   },
   {
    "date": "2026-11-18",
@@ -878,8 +1188,10 @@
    "signal": "觀察",
    "score": 52.8,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 1245.0,
+   "r1": -0.0378,
+   "x1": 0.0062
   },
   {
    "date": "2026-11-18",
@@ -891,8 +1203,10 @@
    "signal": "觀察",
    "score": 43.9,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 142.5,
+   "r1": -0.1035,
+   "x1": -0.0595
   },
   {
    "date": "2026-11-18",
@@ -904,8 +1218,10 @@
    "signal": "觀察",
    "score": 70.8,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 1540.0,
+   "r1": -0.0704,
+   "x1": -0.0264
   },
   {
    "date": "2026-11-18",
@@ -917,8 +1233,10 @@
    "signal": "觀察",
    "score": 68.9,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 3950.0,
+   "r1": -0.0939,
+   "x1": -0.0499
   },
   {
    "date": "2026-11-18",
@@ -930,8 +1248,10 @@
    "signal": "觀察",
    "score": 46.9,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 4500.0,
+   "r1": -0.0909,
+   "x1": -0.0469
   },
   {
    "date": "2026-11-18",
@@ -943,8 +1263,10 @@
    "signal": "觀察",
    "score": 69.3,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 1690.0,
+   "r1": -0.0617,
+   "x1": -0.0177
   },
   {
    "date": "2026-11-18",
@@ -956,8 +1278,10 @@
    "signal": "觀察",
    "score": 46.2,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 6505.0,
+   "r1": -0.083,
+   "x1": -0.039
   },
   {
    "date": "2026-11-18",
@@ -969,8 +1293,10 @@
    "signal": "過熱",
    "score": 45.9,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 128.0,
+   "r1": -0.0097,
+   "x1": 0.0343
   },
   {
    "date": "2026-11-18",
@@ -982,8 +1308,10 @@
    "signal": "觀察",
    "score": 74.0,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 46.65,
+   "r1": -0.0112,
+   "x1": 0.0328
   },
   {
    "date": "2026-11-18",
@@ -995,8 +1323,10 @@
    "signal": "觀察",
    "score": 72.4,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 22.8,
+   "r1": -0.0189,
+   "x1": 0.0251
   },
   {
    "date": "2026-11-18",
@@ -1008,8 +1338,10 @@
    "signal": "觀察",
    "score": 44.4,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 60.5,
+   "r1": -0.0584,
+   "x1": -0.0144
   },
   {
    "date": "2026-11-18",
@@ -1021,8 +1353,10 @@
    "signal": "觀察",
    "score": 34.2,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 3995.0,
+   "r1": -0.0743,
+   "x1": -0.0303
   },
   {
    "date": "2026-11-18",
@@ -1034,8 +1368,10 @@
    "signal": "觀察",
    "score": 29.3,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 3465.0,
+   "r1": -0.1048,
+   "x1": -0.0608
   },
   {
    "date": "2026-11-18",
@@ -1047,8 +1383,10 @@
    "signal": "觀察",
    "score": 45.9,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 741.0,
+   "r1": -0.026,
+   "x1": 0.018
   },
   {
    "date": "2026-11-18",
@@ -1060,8 +1398,10 @@
    "signal": "觀察",
    "score": 36.7,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 1155.0,
+   "r1": -0.1134,
+   "x1": -0.0694
   },
   {
    "date": "2026-11-18",
@@ -1073,8 +1413,10 @@
    "signal": "觀察",
    "score": 39.8,
    "score_half": "low",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 64.7,
+   "r1": -0.098,
+   "x1": -0.054
   },
   {
    "date": "2026-11-18",
@@ -1086,8 +1428,10 @@
    "signal": "觀察",
    "score": 78.6,
    "score_half": "high",
-   "entry_date": null,
-   "entry": null
+   "entry_date": "2026-11-19",
+   "entry": 79.0,
+   "r1": -0.0096,
+   "x1": 0.0344
   },
   {
    "date": "2026-11-17",
@@ -2002,7 +2346,9 @@
    "entry_date": "2026-11-13",
    "entry": 51.0,
    "r1": 0.0058,
-   "x1": -0.0077
+   "x1": -0.0077,
+   "r5": 0.1033,
+   "x5": 0.2116
   },
   {
    "date": "2026-11-12",
@@ -2017,7 +2363,9 @@
    "entry_date": "2026-11-13",
    "entry": 3370.0,
    "r1": -0.0162,
-   "x1": -0.0297
+   "x1": -0.0297,
+   "r5": -0.2256,
+   "x5": -0.1173
   },
   {
    "date": "2026-11-12",
@@ -2032,7 +2380,9 @@
    "entry_date": "2026-11-13",
    "entry": 1375.0,
    "r1": -0.0022,
-   "x1": -0.0157
+   "x1": -0.0157,
+   "r5": -0.1288,
+   "x5": -0.0205
   },
   {
    "date": "2026-11-12",
@@ -2047,7 +2397,9 @@
    "entry_date": "2026-11-13",
    "entry": 252.0,
    "r1": -0.0078,
-   "x1": -0.0213
+   "x1": -0.0213,
+   "r5": -0.2051,
+   "x5": -0.0968
   },
   {
    "date": "2026-11-12",
@@ -2062,7 +2414,9 @@
    "entry_date": "2026-11-13",
    "entry": 173.0,
    "r1": -0.0145,
-   "x1": -0.028
+   "x1": -0.028,
+   "r5": -0.2616,
+   "x5": -0.1533
   },
   {
    "date": "2026-11-12",
@@ -2077,7 +2431,9 @@
    "entry_date": "2026-11-13",
    "entry": 61.1,
    "r1": -0.0661,
-   "x1": -0.0796
+   "x1": -0.0796,
+   "r5": -0.3321,
+   "x5": -0.2238
   },
   {
    "date": "2026-11-12",
@@ -2092,7 +2448,9 @@
    "entry_date": "2026-11-13",
    "entry": 147.0,
    "r1": -0.043,
-   "x1": -0.0565
+   "x1": -0.0565,
+   "r5": -0.1479,
+   "x5": -0.0396
   },
   {
    "date": "2026-11-12",
@@ -2107,7 +2465,9 @@
    "entry_date": "2026-11-13",
    "entry": 4040.0,
    "r1": -0.0108,
-   "x1": -0.0243
+   "x1": -0.0243,
+   "r5": -0.1141,
+   "x5": -0.0058
   },
   {
    "date": "2026-11-12",
@@ -2122,7 +2482,9 @@
    "entry_date": "2026-11-13",
    "entry": 1495.0,
    "r1": -0.0491,
-   "x1": -0.0626
+   "x1": -0.0626,
+   "r5": -0.0956,
+   "x5": 0.0127
   },
   {
    "date": "2026-11-12",
@@ -2137,7 +2499,9 @@
    "entry_date": "2026-11-13",
    "entry": 8645.0,
    "r1": -0.0099,
-   "x1": -0.0234
+   "x1": -0.0234,
+   "r5": -0.31,
+   "x5": -0.2017
   },
   {
    "date": "2026-11-12",
@@ -2152,7 +2516,9 @@
    "entry_date": "2026-11-13",
    "entry": 46.9,
    "r1": 0.0122,
-   "x1": -0.0013
+   "x1": -0.0013,
+   "r5": -0.0164,
+   "x5": 0.0919
   },
   {
    "date": "2026-11-12",
@@ -2167,7 +2533,9 @@
    "entry_date": "2026-11-13",
    "entry": 23.0,
    "r1": 0.0028,
-   "x1": -0.0107
+   "x1": -0.0107,
+   "r5": -0.0275,
+   "x5": 0.0808
   },
   {
    "date": "2026-11-12",
@@ -2182,7 +2550,9 @@
    "entry_date": "2026-11-13",
    "entry": 162.0,
    "r1": 0.0126,
-   "x1": -0.0009
+   "x1": -0.0009,
+   "r5": 0.0187,
+   "x5": 0.127
   },
   {
    "date": "2026-11-12",
@@ -2197,7 +2567,9 @@
    "entry_date": "2026-11-13",
    "entry": 30.0,
    "r1": 0.0074,
-   "x1": -0.0061
+   "x1": -0.0061,
+   "r5": -0.1682,
+   "x5": -0.0599
   },
   {
    "date": "2026-11-12",
@@ -2212,7 +2584,9 @@
    "entry_date": "2026-11-13",
    "entry": 399.5,
    "r1": -0.0618,
-   "x1": -0.0753
+   "x1": -0.0753,
+   "r5": -0.2696,
+   "x5": -0.1613
   },
   {
    "date": "2026-11-12",
@@ -2227,7 +2601,9 @@
    "entry_date": "2026-11-13",
    "entry": 745.0,
    "r1": 0.0115,
-   "x1": -0.002
+   "x1": -0.002,
+   "r5": -0.0312,
+   "x5": 0.0771
   },
   {
    "date": "2026-11-12",
@@ -2242,7 +2618,9 @@
    "entry_date": "2026-11-13",
    "entry": 244.0,
    "r1": -0.0181,
-   "x1": -0.0316
+   "x1": -0.0316,
+   "r5": -0.1016,
+   "x5": 0.0067
   },
   {
    "date": "2026-11-12",
@@ -2257,7 +2635,9 @@
    "entry_date": "2026-11-13",
    "entry": 85.1,
    "r1": -0.0059,
-   "x1": -0.0194
+   "x1": -0.0194,
+   "r5": -0.3143,
+   "x5": -0.206
   },
   {
    "date": "2026-11-12",
@@ -2272,7 +2652,9 @@
    "entry_date": "2026-11-13",
    "entry": 72.9,
    "r1": 0.0228,
-   "x1": 0.0093
+   "x1": 0.0093,
+   "r5": -0.1449,
+   "x5": -0.0366
   },
   {
    "date": "2026-11-12",
@@ -2287,7 +2669,9 @@
    "entry_date": "2026-11-13",
    "entry": 309.5,
    "r1": -0.0235,
-   "x1": -0.037
+   "x1": -0.037,
+   "r5": -0.266,
+   "x5": -0.1577
   },
   {
    "date": "2026-11-11",
@@ -3664,7 +4048,9 @@
    "r1": 0.0108,
    "x1": 0.0559,
    "r5": 0.1126,
-   "x5": 0.0761
+   "x5": 0.0761,
+   "r10": -0.128,
+   "x10": -0.0523
   },
   {
    "date": "2026-11-05",
@@ -3681,7 +4067,9 @@
    "r1": 0.041,
    "x1": 0.0861,
    "r5": 0.0511,
-   "x5": 0.0146
+   "x5": 0.0146,
+   "r10": -0.0561,
+   "x10": 0.0196
   },
   {
    "date": "2026-11-05",
@@ -3698,7 +4086,9 @@
    "r1": 0.1745,
    "x1": 0.2196,
    "r5": 0.2623,
-   "x5": 0.2258
+   "x5": 0.2258,
+   "r10": 0.1144,
+   "x10": 0.1901
   },
   {
    "date": "2026-11-05",
@@ -3715,7 +4105,9 @@
    "r1": 0.0424,
    "x1": 0.0875,
    "r5": 0.171,
-   "x5": 0.1345
+   "x5": 0.1345,
+   "r10": -0.1747,
+   "x10": -0.099
   },
   {
    "date": "2026-11-05",
@@ -3732,7 +4124,9 @@
    "r1": -0.0103,
    "x1": 0.0348,
    "r5": -0.0456,
-   "x5": -0.0821
+   "x5": -0.0821,
+   "r10": -0.0456,
+   "x10": 0.0301
   },
   {
    "date": "2026-11-05",
@@ -3749,7 +4143,9 @@
    "r1": 0.0059,
    "x1": 0.051,
    "r5": 0.1412,
-   "x5": 0.1047
+   "x5": 0.1047,
+   "r10": -0.1882,
+   "x10": -0.1125
   },
   {
    "date": "2026-11-05",
@@ -3766,7 +4162,9 @@
    "r1": 0.0171,
    "x1": 0.0622,
    "r5": -0.0059,
-   "x5": -0.0424
+   "x5": -0.0424,
+   "r10": -0.025,
+   "x10": 0.0507
   },
   {
    "date": "2026-11-05",
@@ -3783,7 +4181,9 @@
    "r1": 0.0308,
    "x1": 0.0759,
    "r5": 0.0481,
-   "x5": 0.0116
+   "x5": 0.0116,
+   "r10": 0.0288,
+   "x10": 0.1045
   },
   {
    "date": "2026-11-05",
@@ -3800,7 +4200,9 @@
    "r1": 0.0127,
    "x1": 0.0578,
    "r5": 0.0894,
-   "x5": 0.0529
+   "x5": 0.0529,
+   "r10": 0.0778,
+   "x10": 0.1535
   },
   {
    "date": "2026-11-05",
@@ -3817,7 +4219,9 @@
    "r1": 0.0326,
    "x1": 0.0777,
    "r5": 0.0278,
-   "x5": -0.0087
+   "x5": -0.0087,
+   "r10": -0.0059,
+   "x10": 0.0698
   },
   {
    "date": "2026-11-05",
@@ -3834,7 +4238,9 @@
    "r1": 0.0182,
    "x1": 0.0633,
    "r5": 0.095,
-   "x5": 0.0585
+   "x5": 0.0585,
+   "r10": 0.0806,
+   "x10": 0.1563
   },
   {
    "date": "2026-11-05",
@@ -3851,7 +4257,9 @@
    "r1": 0.0065,
    "x1": 0.0516,
    "r5": 0.0259,
-   "x5": -0.0106
+   "x5": -0.0106,
+   "r10": 0.01,
+   "x10": 0.0857
   },
   {
    "date": "2026-11-05",
@@ -3868,7 +4276,9 @@
    "r1": 0.0211,
    "x1": 0.0662,
    "r5": 0.0418,
-   "x5": 0.0053
+   "x5": 0.0053,
+   "r10": 0.0231,
+   "x10": 0.0988
   },
   {
    "date": "2026-11-05",
@@ -3885,7 +4295,9 @@
    "r1": 0.0288,
    "x1": 0.0739,
    "r5": 0.0193,
-   "x5": -0.0172
+   "x5": -0.0172,
+   "r10": 0.0445,
+   "x10": 0.1202
   },
   {
    "date": "2026-11-05",
@@ -3902,7 +4314,9 @@
    "r1": 0.0584,
    "x1": 0.1035,
    "r5": 0.1048,
-   "x5": 0.0683
+   "x5": 0.0683,
+   "r10": 0.0853,
+   "x10": 0.161
   },
   {
    "date": "2026-11-05",
@@ -3919,7 +4333,9 @@
    "r1": -0.0059,
    "x1": 0.0392,
    "r5": 0.1715,
-   "x5": 0.135
+   "x5": 0.135,
+   "r10": -0.1502,
+   "x10": -0.0745
   },
   {
    "date": "2026-11-05",
@@ -3936,7 +4352,9 @@
    "r1": 0.0478,
    "x1": 0.0929,
    "r5": 0.1202,
-   "x5": 0.0837
+   "x5": 0.0837,
+   "r10": 0.0292,
+   "x10": 0.1049
   },
   {
    "date": "2026-11-05",
@@ -3953,7 +4371,9 @@
    "r1": 0.0445,
    "x1": 0.0896,
    "r5": 0.1274,
-   "x5": 0.0909
+   "x5": 0.0909,
+   "r10": -0.1798,
+   "x10": -0.1041
   },
   {
    "date": "2026-11-05",
@@ -3970,7 +4390,9 @@
    "r1": 0.0621,
    "x1": 0.1072,
    "r5": 0.5013,
-   "x5": 0.4648
+   "x5": 0.4648,
+   "r10": 0.0787,
+   "x10": 0.1544
   },
   {
    "date": "2026-11-05",
@@ -3987,7 +4409,9 @@
    "r1": -0.0249,
    "x1": 0.0202,
    "r5": -0.0109,
-   "x5": -0.0474
+   "x5": -0.0474,
+   "r10": -0.0008,
+   "x10": 0.0749
   },
   {
    "date": "2026-11-04",
