@@ -1,0 +1,32 @@
+[
+ {
+  "broker": "Morgan Stanley",
+  "rating": null,
+  "target_price": 2000.0,
+  "date": "2026-11-23",
+  "source": "CMoney投資網誌",
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVlRvR2Y3b1RxNEwteTE2M1ZGbnc3dEpiNTczZUJJRzFYd2YwMzloYnFQNXp3SXdLd0xWb2UwdWNNN0F1NmdaQkhvb1VEX2FRenplT05DODJNcUdnZXlxVjc4bzQ4dXc4bVBkeWR1UEU1LW5NZ1RnWFBVQnloSUhkU01UQ3h2S2NvdGxBY1pjZnI?oc=5",
+  "title": "【即時新聞】最新大摩報告看好南電10月淨利年增388%！目標價維持2000元",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "BofA",
+  "rating": "買進",
+  "target_price": 2000.0,
+  "date": "2026-10-02",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQWZzZGVWSnVWYnF1YnVYTEFPZ1QyRk40TzEybjZnWC1kV1JldGZ0Nk9TSDR1Mk51aDRKZHEwLWFGbzdHcUMwTWNHMjUwMDJ0bzN0MTBuRG1ibDZKT0hlY05TaF9RWlZ6ZU9DYkhQZmIzZTJRRUFjcUFOUWhnUGhMSG03OFNUdUV3OVhHYlJnTUUwVFd1Ylh0MTQtNlZOZmpDbkRVQ1p0anYyTlptRWtKd2s2dHgyRVp3QUE?oc=5",
+  "title": "相較同業有落後補漲優勢，美銀給南電買進投資評等目標價 2,000 元",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "Goldman Sachs",
+  "rating": "喊買",
+  "target_price": 2500.0,
+  "date": "2026-09-18",
+  "source": "FTNN 新聞網",
+  "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE83c2FGVENGVmswTnhYYURfaTVqVnNHWkhCR3RMZm96R3h0X3FtaldmWUVOSlpJQVh5TlNpZVJjM0gxX1Jnc0RBd3gxRQ?oc=5",
+  "title": "目標價最高上看2500元！高盛喊買南電與「這ABF載板大廠」 供需缺口越撐越大：2028年恐飆至51",
+  "via": "新聞標題"
+ }
+]
