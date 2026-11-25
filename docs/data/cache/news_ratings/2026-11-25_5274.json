@@ -1,0 +1,32 @@
+[
+ {
+  "broker": "Morgan Stanley",
+  "rating": null,
+  "target_price": 14417.0,
+  "date": "2026-11-19",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZHpySzZGR2l0bm9PMUtiN2FJdDhtSDJYTnk4dENFbmNybG9jQklNcmdKRUNoYkYzMlprUFloWjcwZ2trUnRORENicGVhOVR2OS1VV25MYVZ0bkdhUUJrSUZ0QnVrM3F3X1FqTEJGNG5MeHFfaHc1Tkl4dElHbzJmMkZkaVIwbDhKUzRGLVRwUzN2WFlpRHMzdTQwRU5KV08tOHh3cDFB?oc=5",
+  "title": "新晶片拓展為 2027 年成長動能，大摩給信驊 14,417 元目標價",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "Goldman Sachs",
+  "rating": null,
+  "target_price": 22000.0,
+  "date": "2026-11-09",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMHRHY2FZNGRJbUlIRGZTbFhrQ041R1ZEWE5mYUxhR1pIQVFmNW1rYlhHWU9NYk9Ybll5dFhiUmNrWDBpSnI4LUROVF9zaFdfNXR1bFZpWnVRR1dVWXNaakdoZEVta2FYYVBWblA0bkktaDZQazVuWElTSVd3X29aS3VjUjUwMlUtc3JndU9Lb3o0UnRXUUE?oc=5",
+  "title": "伺服器上升週期帶動信驊強勁成長，高盛力挺目標價 22,000 元",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "J.P. Morgan",
+  "rating": "優於大盤",
+  "target_price": 23000.0,
+  "date": "2026-09-07",
+  "source": "TechNews 科技新報",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbzcwckZqUVRuUEpncmlWTTBFMS1kdlVManJQZzZyV3ZzZ3JHRmpyVEdrOVhvaW8tQ216YWFyeEtocEx1SUdyUHpQd3FTUEo2cEVoS0lxRnk5Z1g5THVPZm9WaTI1ZGFkbkE3ZGNLVTlTVElTN2NCT251VE02alh1TEJscWU2NFdxZnRVV2tyYW9JVVEzSUt0bTdNbXJUZWE5SUlJMFNlcFJDdlJnaXV5YTZLdi1ZQ0MwajRlWQ?oc=5",
+  "title": "信驊營收展望超預期，小摩力挺優於大盤評等目標價提升至 23,000 元",
+  "via": "新聞標題"
+ }
+]
