@@ -1,0 +1,22 @@
+[
+ {
+  "broker": "Morgan Stanley",
+  "rating": "買進",
+  "target_price": null,
+  "date": "2026-11-24",
+  "source": "CMoney",
+  "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1yQW5aNEUtNElQWmMtaWwzLXVFUm1EbTAxeVNDZWlQb1JXVkxJWGIxb29NSkpBSzV6Y3ZOdVRDUnZOYl9VZGJoa09NU2RPQ3VjLWlxZ2ZaOUQ?oc=5",
+  "title": "2603 長榮 - 大摩滿手空單被軋。買不到電子股，等一下就會被迫買進長榮、航運 - 股市爆料同學會",
+  "via": "新聞標題"
+ },
+ {
+  "broker": "J.P. Morgan",
+  "rating": "增持",
+  "target_price": null,
+  "date": "2026-11-17",
+  "source": "TradingView",
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9rTDMzekJ1bExzZ19vdy1SX0FRdGlIMFJrN2FJUkNCUUpIQ3NKQzBDVFZFUHBSZjZKYm90UjJpMVJOX0otOF9NYUMxZ0xwa3Nmazh4eXJPd21vVGp3NHk1TlJxVkctbWhkS3c?oc=5",
+  "title": "大行評級｜小摩：上調中遠海控、東方海外及長榮海運目標價，均維持“增持”評級",
+  "via": "新聞標題"
+ }
+]
